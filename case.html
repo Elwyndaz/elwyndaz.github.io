@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utvärderingar – Centrum för Organisationsutveckling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#202021;--bg:#fff;--primary:#105AFE;--secondary:#635F5A;--tertiary:#E2E2E2;--quaternary:#F3F2F2;--font:'Albert Sans',sans-serif;--outer:clamp(1.25rem,3vw,2.5rem);--sidebar-w:160px;--gap:clamp(2rem,4vw,4rem);--fs-small:.8125rem;--fs-body:1rem;--fs-large:1.25rem;--fs-h5:1.3rem;--fs-hero:clamp(2.2rem,5.5vw,4rem);--ls-body:.01em;--ls-heading:-.02em;--lh-body:1.7;--lh-heading:1.12;--radius-btn:100px;--t:.16s ease}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);font-size:var(--fs-body);color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:var(--lh-body);letter-spacing:var(--ls-body);overflow-x:hidden}
+a{color:inherit;text-underline-offset:.2em}
+ul{list-style:none}
+.site{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh;padding:var(--outer);column-gap:var(--gap);max-width:1280px;margin:0 auto;width:100%}
+.sidebar{position:sticky;top:var(--outer);height:calc(100vh - var(--outer)*2);display:flex;flex-direction:column;justify-content:space-between;align-self:start}
+.sidebar-top{display:flex;flex-direction:column;gap:2em}
+.site-title{font-size:var(--fs-h5);font-weight:700;letter-spacing:var(--ls-heading);line-height:1.2;text-decoration:none;color:var(--fg);transition:color var(--t)}
+.site-title:hover{color:var(--primary)}
+.sidebar-nav{display:flex;flex-direction:column;gap:.3em}
+.sidebar-nav a{font-size:var(--fs-large);font-weight:400;text-decoration:none;color:var(--fg);transition:color var(--t);line-height:1.4}
+.sidebar-nav a:hover,.sidebar-nav a.active{color:var(--primary)}
+.sidebar-social{display:flex;gap:1em;align-items:center}
+.sidebar-social a{color:var(--fg);text-decoration:none;opacity:.7;transition:opacity var(--t)}
+.sidebar-social a:hover{opacity:1}
+.sidebar-social svg{width:20px;height:20px;fill:currentColor}
+.content{display:flex;flex-direction:column;gap:clamp(3.5rem,7vw,6rem);max-width:760px}
+.page-header{padding-top:clamp(3rem,8vw,7rem)}
+.page-eyebrow{font-size:var(--fs-body);color:var(--secondary);margin-bottom:.6em;opacity:0;animation:fadeUp .5s ease .1s forwards}
+.page-title{font-size:var(--fs-hero);font-weight:800;line-height:var(--lh-heading);letter-spacing:var(--ls-heading);opacity:0;animation:fadeUp .6s ease .2s forwards}
+.page-intro{margin-top:1.25em;font-size:var(--fs-large);color:var(--secondary);max-width:580px;opacity:0;animation:fadeUp .6s ease .3s forwards}
+
+/* Stats row */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;opacity:0;animation:fadeUp .6s ease .4s forwards}
+.stat-box{background:var(--quaternary);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;gap:.35em}
+.stat-number{font-size:2.4rem;font-weight:800;letter-spacing:var(--ls-heading);color:var(--primary);line-height:1}
+.stat-label{font-size:var(--fs-small);color:var(--secondary);font-weight:500}
+
+/* Training section */
+.training-section{display:flex;flex-direction:column;gap:2rem;opacity:0;animation:fadeUp .6s ease .45s forwards}
+.training-header{display:flex;flex-direction:column;gap:.5em;padding-bottom:1.25rem;border-bottom:2px solid var(--primary)}
+.training-tag{font-size:var(--fs-small);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
+.training-title{font-size:1.6rem;font-weight:800;letter-spacing:var(--ls-heading);line-height:1.2}
+.training-meta{font-size:var(--fs-small);color:var(--secondary)}
+
+/* Score summary bars */
+.score-summary{display:flex;flex-direction:column;gap:.75rem}
+.score-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem}
+.score-label{font-size:var(--fs-small);font-weight:500;color:var(--secondary)}
+.score-bar-wrap{display:flex;align-items:center;gap:.75rem;grid-column:1/-1}
+.score-bar-track{flex:1;height:6px;background:var(--tertiary);border-radius:100px;overflow:hidden}
+.score-bar-fill{height:100%;background:var(--primary);border-radius:100px;transition:width .8s ease}
+.score-value{font-size:var(--fs-small);font-weight:700;color:var(--primary);min-width:2.5em;text-align:right}
+
+/* Quotes */
+.quotes{display:flex;flex-direction:column;gap:1rem}
+.quote-card{background:var(--quaternary);border-radius:10px;padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.quote-text{font-size:var(--fs-body);line-height:1.65;font-style:italic;color:var(--fg)}
+.quote-meta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.quote-stars{display:flex;gap:2px}
+.quote-stars span{color:var(--primary);font-size:.9rem}
+.quote-detail{font-size:var(--fs-small);color:var(--secondary)}
+
+/* Divider */
+.section-divider{border:none;border-top:1px solid var(--tertiary)}
+
+.site-footer{padding-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--tertiary);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5em;font-size:var(--fs-small);color:var(--secondary);margin-top:auto}
+.footer-left{display:flex;gap:.5em;font-weight:700;color:var(--fg)}
+.footer-left span{font-weight:400;color:var(--secondary)}
+.footer-right a{color:var(--secondary);text-decoration:none}
+.footer-right a:hover{color:var(--primary)}
+.mobile-header{display:none;justify-content:space-between;align-items:center;padding:1rem var(--outer);border-bottom:1px solid var(--tertiary);position:sticky;top:0;background:var(--bg);z-index:100}
+.mobile-title{font-size:.9rem;font-weight:700;text-decoration:none;color:var(--fg)}
+.mobile-menu-btn{background:none;border:none;cursor:pointer;padding:.25rem;color:var(--fg);display:flex;flex-direction:column;gap:5px}
+.mobile-menu-btn span{display:block;width:22px;height:2px;background:currentColor}
+.mobile-nav{display:none;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--tertiary);padding:1.5rem var(--outer) 2rem;gap:.4em}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-size:1.4rem;font-weight:400;text-decoration:none;color:var(--fg)}
+.mobile-nav a:hover{color:var(--primary)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:780px){.site{grid-template-columns:1fr;padding:0;gap:0}.sidebar{display:none}.mobile-header{display:flex}.content{padding:var(--outer);max-width:100%;gap:clamp(2.5rem,6vw,4rem)}.page-header{padding-top:2rem}.stats-row{grid-template-columns:1fr 1fr}.stats-row .stat-box:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header class="mobile-header">
+  <a href="index.html" class="mobile-title">Centrum för Organisationsutveckling</a>
+  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Öppna meny"><span></span><span></span><span></span></button>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Om oss</a>
+  <a href="utbildningar.html">Utbildningar</a>
+  <a href="case.html">Utvärderingar</a>
+  <a href="lasning.html">Lästips</a>
+  <a href="lanktips.html">Länktips</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+<div class="site">
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <a href="index.html" class="site-title">Centrum för<br>Organisations&shy;utveckling</a>
+      <nav class="sidebar-nav">
+        <a href="index.html">Om oss</a>
+        <a href="utbildningar.html">Utbildningar</a>
+        <a href="case.html" class="active">Utvärderingar</a>
+        <a href="lasning.html">Lästips</a>
+        <a href="lanktips.html">Länktips</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+    <div class="sidebar-social">
+      <a href="https://www.linkedin.com/in/patrik-l%C3%B6fgren/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="mailto:patz.lofgren@gmail.com" aria-label="E-post"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="page-header">
+      <p class="page-eyebrow">Vad deltagare säger</p>
+      <h1 class="page-title">Utbildnings&shy;utvärderingar</h1>
+      <p class="page-intro">Sammanfattning av deltagarutvärderingar från våra Excel-utbildningar. Betyg anges på en skala 1-5.</p>
+    </div>
+
+    <!-- Overall stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-number">4.8</span>
+        <span class="stat-label">Snittbetyg utbildning</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">4.7</span>
+        <span class="stat-label">Snittbetyg ledare</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Skulle rekommendera</span>
+      </div>
+    </div>
+
+    <!-- Utbildning 1 -->
+    <div class="training-section">
+      <div class="training-header">
+        <span class="training-tag">Utbildning 1</span>
+        <h2 class="training-title">Excel: Grundläggande &amp; verksamhetsanpassad</h2>
+        <span class="training-meta">6 deltagare utvärde­rade utbildningen</span>
+      </div>
+
+      <div class="score-summary">
+        <div class="score-row">
+          <span class="score-label">Betyg på utbildningen</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:96%"></div></div>
+          <span class="score-value">4.8 / 5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">Betyg på ledaren</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div>
+          <span class="score-value">4.5 / 5</span>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <div class="quote-card">
+          <p class="quote-text">"Pedagogiskt upplagd, mycket bra innehåll."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Innehållet var väl anpassat i nivå och hade en tydlig riktning mot vår verksamhet med exempel som verkligen är användbara."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Tack för en jättetrevlig utbildning som gav mersmak! Jag gillade upplägget där man först fick generell information om kortkommandon och hur de kan underlätta och användas i sitt eget arbete."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Fick med mig många bra verktyg som jag kommer använda och tillämpa i mitt arbete. Ledaren hade förberett kursen väl genom att samla in faktiska arbetsfiler som han utgått från och byggt kursen på."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Jag har en nyfunnen och relativt outforskad kärlek till Excel. Utbildningen väckte ett behov att utforska det mer! Utbildningen gav många användbara verktyg som kommer underlätta mitt vardagliga arbete."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Utbildning 2 -->
+    <div class="training-section" style="animation-delay:.55s">
+      <div class="training-header">
+        <span class="training-tag">Utbildning 2</span>
+        <h2 class="training-title">Excel: Fortsättning &amp; fördjupning</h2>
+        <span class="training-meta">5 deltagare utvärde­rade utbildningen</span>
+      </div>
+
+      <div class="score-summary">
+        <div class="score-row">
+          <span class="score-label">Motsvarade förväntningarna</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:92%"></div></div>
+          <span class="score-value">4.6 / 5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">Tempot passade</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div>
+          <span class="score-value">5 / 5 Ja</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">Betyg på ledaren</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:94%"></div></div>
+          <span class="score-value">4.7 / 5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">Information inför utbildningen</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:92%"></div></div>
+          <span class="score-value">4.6 / 5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">Skulle rekommendera</span>
+        </div>
+        <div class="score-bar-wrap">
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div>
+          <span class="score-value">5 / 5 Ja</span>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <div class="quote-card">
+          <p class="quote-text">"Mycket bra fm! Nöjd med allt!"</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Alla betyg 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Kan vara bra om handledaren frågar upp vilka uppdrag man behöver utbildningen till, så man kan gå igenom mer specifikt. Men super nöjd efter dagen!"</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Att tänka på: Alla har inte dubbla skärmar, alla sitter inte vid dator alla dagar, alla har olika inställningar på sin lånedator. Rast var 45:e min."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 5/5</span>
+          </div>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Blev positivt överraskad av utbildningen. Gav mig mer än vad jag trodde."</p>
+          <div class="quote-meta">
+            <div class="quote-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <span class="quote-detail">Utbildning 5/5 · Ledare 4/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-left">© 2024 <span>Centrum för Organisationsutveckling</span></div>
+      <div class="footer-right"><span id="footer-email"></span></div>
+    </footer>
+  </main>
+</div>
+<script>
+function toggleMenu(){
+  var nav = document.getElementById('mobileNav');
+  var isOpening = !nav.classList.contains('open');
+  nav.classList.toggle('open');
+  if (isOpening) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+var u='patz.lofgren';var d='gmail.com';
+var el=document.getElementById('footer-email');
+if(el){var a=document.createElement('a');a.href='mai'+'lto:'+u+'@'+d;a.textContent=u+'@'+d;a.style.color='inherit';el.appendChild(a);}
+</script>
+</body>
+</html>
