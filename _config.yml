@@ -3,13 +3,3 @@ description: Excel-utbildning, BAM-utbildning och ledarskapsutbildning i Umeå o
 url: https://orgutveckling.se
 baseurl: ""
 lang: sv
-
-permalink: /artiklar/:title/
-
-plugins:
-  - jekyll-seo-tag
-
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
