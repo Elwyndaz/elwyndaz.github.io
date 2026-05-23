@@ -1,0 +1,15 @@
+title: Centrum för Organisations-Utveckling
+description: Excel-utbildning, BAM-utbildning och ledarskapsutbildning i Umeå och Västerbotten.
+url: https://orgutveckling.se
+baseurl: ""
+lang: sv
+
+permalink: /artiklar/:title/
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
