@@ -17,7 +17,6 @@ html{scroll-behavior:smooth}
 body{font-family:var(--font);font-size:var(--fs-body);color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:var(--lh-body);letter-spacing:var(--ls-body);overflow-x:hidden}
 a{color:inherit;text-underline-offset:.2em}
 ul{list-style:none}
-
 .site{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh;padding:var(--outer);column-gap:var(--gap);max-width:1280px;margin:0 auto;width:100%}
 .sidebar{position:sticky;top:var(--outer);height:calc(100vh - var(--outer)*2);display:flex;flex-direction:column;justify-content:space-between;align-self:start}
 .sidebar-top{display:flex;flex-direction:column;gap:2em}
@@ -30,22 +29,15 @@ ul{list-style:none}
 .sidebar-social a{color:var(--fg);text-decoration:none;opacity:.7;transition:opacity var(--t)}
 .sidebar-social a:hover{opacity:1}
 .sidebar-social svg{width:20px;height:20px;fill:currentColor}
-
 .content{display:flex;flex-direction:column;gap:clamp(3rem,6vw,5rem);max-width:760px}
-
-/* Page header */
 .page-header{padding-top:clamp(3rem,8vw,7rem)}
 .page-eyebrow{font-size:var(--fs-body);color:var(--secondary);margin-bottom:.6em;opacity:0;animation:fadeUp .5s ease .1s forwards}
 .page-title{font-size:var(--fs-hero);font-weight:800;line-height:var(--lh-heading);letter-spacing:var(--ls-heading);opacity:0;animation:fadeUp .6s ease .2s forwards}
 .page-intro{margin-top:1.25em;font-size:var(--fs-large);color:var(--secondary);max-width:580px;opacity:0;animation:fadeUp .6s ease .3s forwards}
-
-/* Filter */
 .filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;opacity:0;animation:fadeUp .5s ease .35s forwards}
 .filter-btn{padding:.4em 1em;border-radius:var(--radius-btn);font-size:var(--fs-small);font-weight:600;border:1.5px solid var(--tertiary);background:transparent;color:var(--secondary);cursor:pointer;transition:all var(--t);font-family:var(--font);letter-spacing:.01em}
 .filter-btn:hover{border-color:var(--primary);color:var(--primary)}
 .filter-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
-
-/* Section */
 .link-section{display:flex;flex-direction:column;gap:1.25rem;opacity:0;animation:fadeUp .6s ease .4s forwards}
 .link-section.hidden{display:none}
 .section-header{display:flex;align-items:center;gap:1rem;padding-bottom:.75rem;border-bottom:2px solid var(--primary)}
@@ -57,8 +49,6 @@ ul{list-style:none}
 .icon-channel{background:#FF0000}
 .section-title{font-size:1.2rem;font-weight:800;letter-spacing:var(--ls-heading)}
 .section-count{font-size:var(--fs-small);color:var(--secondary);font-weight:500;margin-left:auto}
-
-/* Link cards */
 .link-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .link-card{display:flex;align-items:flex-start;gap:.875rem;padding:1rem 1.125rem;background:var(--quaternary);border-radius:10px;text-decoration:none;color:var(--fg);transition:transform var(--t),box-shadow var(--t);border:1.5px solid transparent}
 .link-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--primary)}
@@ -74,18 +64,12 @@ ul{list-style:none}
 .link-card-area{display:inline-block;font-size:.75rem;font-weight:600;color:var(--primary);background:#e8f0ff;border-radius:100px;padding:.15em .65em;margin-top:.25em;letter-spacing:.02em}
 .link-card-arrow{margin-left:auto;color:var(--tertiary);font-size:.9rem;transition:color var(--t),transform var(--t);flex-shrink:0;align-self:center;padding-left:.5rem}
 .link-card:hover .link-card-arrow{color:var(--primary);transform:translateX(3px)}
-
-/* Full-width card for singles */
 .link-grid.single .link-card{grid-column:1/-1;max-width:420px}
-
-/* Footer */
 .site-footer{padding-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--tertiary);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5em;font-size:var(--fs-small);color:var(--secondary);margin-top:auto}
 .footer-left{display:flex;gap:.5em;font-weight:700;color:var(--fg)}
 .footer-left span{font-weight:400;color:var(--secondary)}
 .footer-right a{color:var(--secondary);text-decoration:none}
 .footer-right a:hover{color:var(--primary)}
-
-/* Mobile */
 .mobile-header{display:none;justify-content:space-between;align-items:center;padding:1rem var(--outer);border-bottom:1px solid var(--tertiary);position:sticky;top:0;background:var(--bg);z-index:100}
 .mobile-title{font-size:.9rem;font-weight:700;text-decoration:none;color:var(--fg)}
 .mobile-menu-btn{background:none;border:none;cursor:pointer;padding:.25rem;color:var(--fg);display:flex;flex-direction:column;gap:5px}
@@ -94,21 +78,11 @@ ul{list-style:none}
 .mobile-nav.open{display:flex}
 .mobile-nav a{font-size:1.4rem;font-weight:400;text-decoration:none;color:var(--fg)}
 .mobile-nav a:hover{color:var(--primary)}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:780px){
-  .site{grid-template-columns:1fr;padding:0;gap:0}
-  .sidebar{display:none}
-  .mobile-header{display:flex}
-  .content{padding:var(--outer);max-width:100%;gap:clamp(2rem,5vw,3.5rem)}
-  .page-header{padding-top:2rem}
-  .link-grid{grid-template-columns:1fr}
-}
+@media(max-width:780px){.site{grid-template-columns:1fr;padding:0;gap:0}.sidebar{display:none}.mobile-header{display:flex}.content{padding:var(--outer);max-width:100%;gap:clamp(2rem,5vw,3.5rem)}.page-header{padding-top:2rem}.link-grid{grid-template-columns:1fr}}
 </style>
 
-<!-- SEO: canonical -->
 <link rel="canonical" href="https://orgutveckling.se/lanktips.html">
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Centrum för Organisations-Utveckling">
 <meta property="og:title" content="Länktips Excel & Psykologi">
@@ -116,11 +90,9 @@ ul{list-style:none}
 <meta property="og:url" content="https://orgutveckling.se/lanktips.html">
 <meta property="og:image" content="https://orgutveckling.se/COU.png">
 <meta property="og:locale" content="sv_SE">
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Länktips Excel & Psykologi">
 <meta name="twitter:description" content="Utvalda nyhetsbrev, poddar och YouTube-kanaler inom Excel, Office-paketet och psykologi – kurerade av Centrum för Organisations-Utveckling i Umeå.">
-<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -162,19 +134,17 @@ ul{list-style:none}
     </div>
     <div class="sidebar-social">
       <a href="https://www.linkedin.com/in/patrik-l%C3%B6fgren/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      <a href="mailto:patz.lofgren@gmail.com" aria-label="E-post"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+      <a href="mailto:kontakt@orgutveckling.se" aria-label="E-post"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
     </div>
   </aside>
 
   <main class="content">
-
     <div class="page-header">
       <p class="page-eyebrow">Resurser & inspiration</p>
       <h1 class="page-title">Länktips</h1>
       <p class="page-intro">Utvalda nyhetsbrev, poddar och YouTube-kanaler inom Excel, Office-paketet och psykologi, för dig som vill lära dig mer.</p>
     </div>
 
-    <!-- Filter -->
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterLinks('all', this)">Alla</button>
       <button class="filter-btn" onclick="filterLinks('nyhetsbrev', this)">Nyhetsbrev</button>
@@ -186,29 +156,19 @@ ul{list-style:none}
     <!-- Nyhetsbrev -->
     <div class="link-section" data-type="nyhetsbrev">
       <div class="section-header">
-        <div class="section-icon icon-newsletter">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </div>
+        <div class="section-icon icon-newsletter"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
         <h2 class="section-title">Nyhetsbrev</h2>
         <span class="section-count">2 st</span>
       </div>
       <div class="link-grid">
         <a href="https://www.excelbrevet.se/" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-newsletter"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Excelbrevet</p>
-            <p class="link-card-sub">Regelbundna tips och tricks i Excel direkt i din inkorg.</p>
-            <span class="link-card-area">Excel</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Excelbrevet</p><p class="link-card-sub">Regelbundna tips och tricks i Excel direkt i din inkorg.</p><span class="link-card-area">Excel</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="https://stavegard.se/prenumerera" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-newsletter"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Stavegård, nyhetsbrev</p>
-            <p class="link-card-sub">David Stavegårds nyhetsbrev med praktiska Excel-tips på svenska.</p>
-            <span class="link-card-area">Excel</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Stavegård, nyhetsbrev</p><p class="link-card-sub">David Stavegårds nyhetsbrev med praktiska Excel-tips på svenska.</p><span class="link-card-area">Excel</span></div>
           <span class="link-card-arrow">→</span>
         </a>
       </div>
@@ -217,47 +177,29 @@ ul{list-style:none}
     <!-- Poddar -->
     <div class="link-section" data-type="podcast">
       <div class="section-header">
-        <div class="section-icon icon-podcast">
-          <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h1v-8H4v-1a8 8 0 1 1 16 0v1h-2v8h1c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/></svg>
-        </div>
+        <div class="section-icon icon-podcast"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h1v-8H4v-1a8 8 0 1 1 16 0v1h-2v8h1c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/></svg></div>
         <h2 class="section-title">Poddar</h2>
         <span class="section-count">4 st</span>
       </div>
       <div class="link-grid">
         <a href="https://dummamanniskor.se/" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-podcast"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h1v-8H4v-1a8 8 0 1 1 16 0v1h-2v8h1c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Dumma människor</p>
-            <p class="link-card-sub">Svensk podd om psykologi, beteende och hur vi tänker och fattar beslut.</p>
-            <span class="link-card-area">Psykologi</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Dumma människor</p><p class="link-card-sub">Svensk podd om psykologi, beteende och hur vi tänker och fattar beslut.</p><span class="link-card-area">Psykologi</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="https://scottbarrykaufman.com/podcast/" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-podcast"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h1v-8H4v-1a8 8 0 1 1 16 0v1h-2v8h1c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">The Psychology Podcast</p>
-            <p class="link-card-sub">Scott Barry Kaufman intervjuar ledande psykologer och forskare.</p>
-            <span class="link-card-area">Psykologi</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">The Psychology Podcast</p><p class="link-card-sub">Scott Barry Kaufman intervjuar ledande psykologer och forskare.</p><span class="link-card-area">Psykologi</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="https://www.apa.org/news/podcasts/speaking-of-psychology" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-podcast"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h1v-8H4v-1a8 8 0 1 1 16 0v1h-2v8h1c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Speaking of Psychology</p>
-            <p class="link-card-sub">APA:s officiella podd med psykologisk forskning gjord tillgänglig för alla.</p>
-            <span class="link-card-area">Psykologi</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Speaking of Psychology</p><p class="link-card-sub">APA:s officiella podd med psykologisk forskning gjord tillgänglig för alla.</p><span class="link-card-area">Psykologi</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="https://www.rovasjogren.se/podcast" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-podcast"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h1v-8H4v-1a8 8 0 1 1 16 0v1h-2v8h1c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Pedagogisk psykologi</p>
-            <p class="link-card-sub">Svensk podd om lärande, pedagogik och psykologi i praktiken.</p>
-            <span class="link-card-area">Psykologi</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Pedagogisk psykologi</p><p class="link-card-sub">Svensk podd om lärande, pedagogik och psykologi i praktiken.</p><span class="link-card-area">Psykologi</span></div>
           <span class="link-card-arrow">→</span>
         </a>
       </div>
@@ -266,125 +208,78 @@ ul{list-style:none}
     <!-- YouTube-kanaler -->
     <div class="link-section" data-type="kanal">
       <div class="section-header">
-        <div class="section-icon icon-channel">
-          <svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
-        </div>
+        <div class="section-icon icon-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
         <h2 class="section-title">YouTube-kanaler</h2>
         <span class="section-count">10 kanaler</span>
       </div>
 
-      <!-- Excel -->
       <p style="font-size:var(--fs-small);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--secondary);margin-bottom:.5rem">Excel</p>
       <div class="link-grid" style="margin-bottom:1.5rem">
         <a href="http://www.youtube.com/@ExcelCampus" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Excel Campus</p>
-            <p class="link-card-sub">Djupgående Excel-tutorials från grundläggande till avancerat.</p>
-            <span class="link-card-area">Excel</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Excel Campus</p><p class="link-card-sub">Djupgående Excel-tutorials från grundläggande till avancerat.</p><span class="link-card-area">Excel</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@DavidStavegard" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">David Stavegård</p>
-            <p class="link-card-sub">Excel på svenska, tydliga genomgångar för svenska användare.</p>
-            <span class="link-card-area">Excel</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">David Stavegård</p><p class="link-card-sub">Excel på svenska, tydliga genomgångar för svenska användare.</p><span class="link-card-area">Excel</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@ExcelDictionary" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Excel Dictionary</p>
-            <p class="link-card-sub">Korta och fokuserade videor om enskilda Excel-funktioner.</p>
-            <span class="link-card-area">Excel</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Excel Dictionary</p><p class="link-card-sub">Korta och fokuserade videor om enskilda Excel-funktioner.</p><span class="link-card-area">Excel</span></div>
           <span class="link-card-arrow">→</span>
         </a>
       </div>
 
-      <!-- PowerPoint -->
       <p style="font-size:var(--fs-small);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--secondary);margin-bottom:.5rem">PowerPoint</p>
       <div class="link-grid" style="margin-bottom:1.5rem">
         <a href="http://www.youtube.com/@oneskill_ppt" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">One Skill PPT</p>
-            <p class="link-card-sub">Ett PowerPoint-trick per video, snabbt och praktiskt.</p>
-            <span class="link-card-area">PowerPoint</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">One Skill PPT</p><p class="link-card-sub">Ett PowerPoint-trick per video, snabbt och praktiskt.</p><span class="link-card-area">PowerPoint</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@PresentationProcess" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Presentation Process</p>
-            <p class="link-card-sub">Lär dig designa professionella presentationer i PowerPoint.</p>
-            <span class="link-card-area">PowerPoint</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Presentation Process</p><p class="link-card-sub">Lär dig designa professionella presentationer i PowerPoint.</p><span class="link-card-area">PowerPoint</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@SlidesbySander" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Slides by Sander</p>
-            <p class="link-card-sub">Kreativa och visuellt starka PowerPoint-tekniker.</p>
-            <span class="link-card-area">PowerPoint</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Slides by Sander</p><p class="link-card-sub">Kreativa och visuellt starka PowerPoint-tekniker.</p><span class="link-card-area">PowerPoint</span></div>
           <span class="link-card-arrow">→</span>
         </a>
       </div>
 
-      <!-- Office & verktyg -->
       <p style="font-size:var(--fs-small);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--secondary);margin-bottom:.5rem">Office-paketet & andra verktyg</p>
       <div class="link-grid">
         <a href="http://www.youtube.com/@KevinStratvert" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Kevin Stratvert</p>
-            <p class="link-card-sub">Breda genomgångar av hela Office-paketet och produktivitetsverktyg.</p>
-            <span class="link-card-area">Office-paketet</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Kevin Stratvert</p><p class="link-card-sub">Breda genomgångar av hela Office-paketet och produktivitetsverktyg.</p><span class="link-card-area">Office-paketet</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@LeilaGharani" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Leila Gharani</p>
-            <p class="link-card-sub">Excel, Power BI och Office, välproducerat och pedagogiskt.</p>
-            <span class="link-card-area">Office-paketet</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Leila Gharani</p><p class="link-card-sub">Excel, Power BI och Office, välproducerat och pedagogiskt.</p><span class="link-card-area">Office-paketet</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@MicrosoftTeams" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Microsoft Teams</p>
-            <p class="link-card-sub">Officiell kanal med guider och nyheter för Microsoft Teams.</p>
-            <span class="link-card-area">Microsoft Teams</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Microsoft Teams</p><p class="link-card-sub">Officiell kanal med guider och nyheter för Microsoft Teams.</p><span class="link-card-area">Microsoft Teams</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="http://www.youtube.com/@MikeTholfsen" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 22s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Mike Tholfsen</p>
-            <p class="link-card-sub">Microsoft 365 och utbildningsverktyg, praktiska genomgångar.</p>
-            <span class="link-card-area">Office-paketet</span>
-          </div>
+          <div class="link-card-icon lc-channel"><svg viewBox="0 0 24 24"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></div>
+          <div class="link-card-body"><p class="link-card-title">Mike Tholfsen</p><p class="link-card-sub">Microsoft 365 och utbildningsverktyg, praktiska genomgångar.</p><span class="link-card-area">Office-paketet</span></div>
           <span class="link-card-arrow">→</span>
         </a>
       </div>
     </div>
 
-    <!-- Videotips -->
+    <!-- Egna videor -->
     <div class="link-section" data-type="video">
       <div class="section-header">
-        <div class="section-icon icon-video">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
+        <div class="section-icon icon-video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         <h2 class="section-title">Egna videor</h2>
         <span class="section-count">3 videor</span>
       </div>
@@ -392,34 +287,21 @@ ul{list-style:none}
       <div class="link-grid">
         <a href="https://youtu.be/knHVwQpuORI?si=Zc1i6cmFp9gNcN2z" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Tips och tricks i Excel</p>
-            <p class="link-card-sub">Snabbgenomgång av de mest användbara funktionerna i Excel.</p>
-            <span class="link-card-area">Excel</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Tips och tricks i Excel</p><p class="link-card-sub">Snabbgenomgång av de mest användbara funktionerna i Excel.</p><span class="link-card-area">Excel</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="https://youtu.be/p4q2IyBdi2I?si=lOsmPBDbU1Le72Wz" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Tips och tricks i PowerPoint</p>
-            <p class="link-card-sub">Praktiska genvägar och funktioner för bättre presentationer.</p>
-            <span class="link-card-area">Office-paketet</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Tips och tricks i PowerPoint</p><p class="link-card-sub">Praktiska genvägar och funktioner för bättre presentationer.</p><span class="link-card-area">Office-paketet</span></div>
           <span class="link-card-arrow">→</span>
         </a>
         <a href="https://youtu.be/9WMinfgJDHU?si=4rlupZ9RkZGmhUmR" target="_blank" rel="noopener" class="link-card">
           <div class="link-card-icon lc-video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="link-card-body">
-            <p class="link-card-title">Tips och tricks i Outlook</p>
-            <p class="link-card-sub">Bli mer effektiv i Outlook med dessa smarta tips.</p>
-            <span class="link-card-area">Office-paketet</span>
-          </div>
+          <div class="link-card-body"><p class="link-card-title">Tips och tricks i Outlook</p><p class="link-card-sub">Bli mer effektiv i Outlook med dessa smarta tips.</p><span class="link-card-area">Office-paketet</span></div>
           <span class="link-card-arrow">→</span>
         </a>
       </div>
     </div>
-
 
     <footer class="site-footer">
       <div class="footer-left">© 2024 <span>Centrum för Organisationsutveckling</span></div>
@@ -449,7 +331,7 @@ function filterLinks(type, btn) {
   });
 }
 
-var u='patz.lofgren';var d='gmail.com';
+var u='kontakt';var d='orgutveckling.se';
 var el=document.getElementById('footer-email');
 if(el){var a=document.createElement('a');a.href='mai'+'lto:'+u+'@'+d;a.textContent=u+'@'+d;a.style.color='inherit';el.appendChild(a);}
 </script>
