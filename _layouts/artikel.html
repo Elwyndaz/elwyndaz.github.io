@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="/COU.png">
 
 <title>{{ page.title }} | Centrum för Organisations-Utveckling</title>
@@ -92,14 +93,14 @@ ul{list-style:none}
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:description" content="{{ page.description }}">
 <meta property="og:url" content="{{ page.url | prepend: site.url }}">
-<meta property="og:image" content="https://orgutveckling.se/logo.png">
+<meta property="og:image" content="https://orgutveckling.se/og-image.png">
 <meta property="og:locale" content="sv_SE">
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
-<meta name="twitter:image" content="https://orgutveckling.se/logo.png">
+<meta name="twitter:image" content="https://orgutveckling.se/og-image.png">
 <!-- Canonical -->
 <link rel="canonical" href="{{ page.url | prepend: site.url }}">
 <!-- Structured data -->
@@ -130,7 +131,7 @@ ul{list-style:none}
 <body>
 
 <header class="mobile-header">
-  <a href="/index.html" class="mobile-title">Centrum för Organisations-Utveckling</a>
+  <a href="/index.html" class="mobile-title">Centrum för Organisationsutveckling</a>
   <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Öppna meny"><span></span><span></span><span></span></button>
 </header>
 <nav class="mobile-nav" id="mobileNav">
@@ -145,7 +146,7 @@ ul{list-style:none}
 <div class="site">
   <aside class="sidebar">
     <div class="sidebar-top">
-      <a href="/index.html" class="site-title">Centrum för<br>Organisations-Utveckling</a>
+      <a href="/index.html" class="site-title">Centrum för<br>Organisations Utveckling</a>
       <nav class="sidebar-nav">
         <a href="/utbildningar.html">Utbildningar</a>
         <a href="/case.html">Utvärderingar</a>
