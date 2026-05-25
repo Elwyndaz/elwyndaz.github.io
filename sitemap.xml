@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://orgutveckling.se/</loc>
-    <priority>1.0</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://orgutveckling.se/artiklar.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://orgutveckling.se/utbildningar.html</loc>
-    <priority>0.9</priority>
+    <loc>https://orgutveckling.se/bam-utbildning-umea.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://orgutveckling.se/kontakt.html</loc>
-    <priority>0.9</priority>
-    <changefreq>yearly</changefreq>
+    <loc>https://orgutveckling.se/boka-utbildning-umea.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://orgutveckling.se/case.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://orgutveckling.se/artiklar/</loc>
-    <priority>0.8</priority>
+    <loc>https://orgutveckling.se/excel-utbildning-umea.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://orgutveckling.se/</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://orgutveckling.se/lasning.html</loc>
-    <priority>0.6</priority>
+    <loc>https://orgutveckling.se/kontakt.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://orgutveckling.se/lanktips.html</loc>
-    <priority>0.6</priority>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://orgutveckling.se/lasning.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://orgutveckling.se/ledarskapsutbildning-umea.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://orgutveckling.se/utbildningar.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://orgutveckling.se/excel-funktioner-som-sparar-tid.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 </urlset>
