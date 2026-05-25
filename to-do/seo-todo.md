@@ -6,32 +6,33 @@
 - [x] robots: index, follow på alla sidor
 - [x] Bättre H1-taggar på alla sidor
 - [x] Meta description tillagd på case.html
-- [x] Sitemap uppdaterad med /artiklar/
+- [x] Sitemap uppdaterad med /artiklar/ och landningssidor
 - [x] Jekyll-blogg uppsatt
 - [x] Google Search Console uppsatt
 - [x] author-fält tillagt i strukturerad data (case.html)
+- [x] Ladda upp og-image.png till GitHub-repots rot
+- [x] Skicka in sitemap.xml i Search Console
+- [x] Bildfilnamn bytta (excel-utbildning-umea.png, utvarderingar-umea.png, boka-utbildning-umea.png)
+- [x] Bindestreck borttaget i loggan (mobil: Organisationsutveckling, desktop: Organisations Utveckling)
+- [x] Landningssida: excel-utbildning-umea.html
+- [x] Landningssida: bam-utbildning-umea.html
+- [x] Landningssida: ledarskapsutbildning-umea.html
 
 ---
 
 ## Att göra – tekniskt
-- [ x] Ändra "centrum för organisations-utveckling" bindestrecket som länkar till index-sidan ser konstigt ut på mobil där det är en rad
-- [x ] Ladda upp og-image.png till GitHub-repots rot
-- [x ] Skicka in sitemap.xml i Search Console (Search Console → Sitemaps)
+
 - [ ] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
-- [ ] Byt bildfilnamn till beskrivande namn, ex. `excel-utbildning-umea.png` istället för `ikon_utbildningar.png`
-- [ ] Komprimera bilder (logo.png, og-image.png) – använd squoosh.app eller liknande
+- [ ] Komprimera bilder (logo.png, og-image.png) – använd squoosh.app
 - [ ] Konvertera bilder till WebP-format om möjligt
-- [ ] Lägg till breadcrumb-schema på artikelsidor
+- [ ] Lägg till breadcrumb-schema på artikelsidor (Claude fixar)
 
 ---
 
 ## Att göra – innehåll (störst SEO-effekt)
 
-- [ x] Skapa separat landningssida: `/excel-utbildning-umea.html` (700–1200 ord)
-- [ x] Skapa separat landningssida: `/bam-utbildning-umea.html` (700–1200 ord)
-- [x ] Skapa separat landningssida: `/ledarskapsutbildning-umea.html` (700–1200 ord)
-- [ ] Lägg till FAQ-sektion på startsidan
-- [ ] Lägg till mer text på startsidan (mål: 700–1200 ord totalt)
+- [ ] Lägg till FAQ-sektion på startsidan (Claude fixar)
+- [ ] Lägg till mer text på startsidan – just nu 446 ord, mål 700–1200 (Claude fixar)
 
 ---
 
