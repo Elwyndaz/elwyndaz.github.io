@@ -30,6 +30,7 @@
 - [ ] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
 - [ ] Komprimera bilder (logo.png, og-image.png) – använd squoosh.app
 - [ ] Konvertera bilder till WebP-format om möjligt
+- [x] Meta description på startsidan kortad till 148 tecken (var 177, gräns 160)
 - [ ] Efter publicering: verifiera åtgärder i Search Console (klicka "Verifiera att åtgärder vidtagits")
 
 ---
