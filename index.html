@@ -72,9 +72,70 @@ ul{list-style:none}
 .mobile-nav a:hover{color:var(--primary)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:780px){.site{grid-template-columns:1fr;padding:0;gap:0}.sidebar{display:none}.mobile-header{display:flex}.content{padding:var(--outer);max-width:100%;gap:clamp(2.5rem,6vw,4rem)}.hero{padding-top:2rem}.cards{grid-template-columns:1fr 1fr}.cards .card:last-child{grid-column:1/-1}}
+.section-text{display:flex;flex-direction:column;gap:1.25rem}
+.section-text h2{font-size:1.6rem;font-weight:800;letter-spacing:var(--ls-heading);line-height:var(--lh-heading)}
+.section-text p{line-height:var(--lh-body);color:var(--fg)}
+.faq-label{font-size:var(--fs-small);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--secondary);margin-bottom:1.5em}
+.faq{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--tertiary)}
+.faq-item:first-of-type{border-top:1px solid var(--tertiary)}
+.faq-item summary{font-weight:600;font-size:var(--fs-body);padding:.95em 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color var(--t)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--primary)}
+.faq-item summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--primary);flex-shrink:0;line-height:1;transition:transform var(--t)}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .faq-answer{padding-bottom:1.1em;color:var(--secondary);line-height:var(--lh-body);max-width:620px}
 </style>
 
 <link rel="canonical" href="https://orgutveckling.se/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vad ingår i en Excel-utbildning hos er?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vår Excel-utbildning anpassas efter er verksamhet och er personals förkunskaper. Vi går igenom de funktioner och arbetsflöden som faktiskt används i er vardag, allt från grunderna till avancerade formler, pivottabeller och dataanalys. Utbildningen hålls i Umeå eller på distans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är BAM-utbildning och vem behöver den?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BAM står för Bättre Arbetsmiljö och är en grundläggande utbildning i systematiskt arbetsmiljöarbete. Den riktar sig till chefer och skyddsombud och ger de verktyg som krävs för att arbeta förebyggande med arbetsmiljöfrågor. Kursen uppfyller Arbetsmiljöverkets krav."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur skiljer sig er ledarskapsutbildning från andra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vår ledarskapsutbildning bygger på psykologisk kunskap och evidensbaserade metoder. Vi fokuserar på verkliga utmaningar i ledarrollen: kommunikation, feedback, gruppdynamik och psykologisk trygghet. Ingen teori för sin egen skull, utan ett praktiskt ledarskap som fungerar i vardagen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ni komma till oss, eller hålls utbildningarna på en fast plats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vi håller utbildningar hos er på er arbetsplats, i egna lokaler i Umeå eller på distans via digitala verktyg. Vi anpassar formen efter vad som passar er bäst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur bokar vi en utbildning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enklast är att höra av sig via kontaktformuläret eller e-post. Vi tar en dialog om era behov och sätter ihop ett upplägg anpassat efter er verksamhet. Det kostar ingenting att fråga."
+      }
+    }
+  ]
+}
+</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Centrum för Organisations-Utveckling">
 <meta property="og:title" content="Excel-utbildning i Umeå | Centrum för Organisations-Utveckling">
@@ -127,7 +188,7 @@ ul{list-style:none}
 </head>
 <body>
 <header class="mobile-header">
-  <a href="index.html" class="mobile-title">Centrum för Organisationsutveckling</a>
+  <a href="/" class="mobile-title">Centrum för Organisationsutveckling</a>
   <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Öppna meny"><span></span><span></span><span></span></button>
 </header>
 <nav class="mobile-nav" id="mobileNav">
@@ -141,7 +202,7 @@ ul{list-style:none}
 <div class="site">
   <aside class="sidebar">
     <div class="sidebar-top">
-      <a href="index.html" class="site-title">Centrum för<br>Organisations Utveckling</a>
+      <a href="/" class="site-title">Centrum för<br>Organisations Utveckling</a>
       <nav class="sidebar-nav">
         <a href="utbildningar.html">Utbildningar</a>
         <a href="case.html">Utvärderingar</a>
@@ -170,6 +231,7 @@ ul{list-style:none}
       <div class="intro-body">
         <p>Centrum för Organisationsutveckling erbjuder Excel-utbildning i Umeå, verksamhetsanpassad och med högt betyg från deltagarna. Vi håller även BAM-utbildning (Bättre Arbetsmiljö) och ledarskapsutbildning för organisationer i Umeå och Västerbotten.</p>
         <p>Vi tror på att hållbar förändring och lärande sker inifrån med hjälp av psykologiskt kunnande. Vårt arbete bygger på gedigen erfarenhet, evidensbaserat förhållningssätt och ett genuint engagemang för de människors beteende och de verksamheter vi möter. Vi lyssnar innan vi agerar och anpassar alltid utbildningen utifrån er verksamhet.</p>
+        <p>Oavsett om ni behöver en punktinsats inom Excel eller ett längre program i ledarskap, utgår vi alltid från er situation. Vi kartlägger behoven, formulerar tydliga mål och följer upp resultaten. Utbildning är inte ett mål i sig, utan ett verktyg för förändring som faktiskt håller.</p>
       </div>
     </section>
     <section>
@@ -180,7 +242,38 @@ ul{list-style:none}
         <a href="kontakt.html" class="card"><div class="card-image" style="background:none;"><img src="boka-utbildning-umea.png" alt="Boka Excel-utbildning i Umeå" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;"></div><span class="card-eyebrow">Boka</span><p class="card-title">Intresserad av Excel-utbildning i Umeå? Hör av dig.</p><span class="card-link">Kontakta oss</span></a>
       </div>
     </section>
-    <footer class="site-footer">
+    <section class="section-text">
+      <h2>Hur vi arbetar</h2>
+      <p>Vi tror inte på standardupplägg som levereras rakt av. Varje uppdrag börjar med ett samtal om er verksamhet, era medarbetare och de utmaningar ni vill ta itu med. Utifrån det lägger vi upp en utbildning som passar er, inte en hylla vi plockar från.</p>
+      <p>Vår Excel-utbildning i Umeå utgår från de arbetsuppgifter deltagarna faktiskt möter. Det innebär att vi arbetar med verkliga filer, verkliga problem och verkliga arbetsflöden. Det ger ett lärande som sitter kvar långt efter utbildningsdagen.</p>
+      <p>I BAM-utbildningen och ledarskapsutbildningen kombinerar vi aktuell forskning med praktiska övningar och gruppdiskussioner. Chefer och skyddsombud får med sig konkreta verktyg de kan använda direkt, inte en tjock pärm som ställs i hyllan.</p>
+      <p>Vi arbetar med organisationer i hela Västerbotten och Norrland, och håller utbildningar hos er, i egna lokaler i Umeå eller på distans. Flexibiliteten är en självklarhet, inte ett tillägg.</p>
+    </section>
+    <section>
+      <p class="faq-label">Vanliga frågor</p>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Vad ingår i en Excel-utbildning hos er?</summary>
+          <p class="faq-answer">Vår Excel-utbildning anpassas efter er verksamhet och er personals förkunskaper. Vi går igenom de funktioner och arbetsflöden som faktiskt används i er vardag, allt från grunderna till avancerade formler, pivottabeller och dataanalys. Utbildningen hålls i Umeå eller på distans.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Vad är BAM-utbildning och vem behöver den?</summary>
+          <p class="faq-answer">BAM står för Bättre Arbetsmiljö och är en grundläggande utbildning i systematiskt arbetsmiljöarbete. Den riktar sig till chefer och skyddsombud och ger de verktyg som krävs för att arbeta förebyggande med arbetsmiljöfrågor. Kursen uppfyller Arbetsmiljöverkets krav.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hur skiljer sig er ledarskapsutbildning från andra?</summary>
+          <p class="faq-answer">Vår ledarskapsutbildning bygger på psykologisk kunskap och evidensbaserade metoder. Vi fokuserar på verkliga utmaningar i ledarrollen: kommunikation, feedback, gruppdynamik och psykologisk trygghet. Ingen teori för sin egen skull, utan ett praktiskt ledarskap som fungerar i vardagen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kan ni komma till oss, eller hålls utbildningarna på en fast plats?</summary>
+          <p class="faq-answer">Vi håller utbildningar hos er på er arbetsplats, i egna lokaler i Umeå eller på distans via digitala verktyg. Vi anpassar formen efter vad som passar er bäst.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hur bokar vi en utbildning?</summary>
+          <p class="faq-answer">Enklast är att höra av sig via kontaktformuläret eller e-post. Vi tar en dialog om era behov och sätter ihop ett upplägg anpassat efter er verksamhet. Det kostar ingenting att fråga.</p>
+        </details>
+      </div>
+    </section>
       <div class="footer-left">© 2024 <span>Centrum för Organisationsutveckling</span></div>
       <div class="footer-right"><span id="footer-email"></span></div>
     </footer>

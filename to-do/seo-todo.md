@@ -17,6 +17,11 @@
 - [x] Landningssida: excel-utbildning-umea.html
 - [x] Landningssida: bam-utbildning-umea.html
 - [x] Landningssida: ledarskapsutbildning-umea.html
+- [x] Breadcrumb-schema tillagt på artikelsidor (_layouts/artikel.html)
+- [x] FAQ-sektion tillagd på startsidan (HTML + FAQPage JSON-LD)
+- [x] Mer text på startsidan – ökat från 446 till ~700 synliga ord
+- [x] Fix: alla interna logo-länkar ändrade från index.html till / (åtgärdar "Alternativ sida med korrekt kanonisk tagg" i Search Console)
+- [x] Fix: boka-utbildning-umea.html borttagen från sitemap.xml (filen existerar inte)
 
 ---
 
@@ -25,14 +30,13 @@
 - [ ] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
 - [ ] Komprimera bilder (logo.png, og-image.png) – använd squoosh.app
 - [ ] Konvertera bilder till WebP-format om möjligt
-- [ ] Lägg till breadcrumb-schema på artikelsidor (Claude fixar)
+- [ ] Efter publicering: verifiera åtgärder i Search Console (klicka "Verifiera att åtgärder vidtagits")
 
 ---
 
 ## Att göra – innehåll (störst SEO-effekt)
 
-- [ ] Lägg till FAQ-sektion på startsidan (Claude fixar)
-- [ ] Lägg till mer text på startsidan – just nu 446 ord, mål 700–1200 (Claude fixar)
+- [ ] Ny artikel: 10 Excel-funktioner som sparar tid (utkast finns i _posts/)
 
 ---
 
