@@ -21,7 +21,7 @@
 - [x] FAQ-sektion tillagd på startsidan (HTML + FAQPage JSON-LD)
 - [x] Mer text på startsidan – ökat från 446 till ~700 synliga ord
 - [x] Fix: alla interna logo-länkar ändrade från index.html till / (åtgärdar "Alternativ sida med korrekt kanonisk tagg" i Search Console)
-- [x] Fix: boka-utbildning-umea.html borttagen från sitemap.xml (filen existerar inte)
+- [x] Fix: boka-utbildning-umea.html borttagen från sitemap.xml (filen existerar inte – men finns fortfarande live, se manuella åtgärder)
 
 ---
 
@@ -99,3 +99,29 @@
 - **1–3 månader** – börjar indexeras ordentligt
 - **3–6 månader** – börjar ranka lokalt
 - **6–12 månader** – kan börja vinna lokala sökningar
+
+---
+
+## Manuella åtgärder (kan inte fixas i kod)
+
+- [ ] **boka-utbildning-umea.html** finns live på GitHub men inte i zipen. Öppna filen i GitHub och kontrollera vad canonical pekar på. Om sidan inte ska indexeras: ta bort filen. Om den ska indexeras: ge den canonical som pekar på sig själv.
+- [ ] Klicka "Verifiera att åtgärder vidtagits" i Search Console efter nästa push
+
+---
+
+## Design-förbättringar (från extern granskning)
+
+- [x] A: Sidebar-gap ökad (2em → 3rem), logo och nav tydligt separerade
+- [x] B: H1 hero-rubrik begränsad till max-width: 680px
+- [x] C: Perfect-fourth typskala tillagd som CSS-variabler (--text-xs till --text-4xl), h2/h3 använder skalan
+- [x] E: Knapphierarki – primary större padding, outline lite mindre + font-size
+- [x] F: Stat-kort på Excel-sidan: align-items:stretch, justify-content:flex-start
+- [x] G: Body-text begränsad till max-width: 68ch på Excel, BAM och ledarskaps-sidor
+- [x] H: Footer fått background-color: #fafafa och padding-bottom
+- [x] I: Logotyp-text (.site-title) minskad till 0.75rem, uppercase, letter-spacing 0.07em
+- [x] J: Active nav-länk använder --color-active-nav (#3d6cf5) istället för samma blå som CTA
+
+### Kvarstår (kräver ditt beslut)
+- [ ] D: Illustrationen på startsidan (logo.png i intro-sektionen) kritiserades som "clipart".
+      Om bilden är professionell nog: behåll. Om inte: ersätt med ett typografiskt stat-block
+      eller ett riktigt foto från en utbildning.
