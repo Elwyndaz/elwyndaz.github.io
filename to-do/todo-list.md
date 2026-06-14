@@ -22,6 +22,9 @@
 - [x] Mer text på startsidan – ökat från 446 till ~700 synliga ord
 - [x] Fix: alla interna logo-länkar ändrade från index.html till / (åtgärdar "Alternativ sida med korrekt kanonisk tagg" i Search Console)
 - [x] Fix: boka-utbildning-umea.html borttagen från sitemap.xml (filen existerar inte – men finns fortfarande live, se manuella åtgärder)
+- [x] Fix: Knapparna "Boka utbildning" / "Våra utbildningar" på startsidan – la till `align-items:center` på `.hero-actions` så outline-knappen inte sträcktes till samma höjd som primary-knappen
+- [x] Fix: Saknad `<footer>`-tagg på startsidan – `index.html` hade en `</footer>` utan motsvarande `<footer class="site-footer">`. Det gjorde att footerns ram, gråa bakgrund och layout (vänster/höger-uppdelning) inte syntes på startsidan, till skillnad från alla andra sidor
+- [x] Fix: sitemap.xml – `/artiklar.html` ändrat till `/artiklar/` (matchar `permalink: /artiklar/` i artiklar.html – `/artiklar.html` hade gett 404 i Search Console)
 
 ---
 
@@ -35,16 +38,23 @@
 
 ---
 
+## Att verifiera (nya fynd från senaste genomgången – jag kunde inte kolla live-sajten, den är för ny för att vara sökindexerad)
+
+- [ ] **WebP-bilder på startsidan**: `index.html` laddar `logo.webp`, `excel-utbildning-umea.webp`, `utvarderingar-umea.webp` och `boka-utbildning-umea.webp`. Men den tidigare "Klart"-punkten om namnbyte talar om `.png`-filer. Kolla i GitHub-repot att `.webp`-versionerna verkligen ligger i roten. Om de saknas visas trasiga bilder på hela startsidan – då måste vi antingen konvertera bilderna till `.webp`, eller ändra `<img src>` tillbaka till `.png` tills de är konverterade.
+- [ ] **URL för Excel-artikeln**: sitemap.xml pekar på `https://orgutveckling.se/excel-funktioner-som-sparar-tid.html`. `_config.yml` saknar dock en `permalink`-rad, vilket gör att Jekylls standardformat normalt lägger inlägg under `/ÅÅÅÅ/MM/DD/...`, dvs `https://orgutveckling.se/2025/05/23/excel-funktioner-som-sparar-tid.html`. Testa att öppna båda – vilken visar artikeln? Om det är datum-varianten behöver sitemap.xml-raden uppdateras.
+- [ ] **boka-utbildning-umea.html**: kvarstår som manuell åtgärd längre ner, kunde inte verifieras denna gång.
+
+---
+
 ## Att göra – innehåll (störst SEO-effekt)
 
-- [ ] Ny artikel: 10 Excel-funktioner som sparar tid (utkast finns i _posts/)
+- [ ] **"10 Excel-funktioner som sparar tid"**: denna punkt verkar redan vara klar, bara under ett annat namn – `_posts/2025-05-23-excel-funktioner-som-sparar-tid.md` ("5 Excel-funktioner som sparar tid varje dag") finns redan och är med i sitemap.xml. Förslag: bocka av denna som klar. Om du ändå vill ha en till artikel med fler/andra Excel-funktioner går det bra, men då bör den ha en annan vinkel så den inte konkurrerar med den befintliga artikeln i sökresultat.
 
 ---
 
 ## Att göra – artiklar (1 per vecka)
 
 ### Excel
-- [ ] 10 Excel-funktioner som sparar tid
 - [ ] Vanliga Excel-misstag på arbetsplatser
 - [ ] Så lär du dig pivottabeller snabbt
 - [ ] Excel för ekonomer
