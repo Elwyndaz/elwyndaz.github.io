@@ -36,7 +36,7 @@ ul{list-style:none}
 .hero{padding-top:clamp(4rem,10vw,10rem)}
 .hero-eyebrow{font-size:var(--fs-body);font-weight:400;color:var(--secondary);margin-bottom:.75em;opacity:0;animation:fadeUp .6s ease .1s forwards}
 .hero-headline{font-size:var(--fs-hero);font-weight:800;line-height:var(--lh-heading);letter-spacing:var(--ls-heading);margin-bottom:1.25em;max-width:680px;opacity:0;animation:fadeUp .6s ease .2s forwards}
-.hero-actions{display:flex;gap:1em;flex-wrap:wrap;opacity:0;animation:fadeUp .6s ease .35s forwards}
+.hero-actions{display:flex;align-items:center;gap:1em;flex-wrap:wrap;opacity:0;animation:fadeUp .6s ease .35s forwards}
 .btn{display:inline-block;border-radius:var(--radius-btn);font-size:var(--fs-body);font-weight:600;text-decoration:none;cursor:pointer;transition:transform var(--t),box-shadow var(--t),background var(--t),color var(--t);letter-spacing:.01em;font-family:var(--font)}
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:var(--primary);color:#fff;padding:.8em 1.8em;border:2px solid var(--primary)}
@@ -275,6 +275,8 @@ ul{list-style:none}
         </details>
       </div>
     </section>
+
+    <footer class="site-footer">
       <div class="footer-left">© 2024 <span>Centrum för Organisationsutveckling</span></div>
       <div class="footer-right"><span id="footer-email"></span></div>
     </footer>
