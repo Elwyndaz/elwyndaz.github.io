@@ -1,7 +1,7 @@
 ---
 layout: artikel
 title: "5 Excel-funktioner som sparar tid varje dag"
-date: 2025-05-23
+date: 2026-01-26
 description: "Lär dig fem funktioner i Excel som de flesta inte känner till – men som gör stor skillnad i vardagen."
 kategori: Excel
 ingress: "De flesta använder bara en bråkdel av vad Excel kan göra. Här är fem funktioner som gör stor skillnad i vardagen – oavsett om du är nybörjare eller van användare."
