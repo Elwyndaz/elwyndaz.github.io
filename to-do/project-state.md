@@ -66,6 +66,11 @@
   (fanns en `</footer>` utan öppnande tagg → footerns styling syntes inte)
 - **2026-06-14**: Rättade sitemap.xml: `/artiklar.html` → `/artiklar/` (matchar
   `permalink` i artiklar.html, annars 404 i Search Console)
+- **2026-06-14**: Tog bort footerns grå bakgrundsruta (`background-color:#fafafa`
+  i `.site-footer`) på alla sidor – den kunde aldrig sträcka sig under sidofältet
+  p.g.a. CSS-grid-layouten och såg därför ut som ett löst, felplacerat kort.
+  Behöll avdelarlinjen ovanför (`border-top`). Gjort på samtliga statiska sidor
+  samt `_layouts/artikel.html`
 
 ---
 
