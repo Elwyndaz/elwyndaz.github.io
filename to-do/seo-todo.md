@@ -25,6 +25,7 @@
 - [x] Fix: Knapparna "Boka utbildning" / "Våra utbildningar" på startsidan – la till `align-items:center` på `.hero-actions` så outline-knappen inte sträcktes till samma höjd som primary-knappen
 - [x] Fix: Saknad `<footer>`-tagg på startsidan – `index.html` hade en `</footer>` utan motsvarande `<footer class="site-footer">`. Det gjorde att footerns ram, gråa bakgrund och layout (vänster/höger-uppdelning) inte syntes på startsidan, till skillnad från alla andra sidor
 - [x] Fix: sitemap.xml – `/artiklar.html` ändrat till `/artiklar/` (matchar `permalink: /artiklar/` i artiklar.html – `/artiklar.html` hade gett 404 i Search Console)
+- [x] Fix: footern längst ner på alla sidor – tog bort den grå bakgrundsrutan (`background-color:#fafafa`) som bara täckte textkolumnens bredd och såg ut som ett löst, felplacerat kort eftersom den (på grund av CSS-grid-layouten) aldrig kunde sträcka sig under sidofältet. Behöll den tunna avdelarlinjen ovanför texten. Gjort på samtliga 9 statiska sidor + `_layouts/artikel.html`
 
 ---
 
