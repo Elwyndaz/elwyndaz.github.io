@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/webp" href="COU.webp">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <title>Excel-utbildning Umeå | BAM & Ledarskap</title>
 <meta name="description" content="Centrum för Organisationsutveckling erbjuder Excel-utbildning, BAM och ledarskap i Umeå. Verksamhetsanpassad utbildning med högt deltagaromdöme.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@700&display=swap"></noscript>
 <style>
-:root{--fg:#202021;--bg:#fff;--primary:#105AFE;--color-active-nav:#3d6cf5;--secondary:#635F5A;--tertiary:#E2E2E2;--quaternary:#F3F2F2;--font:'Albert Sans',sans-serif;--outer:clamp(1.25rem,3vw,2.5rem);--sidebar-w:160px;--gap:clamp(2rem,4vw,4rem);--fs-small:.8125rem;--fs-body:1rem;--fs-large:1.25rem;--fs-h5:1.3rem;--fs-hero:clamp(2.2rem,5.5vw,4rem);--ls-body:.01em;--ls-heading:-.02em;--lh-body:1.7;--lh-heading:1.12;--radius-btn:100px;--t:.16s ease;--text-xs:.75rem;--text-sm:.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.333rem;--text-2xl:1.777rem;--text-3xl:2.369rem;--text-4xl:3.157rem}
+:root{--fg:#2A2E37;--bg:#fff;--primary:#3D6B7D;--color-active-nav:#5C8A9C;--secondary:#635F5A;--tertiary:#E2E2E2;--quaternary:#FAF9F6;--font:'Albert Sans',sans-serif;--font-logo:'Space Grotesk',sans-serif;--grafit:#2A2E37;--petrol:#3D6B7D;--lera:#BF8A5C;--papper:#FAF9F6;--outer:clamp(1.25rem,3vw,2.5rem);--sidebar-w:160px;--gap:clamp(2rem,4vw,4rem);--fs-small:.8125rem;--fs-body:1rem;--fs-large:1.25rem;--fs-h5:1.3rem;--fs-hero:clamp(2.2rem,5.5vw,4rem);--ls-body:.01em;--ls-heading:-.02em;--lh-body:1.7;--lh-heading:1.12;--radius-btn:100px;--t:.16s ease;--text-xs:.75rem;--text-sm:.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.333rem;--text-2xl:1.777rem;--text-3xl:2.369rem;--text-4xl:3.157rem}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font);font-size:var(--fs-body);color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:var(--lh-body);letter-spacing:var(--ls-body);overflow-x:hidden}
@@ -31,7 +31,7 @@ ul{list-style:none}
 .sidebar-social{display:flex;gap:1em;align-items:center}
 .sidebar-social a{color:var(--fg);text-decoration:none;opacity:.7;transition:opacity var(--t)}
 .sidebar-social a:hover{opacity:1}
-.sidebar-social svg{width:20px;height:20px;fill:currentColor}
+.sidebar-social svg{width:20px;height:20px;fill:currentColor}.cou-mark{display:inline-grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:3px;flex-shrink:0}.cou-mark i{display:block;background:var(--grafit);border-radius:2px;font-style:normal}.cou-mark i.accent{background:var(--lera)}.site-title{display:flex;flex-direction:column;align-items:flex-start;gap:.6em}.site-title .cou-mark{width:22px;height:22px}.mobile-title{display:flex;align-items:center;gap:.55em}.mobile-title .cou-mark{width:16px;height:16px}
 .content{display:flex;flex-direction:column;gap:clamp(3.5rem,7vw,6rem);max-width:760px}
 .hero{padding-top:clamp(4rem,10vw,10rem)}
 .hero-eyebrow{font-size:var(--fs-body);font-weight:400;color:var(--secondary);margin-bottom:.75em;opacity:0;animation:fadeUp .6s ease .1s forwards}
@@ -40,13 +40,19 @@ ul{list-style:none}
 .btn{display:inline-block;border-radius:var(--radius-btn);font-size:var(--fs-body);font-weight:600;text-decoration:none;cursor:pointer;transition:transform var(--t),box-shadow var(--t),background var(--t),color var(--t);letter-spacing:.01em;font-family:var(--font)}
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:var(--primary);color:#fff;padding:.8em 1.8em;border:2px solid var(--primary)}
-.btn-primary:hover{box-shadow:0 4px 20px rgba(16,90,254,.3)}
+.btn-primary:hover{box-shadow:0 4px 20px rgba(61,107,125,.35)}
 .btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary);padding:.65em 1.4em;font-size:.9375rem}
 .btn-outline:hover{background:var(--primary);color:#fff}
 .intro{display:grid;gap:2rem;opacity:0;animation:fadeUp .7s ease .5s forwards}
-.intro-image{width:100%;min-height:260px;border-radius:8px;background:linear-gradient(135deg,#e8eef8 0%,#cdd8f0 50%,#b8c8e8 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.intro-image{width:100%;min-height:260px;border-radius:8px;background:linear-gradient(135deg,#e8eef8 0%,#cdd8f0 50%,#b8c8e8 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:48px 40px}
 .intro-image::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.04) 0px,rgba(255,255,255,.04) 1px,transparent 1px,transparent 8px)}
 .intro-image-label{font-size:var(--fs-small);color:var(--secondary);position:relative;z-index:1;font-style:italic}
+.hero-mark{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;position:relative;z-index:1;opacity:0;animation:fadeUp .6s ease .15s forwards}
+.hero-mark-icon{width:64px;height:64px;gap:9px}
+.hero-mark-icon i{border-radius:22%}
+.hero-mark-text{font-family:var(--font-logo);font-weight:700;font-size:clamp(1.6rem,4vw,2.75rem);line-height:1.05;letter-spacing:-.02em;color:var(--grafit)}
+.hero-mark-text span{display:block}
+.hero-mark-text .accent-text{color:var(--petrol)}
 .intro-body p+p{margin-top:1em}
 .cards-label{font-size:var(--fs-small);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--secondary);margin-bottom:1.5em}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -189,7 +195,7 @@ ul{list-style:none}
 </head>
 <body>
 <header class="mobile-header">
-  <a href="/" class="mobile-title">Centrum för Organisationsutveckling</a>
+  <a href="/" class="mobile-title"><span class="cou-mark" aria-hidden="true"><i></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i></i></span><span>Centrum för Organisationsutveckling</span></a>
   <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Öppna meny"><span></span><span></span><span></span></button>
 </header>
 <nav class="mobile-nav" id="mobileNav">
@@ -203,7 +209,7 @@ ul{list-style:none}
 <div class="site">
   <aside class="sidebar">
     <div class="sidebar-top">
-      <a href="/" class="site-title">Centrum för<br>Organisations Utveckling</a>
+      <a href="/" class="site-title"><span class="cou-mark" aria-hidden="true"><i></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i></i></span><span>Centrum för<br>Organisations Utveckling</span></a>
       <nav class="sidebar-nav">
         <a href="utbildningar.html">Utbildningar</a>
         <a href="case.html">Utvärderingar</a>
@@ -228,7 +234,7 @@ ul{list-style:none}
       </div>
     </section>
     <section class="intro">
-      <div class="intro-image" style="background:none;"><img src="logo.webp" alt="Centrum för Organisationsutveckling" style="width:100%;height:100%;object-fit:contain;border-radius:8px;"></div>
+      <div class="intro-image" style="background:oklch(0.99 0.004 95);"><div class="hero-mark"><span class="cou-mark hero-mark-icon" aria-hidden="true"><i></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i></i></span><div class="hero-mark-text"><span>Centrum för</span><span class="accent-text">Organisations-</span><span class="accent-text">utveckling</span></div></div></div>
       <div class="intro-body">
         <p>Centrum för Organisationsutveckling erbjuder Excel-utbildning i Umeå, verksamhetsanpassad och med högt betyg från deltagarna. Vi håller även BAM-utbildning (Bättre Arbetsmiljö) och ledarskapsutbildning för organisationer i Umeå och Västerbotten.</p>
         <p>Vi tror på att hållbar förändring och lärande sker inifrån med hjälp av psykologiskt kunnande. Vårt arbete bygger på gedigen erfarenhet, evidensbaserat förhållningssätt och ett genuint engagemang för de människors beteende och de verksamheter vi möter. Vi lyssnar innan vi agerar och anpassar alltid utbildningen utifrån er verksamhet.</p>

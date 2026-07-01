@@ -129,9 +129,10 @@ Alla tre punkter som tidigare stod här ("WebP-bilder på startsidan", "URL för
 - [x] G: Body-text begränsad till max-width: 68ch på Excel, BAM och ledarskaps-sidor
 - [x] H: Footer fått background-color: #fafafa och padding-bottom
 - [x] I: Logotyp-text (.site-title) minskad till 0.75rem, uppercase, letter-spacing 0.07em
-- [x] J: Active nav-länk använder --color-active-nav (#3d6cf5) istället för samma blå som CTA
+- [x] J: Active nav-länk använder --color-active-nav (#3d6cf5 → nu #5C8A9C efter palettbytet 2026-07-01) istället för samma blå som CTA
+- [x] D: **2026-07-01** – löst genom ny logotyp-implementation. `logo.webp`-illustrationen på startsidan ersattes med det nya rutnätsmärket + typografisk wordmark (ren HTML/CSS, se `to-do/project-state.md` för detaljer). Ingen clipart-bild längre.
 
-### Kvarstår (kräver ditt beslut)
-- [ ] D: Illustrationen på startsidan (logo.png i intro-sektionen) kritiserades som "clipart".
-      Om bilden är professionell nog: behåll. Om inte: ersätt med ett typografiskt stat-block
-      eller ett riktigt foto från en utbildning.
+### Ny logotyp – 2026-07-01 (från Claude Design-handoff)
+- [x] Rutnätsmärke (`.cou-mark`) + Space Grotesk-wordmark implementerat i sidofält, mobilheader, favicon (`favicon.svg`) och startsidans hero
+- [x] Fullständigt palettbyte: Grafit/Petrol/Lera/Papper ersätter den gamla blå (#105AFE) överallt – knappar, länkar, aktiv nav, badges
+- [ ] **Kvarstår**: `og-image.png/webp` och `logo.webp` (i `_layouts/artikel.html`s JSON-LD) visar fortfarande gamla loggan – kräver en riktig bildexport (PNG från Claude Design-projektet, eller en miljö med bildgenerering) eftersom rutnätsmärket bara finns som HTML/CSS/SVG, inte som rasterfil

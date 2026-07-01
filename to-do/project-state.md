@@ -87,6 +87,29 @@
     repot – det var aldrig ett problem.
   - Passade även på att byta og:image/twitter:image från `og-image.png` (1.7MB)
     till den redan existerande, oanvända `og-image.webp` (80KB).
+- **2026-07-01**: Implementerade ny logotyp (från Claude Design-handoff, riktning
+  "1c" – rutnätsmärke). Ny färgpalett: Grafit `#2A2E37`, Petrol `#3D6B7D`, Lera
+  `#BF8A5C`, Papper `#FAF9F6`. Genomfört på samtliga 11 sidor:
+  - Nytt 3×3-rutnätsmärke (`.cou-mark`, ren HTML/CSS – ingen bildfil) med 6 grafit-
+    rutor + 3 lera-rutor i diagonal, tillagt i sidofältets logga, mobilheadern och
+    som stor hero-variant i startsidans intro-sektion (ersätter den gamla rasterbilden
+    `logo.webp` där).
+  - Ny favicon: `favicon.svg` (vektor, samma rutnätsmärke på grafit botten) – ersätter
+    `COU.webp`/`COU.png` på alla sidor. `type="image/svg+xml"`.
+  - Space Grotesk tillagd som loggtypsnitt (`--font-logo`), Albert Sans oförändrat
+    som brödtext.
+  - **Fullständigt palettbyte** (användarens val, inte bara logga): `--primary`
+    `#105AFE` → Petrol `#3D6B7D`, `--color-active-nav` `#3d6cf5` → ljusare petrol
+    `#5C8A9C` (medvetet annan nyans än CTA, se arkitekturbeslut nedan), `--fg`
+    `#202021` → Grafit `#2A2E37`, `--quaternary` → Papper `#FAF9F6`. Påverkar alla
+    knappar, länkar, aktiv nav-färg och kategori-badges på alla sidor.
+  - **Ofullständigt / kräver uppföljning**: kan inte generera nya rasterbilder i
+    denna miljö (ingen ImageMagick/cairosvg/Pillow tillgänglig). `og-image.png/webp`
+    (OG-förhandsvisning) och `logo.webp` i Article-JSON-LD (`_layouts/artikel.html`,
+    `publisher.logo.url`) visar fortfarande den GAMLA loggan. Behöver antingen en
+    PNG-export från Claude Design-projektet, eller en bildgenereringsmiljö, för att
+    bli helt klart.
+  - Verifierat i webbläsarpreview (desktop + mobil, sidofält + mobilmeny) innan commit.
 
 ---
 
@@ -106,10 +129,15 @@
 
 ## Nästa steg
 
-1. Skriv nästa artikel i serien (t.ex. nästa BAM-ämne, eller börja på Ledarskap –
+1. **Ny logga – rasterbilder kvarstår**: exportera en PNG av det nya rutnätsmärket
+   (från Claude Design-projektet "Logga för organisationsutveckling", eller be en
+   Claude-session med bildgenerering göra det) och ersätt `og-image.png`/`og-image.webp`
+   samt `logo.webp` (används i `_layouts/artikel.html`s Article-JSON-LD) så hela
+   sajten visar den nya loggan konsekvent, inte bara sidnavigeringen.
+2. Skriv nästa artikel i serien (t.ex. nästa BAM-ämne, eller börja på Ledarskap –
    Patriks val)
-2. Skapa Google Business Profile
-3. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search Console
+3. Skapa Google Business Profile
+4. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search Console
 
 ---
 
@@ -132,6 +160,19 @@ mot live-sajten och åtgärdades 2026-07-01, se changelog ovan.
   mindre knappen till samma höjd som den större, se buggfix 2026-06-14).
 - **Artikelserien**: en artikel i veckan, kategoriserad Excel/BAM/Ledarskap, för att
   bygga långsiktig SEO-auktoritet snarare än snabba resultat.
+- **`--color-active-nav` ≠ `--primary`**: medvetet val sedan tidigare (se buggfix
+  "J" i seo-todo.md) att aktiv nav-länk INTE ska ha exakt samma färg som CTA-knappar,
+  för visuell hierarki. Efter palettbytet 2026-07-01 betyder det: `--primary` =
+  Petrol `#3D6B7D` (mättad, för knappar/länkar), `--color-active-nav` = en ljusare
+  petrol-nyans `#5C8A9C` (för aktiv sidofältslänk). Håll dem åtskilda vid framtida
+  färgändringar.
+- **Loggmärket är ren HTML/CSS, ingen bildfil**: `.cou-mark` (3×3 rutnät, 9 st
+  `<i>`-element, 6 grafit + 3 lera i diagonal) byggdes direkt i CSS istället för en
+  exporterad bild, eftersom det är enkla geometriska former – skalar skarpt i alla
+  storlekar (sidofält, mobilheader, startsidans hero) utan separata bildfiler.
+  Färg/mönster styrs av `--grafit`/`--lera`-variablerna, så ändras palettet ändras
+  loggan automatiskt. `favicon.svg` är samma mönster men som fristående SVG-fil
+  (måste vara en riktig fil för `<link rel="icon">`).
 
 ---
 
