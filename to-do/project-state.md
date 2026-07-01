@@ -103,13 +103,13 @@
     `#5C8A9C` (medvetet annan nyans än CTA, se arkitekturbeslut nedan), `--fg`
     `#202021` → Grafit `#2A2E37`, `--quaternary` → Papper `#FAF9F6`. Påverkar alla
     knappar, länkar, aktiv nav-färg och kategori-badges på alla sidor.
-  - **Ofullständigt / kräver uppföljning**: kan inte generera nya rasterbilder i
-    denna miljö (ingen ImageMagick/cairosvg/Pillow tillgänglig). `og-image.png/webp`
-    (OG-förhandsvisning) och `logo.webp` i Article-JSON-LD (`_layouts/artikel.html`,
-    `publisher.logo.url`) visar fortfarande den GAMLA loggan. Behöver antingen en
-    PNG-export från Claude Design-projektet, eller en bildgenereringsmiljö, för att
-    bli helt klart.
   - Verifierat i webbläsarpreview (desktop + mobil, sidofält + mobilmeny) innan commit.
+- **2026-07-01**: Patrik levererade de rasterbilder som saknades (`og-image.png`,
+  `og-image.webp`, `logo.png`, `logo.webp` – exporterade från Claude Design-projektet).
+  Ersatte de gamla filerna i repot. `og-image.png` gick samtidigt från 1.7MB till
+  30KB. Nu visar OG-förhandsvisning och Article-JSON-LD (`_layouts/artikel.html`)
+  också det nya rutnätsmärket – rebrandet är komplett överallt, inte bara i
+  sidnavigeringen.
 
 ---
 
@@ -129,15 +129,12 @@
 
 ## Nästa steg
 
-1. **Ny logga – rasterbilder kvarstår**: exportera en PNG av det nya rutnätsmärket
-   (från Claude Design-projektet "Logga för organisationsutveckling", eller be en
-   Claude-session med bildgenerering göra det) och ersätt `og-image.png`/`og-image.webp`
-   samt `logo.webp` (används i `_layouts/artikel.html`s Article-JSON-LD) så hela
-   sajten visar den nya loggan konsekvent, inte bara sidnavigeringen.
-2. Skriv nästa artikel i serien (t.ex. nästa BAM-ämne, eller börja på Ledarskap –
+1. Skriv nästa artikel i serien (t.ex. nästa BAM-ämne, eller börja på Ledarskap –
    Patriks val)
-3. Skapa Google Business Profile
-4. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search Console
+2. Skapa Google Business Profile
+3. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search Console
+   (extra viktigt nu efter logga/og-image-bytet – Google/Facebook cachar OG-bilder
+   hårt, kan behöva tvinga omcrawl om delade länkar visar den gamla bilden)
 
 ---
 

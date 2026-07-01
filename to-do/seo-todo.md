@@ -135,4 +135,4 @@ Alla tre punkter som tidigare stod här ("WebP-bilder på startsidan", "URL för
 ### Ny logotyp – 2026-07-01 (från Claude Design-handoff)
 - [x] Rutnätsmärke (`.cou-mark`) + Space Grotesk-wordmark implementerat i sidofält, mobilheader, favicon (`favicon.svg`) och startsidans hero
 - [x] Fullständigt palettbyte: Grafit/Petrol/Lera/Papper ersätter den gamla blå (#105AFE) överallt – knappar, länkar, aktiv nav, badges
-- [ ] **Kvarstår**: `og-image.png/webp` och `logo.webp` (i `_layouts/artikel.html`s JSON-LD) visar fortfarande gamla loggan – kräver en riktig bildexport (PNG från Claude Design-projektet, eller en miljö med bildgenerering) eftersom rutnätsmärket bara finns som HTML/CSS/SVG, inte som rasterfil
+- [x] **Klar 2026-07-01**: `og-image.png/webp` och `logo.png/webp` ersatta med riktiga exporter av det nya rutnätsmärket (levererade av Patrik). `og-image.png` gick från 1.7MB till 30KB på köpet.
