@@ -71,6 +71,22 @@
   p.g.a. CSS-grid-layouten och såg därför ut som ett löst, felplacerat kort.
   Behöll avdelarlinjen ovanför (`border-top`). Gjort på samtliga statiska sidor
   samt `_layouts/artikel.html`
+- **2026-07-01**: Verifierade alla tre öppna punkter under "Kända buggar" mot den
+  live-sajten (den var tidigare för ny för sökindex/åtkomst) och fixade det som
+  faktiskt var trasigt:
+  - Favicon (`COU.png`) gav 404 på alla sidor – bara `COU.webp` finns i repot.
+    Ändrat `<link rel="icon">` till `type="image/webp" href="COU.webp"` överallt.
+  - `logo.png` i Article-JSON-LD (`_layouts/artikel.html`) gav samma problem –
+    ändrat till `logo.webp`.
+  - Sitemap.xml:s artikel-URL:er (`/slug.html`) gav 404 – riktiga URL:er är
+    `/ÅÅÅÅ/MM/DD/slug.html` (Jekylls standardpermalink, eftersom `_config.yml`
+    saknar `permalink`-inställning). Rättat alla 6 poster och lagt till
+    "Konflikthantering för chefer" som helt saknades i sitemap.xml.
+  - `boka-utbildning-umea.html` finns inte längre live (404) – ingen åtgärd behövs.
+  - WebP-bilderna på startsidan (logo/excel/utvärderingar/boka) fanns redan i
+    repot – det var aldrig ett problem.
+  - Passade även på att byta og:image/twitter:image från `og-image.png` (1.7MB)
+    till den redan existerande, oanvända `og-image.webp` (80KB).
 
 ---
 
@@ -92,32 +108,16 @@
 
 1. Skriv nästa artikel i serien (t.ex. nästa BAM-ämne, eller börja på Ledarskap –
    Patriks val)
-2. Verifiera de tre punkterna under "Kända buggar" nedan
-3. Manuell åtgärd: kontrollera/ta bort `boka-utbildning-umea.html` på GitHub
-4. Skapa Google Business Profile
-5. Komprimera bilder och/eller konvertera till WebP (logo.png, og-image.png m.fl.)
-6. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search Console
+2. Skapa Google Business Profile
+3. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search Console
 
 ---
 
 ## Kända buggar / att verifiera
 
-- **WebP vs PNG-bilder på startsidan**: `index.html` laddar `logo.webp`,
-  `excel-utbildning-umea.webp`, `utvarderingar-umea.webp` och `boka-utbildning-umea.webp`.
-  En tidigare to-do-punkt säger att bilderna istället döptes om till `.png`. Om
-  `.webp`-filerna inte finns i repot blir det trasiga bilder på hela startsidan.
-  **Status: ej verifierat** – sajten gick inte att hämta live (för ny för sökindex).
-
-- **Blogginläggens URL/permalink**: `_config.yml` saknar en `permalink`-inställning,
-  vilket gör att Jekylls standard normalt lägger inlägg under `/ÅÅÅÅ/MM/DD/...`.
-  `sitemap.xml` antar istället att URL:en bara är `/slug.html`
-  (t.ex. `/excel-funktioner-som-sparar-tid.html`, `/vanliga-excel-misstag.html`).
-  **Status: ej verifierat** – testa båda varianterna live när sajten är uppdaterad,
-  och justera sitemap.xml om datum-varianten visar sig vara den korrekta.
-
-- **boka-utbildning-umea.html**: finns live på GitHub men ingår inte i de filer
-  Claude har tillgång till. Okänt vad `canonical`-taggen pekar på och om sidan ska
-  finnas kvar. Kräver manuell kontroll direkt i GitHub.
+Inga öppna punkter just nu – de tre som stod här (WebP-bilder på startsidan,
+blogginläggens permalink/sitemap-URL:er, `boka-utbildning-umea.html`) verifierades
+mot live-sajten och åtgärdades 2026-07-01, se changelog ovan.
 
 ---
 
@@ -135,4 +135,4 @@
 
 ---
 
-*Senast uppdaterad: 2026-06-14*
+*Senast uppdaterad: 2026-07-01*

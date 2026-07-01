@@ -26,24 +26,27 @@
 - [x] Fix: Saknad `<footer>`-tagg på startsidan – `index.html` hade en `</footer>` utan motsvarande `<footer class="site-footer">`. Det gjorde att footerns ram, gråa bakgrund och layout (vänster/höger-uppdelning) inte syntes på startsidan, till skillnad från alla andra sidor
 - [x] Fix: sitemap.xml – `/artiklar.html` ändrat till `/artiklar/` (matchar `permalink: /artiklar/` i artiklar.html – `/artiklar.html` hade gett 404 i Search Console)
 - [x] Fix: footern längst ner på alla sidor – tog bort den grå bakgrundsrutan (`background-color:#fafafa`) som bara täckte textkolumnens bredd och såg ut som ett löst, felplacerat kort eftersom den (på grund av CSS-grid-layouten) aldrig kunde sträcka sig under sidofältet. Behöll den tunna avdelarlinjen ovanför texten. Gjort på samtliga 9 statiska sidor + `_layouts/artikel.html`
+- [x] **2026-07-01**: Fix: favicon var trasig på ALLA sidor – `<link rel="icon" href="COU.png">` pekade på en fil som inte finns i repot (bara `COU.webp` finns). Ändrat till `type="image/webp" href="COU.webp"` på samtliga 9 statiska sidor + `artiklar.html` + `_layouts/artikel.html`. Verifierat live: `/COU.png` gav 404.
+- [x] **2026-07-01**: Fix: `publisher.logo.url` i Article-structured-data (`_layouts/artikel.html`) pekade på `logo.png`, som inte finns – bara `logo.webp` finns. Ändrat till `logo.webp`.
+- [x] **2026-07-01**: Fix: og:image/twitter:image pekade på `og-image.png` (1.7MB) på alla sidor. Den redan existerande, mindre `og-image.webp` (80KB) låg oanvänd i repot – bytt alla referenser till den. Löser samtidigt bildkomprimerings-punkten nedan för og-bilden.
+- [x] **2026-07-01**: Fix: sitemap.xml – alla 6 artikel-URL:er pekade på fel format (`/slug.html`). Verifierat live att `_config.yml` saknar `permalink`-inställning så Jekylls standard gäller: `/ÅÅÅÅ/MM/DD/slug.html` (datumet är post-frontmatterns `date:`-fält, inte alltid samma som filnamnet – se `vanliga-excel-misstag.html`, filnamn har 2026-06-29 men frontmatter-datum 2026-06-14, och URL:en följer frontmatter-datumet). Samtidigt tillagd den saknade artikeln "Konflikthantering för chefer" som helt saknades i sitemap.xml.
+- [x] **2026-07-01**: Verifierat live: `boka-utbildning-umea.html` finns INTE (404) – tidigare osäkerhet i to-do var inaktuell, ingen åtgärd behövs längre.
 
 ---
 
 ## Att göra – tekniskt
 
 - [ ] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
-- [ ] Komprimera bilder (logo.png, og-image.png) – använd squoosh.app
-- [ ] Konvertera bilder till WebP-format om möjligt
+- [ ] Komprimera logo.webp om filstorleken är stor (og-image löst, se Klart-listan – bytt till redan komprimerad og-image.webp)
+- [x] Konvertera bilder till WebP-format om möjligt – og-image och favicon klart 2026-07-01, logo.webp fanns redan
 - [x] Meta description på startsidan kortad till 148 tecken (var 177, gräns 160)
 - [ ] Efter publicering: verifiera åtgärder i Search Console (klicka "Verifiera att åtgärder vidtagits")
 
 ---
 
-## Att verifiera (nya fynd från senaste genomgången – jag kunde inte kolla live-sajten, den är för ny för att vara sökindexerad)
+## Att verifiera – KLART, se Klart-listan ovan (2026-07-01)
 
-- [ ] **WebP-bilder på startsidan**: `index.html` laddar `logo.webp`, `excel-utbildning-umea.webp`, `utvarderingar-umea.webp` och `boka-utbildning-umea.webp`. Men den tidigare "Klart"-punkten om namnbyte talar om `.png`-filer. Kolla i GitHub-repot att `.webp`-versionerna verkligen ligger i roten. Om de saknas visas trasiga bilder på hela startsidan – då måste vi antingen konvertera bilderna till `.webp`, eller ändra `<img src>` tillbaka till `.png` tills de är konverterade.
-- [ ] **URL för Excel-artikeln**: sitemap.xml pekar på `https://orgutveckling.se/excel-funktioner-som-sparar-tid.html`. `_config.yml` saknar dock en `permalink`-rad, vilket gör att Jekylls standardformat normalt lägger inlägg under `/ÅÅÅÅ/MM/DD/...`, dvs `https://orgutveckling.se/2025/05/23/excel-funktioner-som-sparar-tid.html`. Testa att öppna båda – vilken visar artikeln? Om det är datum-varianten behöver sitemap.xml-raden uppdateras.
-- [ ] **boka-utbildning-umea.html**: kvarstår som manuell åtgärd längre ner, kunde inte verifieras denna gång.
+Alla tre punkter som tidigare stod här ("WebP-bilder på startsidan", "URL för Excel-artikeln", "boka-utbildning-umea.html") är nu verifierade mot den live-sajten och åtgärdade. Se "Klart ✅"-raderna daterade 2026-07-01 ovan för detaljer.
 
 ---
 
@@ -111,7 +114,7 @@
 
 ## Manuella åtgärder (kan inte fixas i kod)
 
-- [ ] **boka-utbildning-umea.html** finns live på GitHub men inte i zipen. Öppna filen i GitHub och kontrollera vad canonical pekar på. Om sidan inte ska indexeras: ta bort filen. Om den ska indexeras: ge den canonical som pekar på sig själv.
+- [x] **boka-utbildning-umea.html** – verifierat 2026-07-01 via direkt anrop mot live-sajten att filen ger 404, dvs den finns inte längre. Ingen åtgärd behövs.
 - [ ] Klicka "Verifiera att åtgärder vidtagits" i Search Console efter nästa push
 
 ---
