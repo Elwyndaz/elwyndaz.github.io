@@ -118,10 +118,17 @@
     istället för avrundade kvadrater. Ändrat till `border-radius:22%` (samma
     proportion som `favicon.svg` och `.hero-mark-icon`) så det skalar rätt oavsett
     ikonstorlek.
-  - Favicon syntes inte i webbläsarfliken – `favicon.svg` fungerar i Chrome/Firefox/
+  - Favikon syntes inte i webbläsarfliken – `favicon.svg` fungerar i Chrome/Firefox/
     Edge men Safari saknar stöd för SVG-favikoner i vanliga flikar. Lade till
     `<link rel="icon" type="image/png" sizes="512x512" href="logo.png">` som
     fallback (samma logo.png som levererades ovan) före SVG-länken på alla sidor.
+  - Ikonen+ordmärket i sidofältet satt vänsterjusterat (`align-items:flex-start`)
+    istället för centrerat. `.site-title` sträcks (via förälderns default
+    `align-items:stretch`) till hela sidofältets 160px bredd, så vänsterjustering
+    fick loggan att se ut som att den "hängde" i vänsterkanten istället för att
+    vara centrerad ovanför texten. Ändrat till `align-items:center` +
+    `text-align:center`. Nav-länkarna under är fortfarande vänsterjusterade som
+    tidigare (bara loggan centrerades).
 
 ---
 
