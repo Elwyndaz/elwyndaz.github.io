@@ -110,6 +110,18 @@
   30KB. Nu visar OG-förhandsvisning och Article-JSON-LD (`_layouts/artikel.html`)
   också det nya rutnätsmärket – rebrandet är komplett överallt, inte bara i
   sidnavigeringen.
+- **2026-07-01**: Patrik flaggade två buggar i den nya loggan efter att v1.9.0 gått
+  live:
+  - `.cou-mark i`-cellerna hade `border-radius:2px` hårdkodat, men i sidofältet/
+    mobilheadern är varje cell bara ~3–5px (22px resp. 16px-ikon, 3px gap, 3 celler)
+    → 2px blev 38–60% av cellstorleken, dvs cellerna såg ut som runda prickar
+    istället för avrundade kvadrater. Ändrat till `border-radius:22%` (samma
+    proportion som `favicon.svg` och `.hero-mark-icon`) så det skalar rätt oavsett
+    ikonstorlek.
+  - Favicon syntes inte i webbläsarfliken – `favicon.svg` fungerar i Chrome/Firefox/
+    Edge men Safari saknar stöd för SVG-favikoner i vanliga flikar. Lade till
+    `<link rel="icon" type="image/png" sizes="512x512" href="logo.png">` som
+    fallback (samma logo.png som levererades ovan) före SVG-länken på alla sidor.
 
 ---
 
