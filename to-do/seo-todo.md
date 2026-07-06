@@ -40,13 +40,6 @@
 - [ ] Komprimera logo.webp om filstorleken är stor (og-image löst, se Klart-listan – bytt till redan komprimerad og-image.webp)
 - [x] Konvertera bilder till WebP-format om möjligt – og-image och favicon klart 2026-07-01, logo.webp fanns redan
 - [x] Meta description på startsidan kortad till 148 tecken (var 177, gräns 160)
-- [ ] Efter publicering: verifiera åtgärder i Search Console (klicka "Verifiera att åtgärder vidtagits")
-
----
-
-## Att verifiera – KLART, se Klart-listan ovan (2026-07-01)
-
-Alla tre punkter som tidigare stod här ("WebP-bilder på startsidan", "URL för Excel-artikeln", "boka-utbildning-umea.html") är nu verifierade mot den live-sajten och åtgärdade. Se "Klart ✅"-raderna daterade 2026-07-01 ovan för detaljer.
 
 ---
 
@@ -114,7 +107,6 @@ Alla tre punkter som tidigare stod här ("WebP-bilder på startsidan", "URL för
 
 ## Manuella åtgärder (kan inte fixas i kod)
 
-- [x] **boka-utbildning-umea.html** – verifierat 2026-07-01 via direkt anrop mot live-sajten att filen ger 404, dvs den finns inte längre. Ingen åtgärd behövs.
 - [ ] Klicka "Verifiera att åtgärder vidtagits" i Search Console efter nästa push
 
 ---
