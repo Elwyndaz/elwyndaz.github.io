@@ -52,7 +52,7 @@ Alla tre punkter som tidigare stod här ("WebP-bilder på startsidan", "URL för
 
 ## Att göra – innehåll (störst SEO-effekt)
 
-- [ ] **"10 Excel-funktioner som sparar tid"**: denna punkt verkar redan vara klar, bara under ett annat namn – `_posts/2025-05-23-excel-funktioner-som-sparar-tid.md` ("5 Excel-funktioner som sparar tid varje dag") finns redan och är med i sitemap.xml. Förslag: bocka av denna som klar. Om du ändå vill ha en till artikel med fler/andra Excel-funktioner går det bra, men då bör den ha en annan vinkel så den inte konkurrerar med den befintliga artikeln i sökresultat.
+- [x] **"10 Excel-funktioner som sparar tid"**: denna punkt verkar redan vara klar, bara under ett annat namn – `_posts/2025-05-23-excel-funktioner-som-sparar-tid.md` ("5 Excel-funktioner som sparar tid varje dag") finns redan och är med i sitemap.xml. Förslag: bocka av denna som klar. Om du ändå vill ha en till artikel med fler/andra Excel-funktioner går det bra, men då bör den ha en annan vinkel så den inte konkurrerar med den befintliga artikeln i sökresultat.
 
 ---
 
