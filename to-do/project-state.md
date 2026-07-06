@@ -30,7 +30,12 @@
   `bam-utbildning-umea.html`, `ledarskapsutbildning-umea.html`): vanlig HTML,
   **egen `<style>`-block** per sida, ingen delad CSS-fil. Designsystemet
   (färger, typsnitt, mellanrum, knappstilar) är CSS-variabler i `:root{...}`
-  och måste hållas identiskt mellan sidorna för hand.
+  och måste hållas identiskt mellan sidorna för hand. Har ingen Jekyll-
+  frontmatter, så Liquid-taggar (`{{ }}`) fungerar INTE i dem – de statiska
+  sidornas footer-copyright-år (`© 2026`) måste därför bumpas manuellt på
+  alla 10 sidor en gång om året (senast gjort 2026-07-06, tidigare stod det
+  en blandning av 2024/2025). `_layouts/artikel.html` slipper detta – den
+  använder `{{ site.time | date: '%Y' }}` och uppdateras automatiskt.
 - **Blogg** (`/artiklar/`): Jekyll. Inlägg i `_posts/` (`ÅÅÅÅ-MM-DD-slug.md`),
   layout i `_layouts/artikel.html`. `artiklar.html` har `permalink: /artiklar/`
   och loopar över `site.posts` automatiskt – nya inlägg dyker upp utan
