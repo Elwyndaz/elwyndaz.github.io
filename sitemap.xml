@@ -31,6 +31,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://orgutveckling.se/ai/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
     <loc>https://orgutveckling.se/kontakt.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
