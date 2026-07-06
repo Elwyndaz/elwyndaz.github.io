@@ -36,7 +36,7 @@
 
 ## Att göra – tekniskt
 
-- [ ] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
+- [x] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
 - [ ] Komprimera logo.webp om filstorleken är stor (og-image löst, se Klart-listan – bytt till redan komprimerad og-image.webp)
 - [x] Konvertera bilder till WebP-format om möjligt – og-image och favicon klart 2026-07-01, logo.webp fanns redan
 - [x] Meta description på startsidan kortad till 148 tecken (var 177, gräns 160)
