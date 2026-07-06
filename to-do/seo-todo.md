@@ -31,13 +31,13 @@
 - [x] **2026-07-01**: Fix: og:image/twitter:image pekade på `og-image.png` (1.7MB) på alla sidor. Den redan existerande, mindre `og-image.webp` (80KB) låg oanvänd i repot – bytt alla referenser till den. Löser samtidigt bildkomprimerings-punkten nedan för og-bilden.
 - [x] **2026-07-01**: Fix: sitemap.xml – alla 6 artikel-URL:er pekade på fel format (`/slug.html`). Verifierat live att `_config.yml` saknar `permalink`-inställning så Jekylls standard gäller: `/ÅÅÅÅ/MM/DD/slug.html` (datumet är post-frontmatterns `date:`-fält, inte alltid samma som filnamnet – se `vanliga-excel-misstag.html`, filnamn har 2026-06-29 men frontmatter-datum 2026-06-14, och URL:en följer frontmatter-datumet). Samtidigt tillagd den saknade artikeln "Konflikthantering för chefer" som helt saknades i sitemap.xml.
 - [x] **2026-07-01**: Verifierat live: `boka-utbildning-umea.html` finns INTE (404) – tidigare osäkerhet i to-do var inaktuell, ingen åtgärd behövs längre.
+- [x] **2026-07-06**: Verifierat: `logo.webp` är 6 KB – redan minimal, ingen komprimering behövs.
 
 ---
 
 ## Att göra – tekniskt
 
 - [x] Skapa Google Business Profile (går utan bolag, verifieras via vykort)
-- [ ] Komprimera logo.webp om filstorleken är stor (og-image löst, se Klart-listan – bytt till redan komprimerad og-image.webp)
 - [x] Konvertera bilder till WebP-format om möjligt – og-image och favicon klart 2026-07-01, logo.webp fanns redan
 - [x] Meta description på startsidan kortad till 148 tecken (var 177, gräns 160)
 
