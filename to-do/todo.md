@@ -70,6 +70,18 @@
 
 ---
 
+## Kod/struktur (från audit 2026-07-06, ej akut)
+
+- [ ] De tre landningssidorna (bam/excel/ledarskap) är 75–100% duplicerad
+  HTML/CSS utan delad layout, trots att Jekyll redan bygger vid varje push
+  för bloggen. En delad Jekyll-layout skulle döda den manuella synk-skatten
+  (t.ex. copyright-år på 10 filer) – gör när det börjar kännas jobbigt att
+  hålla sidorna i synk, inte innan.
+- [ ] Kolla `lasning.html`-visningsmönstret i Search Console igen om ~4
+  veckor – för litet urval än för att agera på.
+
+---
+
 ## Nyckelord att sikta på
 
 **Primära**: excelutbildning umeå · excel kurs umeå · bam utbildning umeå ·

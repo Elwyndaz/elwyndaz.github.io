@@ -73,14 +73,13 @@
   Papper `#FAF9F6`) genomförd på alla 11 sidor.
 - Tre SEO-landningssidor live (Excel/BAM/ledarskap), medvetet utanför
   huvudnav men länkade kontextuellt.
-- Artikelserie: 6 av ~13 planerade artiklar publicerade (se `todo.md` för
+- Artikelserie: 7 av ~13 planerade artiklar publicerade (se `todo.md` för
   återstående ämnen). Obs: `todo.md` hade tidigare "Konflikthantering för
   chefer" olistad som ogjord trots att den varit live sedan 2026-03-30 —
   rättat 2026-07-06, dubbelkolla mot `_posts/` innan du litar på
   todo-checklistan igen.
 - Inga kända öppna buggar.
-- **Lokalt repo låg 2026-07-06 4 commits före `origin/main`, opushat** – kolla
-  `git status`/`git log` innan du antar att GitHub matchar arbetskatalogen.
+- Repo synkat med `origin/main` (verifierat 2026-07-06).
 - **Google Search Console-data är nu tillgänglig direkt via MCP** (server
   `gsc`, registrerad user-scope 2026-07-06, `uvx mcp-search-console` +
   OAuth). Fråga efter indexerings-/prestandadata istället för att gissa.
