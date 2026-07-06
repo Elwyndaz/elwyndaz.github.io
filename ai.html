@@ -74,6 +74,9 @@ ul{list-style:none}
 .check-btn:hover{border-color:var(--primary)}
 .link-card.done{opacity:.55}
 .link-card.done .check-btn{background:#3D7D51;border-color:#3D7D51;color:#fff}
+.vote-btn{display:flex;align-items:center;gap:.3em;padding:.15em .6em;border-radius:var(--radius-btn);border:1.5px solid var(--tertiary);background:transparent;cursor:pointer;flex-shrink:0;align-self:center;margin-left:.5rem;font-size:.75rem;font-weight:600;color:var(--secondary);transition:all var(--t);font-family:var(--font)}
+.vote-btn:hover{border-color:var(--primary);color:var(--primary)}
+.vote-btn.voted{background:var(--primary);border-color:var(--primary);color:#fff}
 .site-footer{padding-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--tertiary);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5em;font-size:var(--fs-small);color:var(--secondary);margin-top:auto;padding-bottom:1.5rem}
 .footer-left{display:flex;gap:.5em;font-weight:700;color:var(--fg)}
 .footer-left span{font-weight:400;color:var(--secondary)}
@@ -345,9 +348,12 @@ function filterLinks(type, btn) {
   });
 }
 
-// Checkmarks: klickad länk markeras som klar, sparas i localStorage per besökare
+// Checkmarks (localStorage, per besökare) + upvotes (Cloudflare Worker, delas av alla)
+var VOTES_API = 'https://api.orgutveckling.se';
+var voteCounts = {};
 document.querySelectorAll('.link-card').forEach(function(card){
-  var key = 'done:' + card.getAttribute('href');
+  var href = card.getAttribute('href');
+  var key = 'done:' + href;
   var btn = document.createElement('button');
   btn.className = 'check-btn';
   btn.textContent = '✓';
@@ -363,7 +369,39 @@ document.querySelectorAll('.link-card').forEach(function(card){
     card.classList.add('done');
     localStorage.setItem(key, '1');
   });
+
+  var voteKey = 'voted:' + href;
+  var voteBtn = document.createElement('button');
+  voteBtn.className = 'vote-btn' + (localStorage.getItem(voteKey) ? ' voted' : '');
+  voteBtn.setAttribute('aria-label', 'Rösta upp');
+  var count = document.createElement('span');
+  count.textContent = '0';
+  voteBtn.append('▲', count);
+  voteCounts[href] = count;
+  voteBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var dir = localStorage.getItem(voteKey) ? -1 : 1;
+    if (dir === 1) localStorage.setItem(voteKey, '1');
+    else localStorage.removeItem(voteKey);
+    voteBtn.classList.toggle('voted', dir === 1);
+    count.textContent = Math.max(0, Number(count.textContent) + dir);
+    fetch(VOTES_API + '/vote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: href, dir: dir })
+    }).then(function(r){ return r.json(); })
+      .then(function(d){ count.textContent = d.votes; });
+  });
+
+  card.appendChild(voteBtn);
   card.appendChild(btn);
+});
+
+fetch(VOTES_API + '/votes').then(function(r){ return r.json(); }).then(function(all){
+  Object.keys(voteCounts).forEach(function(href){
+    if (all[href]) voteCounts[href].textContent = all[href];
+  });
 });
 
 var u='kontakt';var d='orgutveckling.se';
