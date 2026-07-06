@@ -11,7 +11,11 @@
 
 - **Vad**: Webbplats för Centrum för Organisations-Utveckling (COU) i Umeå.
   Excel-utbildning, BAM-utbildning (Bättre Arbetsmiljö), ledarskapsutbildning.
-- **Hosting**: GitHub Pages, domän `orgutveckling.se` (se `CNAME`).
+- **Hosting**: GitHub Pages, domän `orgutveckling.se` (se `CNAME`). Domänen
+  är registrerad hos **Strato.se**, DNS/proxy sköts av **Cloudflare**
+  (troligen för att kunna peka root-domänen mot GitHub Pages – vanlig CNAME
+  går inte på apex-domäner, Cloudflare löser det + ger gratis CDN/SSL på
+  köpet). Cloudflare-kontot ligger utanför repot, ingen insyn härifrån.
 - **Publicering**: manuell uppladdning via GitHub-webbgränssnittet, inget
   byggsteg för de statiska sidorna. Jekyll körs automatiskt av GitHub Pages
   för bloggdelen.

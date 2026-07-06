@@ -10,7 +10,7 @@
 - Grundläggande teknisk SEO: meta-taggar, robots, sitemap, Search Console,
   structured data (LocalBusiness, FAQPage, Course, Review, Breadcrumb)
 - Tre SEO-landningssidor (Excel/BAM/ledarskap), Jekyll-blogg uppsatt,
-  6 artiklar publicerade (2 Excel, 2 BAM, 2 Ledarskap)
+  7 artiklar publicerade (2 Excel, 3 BAM, 2 Ledarskap)
 - Google Business Profile skapad
 - Bildnamn/format städade (WebP, ASCII-namn), og-image komprimerad
   1.7MB → 30KB
@@ -32,10 +32,7 @@
 - [ ] Excelkurs för nybörjare i Umeå
 
 ### BAM / arbetsmiljö
-- [ ] Är BAM obligatoriskt? *("BAM och SAM" nämner redan kort att BAM inte i
-  sig är ett lagkrav – denna artikel bör gå djupare: kollektivavtal,
-  branschspecifika krav, eller vad som händer vid en arbetsmiljöinspektion
-  utan utbildad personal)*
+- [x] Är BAM obligatoriskt? (publicerad 2026-07-06)
 - [ ] Psykologisk arbetsmiljö på moderna arbetsplatser
 
 ### Ledarskap
@@ -48,16 +45,28 @@
 
 ## Att göra – backlinks och lokal auktoritet
 
-- [ ] Registrera i lokala företagsregister i Umeå
-- [ ] Kontakta samarbetspartners om länkutbyte
-- [ ] Skriv gästinlägg på relevanta sajter (arbetsmiljö, HR, Excel)
+> Obs: detta är ett fritidsprojekt vid sidan av heltidsplugg, ingen
+> registrerad firma – betalning löses via Frilans Finans om/när en kund
+> dyker upp. Håll backlink-arbetet gratis och lågtröskel, hoppa över sånt
+> som kräver medlemsavgift eller ett registrerat företag.
+
 - [ ] Dela artiklar på LinkedIn löpande
+- [ ] Nämn sajten i relevanta gratis Umeå-forum/Facebook-grupper för
+  småföretag/frilans, om tillfälle uppstår naturligt
+- ~~hitta.se/eniro.se~~ – testat 2026-07-06, går inte: de har ingen
+  "lägg till företag"-funktion, bara "verifiera ditt företag" mot en
+  befintlig post från Bolagsverket/SCB. Utan registrerad enskild firma
+  finns ingen post att claima – hårt stopp, inte värt att felsöka mer
+- ~~Handelskammare/Företagarna-medlemskap~~ – kostar pengar, fel skala för
+  detta projekt just nu
+- ~~utbildning.se/studier.se~~ – kräver sannolikt etablerat
+  utbildningsföretag, pausad
 
 ---
 
 ## Manuella åtgärder (kan inte fixas i kod)
 
-- [ ] Klicka "Verifiera att åtgärder vidtagits" i Search Console efter nästa push
+- [x] Klicka "Verifiera att åtgärder vidtagits" i Search Console efter nästa push (klart 2026-07-06)
 
 ---
 
