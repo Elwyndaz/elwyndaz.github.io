@@ -25,6 +25,11 @@
 
 ## Arkitektur – så hänger det ihop
 
+- **`cv.html`**: Patriks personliga CV, riktat mot en PTP-ansökan (AO-psykologi,
+  Rova & Sjögren). Medvetet UTANFÖR sajtens vanliga arkitektur: ingen
+  nav-länk, `robots: noindex, nofollow`, inte med i `sitemap.xml`. Ska INTE
+  synkas in i nav/sitemap eller räknas med i de statiska sidornas
+  copyright-årsbump nedan – den delar bara CSS-mallen, inte livscykeln.
 - **Statiska sidor** (`index.html`, `utbildningar.html`, `case.html`,
   `kontakt.html`, `lasning.html`, `lanktips.html`, `excel-utbildning-umea.html`,
   `bam-utbildning-umea.html`, `ledarskapsutbildning-umea.html`): vanlig HTML,
