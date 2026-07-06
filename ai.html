@@ -70,6 +70,10 @@ ul{list-style:none}
 .link-card-area{display:inline-block;font-size:.75rem;font-weight:600;color:var(--primary);background:#E6EEF0;border-radius:100px;padding:.15em .65em;margin-top:.25em;letter-spacing:.02em}
 .link-card-arrow{margin-left:auto;color:var(--tertiary);font-size:.9rem;transition:color var(--t),transform var(--t);flex-shrink:0;align-self:center;padding-left:.5rem}
 .link-card:hover .link-card-arrow{color:var(--primary);transform:translateX(3px)}
+.check-btn{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--tertiary);background:transparent;cursor:pointer;flex-shrink:0;align-self:center;margin-left:.5rem;display:flex;align-items:center;justify-content:center;font-size:.7rem;line-height:1;color:transparent;transition:all var(--t);padding:0;font-family:var(--font)}
+.check-btn:hover{border-color:var(--primary)}
+.link-card.done{opacity:.55}
+.link-card.done .check-btn{background:#3D7D51;border-color:#3D7D51;color:#fff}
 .site-footer{padding-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--tertiary);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5em;font-size:var(--fs-small);color:var(--secondary);margin-top:auto;padding-bottom:1.5rem}
 .footer-left{display:flex;gap:.5em;font-weight:700;color:var(--fg)}
 .footer-left span{font-weight:400;color:var(--secondary)}
@@ -340,6 +344,27 @@ function filterLinks(type, btn) {
     }
   });
 }
+
+// Checkmarks: klickad länk markeras som klar, sparas i localStorage per besökare
+document.querySelectorAll('.link-card').forEach(function(card){
+  var key = 'done:' + card.getAttribute('href');
+  var btn = document.createElement('button');
+  btn.className = 'check-btn';
+  btn.textContent = '✓';
+  btn.setAttribute('aria-label', 'Markera som klar');
+  if (localStorage.getItem(key)) card.classList.add('done');
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    if (card.classList.toggle('done')) localStorage.setItem(key, '1');
+    else localStorage.removeItem(key);
+  });
+  card.addEventListener('click', function(){
+    card.classList.add('done');
+    localStorage.setItem(key, '1');
+  });
+  card.appendChild(btn);
+});
 
 var u='kontakt';var d='orgutveckling.se';
 var el=document.getElementById('footer-email');
