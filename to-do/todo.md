@@ -1,5 +1,7 @@
 # To-do – orgutveckling.se
 
+> Tvärprojekt-prio: se `../../master-backlog.md`, uppdatera båda vid ändring.
+
 > Planerat och pågående arbete. Arkitektur och nuläge: se `to-do/project-state.md`.
 > Detaljerad historik över gjorda fixar: `git log`, inte här.
 
