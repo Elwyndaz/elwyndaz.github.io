@@ -57,6 +57,14 @@ Excel. Se `BACKLOG.md` under "SEO-läget" för hela underlaget.
 Tidigare: teknisk SEO, tre landningssidor, Jekyll-blogg, Google Business Profile,
 WebP-bilder med ASCII-namn.
 
+## Deploy
+
+Pushad till `main` 2026-08-13 som commit `13941b5`. GitHub Pages byggde utan fel
+på 73 sekunder. Verifierat i produktion: samtliga sjutton URL:er svarar 200,
+den gamla artikel-URL:en vidarebefordrar med canonical och robots `noindex,
+follow`, designunderlaget svarar 404 (alltså korrekt exkluderat), och den nya
+designen ligger live.
+
 ## Verification
 
 - Alla tolv sidor kontrollerade i webbläsare på 1440 px och 390 px.
