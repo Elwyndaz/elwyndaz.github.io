@@ -79,7 +79,18 @@ skriva. Inget av det blockerar att sajten går live.
 - [ ] **Citat från BAM och ledarskap.** Alla elva utvärderingar är från
   Excel-utbildningar. Designunderlaget visar citat märkta "Skyddsombud, BAM" och
   "Enhetschef, Ledarskap" — de finns inte, så de är utelämnade. Samla in när du
-  hållit de kurserna.
+  hållit de kurserna. **Prioritera ledarskap**: det är enda området med mätbar
+  sökefterfrågan, och det har noll omdömen att visa.
+- [ ] **Leta rätt på utvärderingen från den tredje Excel-utbildningen.** Patrik
+  har hållit tre Excel-kurser: två små grupper (de som ligger på `case.html` med
+  sex respektive fem svar) och en med 15–20 deltagare. Den sista saknar
+  utvärdering på sajten och kanske är sparad någon annanstans. Den vore värdefull
+  av två skäl: den visar att ni klarar stora grupper, och den skulle mer än
+  fördubbla underlaget bakom betyget 4,8.
+- [ ] **Kontrollera att kursnamnet "Excel för administratörer" sitter på rätt
+  kurs.** Det sattes 2026-08-13 på kurs 02, alltså den lilla gruppen med fem
+  svar. Under samtalet visade det sig att namnet möjligen hör till 15–20-kursen i
+  stället. Står på tre ställen: `case.html`, startsidan och Excel-sidan.
 
 **Teknik**
 
