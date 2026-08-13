@@ -1,138 +1,130 @@
 # Projektstatus – orgutveckling.se
 
 > **Syfte med denna fil**: snabb kontext för en ny/framtida Claude-session.
-> Läs denna + `to-do/todo.md` (planerat arbete) tillsammans. Detaljerad historik
-> över enskilda fixar: `git log`, inte här – den här filen beskriver nuläget,
-> inte en logg över hur vi kom dit.
+> Läs denna + `CONTEXT.md` (arkitektur och regler) + `BACKLOG.md` (planerat
+> arbete) tillsammans. Detaljerad historik över enskilda fixar: `git log`, inte
+> här – den här filen beskriver nuläget, inte hur vi kom hit.
 
 ---
 
 ## Om projektet
 
 - **Vad**: Webbplats för Centrum för Organisations-Utveckling (COU) i Umeå.
-  Excel-utbildning, BAM-utbildning (Bättre Arbetsmiljö), ledarskapsutbildning.
+  Excel-utbildning, BAM-utbildning (Bättre Arbetsmiljö), ledarskapsutbildning
+  och organisationsutveckling.
 - **Hosting**: GitHub Pages, domän `orgutveckling.se` (se `CNAME`). Domänen
-  är registrerad hos **Strato.se**, DNS/proxy sköts av **Cloudflare**
-  (troligen för att kunna peka root-domänen mot GitHub Pages – vanlig CNAME
-  går inte på apex-domäner, Cloudflare löser det + ger gratis CDN/SSL på
-  köpet). Cloudflare-kontot ligger utanför repot, ingen insyn härifrån.
-- **Publicering**: manuell uppladdning via GitHub-webbgränssnittet, inget
-  byggsteg för de statiska sidorna. Jekyll körs automatiskt av GitHub Pages
-  för bloggdelen.
+  är registrerad hos **Strato.se**, DNS/proxy sköts av **Cloudflare** (behövs
+  för att peka apex-domänen mot GitHub Pages, och ger gratis CDN och SSL på
+  köpet). Cloudflare-kontot ligger utanför repot.
+- **Publicering**: push till `main`. Jekyll körs automatiskt av GitHub Pages
+  för bloggdelen. De statiska sidorna behöver inget byggsteg.
 - **Kontakt**: kontakt@orgutveckling.se, 072-221 13 37.
 
 ---
 
-## Arkitektur – så hänger det ihop
+## Sidor
 
-- **`cv.html`**: Patriks personliga CV, riktat mot en PTP-ansökan (AO-psykologi,
-  Rova & Sjögren). Medvetet UTANFÖR sajtens vanliga arkitektur: ingen
-  nav-länk, `robots: noindex, nofollow`, inte med i `sitemap.xml`. Ska INTE
-  synkas in i nav/sitemap eller räknas med i de statiska sidornas
-  copyright-årsbump nedan – den delar bara CSS-mallen, inte livscykeln.
-- **Statiska sidor** (`index.html`, `utbildningar.html`, `case.html`,
-  `kontakt.html`, `lasning.html`, `lanktips.html`, `excel-utbildning-umea.html`,
-  `bam-utbildning-umea.html`, `ledarskapsutbildning-umea.html`): vanlig HTML,
-  **egen `<style>`-block** per sida, ingen delad CSS-fil. Designsystemet
-  (färger, typsnitt, mellanrum, knappstilar) är CSS-variabler i `:root{...}`
-  och måste hållas identiskt mellan sidorna för hand. Har ingen Jekyll-
-  frontmatter, så Liquid-taggar (`{{ }}`) fungerar INTE i dem – de statiska
-  sidornas footer-copyright-år (`© 2026`) måste därför bumpas manuellt på
-  alla 10 sidor en gång om året (senast gjort 2026-07-06, tidigare stod det
-  en blandning av 2024/2025). `_layouts/artikel.html` slipper detta – den
-  använder `{{ site.time | date: '%Y' }}` och uppdateras automatiskt.
-- **Blogg** (`/artiklar/`): Jekyll. Inlägg i `_posts/` (`ÅÅÅÅ-MM-DD-slug.md`),
-  layout i `_layouts/artikel.html`. `artiklar.html` har `permalink: /artiklar/`
-  och loopar över `site.posts` automatiskt – nya inlägg dyker upp utan
-  manuella länkar. `_config.yml` saknar egen `permalink`-inställning så
-  Jekylls standard gäller: URL:en blir `/ÅÅÅÅ/MM/DD/slug.html` där datumet är
-  **frontmatterns `date:`-fält**, inte nödvändigtvis filnamnet.
-- **Navigation** (samma ordning på ALLA sidor, sidofält + mobilmeny):
-  Utbildningar → Utvärderingar (`case.html`) → Artiklar → Lästips
-  (`lasning.html`) → Länktips (`lanktips.html`) → Kontakt. Har orsakat buggar
-  förut vid redigering – verifiera ordningen på alla sidor om navigationen
-  ändras.
-- **E-post i HTML**: skrivs aldrig ut i klartext, byggs ihop med JS
-  (`var u='kontakt';var d='orgutveckling.se'`) för att undvika spam-bots.
-- **Bildnamn**: endast ASCII (inga å/ä/ö) – har orsakat renderingsproblem.
-- **Loggan** (`.cou-mark`): ren HTML/CSS (3×3-rutnät, 9 `<i>`-element, 6
-  grafit + 3 lera diagonalt), ingen bildfil – skalar skarpt i sidofält,
-  mobilheader och startsidans hero. `favicon.svg` är samma mönster som
-  fristående SVG (måste vara en riktig fil för `<link rel="icon">`).
-- **sitemap.xml**: underhålls manuellt, måste matcha verkliga URL:er (se
-  Jekyll-permalink-anmärkningen ovan – lätt att få fel).
+| Fil | URL | Roll |
+| --- | --- | --- |
+| `index.html` | `/` | Startsida: hero, bevisremsa, utbildningsregister, mörkt statement, process, citat, kunskap, FAQ, CTA |
+| `utbildningar.html` | `/utbildningar.html` | Register över de fyra programmen |
+| `excel-utbildning-umea.html` | samma | Landningssida, SEO-fras i H1 |
+| `bam-utbildning-umea.html` | samma | Landningssida, plus spalten Regler och underlag |
+| `ledarskapsutbildning-umea.html` | samma | Landningssida |
+| `artiklar.html` | `/artiklar/` | Kunskap: Jekyll-loop över `site.posts` plus vägar till Läslistan och Länktips |
+| `_layouts/artikel.html` | `/ÅÅÅÅ/MM/DD/slug.html` | Artikelmall |
+| `case.html` | `/case.html` | Utvärderingar. Inte i navigationen, men länkad från flera sidor |
+| `om-oss.html` | `/om-oss.html` | Ny sida, byggd runt en person |
+| `kontakt.html` | `/kontakt.html` | Förfrågningsformulär med chips, mailto-baserat |
+| `lasning.html` | `/lasning.html` | Läslistan, 48 titlar |
+| `lanktips.html` | `/lanktips.html` | 19 källor |
+| `tack.html` | `/tack.html` | Tacksida, mörk, `noindex` |
+| `404.html` | `/404.html` | Tre vägar vidare i registerform, `noindex` |
+| `cv.html` | `/cv.html` | **Utanför arkitekturen.** Ingen nav, `noindex, nofollow`, inte i sitemap. Egen CSS och eget e-postskript, riktat till en PTP-handledare. Utskrivbart dokument i en spalt |
+| `2025/05/23/...html` | samma | Vidarebefordran för en gammal artikel-URL som låg indexerad och svarade 404 |
 
 ---
 
-## Nuvarande status (2026-07-06)
+## Nuvarande status (2026-08-12)
 
-- Sajten är live, grundläggande teknisk SEO på plats (meta-taggar, robots,
-  sitemap, Search Console, LocalBusiness/FAQPage/Course/Review/Breadcrumb
-  structured data).
-- Ny logga + färgpalett (Grafit `#2A2E37`, Petrol `#3D6B7D`, Lera `#BF8A5C`,
-  Papper `#FAF9F6`) genomförd på alla 11 sidor.
-- Tre SEO-landningssidor live (Excel/BAM/ledarskap), medvetet utanför
-  huvudnav men länkade kontextuellt.
-- Artikelserie: 7 av ~13 planerade artiklar publicerade (se `todo.md` för
-  återstående ämnen). Obs: `todo.md` hade tidigare "Konflikthantering för
-  chefer" olistad som ogjord trots att den varit live sedan 2026-03-30 —
-  rättat 2026-07-06, dubbelkolla mot `_posts/` innan du litar på
-  todo-checklistan igen.
-- Inga kända öppna buggar.
-- Repo synkat med `origin/main` (verifierat 2026-07-06).
-- **Google Search Console-data är nu tillgänglig direkt via MCP** (server
-  `gsc`, registrerad user-scope 2026-07-06, `uvx mcp-search-console` +
-  OAuth). Fråga efter indexerings-/prestandadata istället för att gissa.
-  Facit 2026-07-06: sajten är indexerad (16 URL:er, 0 fel), men i praktiken
-  osynlig – 60 visningar/0 klick senaste 28 dagarna, se "Nästa steg" för
-  konsekvensen.
+- **Redesignen är genomförd.** Hela sajten är omgjord från kortbaserad layout
+  till registerlayout enligt `HANDOFF-REDESIGN.md`. Paletten är utbytt, den
+  gamla `.cou-mark`-loggan är ersatt av ordmärket `ORG / UTVECKLING`, och
+  navigationen är fyra poster i stället för sex.
+- **Designsystemet ligger i `/style.css`**, sidlogiken i `/site.js`. Båda
+  länkas av samtliga sidor utom `cv.html`.
+- Två nya sidor (`om-oss.html`, `tack.html`) plus `404.html`. `om-oss.html` är
+  tillagd i `sitemap.xml`; tack och 404 är `noindex` och står medvetet utanför.
+- Strukturerad data följer med: `LocalBusiness` och `FAQPage` på startsidan,
+  `Course` + `FAQPage` + `BreadcrumbList` på landningssidorna, `ItemList` på
+  utbildningsöversikten, `Course`/`Review` på `case.html`, `AboutPage`/`Person`
+  på Om oss, `Blog` på Kunskap, `Article` på artiklarna.
+- Verifierat i webbläsare på 1440 px och 390 px: inga brutna interna länkar,
+  exakt ett `<h1>` per sida, ingen horisontell scroll, inga konsolfel,
+  förfrågningsformuläret bygger rätt mailto.
+- **Jekyll går att bygga lokalt sedan 2026-08-13.** Ruby 3.3 och Jekyll 4.4 är
+  installerade, `C:\Ruby33-x64\bin` ligger i user-PATH. Kör
+  `jekyll build --destination _site` före varje push. Bygget är verifierat:
+  `/artiklar/` och alla sju artikel-URL:er genereras, ingen oredigerad Liquid
+  finns kvar och all JSON-LD i hela bygget är giltig.
+- **Designunderlaget exkluderat.** Mappen `Webbanalys och strategi/` låg i
+  reporoten och kopierades av Jekyll rakt in i bygget, alltså hade den
+  publicerats på orgutveckling.se. Nu gitignorerad och listad under `exclude:`
+  i `_config.yml`.
+- **Åtta artiklar publicerade**, senast "Psykologisk trygghet i arbetsgrupper"
+  2026-08-13.
+- **`cv.html` ombyggd 2026-08-13** enligt eget designunderlag. Register med årtal
+  i egen kolumn, print-CSS, ingen navigation. Fortfarande utanför sitemap och
+  index.
+- Google Search Console-data hämtas via MCP-servern `gsc`. Fråga efter data
+  i stället för att gissa. **Facit 2026-08-13:** första klicket någonsin (18 juli,
+  till startsidan, snittposition 4,9), 78 visningar mot 60 föregående period.
+  `ledarskapsutbildning umeå` är den största frågan med 22 visningar på position
+  21,8, medan Excel och BAM ger i princip noll. Slutsatsen att huvudnyckelorden
+  saknar sökvolym gäller alltså inte ledarskap. Fullständig genomgång i
+  `BACKLOG.md` under "SEO-läget".
 
 ---
 
 ## Nästa steg
 
-1. **Backlink-arbete (prio 1, ännu inte påbörjat)** – 2026-07-06: kopplade in
-   Search Console-data (MCP-integration, se nedan) och facit är att sajten
-   är indexerad (16 URL:er, 0 fel) men i praktiken osynlig: 60 visningar/
-   0 klick på 28 dagar, och de tänkta huvudkeyworden ("excel utbildning
-   umeå", "bam utbildning umeå") har nästan ingen sökvolym alls än. Det är
-   en ny-domän-auktoritetsfråga, inte en innehålls- eller teknik-fråga –
-   backlinks är därför den enda åtgärden som är strukturellt säker att
-   hjälpa. Artikelserien (punkt 2) fortsätter parallellt, den kostar bara
-   det vanliga veckopasset.
-2. Skriv nästa artikel i serien (nästa BAM-ämne, eller börja på Ledarskap –
-   Patriks val, se `todo.md`)
-3. Efter nästa push: klicka "Verifiera att åtgärder vidtagits" i Search
-   Console (extra viktigt efter logga/og-image-bytet – Google/Facebook cachar
-   OG-bilder hårt)
-
-**Kuriosa från samma datapull**: `/lasning.html` (lästips) är oväntat sidan
-med flest visningar (36/28 dagar) – men för orelaterade akademiska/
-boktitel-sökningar (t.ex. "roland paulsen", "thomas jordan
-konflikthantering"), inte för kurserna. Provstorleken är för liten för att
-agera på (max 36 visningar), men värt att titta närmare på om mönstret
-håller i sig efter fler veckor.
+1. **Backlink-arbete, prio 1, fortfarande inte påbörjat.** Redesignen ändrar
+   inte grundproblemet: sajten är indexerad men saknar auktoritet, och de tänkta
+   huvudnyckelorden har nästan ingen sökvolym. Backlinks är den enda åtgärd som
+   är strukturellt säker att hjälpa. Se `BACKLOG.md` för vad som redan är
+   testat och avskrivet.
+2. **Efter push**: verifiera att Jekyll-delen byggde, och begär omindexering i
+   Search Console. Alla titlar, meta-beskrivningar och H1 är omskrivna.
+3. **Öppna beslut och saknat innehåll** ligger i `BACKLOG.md` under "Kvar från
+   redesignen": porträttet till Om oss, bokkommentarerna, om Läslistan och
+   Länktips ska slås ihop, och om innehållslistorna 01–05 stämmer.
+4. Skriv nästa artikel i serien, se `BACKLOG.md`.
 
 ---
 
-## Arkitekturbeslut (varför saker är som de är)
+## Fällor att känna till
 
-- **Ingen delad CSS-fil**: håller varje sida fristående för enkel manuell
-  uppladdning utan byggsteg. Pris: designsystem-ändringar måste göras på
-  ALLA berörda sidor för hand.
-- **Knapphierarki**: `.btn-primary` har större padding/font-size än
-  `.btn-outline`, medvetet för visuell hierarki. Flex-containrar som blandar
-  de två knapptyperna behöver `align-items:center` (annars sträcks den
-  mindre knappen till samma höjd som den större).
-- **Artikelserien**: en artikel/vecka, kategoriserad Excel/BAM/Ledarskap, för
-  långsiktig SEO-auktoritet snarare än snabba resultat.
-- **`--color-active-nav` ≠ `--primary`**: aktiv nav-länk ska INTE ha exakt
-  samma färg som CTA-knappar, för visuell hierarki. `--primary` = Petrol
-  `#3D6B7D` (knappar/länkar), `--color-active-nav` = ljusare petrol `#5C8A9C`
-  (aktiv sidofältslänk). Håll åtskilda vid framtida färgändringar.
-- **Loggan är ren HTML/CSS**: skalar i alla storlekar utan separata
-  bildfiler, och följer paletten automatiskt via `--grafit`/`--lera`.
+- **Liquid fungerar inte i de statiska sidorna** – de saknar frontmatter.
+  Copyright-året i footern måste därför bumpas för hand.
+- **Navigationsordningen måste vara identisk på alla sidor.** Den har orsakat
+  buggar förut. Ordningen är Utbildningar, Kunskap, Om oss, Kontakt, plus
+  knappen Begär förslag.
+- **`cv.html` ska aldrig synkas in** i nav, sitemap, palett eller
+  copyright-årsbump.
+- **Sitemap-permalinks**: Jekyll använder frontmatterns `date`, inte filnamnet.
+  Kontrollerat 2026-08-12: alla sju artiklar har `date` som matchar filnamnet.
+- **`.main-nav a` slår `.btn-nav` på specificitet.** Därför heter regeln
+  `.main-nav a.btn-nav` i `style.css`. Sänk den inte, då blir CTA-knappen svart
+  text på svart yta.
+- **Rutnätsceller med skiljelinje behöver padding på båda sidor.** En enda
+  `padding`-regel för alla celler ger 0 i vänsterpadding, så texten hamnar kloss
+  mot linjen från cell 2 och framåt. Gäller `.col-cell`, `.kunskap-card`,
+  `.fact-cell` och `.stat-cell`.
+- **`.eyebrow` måste ha `max-width:none`.** Annars ärver den `p { max-width:68ch }`
+  och bryts på två rader.
+- **Filer i reporoten publiceras.** Allt som inte är gitignorerat eller listat
+  under `exclude:` i `_config.yml` hamnar på den publika sajten.
 
 ---
 
-*Senast uppdaterad: 2026-07-06*
+*Senast uppdaterad: 2026-08-12*

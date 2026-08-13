@@ -4,280 +4,487 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/png" sizes="512x512" href="logo.png"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="512x512" href="/logo.png"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-<title>Boktips Ledarskap & Psykologi | Organisationsutveckling</title>
-<meta name="description" content="Boktips inom organisationspsykologi, ledarskap, beteendevetenskap och förändring, utvalda av Centrum för Organisationsutveckling i Umeå.">
+<title>Läslistan | Böcker om ledarskap, organisation och psykologi</title>
+<meta name="description" content="Böckerna vi återkommer till i utbildningarna: organisationspsykologi, ledarskap, beteendevetenskap och förändring. 48 titlar i fem ämnen.">
+<link rel="canonical" href="https://orgutveckling.se/lasning.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@700&display=swap"></noscript>
-<style>
-:root{--fg:#2A2E37;--bg:#fff;--primary:#3D6B7D;--color-active-nav:#5C8A9C;--secondary:#635F5A;--tertiary:#E2E2E2;--quaternary:#FAF9F6;--font:'Albert Sans',sans-serif;--font-logo:'Space Grotesk',sans-serif;--grafit:#2A2E37;--petrol:#3D6B7D;--lera:#BF8A5C;--papper:#FAF9F6;--outer:clamp(1.25rem,3vw,2.5rem);--sidebar-w:160px;--gap:clamp(2rem,4vw,4rem);--fs-small:.8125rem;--fs-body:1rem;--fs-large:1.25rem;--fs-h5:1.3rem;--fs-hero:clamp(2.2rem,5.5vw,4rem);--ls-body:.01em;--ls-heading:-.02em;--lh-body:1.7;--lh-heading:1.12;--radius-btn:100px;--t:.16s ease;--text-xs:.75rem;--text-sm:.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.333rem;--text-2xl:1.777rem;--text-3xl:2.369rem;--text-4xl:3.157rem}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);font-size:var(--fs-body);color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:var(--lh-body);letter-spacing:var(--ls-body);overflow-x:hidden}
-a{color:inherit;text-underline-offset:.2em}
-ul{list-style:none}
-.site{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh;padding:var(--outer);column-gap:var(--gap);max-width:1280px;margin:0 auto;width:100%}
-.sidebar{position:sticky;top:var(--outer);height:calc(100vh - var(--outer)*2);display:flex;flex-direction:column;justify-content:space-between;align-self:start}
-.sidebar-top{display:flex;flex-direction:column;gap:3rem}
-.site-title{font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;line-height:1.5;text-decoration:none;color:var(--fg);transition:color var(--t)}
-.site-title:hover{color:var(--primary)}
-.sidebar-nav{display:flex;flex-direction:column;gap:.3em}
-.sidebar-nav a{font-size:1rem;font-weight:400;text-decoration:none;color:var(--fg);transition:color var(--t);line-height:1.4}
-.sidebar-nav a:hover{color:var(--primary)}.sidebar-nav a.active{color:var(--color-active-nav);font-weight:600}
-.sidebar-social{display:flex;gap:1em;align-items:center}
-.sidebar-social a{color:var(--fg);text-decoration:none;opacity:.7;transition:opacity var(--t)}
-.sidebar-social a:hover{opacity:1}
-.sidebar-social svg{width:20px;height:20px;fill:currentColor}.cou-mark{display:inline-grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:3px;flex-shrink:0}.cou-mark i{display:block;background:var(--grafit);border-radius:22%;font-style:normal}.cou-mark i.accent{background:var(--lera)}.site-title{display:flex;flex-direction:column;align-items:center;gap:.6em;text-align:center}.site-title .cou-mark{width:22px;height:22px}.mobile-title{display:flex;align-items:center;gap:.55em}.mobile-title .cou-mark{width:16px;height:16px}
-.content{display:flex;flex-direction:column;gap:clamp(3rem,6vw,5rem);max-width:760px}
-.page-header{padding-top:clamp(3rem,8vw,7rem)}
-.page-eyebrow{font-size:var(--fs-body);color:var(--secondary);margin-bottom:.6em;opacity:0;animation:fadeUp .5s ease .1s forwards}
-.page-title{font-size:var(--fs-hero);font-weight:800;line-height:var(--lh-heading);letter-spacing:var(--ls-heading);opacity:0;animation:fadeUp .6s ease .2s forwards}
-.page-intro{margin-top:1.25em;font-size:var(--fs-large);color:var(--secondary);max-width:580px;opacity:0;animation:fadeUp .6s ease .3s forwards}
-.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;opacity:0;animation:fadeUp .5s ease .35s forwards}
-.filter-btn{padding:.4em 1em;border-radius:var(--radius-btn);font-size:var(--fs-small);font-weight:600;border:1.5px solid var(--tertiary);background:transparent;color:var(--secondary);cursor:pointer;transition:all var(--t);font-family:var(--font);letter-spacing:.01em}
-.filter-btn:hover{border-color:var(--primary);color:var(--primary)}
-.filter-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
-.category-section{display:flex;flex-direction:column;gap:1.25rem;opacity:0;animation:fadeUp .6s ease .4s forwards}
-.category-section.hidden{display:none}
-.category-header{display:flex;align-items:baseline;gap:1rem;padding-bottom:.75rem;border-bottom:2px solid var(--primary)}
-.category-title{font-size:1.3rem;font-weight:800;letter-spacing:var(--ls-heading)}
-.category-count{font-size:var(--fs-small);color:var(--secondary);font-weight:500}
-.book-grid{display:flex;flex-direction:column;gap:.5rem}
-.book-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.875rem;padding:.875rem 1rem;background:var(--quaternary);border-radius:8px;transition:background var(--t),border-color var(--t);text-decoration:none;color:var(--fg);border:1.5px solid transparent}
-.book-card:hover{background:#eef3ff;border-color:var(--primary)}
-.book-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.dot-org{background:var(--primary)}
-.dot-beh{background:#7c3aed}
-.dot-team{background:#059669}
-.dot-well{background:#dc2626}
-.dot-misc{background:#6b7280}
-.book-body{display:flex;flex-direction:column;gap:.1em;min-width:0}
-.book-title{font-size:.9rem;font-weight:700;line-height:1.3;letter-spacing:var(--ls-heading)}
-.book-author{font-size:var(--fs-small);color:var(--secondary)}
-.book-arrow{color:var(--tertiary);font-size:.85rem;transition:color var(--t),transform var(--t)}
-.book-card:hover .book-arrow{color:var(--primary);transform:translateX(3px)}
-.book-spine,.book-spine-title,.spine-org,.spine-beh,.spine-team,.spine-well,.spine-misc{display:none}
-.site-footer{padding-top:clamp(2rem,4vw,3.5rem);border-top:1px solid var(--tertiary);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5em;font-size:var(--fs-small);color:var(--secondary);margin-top:auto;padding-bottom:1.5rem}
-.footer-left{display:flex;gap:.5em;font-weight:700;color:var(--fg)}
-.footer-left span{font-weight:400;color:var(--secondary)}
-.footer-right a{color:var(--secondary);text-decoration:none}
-.footer-right a:hover{color:var(--primary)}
-.mobile-header{display:none;justify-content:space-between;align-items:center;padding:1rem var(--outer);border-bottom:1px solid var(--tertiary);position:sticky;top:0;background:var(--bg);z-index:100}
-.mobile-title{font-size:.9rem;font-weight:700;text-decoration:none;color:var(--fg)}
-.mobile-menu-btn{background:none;border:none;cursor:pointer;padding:.25rem;color:var(--fg);display:flex;flex-direction:column;gap:5px}
-.mobile-menu-btn span{display:block;width:22px;height:2px;background:currentColor}
-.mobile-nav{display:none;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--tertiary);padding:1.5rem var(--outer) 2rem;gap:.4em}
-.mobile-nav.open{display:flex}
-.mobile-nav a{font-size:1.4rem;font-weight:400;text-decoration:none;color:var(--fg)}
-.mobile-nav a:hover{color:var(--primary)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:780px){.site{grid-template-columns:1fr;padding:0;gap:0}.sidebar{display:none}.mobile-header{display:flex}.content{padding:var(--outer);max-width:100%;gap:clamp(2rem,5vw,3.5rem)}.page-header{padding-top:2rem}.book-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
-</style>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="/style.css">
 
-<link rel="canonical" href="https://orgutveckling.se/lasning.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Centrum för Organisations-Utveckling">
-<meta property="og:title" content="Boktips inom ledarskap och psykologi">
-<meta property="og:description" content="47 utvalda boktips inom ledarskap, organisationspsykologi, beteendevetenskap och teamutveckling – rekommenderade av COU i Umeå.">
+<meta property="og:title" content="Läslistan: böcker om ledarskap, organisation och psykologi">
+<meta property="og:description" content="Böckerna vi återkommer till i utbildningarna. 48 titlar i fem ämnen.">
 <meta property="og:url" content="https://orgutveckling.se/lasning.html">
 <meta property="og:image" content="https://orgutveckling.se/og-image.webp">
 <meta property="og:locale" content="sv_SE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boktips inom ledarskap och psykologi">
-<meta name="twitter:description" content="47 utvalda boktips inom ledarskap, organisationspsykologi, beteendevetenskap och teamutveckling – rekommenderade av COU i Umeå.">
+<meta name="twitter:title" content="Läslistan: böcker om ledarskap, organisation och psykologi">
+<meta name="twitter:description" content="Böckerna vi återkommer till i utbildningarna. 48 titlar i fem ämnen.">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Boktips – Centrum för Organisations-Utveckling",
-  "description": "47 utvalda boktips inom ledarskap, organisationspsykologi, beteendevetenskap och teamutveckling.",
-  "url": "https://orgutveckling.se/lasning.html",
-  "author": {"@type": "Organization", "name": "Centrum för Organisations-Utveckling", "url": "https://orgutveckling.se"}
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Hem", "item": "https://orgutveckling.se/"},
+    {"@type": "ListItem", "position": 2, "name": "Kunskap", "item": "https://orgutveckling.se/artiklar/"},
+    {"@type": "ListItem", "position": 3, "name": "Läslistan", "item": "https://orgutveckling.se/lasning.html"}
+  ]
 }
 </script>
 </head>
 <body>
 
-<header class="mobile-header">
-  <a href="/" class="mobile-title"><span class="cou-mark" aria-hidden="true"><i></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i></i></span><span>Centrum för Organisationsutveckling</span></a>
-  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Öppna meny"><span></span><span></span><span></span></button>
+<a href="#innehall" class="skip-link">Hoppa till innehållet</a>
+
+<header class="site-header">
+  <a href="/" class="wordmark"><span class="a">ORG</span><span class="slash">/</span><span class="b">UTVECKLING</span></a>
+  <nav class="main-nav" aria-label="Huvudmeny">
+    <a href="/utbildningar.html">Utbildningar</a>
+    <a href="/artiklar/" aria-current="page">Kunskap</a>
+    <a href="/om-oss.html">Om oss</a>
+    <a href="/kontakt.html">Kontakt</a>
+    <a href="/kontakt.html" class="btn-nav">Begär förslag</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
 </header>
-<nav class="mobile-nav" id="mobileNav">
-  <a href="utbildningar.html">Utbildningar</a>
-  <a href="case.html">Utvärderingar</a>
-  <a href="/artiklar">Artiklar</a>
-  <a href="lasning.html">Lästips</a>
-  <a href="lanktips.html">Länktips</a>
-  <a href="kontakt.html">Kontakt</a>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobilmeny">
+  <div class="mobile-nav-top">
+    <a href="/" class="wordmark"><span class="a">ORG</span><span class="slash">/</span><span class="b">UTVECKLING</span></a>
+    <button class="mobile-nav-close" onclick="toggleMenu()" aria-label="Stäng meny">&times;</button>
+  </div>
+  <div class="mobile-nav-list">
+    <a href="/utbildningar.html"><span>01</span>Utbildningar</a>
+    <a href="/artiklar/"><span>02</span>Kunskap</a>
+    <a href="/om-oss.html"><span>03</span>Om oss</a>
+    <a href="/kontakt.html"><span>04</span>Kontakt</a>
+  </div>
+  <a href="/kontakt.html" class="mobile-nav-cta">Begär förslag</a>
 </nav>
 
-<div class="site">
-  <aside class="sidebar">
-    <div class="sidebar-top">
-      <a href="/" class="site-title"><span class="cou-mark" aria-hidden="true"><i></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i class="accent"></i><i></i><i></i></span><span>Centrum för<br>Organisations Utveckling</span></a>
-      <nav class="sidebar-nav">
-        <a href="utbildningar.html">Utbildningar</a>
-        <a href="case.html">Utvärderingar</a>
-        <a href="/artiklar">Artiklar</a>
-        <a href="lasning.html" class="active">Lästips</a>
-        <a href="lanktips.html">Länktips</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </div>
-    <div class="sidebar-social">
-      <a href="https://www.linkedin.com/in/patrik-l%C3%B6fgren/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      <a href="mailto:kontakt@orgutveckling.se" aria-label="E-post"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-    </div>
-  </aside>
+<main id="innehall">
+<div class="wrap">
 
-  <main class="content">
-    <div class="page-header">
-      <p class="page-eyebrow">Inspiration & kunskap</p>
-      <h1 class="page-title">Boktips inom ledarskap och psykologi</h1>
-      <p class="page-intro">Böcker jag läst och rekommenderar inom organisationspsykologi, ledarskap, beteendevetenskap och förändring. Klicka på en bok för att söka efter den.</p>
+  <section class="page-head">
+    <p class="eyebrow"><a href="/artiklar/">Kunskap</a> &middot; Läslistan</p>
+    <h1>Böckerna vi återkommer till</h1>
+    <p class="ingress">Organisationspsykologi, ledarskap, beteendevetenskap och förändring. Listan är läst, inte hopsamlad, och den växer långsamt. Klicka på en titel för att söka efter den.</p>
+  </section>
+
+  <section class="band">
+    <div class="section-head">
+      <h2>Register</h2>
+      <span class="meta">48 titlar &middot; fem ämnen</span>
     </div>
 
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterBooks('all', this)">Alla (47)</button>
-      <button class="filter-btn" onclick="filterBooks('org', this)">Organisation & ledarskap</button>
-      <button class="filter-btn" onclick="filterBooks('beh', this)">Beteende & psykologi</button>
-      <button class="filter-btn" onclick="filterBooks('team', this)">Team & samarbete</button>
-      <button class="filter-btn" onclick="filterBooks('well', this)">Mående & resiliens</button>
-      <button class="filter-btn" onclick="filterBooks('misc', this)">Övrigt</button>
+    <div class="chips" data-filter-set=".book-row" style="margin:22px 0 4px">
+      <button type="button" class="chip active" data-value="all">Alla</button>
+      <button type="button" class="chip" data-value="org">Organisation &amp; ledarskap</button>
+      <button type="button" class="chip" data-value="beh">Beteende &amp; psykologi</button>
+      <button type="button" class="chip" data-value="team">Team &amp; samarbete</button>
+      <button type="button" class="chip" data-value="well">Mående &amp; resiliens</button>
+      <button type="button" class="chip" data-value="misc">Övrigt</button>
     </div>
 
-    <!-- Organisation & ledarskap -->
-    <div class="category-section" data-cat="org">
-      <div class="category-header">
-        <h2 class="category-title">Organisation & ledarskap</h2>
-        <span class="category-count">21 böcker</span>
-      </div>
-      <div class="book-grid">
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Psykologisk+trygghet+Bringselius" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Psykologisk trygghet</p><p class="book-author">Louise Bringselius</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=The+Fearless+Organization+Edmondson" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">The Fearless Organization</p><p class="book-author">Amy C. Edmondson</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Tillitsprincipen+Bringselius" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Tillitsprincipen</p><p class="book-author">Louise Bringselius</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Tillit+och+medledarskap" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Tillit och medledarskap</p><p class="book-author">Gistvall & Rådström</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=En+liten+bok+om+ledarskap+Söderfjäll" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">En liten bok om ledarskap</p><p class="book-author">Stefan Söderfjäll</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=The+7+Habits+Covey" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">The 7 Habits of Highly Effective People</p><p class="book-author">Stephen R. Covey</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Konsulten+Thylefors" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Konsulten</p><p class="book-author">Ingela Thylefors (red.)</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Chefshandledning" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Chefshandledning</p><p class="book-author">Björnsdotter Grill</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Implementeringsboken+Hasson" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Implementeringsboken</p><p class="book-author">Hasson & von Thiele Schwarz</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Vi+bara+lyder+Roland+Paulsen" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Vi bara lyder</p><p class="book-author">Roland Paulsen</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Tänk+om+Roland+Paulsen" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Tänk om</p><p class="book-author">Roland Paulsen</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Engagemang+Per+Grankvist" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Engagemang</p><p class="book-author">Per Grankvist</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Facilitera+Anna+Gullstrand" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Facilitera!</p><p class="book-author">Anna Gullstrand</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Uppskattande+processövningar" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Uppskattande processövningar</p><p class="book-author">Lindén & Halkier Bjerring</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Snacka+om+kommunikation+Fogelberg" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Snacka om kommunikation</p><p class="book-author">Anders Fogelberg</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Konflikthantering+i+arbetslivet+Jordan" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Konflikthantering i arbetslivet</p><p class="book-author">Thomas Jordan</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Helikopterfaktorn+Hedensjö" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Helikopterfaktorn</p><p class="book-author">Björn Hedensjö</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Värsta+bästa+hjälpen+Pagreus" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Värsta bästa hjälpen</p><p class="book-author">Stefan Pagreus</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=How+to+Win+Friends+Carnegie" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">How to Win Friends and Influence People</p><p class="book-author">Dale Carnegie</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Animal+Farm+Orwell" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Animal Farm</p><p class="book-author">George Orwell</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Sälj+dig+själv+Thordén" target="_blank" class="book-card" data-cat="org"><div class="book-dot dot-org"></div><div class="book-body"><p class="book-title">Sälj dig själv och ta betalt!</p><p class="book-author">Ulla-Lisa Thordén</p></div><span class="book-arrow">→</span></a>
-      </div>
+    <div style="margin-top:18px;border-top:1px solid var(--black)">
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Psykologisk+trygghet+Bringselius" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">01</span>
+        <span class="b-title">Psykologisk trygghet</span>
+        <span class="b-meta">Louise Bringselius</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=The+Fearless+Organization+Edmondson" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">02</span>
+        <span class="b-title">The Fearless Organization</span>
+        <span class="b-meta">Amy C. Edmondson</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Tillitsprincipen+Bringselius" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">03</span>
+        <span class="b-title">Tillitsprincipen</span>
+        <span class="b-meta">Louise Bringselius</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Tillit+och+medledarskap" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">04</span>
+        <span class="b-title">Tillit och medledarskap</span>
+        <span class="b-meta">Gistvall &amp; Rådström</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=En+liten+bok+om+ledarskap+Söderfjäll" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">05</span>
+        <span class="b-title">En liten bok om ledarskap</span>
+        <span class="b-meta">Stefan Söderfjäll</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=The+7+Habits+Covey" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">06</span>
+        <span class="b-title">The 7 Habits of Highly Effective People</span>
+        <span class="b-meta">Stephen R. Covey</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Konsulten+Thylefors" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">07</span>
+        <span class="b-title">Konsulten</span>
+        <span class="b-meta">Ingela Thylefors (red.)</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Chefshandledning" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">08</span>
+        <span class="b-title">Chefshandledning</span>
+        <span class="b-meta">Björnsdotter Grill</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Implementeringsboken+Hasson" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">09</span>
+        <span class="b-title">Implementeringsboken</span>
+        <span class="b-meta">Hasson &amp; von Thiele Schwarz</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Vi+bara+lyder+Roland+Paulsen" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">10</span>
+        <span class="b-title">Vi bara lyder</span>
+        <span class="b-meta">Roland Paulsen</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Tänk+om+Roland+Paulsen" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">11</span>
+        <span class="b-title">Tänk om</span>
+        <span class="b-meta">Roland Paulsen</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Engagemang+Per+Grankvist" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">12</span>
+        <span class="b-title">Engagemang</span>
+        <span class="b-meta">Per Grankvist</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Facilitera+Anna+Gullstrand" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">13</span>
+        <span class="b-title">Facilitera!</span>
+        <span class="b-meta">Anna Gullstrand</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Uppskattande+processövningar" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">14</span>
+        <span class="b-title">Uppskattande processövningar</span>
+        <span class="b-meta">Lindén &amp; Halkier Bjerring</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Snacka+om+kommunikation+Fogelberg" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">15</span>
+        <span class="b-title">Snacka om kommunikation</span>
+        <span class="b-meta">Anders Fogelberg</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Konflikthantering+i+arbetslivet+Jordan" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">16</span>
+        <span class="b-title">Konflikthantering i arbetslivet</span>
+        <span class="b-meta">Thomas Jordan</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Helikopterfaktorn+Hedensjö" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">17</span>
+        <span class="b-title">Helikopterfaktorn</span>
+        <span class="b-meta">Björn Hedensjö</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Värsta+bästa+hjälpen+Pagreus" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">18</span>
+        <span class="b-title">Värsta bästa hjälpen</span>
+        <span class="b-meta">Stefan Pagreus</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=How+to+Win+Friends+Carnegie" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">19</span>
+        <span class="b-title">How to Win Friends and Influence People</span>
+        <span class="b-meta">Dale Carnegie</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Animal+Farm+Orwell" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">20</span>
+        <span class="b-title">Animal Farm</span>
+        <span class="b-meta">George Orwell</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Sälj+dig+själv+Thordén" target="_blank" rel="noopener" class="book-row" data-cat="org">
+        <span class="b-num">21</span>
+        <span class="b-title">Sälj dig själv och ta betalt!</span>
+        <span class="b-meta">Ulla-Lisa Thordén</span>
+        <span class="b-note">Organisation &amp; ledarskap</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Beteendedesign+Janson+Lång" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">22</span>
+        <span class="b-title">Beteendedesign</span>
+        <span class="b-meta">Arvid Janson &amp; Niklas Lång</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Beteendeanalys+i+organisationer+Olofsson" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">23</span>
+        <span class="b-title">Beteendeanalys i organisationer</span>
+        <span class="b-meta">Rolf Olofsson</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Bringing+Out+the+Best+in+People+Daniels" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">24</span>
+        <span class="b-title">Bringing Out the Best in People</span>
+        <span class="b-meta">Aubrey C. Daniels</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Don't+Shoot+the+Dog+Pryor" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">25</span>
+        <span class="b-title">Don't Shoot the Dog!</span>
+        <span class="b-meta">Karen Pryor</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Nudge+Thaler+Sunstein" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">26</span>
+        <span class="b-title">Nudge</span>
+        <span class="b-meta">Thaler &amp; Sunstein</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Influence+Cialdini" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">27</span>
+        <span class="b-title">Influence</span>
+        <span class="b-meta">Robert B. Cialdini</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Payoff+Dan+Ariely" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">28</span>
+        <span class="b-title">Payoff</span>
+        <span class="b-meta">Dan Ariely</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Ologiskt+Dan+Ariely" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">29</span>
+        <span class="b-title">Ologiskt</span>
+        <span class="b-meta">Dan Ariely</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Decisive+Heath+Heath" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">30</span>
+        <span class="b-title">Decisive</span>
+        <span class="b-meta">Chip Heath &amp; Dan Heath</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=How+Emotions+Are+Made+Barrett" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">31</span>
+        <span class="b-title">How Emotions Are Made</span>
+        <span class="b-meta">Lisa Feldman Barrett</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Atomic+Habits+James+Clear" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">32</span>
+        <span class="b-title">Atomic Habits</span>
+        <span class="b-meta">James Clear</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Determined+Sapolsky+Free+Will" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">33</span>
+        <span class="b-title">Determined: Life Without Free Will</span>
+        <span class="b-meta">Robert Sapolsky</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Moral+Tribes+Joshua+Greene" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">34</span>
+        <span class="b-title">Moral Tribes</span>
+        <span class="b-meta">Joshua Greene</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Vem+är+du+Kajonius+Dädeman" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">35</span>
+        <span class="b-title">Vem är du?</span>
+        <span class="b-meta">Kajonius &amp; Dädeman</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Lusten+att+förstå+Gärdenfors" target="_blank" rel="noopener" class="book-row" data-cat="beh">
+        <span class="b-num">36</span>
+        <span class="b-title">Lusten att förstå</span>
+        <span class="b-meta">Peter Gärdenfors</span>
+        <span class="b-note">Beteende &amp; psykologi</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Effective+Teamwork+Michael+West" target="_blank" rel="noopener" class="book-row" data-cat="team">
+        <span class="b-num">37</span>
+        <span class="b-title">Effective Teamwork</span>
+        <span class="b-meta">Michael West</span>
+        <span class="b-note">Team &amp; samarbete</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Teams+That+Work+Tannenbaum+Salas" target="_blank" rel="noopener" class="book-row" data-cat="team">
+        <span class="b-num">38</span>
+        <span class="b-title">Teams That Work</span>
+        <span class="b-meta">Tannenbaum &amp; Salas</span>
+        <span class="b-note">Team &amp; samarbete</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Teamutveckling+teori+praktik+Jacobsson" target="_blank" rel="noopener" class="book-row" data-cat="team">
+        <span class="b-num">39</span>
+        <span class="b-title">Teamutveckling: teori och praktik</span>
+        <span class="b-meta">Jacobsson &amp; Tengblad</span>
+        <span class="b-note">Team &amp; samarbete</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Ensam+eller+stark+Henrikson" target="_blank" rel="noopener" class="book-row" data-cat="team">
+        <span class="b-num">40</span>
+        <span class="b-title">Ensam eller stark</span>
+        <span class="b-meta">Oskar Henrikson</span>
+        <span class="b-note">Team &amp; samarbete</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Flow+Csikszentmihalyi" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">41</span>
+        <span class="b-title">Flow</span>
+        <span class="b-meta">Mihaly Csikszentmihalyi</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Resiliens+Björn+Hedensjö" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">42</span>
+        <span class="b-title">Resiliens</span>
+        <span class="b-meta">Björn Hedensjö</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Dansa+på+deadline+Rozental" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">43</span>
+        <span class="b-title">Dansa på deadline</span>
+        <span class="b-meta">Rozental &amp; Wennersten</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=En+liten+bok+om+självkänsla+Lindwall" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">44</span>
+        <span class="b-title">En liten bok om självkänsla</span>
+        <span class="b-meta">Magnus Lindwall</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Lycka+på+fullt+allvar+Blom" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">45</span>
+        <span class="b-title">Lycka på fullt allvar</span>
+        <span class="b-meta">Katarina Blom &amp; Sara Hammarkrantz</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Digital+minimalism+Cal+Newport" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">46</span>
+        <span class="b-title">Digital minimalism</span>
+        <span class="b-meta">Cal Newport</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Livet+måste+ha+mening+Frankl" target="_blank" rel="noopener" class="book-row" data-cat="well">
+        <span class="b-num">47</span>
+        <span class="b-title">Livet måste ha mening</span>
+        <span class="b-meta">Viktor E. Frankl</span>
+        <span class="b-note">Mående &amp; resiliens</span>
+      </a>
+      <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=The+Data+Detective+Tim+Harford" target="_blank" rel="noopener" class="book-row" data-cat="misc">
+        <span class="b-num">48</span>
+        <span class="b-title">The Data Detective</span>
+        <span class="b-meta">Tim Harford</span>
+        <span class="b-note">Övrigt</span>
+      </a>
     </div>
+  </section>
 
-    <!-- Beteende & psykologi -->
-    <div class="category-section" data-cat="beh">
-      <div class="category-header">
-        <h2 class="category-title">Beteende & psykologi</h2>
-        <span class="category-count">15 böcker</span>
-      </div>
-      <div class="book-grid">
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Beteendedesign+Janson+Lång" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Beteendedesign</p><p class="book-author">Arvid Janson & Niklas Lång</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Beteendeanalys+i+organisationer+Olofsson" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Beteendeanalys i organisationer</p><p class="book-author">Rolf Olofsson</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Bringing+Out+the+Best+in+People+Daniels" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Bringing Out the Best in People</p><p class="book-author">Aubrey C. Daniels</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Don't+Shoot+the+Dog+Pryor" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Don't Shoot the Dog!</p><p class="book-author">Karen Pryor</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Nudge+Thaler+Sunstein" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Nudge</p><p class="book-author">Thaler & Sunstein</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Influence+Cialdini" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Influence</p><p class="book-author">Robert B. Cialdini</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Payoff+Dan+Ariely" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Payoff</p><p class="book-author">Dan Ariely</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Ologiskt+Dan+Ariely" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Ologiskt</p><p class="book-author">Dan Ariely</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Decisive+Heath+Heath" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Decisive</p><p class="book-author">Chip Heath & Dan Heath</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=How+Emotions+Are+Made+Barrett" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">How Emotions Are Made</p><p class="book-author">Lisa Feldman Barrett</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Atomic+Habits+James+Clear" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Atomic Habits</p><p class="book-author">James Clear</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Determined+Sapolsky+Free+Will" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Determined: Life Without Free Will</p><p class="book-author">Robert Sapolsky</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Moral+Tribes+Joshua+Greene" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Moral Tribes</p><p class="book-author">Joshua Greene</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Vem+är+du+Kajonius+Dädeman" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Vem är du?</p><p class="book-author">Kajonius & Dädeman</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Lusten+att+förstå+Gärdenfors" target="_blank" class="book-card" data-cat="beh"><div class="book-dot dot-beh"></div><div class="book-body"><p class="book-title">Lusten att förstå</p><p class="book-author">Peter Gärdenfors</p></div><span class="book-arrow">→</span></a>
-      </div>
-    </div>
-
-    <!-- Team & samarbete -->
-    <div class="category-section" data-cat="team">
-      <div class="category-header">
-        <h2 class="category-title">Team & samarbete</h2>
-        <span class="category-count">4 böcker</span>
-      </div>
-      <div class="book-grid">
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Effective+Teamwork+Michael+West" target="_blank" class="book-card" data-cat="team"><div class="book-dot dot-team"></div><div class="book-body"><p class="book-title">Effective Teamwork</p><p class="book-author">Michael West</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Teams+That+Work+Tannenbaum+Salas" target="_blank" class="book-card" data-cat="team"><div class="book-dot dot-team"></div><div class="book-body"><p class="book-title">Teams That Work</p><p class="book-author">Tannenbaum & Salas</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Teamutveckling+teori+praktik+Jacobsson" target="_blank" class="book-card" data-cat="team"><div class="book-dot dot-team"></div><div class="book-body"><p class="book-title">Teamutveckling: teori och praktik</p><p class="book-author">Jacobsson & Tengblad</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Ensam+eller+stark+Henrikson" target="_blank" class="book-card" data-cat="team"><div class="book-dot dot-team"></div><div class="book-body"><p class="book-title">Ensam eller stark</p><p class="book-author">Oskar Henrikson</p></div><span class="book-arrow">→</span></a>
-      </div>
-    </div>
-
-    <!-- Mående & resiliens -->
-    <div class="category-section" data-cat="well">
-      <div class="category-header">
-        <h2 class="category-title">Mående & resiliens</h2>
-        <span class="category-count">7 böcker</span>
-      </div>
-      <div class="book-grid">
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Flow+Csikszentmihalyi" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">Flow</p><p class="book-author">Mihaly Csikszentmihalyi</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Resiliens+Björn+Hedensjö" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">Resiliens</p><p class="book-author">Björn Hedensjö</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Dansa+på+deadline+Rozental" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">Dansa på deadline</p><p class="book-author">Rozental & Wennersten</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=En+liten+bok+om+självkänsla+Lindwall" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">En liten bok om självkänsla</p><p class="book-author">Magnus Lindwall</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Lycka+på+fullt+allvar+Blom" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">Lycka på fullt allvar</p><p class="book-author">Katarina Blom & Sara Hammarkrantz</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Digital+minimalism+Cal+Newport" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">Digital minimalism</p><p class="book-author">Cal Newport</p></div><span class="book-arrow">→</span></a>
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=Livet+måste+ha+mening+Frankl" target="_blank" class="book-card" data-cat="well"><div class="book-dot dot-well"></div><div class="book-body"><p class="book-title">Livet måste ha mening</p><p class="book-author">Viktor E. Frankl</p></div><span class="book-arrow">→</span></a>
-      </div>
-    </div>
-
-    <!-- Övrigt -->
-    <div class="category-section" data-cat="misc">
-      <div class="category-header">
-        <h2 class="category-title">Övrigt</h2>
-        <span class="category-count">1 bok</span>
-      </div>
-      <div class="book-grid">
-        <a href="https://www.bokus.com/cgi-bin/product_search.cgi?search_word=The+Data+Detective+Tim+Harford" target="_blank" class="book-card" data-cat="misc"><div class="book-dot dot-misc"></div><div class="book-body"><p class="book-title">The Data Detective</p><p class="book-author">Tim Harford</p></div><span class="book-arrow">→</span></a>
-      </div>
-    </div>
-
-    <footer class="site-footer">
-      <div class="footer-left">© 2026 <span>Centrum för Organisationsutveckling</span></div>
-      <div class="footer-right"><span id="footer-email"></span></div>
-    </footer>
-  </main>
 </div>
 
-<script>
-function toggleMenu(){
-  var nav = document.getElementById('mobileNav');
-  var isOpening = !nav.classList.contains('open');
-  nav.classList.toggle('open');
-  if (isOpening) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
-function filterBooks(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-  btn.classList.add('active');
-  document.querySelectorAll('.category-section').forEach(function(section) {
-    if (cat === 'all' || section.dataset.cat === cat) {
-      section.classList.remove('hidden');
-    } else {
-      section.classList.add('hidden');
-    }
-  });
-}
+<div class="statement">
+  <div class="statement-inner">
+    <p class="eyebrow">Om listan</p>
+    <div class="statement-grid">
+      <h2>Titlar är lätta att lista. Att ha läst dem är det som räknas.</h2>
+      <div>
+        <div class="statement-rule"></div>
+        <p>Listan står här för att den är ärlig, inte för att den ska imponera. Böckerna som faktiskt används i en utbildning nämns på respektive utbildningssida, i det sammanhang där de gör nytta.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-var u='kontakt';var d='orgutveckling.se';
-var el=document.getElementById('footer-email');
-if(el){var a=document.createElement('a');a.href='mai'+'lto:'+u+'@'+d;a.textContent=u+'@'+d;a.style.color='inherit';el.appendChild(a);}
-</script>
+<div class="wrap">
+  <section class="band">
+    <div class="section-head">
+      <h2>Utanför bokhyllan</h2>
+      <a href="/lanktips.html" class="meta">Alla länktips &rarr;</a>
+    </div>
+    <div class="source-list" style="margin-top:22px;border-top:none">
+      <a href="https://www.excelbrevet.se/" target="_blank" rel="noopener">
+        <span class="s-title">Excelbrevet<span>Nyhetsbrev med regelbundna Excel-tips på svenska</span></span>
+        <span class="s-arrow">&#8599;</span>
+      </a>
+      <a href="https://dummamanniskor.se/" target="_blank" rel="noopener">
+        <span class="s-title">Dumma människor<span>Svensk podd om psykologi, beteende och beslut</span></span>
+        <span class="s-arrow">&#8599;</span>
+      </a>
+      <a href="https://www.apa.org/news/podcasts/speaking-of-psychology" target="_blank" rel="noopener">
+        <span class="s-title">Speaking of Psychology<span>APA:s podd med psykologisk forskning gjord tillgänglig</span></span>
+        <span class="s-arrow">&#8599;</span>
+      </a>
+      <a href="https://www.youtube.com/@LeilaGharani" target="_blank" rel="noopener">
+        <span class="s-title">Leila Gharani<span>Excel, Power BI och Office, välproducerat och pedagogiskt</span></span>
+        <span class="s-arrow">&#8599;</span>
+      </a>
+      <a href="https://www.youtube.com/@DavidStavegard" target="_blank" rel="noopener">
+        <span class="s-title">David Stavegård<span>Excel på svenska, tydliga genomgångar</span></span>
+        <span class="s-arrow">&#8599;</span>
+      </a>
+      <a href="https://www.rovasjogren.se/podcast" target="_blank" rel="noopener">
+        <span class="s-title">Pedagogisk psykologi<span>Svensk podd om lärande, pedagogik och psykologi i praktiken</span></span>
+        <span class="s-arrow">&#8599;</span>
+      </a>
+    </div>
+    <p style="font:400 12px/1.7 var(--mono);color:var(--dampad);margin-top:22px">Listan gicks igenom senast 2026-08-12.</p>
+  </section>
+</div>
+
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2>Berätta vad ni behöver kunna.</h2>
+    <div>
+      <p>Kostnadsfritt samtal på tjugo minuter. Vi säger till om vi inte är rätt för uppdraget.</p>
+      <div class="cta-actions">
+        <a href="/kontakt.html" class="btn-primary">Begär förslag</a>
+        <span data-email="cta-email"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <div class="wordmark"><span class="a">ORG</span><span class="slash">/</span><span class="b">UTVECKLING</span></div>
+        <p>Centrum för Organisationsutveckling<br>Umeå, Västerbotten<br><a href="tel:+46722211337" style="color:inherit">072-221 13 37</a></p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Utbildningar</span>
+        <a href="/excel-utbildning-umea.html">Excel</a>
+        <a href="/bam-utbildning-umea.html">Arbetsmiljö &amp; BAM</a>
+        <a href="/ledarskapsutbildning-umea.html">Ledarskap</a>
+        <a href="/utbildningar.html">Alla utbildningar</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Kunskap</span>
+        <a href="/artiklar/">Artiklar</a>
+        <a href="/lasning.html">Läslistan</a>
+        <a href="/lanktips.html">Länktips</a>
+        <a href="/case.html">Utvärderingar</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-title">Kontakt</span>
+        <span data-email=""></span>
+        <a href="/om-oss.html">Om oss</a>
+        <a href="/kontakt.html">Begär förslag</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>orgutveckling.se</span>
+      <span>&copy; 2026 Centrum för Organisationsutveckling</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
 </body>
 </html>

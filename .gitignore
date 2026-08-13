@@ -1,1 +1,14 @@
 ﻿worker/.wrangler/
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+graft/
+
+# Jekylls lokala bygge. Regenereras med `jekyll build`, GitHub Pages bygger sitt eget.
+_site/
+.jekyll-cache/
+
+# Internt designunderlag. Ligger i reporoten men ska ALDRIG publiceras:
+# Jekyll kopierar annars mappen rakt ut till orgutveckling.se.
+Webbanalys och strategi/
+Webbanalys och strategi.zip
+HANDOFF-REDESIGN.md

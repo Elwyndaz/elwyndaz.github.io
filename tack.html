@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" sizes="512x512" href="/logo.png"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<title>Tack för din förfrågan | Centrum för Organisationsutveckling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="/style.css">
+<style>
+/* Tacksidan är helmörk. Den enda mörka ytan utanför statement-blocken. */
+body{background:var(--black);color:var(--papper)}
+.site-header{background:var(--black);border-bottom-color:var(--linje-ljus)}
+.site-header .wordmark,.site-header .wordmark .a,.site-header .wordmark .b{color:var(--papper)}
+.site-header .main-nav a{color:var(--papper)}
+.site-header .menu-btn{color:var(--papper)}
+.tack h1{font-family:var(--serif);font-weight:300;font-size:clamp(38px,6.5vw,88px);line-height:.96;letter-spacing:-.03em;max-width:16ch;margin-top:26px}
+.tack .eyebrow{color:var(--dampad-mork)}
+.tack .lead{font-size:17px;line-height:1.7;color:rgba(242,239,232,.72);margin-top:30px;max-width:60ch}
+.tack .steps{margin-top:clamp(44px,7vw,80px);border-top:1px solid var(--papper)}
+.tack .steps li{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--linje-ljus)}
+.tack .steps .n{font:500 12px/1.6 var(--mono);color:var(--accent)}
+.tack .steps p{font-size:16px;line-height:1.6;color:rgba(242,239,232,.85)}
+.tack .steps b{display:block;font:400 12px/1.6 var(--mono);color:var(--dampad-mork);margin-top:6px}
+.tack .onward{display:flex;gap:24px;flex-wrap:wrap;margin-top:clamp(40px,6vw,64px)}
+.tack .btn-primary{background:var(--papper);color:var(--black);border-color:var(--papper)}
+.tack .btn-primary:hover{background:var(--accent);color:var(--papper);border-color:var(--accent)}
+.tack .text-link{color:rgba(242,239,232,.8);border-bottom-color:rgba(242,239,232,.3)}
+.tack .text-link:hover{color:var(--accent);border-bottom-color:var(--accent)}
+@media(max-width:780px){.tack .steps li{grid-template-columns:40px 1fr;gap:16px}}
+</style>
+</head>
+<body>
+
+<a href="#innehall" class="skip-link">Hoppa till innehållet</a>
+
+<header class="site-header">
+  <a href="/" class="wordmark"><span class="a">ORG</span><span class="slash">/</span><span class="b">UTVECKLING</span></a>
+  <nav class="main-nav" aria-label="Huvudmeny">
+    <a href="/utbildningar.html">Utbildningar</a>
+    <a href="/artiklar/">Kunskap</a>
+    <a href="/om-oss.html">Om oss</a>
+    <a href="/kontakt.html">Kontakt</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobilmeny">
+  <div class="mobile-nav-top">
+    <a href="/" class="wordmark"><span class="a">ORG</span><span class="slash">/</span><span class="b">UTVECKLING</span></a>
+    <button class="mobile-nav-close" onclick="toggleMenu()" aria-label="Stäng meny">&times;</button>
+  </div>
+  <div class="mobile-nav-list">
+    <a href="/utbildningar.html"><span>01</span>Utbildningar</a>
+    <a href="/artiklar/"><span>02</span>Kunskap</a>
+    <a href="/om-oss.html"><span>03</span>Om oss</a>
+    <a href="/kontakt.html"><span>04</span>Kontakt</a>
+  </div>
+  <a href="/kontakt.html" class="mobile-nav-cta">Begär förslag</a>
+</nav>
+
+<main id="innehall">
+<div class="wrap tack" style="padding-top:clamp(48px,8vw,96px);padding-bottom:clamp(64px,10vw,140px)">
+
+  <p class="eyebrow">Förfrågan skickad</p>
+  <h1>Tack. Nu tar vi över.</h1>
+  <p class="lead">Du behöver inte göra något mer. Så här ser de närmaste dagarna ut, så att du vet vad du väntar på och när.</p>
+
+  <ol class="steps">
+    <li>
+      <span class="n">01</span>
+      <div>
+        <p>Vi läser förfrågan och ställer ett par frågor om gruppen.</p>
+        <b>Inom en arbetsdag</b>
+      </div>
+    </li>
+    <li>
+      <span class="n">02</span>
+      <div>
+        <p>Ni får ett förslag på upplägg, längd och pris.</p>
+        <b>Efter samtalet, oftast samma vecka</b>
+      </div>
+    </li>
+    <li>
+      <span class="n">03</span>
+      <div>
+        <p>Vi bestämmer datum tillsammans, när det passar er.</p>
+        <b>Inget är bindande innan dess</b>
+      </div>
+    </li>
+  </ol>
+
+  <div class="onward">
+    <a href="/utbildningar.html" class="btn-primary">Se utbildningarna</a>
+    <a href="/artiklar/" class="text-link" style="align-self:center">Läs något under tiden</a>
+  </div>
+
+  <p style="font:400 12.5px/1.8 var(--mono);color:var(--dampad-mork);margin-top:clamp(40px,6vw,64px)">Hörde du inget? Skriv direkt till <span data-email="text-link"></span> eller ring 072-221 13 37.</p>
+
+</div>
+</main>
+
+<footer class="site-footer" style="border-top:1px solid rgba(242,239,232,.18)">
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>orgutveckling.se</span>
+      <span>&copy; 2026 Centrum för Organisationsutveckling</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+</body>
+</html>
