@@ -2,9 +2,9 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Börja backlink-arbetet, som är prio 1 och fortfarande inte påbörjat; sajten är indexerad men får 60 visningar och 0 klick på 28 dagar
+nextAction: Verifiera att GitHub Pages byggde efter pushen, begär omindexering i Search Console, och kontrollera att den gamla artikel-URL:en /2025/05/23/ nu vidarebefordrar. Därefter backlink-arbetet, med tyngdpunkt på ledarskap, som är den enda ingång med mätbar efterfrågan.
 blockers: []
-reviewedAt: 2026-08-04
+reviewedAt: 2026-08-13
 ---
 
 # Handoff: orgutveckling.se
@@ -12,49 +12,88 @@ reviewedAt: 2026-08-04
 ## Läget
 
 Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning. Problemet är
-inte teknik eller innehåll, det är auktoritet: **indexerad med 16 URL:er och noll
-fel, men i praktiken osynlig med 60 visningar och 0 klick på 28 dagar.**
+auktoritet, inte teknik: 78 visningar och 1 klick på 28 dagar (mätt 2026-08-13).
 
-De tänkta huvudnyckelorden, "excel utbildning umeå" och "bam utbildning umeå",
-har nästan ingen sökvolym alls. Det är en ny-domän-fråga, och backlinks är därför
-den enda åtgärd som är strukturellt säker att hjälpa.
+Men bilden har skärpts sedan juli. **Det stämmer inte längre att huvudnyckelorden
+saknar sökvolym.** `ledarskapsutbildning umeå` ger 22 visningar på position 21,8
+och är sajtens största fråga, medan "excel utbildning umeå" och "bam utbildning
+umeå" fortfarande ger i princip noll. Volymen finns för ledarskap, sajten ligger
+bara på sida tre. Det första klicket någonsin kom 18 juli, till startsidan, som
+ligger på snittposition 4,9.
+
+Konsekvensen: backlinks är fortfarande den strukturellt säkraste åtgärden, men
+tyngdpunkten i både innehåll och länkarbete bör ligga på **ledarskap**, inte
+Excel. Se `BACKLOG.md` under "SEO-läget" för hela underlaget.
 
 ## Recent work
 
-- Grundläggande teknisk SEO: metataggar, robots, sitemap, Search Console och
-  strukturerad data för LocalBusiness, FAQPage, Course, Review och Breadcrumb.
-- Tre SEO-landningssidor för Excel, BAM och ledarskap.
-- Jekyll-blogg uppsatt med sju publicerade artiklar.
-- Google Business Profile skapad.
-- Ny logga och fullständigt palettbyte till Grafit, Petrol, Lera och Papper på
-  alla elva sidor, plus egen favicon med PNG-fallback för Safari.
-- Bildnamn och format städade till WebP med ASCII-namn. og-image komprimerad från
-  1,7 MB till 30 kB.
+**2026-08-12: hela sajten redesignad** enligt `HANDOFF-REDESIGN.md`.
+
+- Kortbaserad layout ersatt av registerlayout: hårfina linjer, numrerade rader,
+  metadata i monospace, radie 0, inga cards. Ett mörkt statement per sida.
+- Paletten helt utbytt. Grafit, Petrol och Lera utgår. Nya värden i `style.css`.
+- Ordmärket `ORG / UTVECKLING` ersätter den gamla `.cou-mark`-loggan.
+- Navigationen är nu Utbildningar, Kunskap, Om oss, Kontakt. Artiklar, lästips
+  och länktips samlas under Kunskap. "Utvärderingar" är borta ur navigationen men
+  `case.html` lever kvar som destination.
+- Designsystemet flyttat till en delad `/style.css`, sidlogiken till `/site.js`.
+  Slut på att synka tio inbyggda `<style>`-block för hand.
+- Nya sidor: `om-oss.html`, `tack.html`, `404.html`.
+- `kontakt.html` har fått ett riktigt förfrågningsformulär med chips för ämne och
+  format. Det har ingen backend utan bygger en mailto.
+- Strukturerad data utökad och följer med till samtliga nya sidor.
+- `CONTEXT.md`, `docs/project-state.md`, `sitemap.xml` och `BACKLOG.md`
+  uppdaterade i samma pass.
+
+**2026-08-13, samma leverans:**
+
+- Ruby 3.3 och Jekyll 4.4 installerade, så bygget kan verifieras lokalt.
+- `cv.html` ombyggd enligt eget designunderlag, med print-CSS.
+- Ny artikel: "Psykologisk trygghet i arbetsgrupper" (åttonde totalt).
+- Död indexerad URL `/2025/05/23/excel-funktioner-som-sparar-tid.html` rättad med
+  canonical och vidarebefordran.
+- Designunderlaget exkluderat ur bygget, det hade annars publicerats.
+
+Tidigare: teknisk SEO, tre landningssidor, Jekyll-blogg, Google Business Profile,
+WebP-bilder med ASCII-namn.
 
 ## Verification
 
-- Search Console-data hämtas direkt via MCP-servern `gsc`, så fråga efter
-  indexerings- och prestandadata i stället för att gissa.
-- Sajten svarar 200 och är indexerad utan fel.
-- Repot är synkat med `origin/main`.
+- Alla tolv sidor kontrollerade i webbläsare på 1440 px och 390 px.
+- Inga brutna interna länkar, exakt ett `<h1>` per sida, ingen horisontell
+  scroll, inga konsolfel.
+- Förfrågningsformuläret testat: chips växlar, mailto byggs, statusmeddelandet
+  visas.
+- Externa källänkar på BAM- och Excel-sidorna kontrollerade med HTTP-anrop.
+- Artiklarnas permalinks kontrollerade mot frontmatterns `date`.
+- **Jekyll-bygget verifierat lokalt.** Ruby 3.3 och Jekyll 4.4 installerades
+  2026-08-13. `jekyll build` går igenom utan fel, `/artiklar/` och alla sju
+  artikel-URL:er genereras, ingen oredigerad Liquid finns kvar i utdata och all
+  JSON-LD i hela bygget är giltig.
+- Designunderlaget bekräftat exkluderat ur bygget.
 
 ## Unresolved details
-
 - **Backlink-arbetet är prio 1 och inte påbörjat.** Det måste hållas gratis och
-  lågtröskel: det här är ett fritidsprojekt vid sidan av heltidsplugg, utan
-  registrerad firma. hitta.se, eniro.se, handelskammare och utbildning.se är
-  redan testade och avskrivna, se `BACKLOG.md`.
+  lågtröskel: fritidsprojekt vid sidan av heltidsplugg, utan registrerad firma.
+  hitta.se, eniro.se, handelskammare och utbildning.se är redan testade och
+  avskrivna, se `BACKLOG.md`.
+- **Öppna beslut och saknat innehåll** ligger samlat i `BACKLOG.md` under "Kvar
+  från redesignen": porträttet till Om oss, kommentarer till de 48 böckerna, om
+  `lasning.html` och `lanktips.html` ska slås ihop, om filtrering ska bli egna
+  URL:er, och om innehållslistorna 01–05 på utbildningssidorna stämmer med det
+  faktiska kursupplägget.
 - `cv.html` står medvetet **utanför** sajtens arkitektur: ingen nav-länk,
-  `noindex, nofollow`, inte i `sitemap.xml`. Synka aldrig in den i nav eller
-  sitemap, och räkna inte med den i copyright-årsbumpen.
-- De tre landningssidorna är 75 till 100 procent duplicerad HTML och CSS utan
-  delad layout, trots att Jekyll redan bygger vid varje push.
+  `noindex, nofollow`, inte i `sitemap.xml`, gammal palett kvar. Synka aldrig in
+  den, och räkna inte med den i copyright-årsbumpen.
 - `lasning.html` är oväntat den mest visade sidan, men för orelaterade akademiska
   sökningar. Urvalet är för litet för att agera på.
+- **Beslutat 2026-08-13: `lasning.html` och `lanktips.html` slås inte ihop**,
+  trots att redesignspecen föreslår det. Se `CONTEXT.md` för motiveringen. Detta
+  är ett låst beslut.
 
 ## Resume here
 
-Börja med backlinks. Artikelserien går parallellt och kostar bara det vanliga
-veckopasset. **Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan
-i `BACKLOG.md`**, den har haft fel förut: "Konflikthantering för chefer" stod som
+Granska redesignen, pusha, verifiera Jekyll-delen. Sedan backlinks.
+**Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan i
+`BACKLOG.md`**, den har haft fel förut: "Konflikthantering för chefer" stod som
 ogjord trots att den varit live sedan 2026-03-30.
