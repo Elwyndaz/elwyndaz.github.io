@@ -145,11 +145,27 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   är de som skiljer ett påstående från ett löfte. Även kritiken publiceras.
 - **Artikelserien** är en artikel i veckan, kategoriserad Excel, Arbetsmiljö eller
   Ledarskap, för långsiktig auktoritet snarare än snabba resultat.
+- **Ledarskapssidans lista heter "Upplägg" och beskriver de sex tillfällena.**
+  Beslutat 2026-08-14. Tillfälle 01, 02 och 06 är fasta, 03 till 05 väljs utifrån
+  kartläggningen vid första tillfället. Excel- och BAM-sidorna har fortfarande
+  "I korthet" med egenskaper, tills det finns riktigt innehåll även för dem.
+- **Kursupplägget bygger på en manual för Funktionellt ledarskap, men bokens
+  modullista publiceras aldrig.** Modulkatalogen på fjorton punkter är en
+  innehållsförteckning ur en Studentlitteratur-titel, och att återge den i ordning
+  som sajtens kursinnehåll vore att publicera bokens struktur. Metoden får och ska
+  namnges, det är trovärdighet. Områdena bakom tillfälle 03 till 05 beskrivs
+  parafraserat i löptext, aldrig som en numrerad katalog.
 
 ## Environments and operations
 
 Publicering sker genom uppladdning till `main`; GitHub Pages bygger Jekyll
 automatiskt för bloggdelen. Search Console-data hämtas via MCP-servern `gsc`,
 fråga efter data i stället för att gissa.
+
+För att titta på sidor i en webbläsare, använd `playwright-cli` (installerat
+globalt 2026-08-14) före en browser-MCP: det är en vanlig CLI och kostar inga
+schematokens. `playwright-cli open <url>`, `find "text"`, `click e15`, `close`.
+Den skriver snapshots i `.playwright-cli/` i den mapp kommandot körs ifrån, som
+är gitignorerad här. Fullständig beskrivning i `C:\dev\AGENTS.md`.
 
 Kontakt: kontakt@orgutveckling.se, 072-221 13 37.

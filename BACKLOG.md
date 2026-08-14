@@ -68,17 +68,23 @@ skriva. Inget av det blockerar att sajten går live.
   till en utbildning. I dag ligger 48 titlar utan kommentarer. Att gallra 48 till
   12 och skriva en mening om var och en är innehållsarbete bara du kan göra.
   Layouten är förberedd: kommentaren ska ta den bredaste spalten.
-- [ ] **Riktigt kursinnehåll till listorna 01–05.** Listorna på utbildningssidorna
-  är nu gamla sajtens egna punkter, alltså sanna, men de beskriver utbildningens
-  *egenskaper* ("Passar både enskilda deltagare och grupper"), inte vad deltagaren
-  *lär sig*. Designunderlaget hade tänkt sig det senare ("Pivottabeller från era
-  egna underlag", "Uppslag och referenser utan felmeddelanden"). Därför heter
-  rubriken "I korthet" och inte "Innehåll". Fem rader om vad deltagarna faktiskt
-  gör under dagen skulle vara sidans starkaste säljargument, och bara du kan
-  skriva dem.
+- [x] **Riktigt kursinnehåll, ledarskapssidan. Gjort 2026-08-14.** Listan heter nu
+  "Upplägg" och beskriver de sex handledningstillfällena i stället för
+  utbildningens egenskaper. Tillfälle 01, 02 och 06 är fasta, 03 till 05 väljs
+  utifrån kartläggningen vid första tillfället. RCT-belägget och orten flyttades
+  ned i brödtexten så att inget påstående försvann.
+- [ ] **Riktigt kursinnehåll till listorna 01–05 på Excel- och BAM-sidorna.**
+  Listorna är gamla sajtens egna punkter, alltså sanna, men de beskriver
+  utbildningens *egenskaper* ("Passar både enskilda deltagare och grupper"), inte
+  vad deltagaren *lär sig*. Designunderlaget hade tänkt sig det senare
+  ("Pivottabeller från era egna underlag", "Uppslag och referenser utan
+  felmeddelanden"). Därför heter rubriken "I korthet" och inte "Innehåll" på de
+  två sidorna. Fem rader om vad deltagarna faktiskt gör under dagen skulle vara
+  sidans starkaste säljargument, och bara du kan skriva dem. Ledarskapssidan är
+  gjord och kan användas som mall.
 - [ ] **Citat från BAM och ledarskap.** Alla elva utvärderingar är från
   Excel-utbildningar. Designunderlaget visar citat märkta "Skyddsombud, BAM" och
-  "Enhetschef, Ledarskap" — de finns inte, så de är utelämnade. Samla in när du
+  "Enhetschef, Ledarskap". De finns inte, så de är utelämnade. Samla in när du
   hållit de kurserna. **Prioritera ledarskap**: det är enda området med mätbar
   sökefterfrågan, och det har noll omdömen att visa.
 - [ ] **Leta rätt på utvärderingen från den tredje Excel-utbildningen.** Patrik

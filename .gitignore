@@ -7,6 +7,9 @@ graft/
 _site/
 .jekyll-cache/
 
+# playwright-cli skriver sidsnapshots i den mapp kommandot kors ifran.
+.playwright-cli/
+
 # Internt designunderlag. Ligger i reporoten men ska ALDRIG publiceras:
 # Jekyll kopierar annars mappen rakt ut till orgutveckling.se.
 Webbanalys och strategi/
