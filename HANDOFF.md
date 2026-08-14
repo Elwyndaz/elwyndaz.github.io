@@ -2,9 +2,9 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Verifiera att GitHub Pages byggde efter pushen, begär omindexering i Search Console, och kontrollera att den gamla artikel-URL:en /2025/05/23/ nu vidarebefordrar. Därefter backlink-arbetet, med tyngdpunkt på ledarskap, som är den enda ingång med mätbar efterfrågan.
+nextAction: Begär omindexering i Search Console av ledarskapsutbildning-umea.html, bam-utbildning-umea.html, utbildningar.html och kontakt.html (krupna före deployen 13 aug), plus om-oss.html och artikeln om psykologisk trygghet, som Google ännu inte känner till. Därefter backlink-arbetet, med tyngdpunkt på ledarskap, som är den enda ingång med mätbar efterfrågan.
 blockers: []
-reviewedAt: 2026-08-13
+reviewedAt: 2026-08-14
 ---
 
 # Handoff: orgutveckling.se
@@ -54,6 +54,19 @@ Excel. Se `BACKLOG.md` under "SEO-läget" för hela underlaget.
   canonical och vidarebefordran.
 - Designunderlaget exkluderat ur bygget, det hade annars publicerats.
 
+**2026-08-14: riktigt kursinnehåll på ledarskapssidan.**
+
+- Listan heter nu **Upplägg** och beskriver de sex handledningstillfällena i
+  stället för utbildningens egenskaper, vilket var hela poängen med
+  backlog-punkten. 01, 02 och 06 är fasta, 03 till 05 väljs utifrån
+  kartläggningen vid första tillfället.
+- Områdena bakom de valbara tillfällena beskrivs parafraserat i löptext. Bokens
+  modullista publiceras aldrig, se `CONTEXT.md`.
+- RCT-belägget stod redan i ingressen och i FAQ:n, så det upprepas inte en tredje
+  gång. Orten och det digitala alternativet flyttades ned i brödtexten så att
+  inget påstående försvann när den gamla listan togs bort.
+- `.playwright-cli/` tillagd i `.gitignore`.
+
 Tidigare: teknisk SEO, tre landningssidor, Jekyll-blogg, Google Business Profile,
 WebP-bilder med ASCII-namn.
 
@@ -88,8 +101,8 @@ designen ligger live.
 - **Öppna beslut och saknat innehåll** ligger samlat i `BACKLOG.md` under "Kvar
   från redesignen": porträttet till Om oss, kommentarer till de 48 böckerna, om
   `lasning.html` och `lanktips.html` ska slås ihop, om filtrering ska bli egna
-  URL:er, och om innehållslistorna 01–05 på utbildningssidorna stämmer med det
-  faktiska kursupplägget.
+  URL:er, och innehållslistorna 01–05 på **Excel- och BAM-sidorna**.
+  Ledarskapssidan är klar sedan 2026-08-14 och kan användas som mall.
 - `cv.html` står medvetet **utanför** sajtens arkitektur: ingen nav-länk,
   `noindex, nofollow`, inte i `sitemap.xml`, gammal palett kvar. Synka aldrig in
   den, och räkna inte med den i copyright-årsbumpen.
@@ -101,7 +114,7 @@ designen ligger live.
 
 ## Resume here
 
-Granska redesignen, pusha, verifiera Jekyll-delen. Sedan backlinks.
+Omindexering i Search Console enligt `nextAction`. Sedan backlinks.
 **Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan i
 `BACKLOG.md`**, den har haft fel förut: "Konflikthantering för chefer" stod som
 ogjord trots att den varit live sedan 2026-03-30.
