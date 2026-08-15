@@ -53,6 +53,15 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   man den synliga texten och glömmer JSON-LD:n slutar rich resultatet fungera
   utan att något syns. Det hade redan hänt på BAM-sidan, upptäckt och rättat
   2026-08-15.
+- **`/ai/` ska förbli 404. Bygg ingen vidarebefordran dit.** Beslutat 2026-08-15.
+  Sidan flyttade till `buildapp.se/ai/` och den gamla adressen ligger kvar
+  indexerad med visningar, vilket ser ut som samma fel som den döda artikel-URL:en.
+  Det är det inte. Artikeln fanns kvar på samma domän och drog rätt publik.
+  `/ai/` drar sökningar på Claude och AI-verktyg, har gett **0 klick på 90 dagar**
+  och har noll inkommande länkar, alltså finns ingen auktoritet att bevara och
+  ingen publik att rädda. 404 är den sanna signalen och Google släpper adressen
+  av sig själv. Använd inte heller Borttagningar i Search Console, den är
+  tillfällig i sex månader och avsedd för akut innehåll.
 - **Ändra aldrig `date:` i en publicerad artikel.** Permalänken följer
   frontmatterns datum, så den gamla URL:en blir en 404 som ligger kvar indexerad.
   Har det redan hänt, lägg en canonical plus meta refresh på den gamla adressen,
