@@ -53,6 +53,22 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   man den synliga texten och glömmer JSON-LD:n slutar rich resultatet fungera
   utan att något syns. Det hade redan hänt på BAM-sidan, upptäckt och rättat
   2026-08-15.
+- **Rutnät hör hemma i `style.css`, aldrig som `style="display:grid..."` i HTML.**
+  Inline-style vinner över alla mediefrågor, så ett rutnät med fast pixelspalt
+  fortsätter ligga i två spalter på en telefon och trycker ut sidan åt höger.
+  Det hade redan hänt på två ställen, upptäckt 2026-08-15: startsidans hero och
+  avslutningsblocket på `om-oss.html`. Startsidan var 592 px bred på en 375 px
+  skärm. `body{overflow-x:hidden}` döljer rullisten men tar inte bort överflödet,
+  och regeln ignoreras dessutom ofta på iOS, så felet syns som att sidan går att
+  zooma och panorera när ingen annan sida gör det.
+- **`check_layout.js` måste gå igenom före push.** `node check_layout.js`, kräver
+  `npm i -g playwright`. Den startar en egen server på loopback och mäter att
+  ingen sida i reporoten blir bredare än skärmen på 320, 375, 430 och 768 px.
+  Samma roll som `check_faq.py`: en statisk sajt har ingen kompilator, så felet
+  ligger annars kvar tills en människa råkar öppna sidan i mobilen. Två
+  följdfällor den fångar: en grid-cell kan inte krympa under sitt innehålls
+  minsta bredd så länge `min-width` är `auto`, och webbläsarens egen regel ger
+  `<fieldset>` dessutom `min-inline-size:min-content`.
 - **`/ai/` ska förbli 404. Bygg ingen vidarebefordran dit.** Beslutat 2026-08-15.
   Sidan flyttade till `buildapp.se/ai/` och den gamla adressen ligger kvar
   indexerad med visningar, vilket ser ut som samma fel som den döda artikel-URL:en.
