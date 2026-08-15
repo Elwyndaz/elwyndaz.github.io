@@ -47,4 +47,4 @@ Bryt istället ner beräkningen i flera steg med **hjälpkolumner**: en kolumn f
 
 ---
 
-Känner du igen något av detta i era egna Excel-filer? Det är precis den typen av saker vi går igenom på vår [Excel-utbildning i Umeå](/excel-utbildning-umea.html) – vi utgår från era riktiga arbetsfiler och rättar till det som kostar tid och skapar fel, i den takt som passar er grupp. [Kontakta oss](/kontakt.html) så berättar vi mer.
+Känner du igen något av detta i era egna Excel-filer? Det är precis den typen av saker vi går igenom på vår [excelutbildning i Umeå](/excel-utbildning-umea.html) – vi utgår från era riktiga arbetsfiler och rättar till det som kostar tid och skapar fel, i den takt som passar er grupp. [Kontakta oss](/kontakt.html) så berättar vi mer.

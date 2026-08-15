@@ -1,6 +1,6 @@
 ﻿worker/.wrangler/
 
-# graft's local graph cache — regenerable, not committed (run `graft build`).
+# graft's local graph cache, regenerable, not committed (run `graft build`).
 graft/
 
 # Jekylls lokala bygge. Regenereras med `jekyll build`, GitHub Pages bygger sitt eget.
@@ -15,3 +15,11 @@ _site/
 Webbanalys och strategi/
 Webbanalys och strategi.zip
 HANDOFF-REDESIGN.md
+
+# repowise local index - regenerable, not committed (run `repowise update`).
+.repowise/
+
+# Maskinspecifik verktygskonfiguration. Bada innehaller absoluta sokvagar till
+# C:\dev och gar inte att dela med en annan dator.
+.mcp.json
+.vscode/

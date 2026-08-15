@@ -45,4 +45,4 @@ Nu stannar rubrikraden (och eventuella kolumner) på plats när du scrollar – 
 
 ---
 
-Vill du lära dig mer? Vi håller Excel-utbildning i Umeå anpassad efter just er verksamhet och era arbetsfiler. [Kontakta oss](/kontakt.html) så berättar vi mer.
+Vill du lära dig mer? Vi håller [excelutbildning i Umeå](/excel-utbildning-umea.html) anpassad efter just er verksamhet och era arbetsfiler. [Kontakta oss](/kontakt.html) så berättar vi mer.

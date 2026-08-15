@@ -39,6 +39,20 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   eftersom den riktar sig till en annan läsare (en PTP-handledare) och använder en
   annan e-postadress (`patz.lofgren@gmail.com`, inte `kontakt@`). Den är byggd som
   ett utskrivbart dokument i en spalt med egen print-CSS: sidan **är** dokumentet.
+- **Sammansatta sökord skrivs ihop, inte med bindestreck.** `excelutbildning`,
+  inte `excel-utbildning`. Svenska är ett sammansättningsspråk och den hopskrivna
+  formen är både korrekt och det folk faktiskt söker på. För Google är de två
+  olika tokens. Ledarskapssidan skrev `ledarskapsutbildning` ihop och är den enda
+  sida som rankar för sin målfras; Excel- och BAM-sidorna skrev med bindestreck
+  och rankar inte. Excelsidan lades om 2026-08-15, BAM-sidan står kvar som
+  kontrollgrupp. Bindestreck är fortfarande rätt i **filnamn och URL:er**, de
+  ändras aldrig.
+- **`check_faq.py` måste gå igenom före push.** `python check_faq.py` efter
+  `jekyll build`. Den kontrollerar att varje `FAQPage`-schema matchar den synliga
+  FAQ-texten ordagrant, vilket Google kräver. Felet är lätt att göra: redigerar
+  man den synliga texten och glömmer JSON-LD:n slutar rich resultatet fungera
+  utan att något syns. Det hade redan hänt på BAM-sidan, upptäckt och rättat
+  2026-08-15.
 - **Ändra aldrig `date:` i en publicerad artikel.** Permalänken följer
   frontmatterns datum, så den gamla URL:en blir en 404 som ligger kvar indexerad.
   Har det redan hänt, lägg en canonical plus meta refresh på den gamla adressen,
