@@ -17,3 +17,5 @@ exclude:
   - docs/
   - graft/
   - README.md
+  - check_faq.py
+  - check_layout.js
