@@ -30,7 +30,13 @@ function loadPlaywright() {
 }
 
 const server = http.createServer((req, res) => {
-  const file = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]));
+  const file = path.resolve(ROOT, '.' + decodeURIComponent(req.url.split('?')[0]));
+  // Servern har repot som rot och C:\dev ovanfor sig, dar det ligger hemligheter
+  // i flera mappar. Utan den har spanningen racker ett ".." i URL:en for att
+  // lasa dem. Servern lyssnar dessutom bara pa loopback, se listen() nedan.
+  if (file !== ROOT && !file.startsWith(ROOT + path.sep)) {
+    res.writeHead(403); return res.end();
+  }
   fs.readFile(file, (err, data) => {
     if (err) { res.writeHead(404); return res.end(); }
     res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
@@ -42,7 +48,7 @@ const server = http.createServer((req, res) => {
   const { chromium } = loadPlaywright();
   // Bara sidor i roten: _site ar byggutdata och Webbanalys ar designkompar.
   const pages = fs.readdirSync(ROOT).filter(f => f.endsWith('.html'));
-  await new Promise(r => server.listen(PORT, r));
+  await new Promise(r => server.listen(PORT, '127.0.0.1', r)); // aldrig ut pa natverket
   const browser = await chromium.launch();
   const fails = [];
 
