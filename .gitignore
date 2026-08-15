@@ -23,3 +23,8 @@ HANDOFF-REDESIGN.md
 # C:\dev och gar inte att dela med en annan dator.
 .mcp.json
 .vscode/
+
+# AGENTS.md har bara repowise autogenererade distill-avsnitt i det har repot,
+# inga egna instruktioner. Halls lokalt. Skriver du riktiga instruktioner har:
+# ta bort raden nedan forst, annars hamnar de aldrig i git.
+AGENTS.md
