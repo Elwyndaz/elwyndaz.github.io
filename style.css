@@ -72,7 +72,9 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 
 /* sidhuvud på undersidor */
 .page-head{padding:clamp(44px,7vw,88px) 0 0}
-.page-head h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,56px);line-height:.95;letter-spacing:-.03em;margin-top:20px;max-width:16ch}
+/* Svenska sammansattningar ("Ledarskapsutbildning") ar langre an en smal skarm.
+   break-word slar bara till nar ordet inte far plats alls, aldrig annars. */
+.page-head h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,56px);line-height:.95;letter-spacing:-.03em;margin-top:20px;max-width:16ch;overflow-wrap:break-word}
 .page-head .ingress{font-size:16px;line-height:1.65;color:var(--brod);margin-top:22px;max-width:52ch}
 .page-head .eyebrow{color:var(--accent)}
 .page-head .eyebrow a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(168,67,31,.4)}
@@ -80,6 +82,10 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 /* Startsidans hero ar den enda plats dar displaygraden slapps los. */
 .page-head.hero h1{max-width:13ch;font-size:clamp(44px,8.2vw,104px);line-height:.9}
 .page-head.hero .eyebrow{color:var(--dampad)}
+/* Hero-rutnatet MASTE bo har, inte som inline-style i index.html: inline vinner
+   over mediefragan och gjorde 300px-spalten oforandrad pa mobil, vilket sprangde
+   sidbredden med ~217px. */
+.hero-top{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:end}
 
 /* Fyrfaltad faktarad.
    Celler med skiljelinje behover luft pa BADA sidor om linjen. Bara
@@ -186,6 +192,12 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 
 /* sticky förfrågningsruta */
 .layout-side{display:grid;grid-template-columns:1fr 320px;gap:clamp(32px,5vw,72px);align-items:start}
+/* En grid-cell kan inte krympa under sitt innehalls minsta bredd sa lange
+   min-width ar auto, och webblasarens egen regel ger <fieldset> dessutom
+   min-inline-size:min-content. Chip-raden ar en nowrap-flexrad pa ~686px, vilket
+   utan de har tva nollstallningarna sprangde kontaktsidans bredd pa mobil. */
+.layout-side>*{min-width:0}
+fieldset{min-inline-size:0}
 /* Ramen finns i designkompen och bryter inte mot "inga cards": det ar en
    inramad sidospalt, inte ett kort som upprepas i ett rutnat. */
 .ask-box{position:sticky;top:96px;border:1px solid var(--black);padding:26px 22px}
@@ -238,6 +250,10 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 .portrait{width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,var(--papper-mork) 0 6px,#E8E4DA 6px 12px);filter:grayscale(1);display:flex;align-items:flex-end;justify-content:flex-start}
 .portrait-placeholder{font:400 11.5px/1.6 var(--mono);color:var(--dampad);padding:20px}
 .about-text p{font-size:17px;line-height:1.7;color:var(--brod);margin-bottom:20px}
+/* Avslutningen pa om-oss: samma inline-fallla som hero hade, flyttad hit sa att
+   mediefragan faktiskt kommer at 260px-spalten. */
+.about-close{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:44px;margin-top:44px;padding-top:32px;border-top:1px solid var(--black);align-items:start}
+.about-close-side{border-left:1px solid var(--linje);padding-left:28px}
 .facts{border-top:1px solid var(--black)}
 .facts div{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--linje)}
 .facts dt{font:400 11.5px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dampad)}
@@ -289,7 +305,9 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 .footer-brand .wordmark,.footer-brand .wordmark .a,.footer-brand .wordmark .b{color:var(--papper)}
 .footer-brand .wordmark{margin-bottom:16px}
 .footer-brand p{font-size:13.5px;line-height:1.6}
-.footer-col{display:flex;flex-direction:column;gap:11px}
+/* Utan brytpunkt inuti ordet satter "kontakt@orgutveckling.se" en minsta bredd
+   pa 155px per kolumn, vilket sprangde sidan pa 320px-skarmar. */
+.footer-col{display:flex;flex-direction:column;gap:11px;overflow-wrap:anywhere}
 .footer-col-title{font:500 10.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dampad-mork)}
 .footer-col a{font-size:13.5px;color:rgba(242,239,232,.75);text-decoration:none;transition:color var(--t)}
 .footer-col a:hover{color:var(--papper)}
@@ -316,6 +334,9 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 @media(max-width:780px){
   .main-nav{display:none}
   .menu-btn{display:flex}
+  .hero-top{grid-template-columns:1fr;gap:28px;align-items:start}
+  .about-close{grid-template-columns:1fr;gap:28px}
+  .about-close-side{border-left:none;padding-left:0;border-top:1px solid var(--linje);padding-top:20px}
   .fact-row,.stat-row{grid-template-columns:1fr 1fr}
   .fact-cell,.stat-cell{border-left:none;border-top:1px solid var(--linje);padding:18px 0}
   .fact-cell:nth-child(odd),.stat-cell:nth-child(odd){padding-right:16px}
