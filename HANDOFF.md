@@ -70,6 +70,20 @@ Excel. Se `BACKLOG.md` under "SEO-läget" för hela underlaget.
   som stod i den synliga texten. Google kräver att de matchar. `check_faq.py`
   lades till i repot och ska köras efter varje `jekyll build`.
 
+**2026-08-15, samma dag: mobilvyn var trasig på två sidor.**
+
+- Startsidan var **592 px bred på en 375 px skärm**, kontaktsidan 743 px.
+  Grundorsaken på startsidan och `om-oss.html` var densamma: rutnätet låg som
+  inline-`style` i HTML:en och vann därmed över mediefrågan vid 780 px, så
+  högerspalten stod kvar på fast pixelbredd. Se regeln i `CONTEXT.md`.
+- Kontaktsidan föll på att `<fieldset>` har `min-inline-size:min-content` inbyggt
+  i webbläsaren och att chip-raden är en nowrap-flexrad på 686 px.
+- Sidfoten sprack på 320 px eftersom `kontakt@orgutveckling.se` satte 155 px
+  minsta kolumnbredd. Rubriker fick `overflow-wrap:break-word`, svenska
+  sammansättningar som "Ledarskapsutbildning" får inte plats på en smal skärm.
+- **`check_layout.js` tillagd** och ska köras före push, som `check_faq.py`.
+  Verifierad genom att buggen återinfördes: checken föll på den.
+
 **2026-08-14: riktigt kursinnehåll på ledarskapssidan.**
 
 - Listan heter nu **Upplägg** och beskriver de sex handledningstillfällena i
@@ -97,8 +111,12 @@ designen ligger live.
 ## Verification
 
 - Alla tolv sidor kontrollerade i webbläsare på 1440 px och 390 px.
-- Inga brutna interna länkar, exakt ett `<h1>` per sida, ingen horisontell
-  scroll, inga konsolfel.
+- Inga brutna interna länkar, exakt ett `<h1>` per sida, inga konsolfel.
+- **Rättelse 2026-08-15:** påståendet "ingen horisontell scroll" var fel. Det
+  var kontrollerat med ögat på 390 px, och just 390 px är den bredd där
+  startsidans fel är minst synligt. Mätt med Playwright föll två sidor:
+  startsidan (592 px bred på 375 px skärm) och kontaktsidan (743 px). Rättat och
+  automatiserat, se `check_layout.js`. Kontrollera aldrig sidbredd med ögat igen.
 - Förfrågningsformuläret testat: chips växlar, mailto byggs, statusmeddelandet
   visas.
 - Externa källänkar på BAM- och Excel-sidorna kontrollerade med HTTP-anrop.
