@@ -2,9 +2,9 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Begär omindexering i Search Console av ledarskapsutbildning-umea.html, bam-utbildning-umea.html, utbildningar.html och kontakt.html (krupna före deployen 13 aug), plus om-oss.html och artikeln om psykologisk trygghet, som Google ännu inte känner till. Därefter backlink-arbetet, med tyngdpunkt på ledarskap, som är den enda ingång med mätbar efterfrågan.
+nextAction: Begär omindexering i Search Console. Nu sju URL:er, excel-utbildning-umea.html tillkom 15 aug och ska först eftersom mätningen av Excel-hypotesen hänger på att Google ser den nya texten. Sedan ledarskapsutbildning-umea.html, om-oss.html, artikeln om psykologisk trygghet, bam-utbildning-umea.html, utbildningar.html och kontakt.html. Därefter backlink-arbetet, med tyngdpunkt på ledarskap, som är den enda ingång med mätbar efterfrågan.
 blockers: []
-reviewedAt: 2026-08-14
+reviewedAt: 2026-08-15
 ---
 
 # Handoff: orgutveckling.se
@@ -53,6 +53,22 @@ Excel. Se `BACKLOG.md` under "SEO-läget" för hela underlaget.
 - Död indexerad URL `/2025/05/23/excel-funktioner-som-sparar-tid.html` rättad med
   canonical och vidarebefordran.
 - Designunderlaget exkluderat ur bygget, det hade annars publicerats.
+
+**2026-08-15: Excelsidan lagd om till hopskrivet sökord, plus en mäträttelse.**
+
+- **Rättelse:** påståendet att sajten fått noll klick, och att första klicket kom
+  18 juli, var fel. Sajten har **15 klick på 90 dagar**. Frågedimensionen i GSC
+  anonymiserar sällsynta sökningar, så frågetabellen summerar till 0. Mät på sida
+  eller datum, och på 90 dagar. Se `BACKLOG.md` under "SEO-läget 2026-08-13".
+- Excelsidan använde `excel-utbildning` med bindestreck genomgående och den
+  hopskrivna formen aldrig. Nu omlagd i title, h1, meta, brödtext, FAQ och all
+  strukturerad data, plus `excelkurs` som andra sökform. Hela underlaget och
+  mätplanen ligger i `BACKLOG.md` under "Excel-hypotesen".
+- **BAM-sidan lämnas medvetet oförändrad som kontrollgrupp.** Rör inte den utan
+  att först läsa av mätningen, annars går jämförelsen förlorad.
+- **Ny bugg hittad och rättad:** BAM-sidans `FAQPage`-schema saknade en mening
+  som stod i den synliga texten. Google kräver att de matchar. `check_faq.py`
+  lades till i repot och ska köras efter varje `jekyll build`.
 
 **2026-08-14: riktigt kursinnehåll på ledarskapssidan.**
 

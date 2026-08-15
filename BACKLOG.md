@@ -111,13 +111,58 @@ skriva. Inget av det blockerar att sajten går live.
 - [ ] Begär omindexering i Search Console när redesignen är pushad. Alla titlar,
   meta-beskrivningar och H1 är omskrivna.
 
+## Excel-hypotesen 2026-08-15
+
+**Mätning, 90 dagar.** Excelsidan får 7 visningar på position 16,4. Ledarskapssidan
+får 86 visningar på position 20,4. Excelsidan ligger alltså **bättre** och får
+ändå tolv gånger färre visningar. Eftersom visningar är ungefär antal sökningar
+gånger sannolikheten att synas, betyder en bättre position med färre visningar
+att det finns färre sökningar. "excelutbildning umeå" förekommer inte en enda
+gång i frågedatat på 90 dagar.
+
+**Hypotesen som testas:** sidan använde `excel-utbildning` med bindestreck 24
+gånger och den hopskrivna formen `excelutbildning` noll gånger. Ledarskapssidan,
+den enda som rankar för sin målfras, skrev `ledarskapsutbildning` ihop 19 gånger.
+Svenska sammansättningar är olika tokens för Google.
+
+**Åtgärdat 2026-08-15:** Excelsidan lagd om till hopskriven form i title, h1,
+meta, ingress, brödtext, FAQ och all strukturerad data. `excelkurs` tillagt som
+andra sökform, bland annat i en ny FAQ om skillnaden mot en färdig kurs.
+Ankartexten i de två Excel-artiklarnas avslutning ändrad till "excelutbildning i
+Umeå", och januariartikeln fick en riktig länk till landningssidan, den hade
+frasen som ren text utan länk.
+
+**BAM-sidan lämnas medvetet med bindestreck som kontrollgrupp.** Om Excelsidan
+rör sig och BAM står stilla är det ett starkare belägg än om båda ändras samtidigt.
+
+- [ ] **Läs av om sex veckor, alltså efter 2026-09-26.** Mät visningar och
+  position för `excel-utbildning-umea.html` på 90 dagar och jämför med 7
+  visningar / position 16,4. Rör sig ingenting är hypotesen fel och orsaken är
+  sökvolym, inte formulering.
+- [ ] **Mät den verkliga volymen i Google Keyword Planner** (gratis med ett Google
+  Ads-konto, kräver ingen annonsering). Search Console visar bara sökningar där
+  sajten redan syns, så frånvaro i GSC bevisar inte frånvaro av volym. Det här är
+  enda sättet att få veta om "excelutbildning umeå" har 10 eller 500 sökningar i
+  månaden, och därmed om Excel är värt mer arbete alls.
+- [ ] **Kontrollera Google Business Profile.** För "i umeå"-sökningar ligger de
+  lokala kartträffarna ovanför de organiska. Står excelutbildning som tjänst där
+  gör den sannolikt mer nytta än landningssidan.
+
+**Realistisk förväntan:** även en förstaplats på "excelutbildning umeå" ger
+sannolikt tiotals sökningar i månaden i en stad på 90 000. Mät den sidan i
+förfrågningar, aldrig i trafik. Ledarskap är där volymen finns.
+
 ## SEO-läget 2026-08-13
 
 Mätt via `gsc`-MCP:n, 28 dagar (16 juli till 13 augusti), jämfört med
 föregående 28 dagar.
 
-- **Första klicket någonsin.** 1 klick den 18 juli, till startsidan. Startsidan
-  ligger på position 4,9 i snitt. Tidigare mätning: 0 klick.
+- ~~**Första klicket någonsin.** 1 klick den 18 juli.~~ **Fel, rättat 2026-08-15.**
+  Sajten har fått **15 klick på 90 dagar**, tolv av dem till startsidan som ligger
+  på position 5,1. Klicken kom i en klunga 25 maj till 7 juni, sedan ett 7 juli
+  och ett 18 juli. Orsaken till felet: **frågedimensionen anonymiserar sällsynta
+  sökningar**, så summan av frågetabellen blir 0 klick även när sajten fått klick.
+  Mät alltid på dimensionen sida eller datum, och på 90 dagar, inte 28.
 - Visningar 78, upp från 60. CTR 1,28 %, snittposition 24,5.
 - **`ledarskapsutbildning umeå` är den överlägset största frågan**: 22 visningar,
   position 21,8. Föregående period 28 visningar. Ledarskapssidan får 23
