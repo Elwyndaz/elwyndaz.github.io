@@ -50,11 +50,13 @@ Vill du se en konkret och saklig genomgång av vad Microsofts inbyggda Copilot i
 
 Kenji visar tydligt vilka prompter som ger bra resultat och varför strukturerad tabelldata i Excel är en absolut förutsättning för att AI över huvud taget ska förstå underlaget.
 
-## När kalkylark inte längre räcker till
+## Nyfiken på hur ni kan använda AI i er vardag?
 
-Många organisationer pressar Excel långt bortom vad programmet är byggt för. När ett kalkylark växer till att bli en hel databas, ett ärendehanteringssystem eller ett komplext planeringsverktyg som delas av tio personer samtidigt, uppstår snabbt versionskaos, kraschade filer och säkerhetsrisker.
+Många verksamheter vill komma igång med AI men vet inte riktigt var de ska börja, eller hur de ska få ut praktisk nytta av verktyg som Microsoft Copilot, ChatGPT eller Claude utan att riskera felaktiga siffror eller röja känslig data.
 
-När du når den gränsen är lösningen sällan mer Excel, utan att ta steget till anpassade webbapplikationer och integrerade system. Det är precis den typen av digitala verktyg och automatiseringar vi bygger via [buildapp.se](https://buildapp.se), där arbetsflöden kan automatiseras med moderna databaser och smarta AI-integrationer i stället för manuella kalkylblad.
+Oavsett om ni vill ha en praktisk workshop för arbetsgruppen, lära er använda AI smartare i era kalkylark, eller utforska hur enkla AI-flöden kan spara tid i era administrativa rutiner, hjälper jag gärna till. Jag utvecklar och experimenterar löpande med praktiska AI-lösningar och app-projekt via [buildapp.se](https://buildapp.se), och brinner för att göra modern teknik begriplig och användbar på riktigt.
+
+Hör gärna av er via [kontaktsidan](/kontakt.html) för ett förutsättningslöst samtal om vad ni vill utforska med AI i er verksamhet.
 
 ## Slutsats: AI ersätter inte Excel-kunskap, den förstärker den
 
