@@ -2,30 +2,27 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Begär omindexering i Search Console. Nu sju URL:er, excel-utbildning-umea.html tillkom 15 aug och ska först eftersom mätningen av Excel-hypotesen hänger på att Google ser den nya texten. Sedan ledarskapsutbildning-umea.html, om-oss.html, artikeln om psykologisk trygghet, bam-utbildning-umea.html, utbildningar.html och kontakt.html. Därefter backlink-arbetet, med tyngdpunkt på ledarskap, som är den enda ingång med mätbar efterfrågan.
+nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-08-15
+reviewedAt: 2026-08-20
 ---
 
 # Handoff: orgutveckling.se
 
 ## Läget
 
-Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning. Problemet är
-auktoritet, inte teknik: 78 visningar och 1 klick på 28 dagar (mätt 2026-08-13).
+Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 indexerade URL:er i sitemapen, alla med status PASS.
 
-Men bilden har skärpts sedan juli. **Det stämmer inte längre att huvudnyckelorden
-saknar sökvolym.** `ledarskapsutbildning umeå` ger 22 visningar på position 21,8
-och är sajtens största fråga, medan "excel utbildning umeå" och "bam utbildning
-umeå" fortfarande ger i princip noll. Volymen finns för ledarskap, sajten ligger
-bara på sida tre. Det första klicket någonsin kom 18 juli, till startsidan, som
-ligger på snittposition 4,9.
-
-Konsekvensen: backlinks är fortfarande den strukturellt säkraste åtgärden, men
-tyngdpunkten i både innehåll och länkarbete bör ligga på **ledarskap**, inte
-Excel. Se `BACKLOG.md` under "SEO-läget" för hela underlaget.
+Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-08-20: Excelsidan on-page optimerad för 'excelkurs' och nischer.**
+
+- Google Keyword Planner körd: sökvolymen bekräftades på ordet `kurs` snarare än `utbildning`.
+- `excel-utbildning-umea.html` uppdaterad i title, meta description, H1, ingress och sektioner för att naturligt fånga `excelkurs umeå`, `grundkurs i excel`, `excel för ekonomer` och `excel för självlärda`.
+- Strukturerad data uppdaterad (`Course` och `BreadcrumbList`).
+- Kontroller gröna: `python check_faq.py` (0 avvikelser), `node check_layout.js` (0 overflow på 320–768 px).
 
 **2026-08-12: hela sajten redesignad** enligt `HANDOFF-REDESIGN.md`.
 
