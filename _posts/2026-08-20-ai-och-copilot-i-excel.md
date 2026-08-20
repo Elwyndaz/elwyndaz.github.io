@@ -2,64 +2,46 @@
 layout: artikel
 title: "AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv?"
 date: 2026-08-20
-description: "Microsoft Copilot och AI lovar att bygga dina Excel-ark åt dig. Här är vad AI faktiskt klarar i Excel i dag, var fallgroparna ligger och varför grundkunskapen behövs mer än någonsin."
+description: "AI lovar att bygga dina kalkylark åt dig. Här är vad Microsoft Copilot och ChatGPT faktiskt klarar i Excel, var riskerna ligger och varför grundkunskapen behövs mer än någonsin."
 kategori: Excel
-ingress: "AI och Microsoft Copilot lovar att du aldrig mer behöver skriva en formel i Excel. Verkligheten på kontoret är mer nyanserad: AI är fantastiskt på att förklara formler, städa ostrukturerad data och skriva makron, men riskabelt om du inte kan granska svaren själv. Här är en genomgång av vad som fungerar på riktigt, tre vanliga fallgropar och hur du kombinerar AI med gedigen Excel-kunskap."
+ingress: "Microsoft Copilot och ChatGPT marknadsförs som att du aldrig mer behöver skriva en formel själv. På ett verkligt kontor med stökiga exporter och svenska bokföringsfiler ser verkligheten annorlunda ut. Här är vad AI faktiskt löser i Excel, var fällorna finns och hur du granskar resultatet."
 ---
 
-Det går knappt en vecka utan att en ny video visar hur Microsoft Copilot, ChatGPT eller Claude bygger komplexa kalkylark på tre sekunder. Löftet är lockande: skriv bara på vanlig svenska vad du vill ha, så sköter AI resten.
+Demonstrationerna av Microsoft Copilot och ChatGPT i kalkylark ser ofta enkla ut: beskriv vad du vill se och få ett färdigt diagram. Men i praktiken, när underlaget består av brutna datumformat, dolda rader och interna kontoplaner, stöter modellerna snabbt på problem.
 
-Men när man sitter med en verklig svensk bokföringsfil, en export från ett affärssystem eller ett komplext personalschema upptäcker de flesta snabbt gränserna. AI är ett fantastiskt verktyg för kalkylark, men det är ingen magisk trollstav.
+AI är ett kraftfullt verktyg i Excel, förutsatt att du vet exakt vad du ber om och kan granska svaret.
 
-Här är en genomgång av vad AI i Excel faktiskt är bra på i dag, var riskerna ligger och hur du använder tekniken utan att fatta felaktiga beslut på jobbet.
+## Det här fungerar bra i dag
 
-## Vad AI faktiskt gör riktigt bra i Excel
+Använd AI för syntax, felsökning och mönster, inte för att göra själva uträkningen i prompten.
 
-Om du använder AI som en kunnig assistent i stället för en automatisk pilot finns det enormt mycket tid att spara. De här momenten fungerar utmärkt redan i dag:
+**Hitta rätt formel snabbt.** I stället för att leta syntax i dokumentationen: beskriv vad du vill göra (*"slå ihop kolumn A och B, men bara om datumet i C är under 2026"*). Du får oftast en fungerande `XLETAUPP` eller kapslad formel på några sekunder.
 
-**01. Översätta dina behov till rätt formel.**
-I stället för att leta på Google eller försöka minnas om det heter `LETARAD`, `INDEX/PASSA` eller moderna `XLETAUPP`, kan du beskriva ditt problem i klartext: *"Hur slår jag ihop kolumn A och B, men bara om datumet i kolumn C är i år?"*. AI ger dig oftast en färdig, fungerande formel direkt.
+**Förklara monsterformler.** Har du ärvt ett kalkylark med formler på fyra rader som ingen vågar röra? Klistra in formeln i AI och be om en rad-för-rad-förklaring av vad den faktiskt gör.
 
-**02. Förklara obegripliga formler som andra har skrivit.**
-Alla som ärvt ett kalkylark från en tidigare kollega har stött på monsterformler på fyra rader med sju kapslade `OM`-satser. Klistra in formeln i AI-verktyget och be den förklara logiken steg för steg. Det är ett av de absolut bästa användningsområdena.
+**Städa textdata.** Rensa telefonnummer, extrahera förnamn ur e-postadresser eller dela upp adresser med `TEXTDELA` eller regex. Mönsterigenkänning är språkmodellernas starkaste sida.
 
-**03. Städa och strukturera stökig textdata.**
-Att separera för- och efternamn, formatera om telefonnummer till enhetlig standard eller plocka ut datum ur ostrukturerade fritextfält kan ta timmar för hand. AI är extremt bra på mönsterigenkänning och kan ge dig rätt funktioner (som `TEXTDELA`, `BYTE` eller `REGEX`) på några sekunder.
+**Skriva enkla VBA-makron.** Att be om ett skript som exporterar valda flikar till PDF eller rensar tomma rader sparar timmar för den som inte programmerar själv.
 
-**04. Skriva enkla VBA-makron för att automatisera rutiner.**
-Vill du ha en knapp som automatiskt sparar tre specifika flikar som separata PDF-filer och skickar dem med e-post? Om du inte kan programmera VBA kan du be AI skriva koden åt dig. Med tydliga instruktioner fungerar det förvånansvärt bra.
+## Tre konkreta fallgropar
 
-## Tre vanliga fallgropar du måste undvika
+**1. Formler som ser rätt ut men räknar snett.**
+Språkmodeller gissar sannolika ord och tecken, de räknar inte. En föreslagen formel kan se helt rimlig ut men missa dolda rader, feltolka textformaterade siffror eller blanda ihop relativa och absoluta cellreferenser (`$A$1` mot `A1`).
 
-Det är när användare litar blint på AI som de allvarliga misstagen sker. Här är de tre största fällorna:
+**2. Granskningsproblemet.**
+Förstår du inte logiken bakom en pivottabell eller en logisk funktion kan du inte avgöra om formeln missar 10 % av underlaget. I bokslut, lön och budget kostar sådana missar pengar.
 
-**1. Formler som ser korrekta ut men räknar fel.**
-AI resonerar språkligt, inte strikt matematiskt. En formel som AI föreslår kan se helt logisk ut vid en första anblick, men ha missat att hantera dolda rader, felaktiga datatyper (som datum sparade som text) eller absoluta kontra relativa cellreferenser (`$A$1` kontra `A1`).
+**3. Sekretess och personuppgifter.**
+Klistra aldrig in rådata med personnummer, lönelistor eller kundregister i öppna AI-verktyg utan företagsskydd.
 
-**2. Granskningsproblemet: du måste förstå logiken själv.**
-Om du inte själv förstår hur en pivottabell, en logisk formel eller en summering är uppbyggd, har du ingen möjlighet att upptäcka när AI föreslår en formel som missar 10 % av underlaget. Inom ekonomi, budget och uppföljning kan det få direkta ekonomiska konsekvenser.
+## Fördjupning: Se Copilot i praktiken
 
-**3. Sekretess och personuppgifter (GDPR).**
-Klistra aldrig in känslig rådata, personnummer, lönelistor eller konfidentiella kundregister i publika AI-tjänster. Se till att du känner till din arbetsgivares policy och använd endast säkrade företagslicenser (som Microsoft 365 Copilot med företagsskydd).
+För en nykter genomgång av vad Microsoft Copilot i Excel faktiskt klarar rekommenderas [Kenji Explains video på YouTube](https://youtu.be/Q9KxHeSySFo?si=u8KZR8gS8oftVWdl). Han visar konkret vilka prompter som fungerar och varför strukturerade Excel-tabeller är ett absolut krav för att verktyget inte ska ge felaktiga svar.
 
-## Fördjupning: Se hur Copilot fungerar i verkligheten
+## Vill ni använda AI smartare i vardagen?
 
-Vill du se en konkret och saklig genomgång av vad Microsofts inbyggda Copilot i Excel faktiskt klarar och var begränsningarna finns? Vi rekommenderar videon från Kenji Explains:
+Många organisationer vill komma igång med AI men fastnar i teorin. Vill ni ha en praktisk workshop för arbetsgruppen, lära er använda Copilot smartare i era kalkylark eller effektivisera era administrativa rutiner, hjälper jag gärna till.
 
-- [Se Kenji Explains genomgång av Copilot i Excel på YouTube](https://youtu.be/Q9KxHeSySFo?si=u8KZR8gS8oftVWdl)
+Jag experimenterar och bygger löpande egna AI- och app-lösningar via [buildapp.se](https://buildapp.se) och fokuserar alltid på praktisk nytta framför buzzwords. Hör gärna av er via [kontaktsidan](/kontakt.html) för ett förutsättningslöst samtal.
 
-Kenji visar tydligt vilka prompter som ger bra resultat och varför strukturerad tabelldata i Excel är en absolut förutsättning för att AI över huvud taget ska förstå underlaget.
-
-## Nyfiken på hur ni kan använda AI i er vardag?
-
-Många verksamheter vill komma igång med AI men vet inte riktigt var de ska börja, eller hur de ska få ut praktisk nytta av verktyg som Microsoft Copilot, ChatGPT eller Claude utan att riskera felaktiga siffror eller röja känslig data.
-
-Oavsett om ni vill ha en praktisk workshop för arbetsgruppen, lära er använda AI smartare i era kalkylark, eller utforska hur enkla AI-flöden kan spara tid i era administrativa rutiner, hjälper jag gärna till. Jag utvecklar och experimenterar löpande med praktiska AI-lösningar och app-projekt via [buildapp.se](https://buildapp.se), och brinner för att göra modern teknik begriplig och användbar på riktigt.
-
-Hör gärna av er via [kontaktsidan](/kontakt.html) för ett förutsättningslöst samtal om vad ni vill utforska med AI i er verksamhet.
-
-## Slutsats: AI ersätter inte Excel-kunskap, den förstärker den
-
-AI gör inte Excel-kunskaper överflödiga, tvärtom. Den som har en stabil grundförståelse för hur kalkylark fungerar kan använda AI för att arbeta dubbelt så snabbt. Den som saknar grunderna riskerar däremot att göra fel dubbelt så fort.
-
-Vill ni stärka era grundläggande kunskaper eller lära er arbeta effektivare med era egna arbetsfiler? Läs mer om vår [verksamhetsanpassade excelkurs i Umeå och på distans](/excel-utbildning-umea.html), där vi utgår från er vardag och era verkliga behov.
+Vill ni i stället stärka grunderna i kalkylark med era egna arbetsfiler som bas? Läs mer om vår [verksamhetsanpassade excelkurs i Umeå och på distans](/excel-utbildning-umea.html).
