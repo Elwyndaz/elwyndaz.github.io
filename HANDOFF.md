@@ -17,12 +17,13 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
-**2026-08-20: Excelsidan on-page optimerad för 'excelkurs' och nischer.**
+**2026-08-20: Excelsidan on-page optimerad och ny artikel om AI/Copilot i Excel publicerad.**
 
 - Google Keyword Planner körd: sökvolymen bekräftades på ordet `kurs` snarare än `utbildning`.
 - `excel-utbildning-umea.html` uppdaterad i title, meta description, H1, ingress och sektioner för att naturligt fånga `excelkurs umeå`, `grundkurs i excel`, `excel för ekonomer` och `excel för självlärda`.
+- Ny artikel: `_posts/2026-08-20-ai-och-copilot-i-excel.md` ("AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv?"). Innehåller reella use cases, tre fallgropar, extern länk till Kenji Explains, brygga till `buildapp.se` och internlänk till excelkursen.
 - Strukturerad data uppdaterad (`Course` och `BreadcrumbList`).
-- Kontroller gröna: `python check_faq.py` (0 avvikelser), `node check_layout.js` (0 overflow på 320–768 px).
+- Kontroller gröna: `python check_faq.py` (0 avvikelser), `node check_layout.js` (0 overflow på 320–768 px), Playwright-rendering PASS.
 
 **2026-08-12: hela sajten redesignad** enligt `HANDOFF-REDESIGN.md`.
 

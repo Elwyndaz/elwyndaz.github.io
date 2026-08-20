@@ -25,6 +25,7 @@ haft fel förut.
 
 ### Excel
 
+- [x] AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv? Publicerad 2026-08-20. Går igenom reella användningsområden (formeltolkning, textstädning, enkla makron), tre allvarliga fallgropar (hallucinerad logik, granskningsbehov, sekretess), extern länk till Kenji Explains, länk till buildapp.se och internlänk till excelkursen.
 - [ ] Så lär du dig pivottabeller snabbt
 - [ ] Excel för ekonomer
 - [ ] Excel för HR
