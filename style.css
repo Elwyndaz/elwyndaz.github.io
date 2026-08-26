@@ -80,7 +80,7 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 .page-head .eyebrow a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(168,67,31,.4)}
 .page-head .eyebrow a:hover{color:var(--black);border-color:var(--black)}
 /* Startsidans hero ar den enda plats dar displaygraden slapps los. */
-.page-head.hero h1{max-width:13ch;font-size:clamp(44px,8.2vw,104px);line-height:.9}
+.page-head.hero h1{max-width:13ch;font-size:clamp(44px,8.2vw,104px);line-height:1}
 .page-head.hero .eyebrow{color:var(--dampad)}
 /* Hero-rutnatet MASTE bo har, inte som inline-style i index.html: inline vinner
    over mediefragan och gjorde 300px-spalten oforandrad pa mobil, vilket sprangde
