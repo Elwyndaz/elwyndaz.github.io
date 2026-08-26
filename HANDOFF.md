@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-08-20
+reviewedAt: 2026-08-26
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,13 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-08-26: hero-rubriken på startsidan kolliderade radvis.**
+
+- `line-height:.9` på `.page-head.hero h1` lät g:et i "fungerar" gå in i raden
+  under ("verkligheten"). Satt till `line-height:1`. Bara startsidans hero
+  påverkas, övriga sidrubriker ligger kvar på `.95`.
+- `node check_layout.js` grön: 14 sidor x 4 bredder, 0 overflow.
 
 **2026-08-20: Excelsidan on-page optimerad och ny artikel om AI/Copilot i Excel publicerad.**
 
