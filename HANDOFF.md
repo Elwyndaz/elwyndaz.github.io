@@ -17,6 +17,24 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
+**2026-08-27: integritetspolicy, sajten saknade informationsplikt helt.**
+
+- Ny `integritetspolicy.html` i registerlayouten, med i `sitemap.xml` och länkad
+  från sidfoten på samtliga sidor plus artikellayouten.
+- Täcker Cloudflare, GitHub Pages, Google Fonts och förfrågningsformuläret.
+  **Formuläret är den enda punkten där uppgifter når mig**, och även där indirekt:
+  det bygger en mailto som besökaren skickar själv, så sajten tar aldrig emot
+  något.
+- **Ingen cookiebanner, och det är rätt.** Sajten sätter inga cookies och använder
+  ingen `localStorage`. Samtyckeskravet i lagen om elektronisk kommunikation
+  triggar på lagring eller läsning på besökarens enhet, och när ingenting lagras
+  triggas det aldrig. GDPR:s informationsplikt gäller ändå eftersom IP-adresser
+  behandlas, och den fyller policyn.
+- Sidfotens underrad fick en länkstil i `style.css`, den saknade en.
+- `jekyll build` grönt, `check_faq.py` 0 avvikelser, `check_layout.js` 0 overflow
+  på 15 sidor x 4 bredder.
+
+
 **2026-08-27: OG-bilden var WebP, alltså osynlig i de flesta delningar.**
 
 - `og:image` pekade på `og-image.webp`. LinkedIn, Slack och iMessage renderar inte
