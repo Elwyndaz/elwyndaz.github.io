@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-08-26
+reviewedAt: 2026-08-27
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,19 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-08-27: OG-bilden var WebP, alltså osynlig i de flesta delningar.**
+
+- `og:image` pekade på `og-image.webp`. LinkedIn, Slack och iMessage renderar inte
+  WebP alls, och Facebook är opålitligt. `og-image.png` (1200x630) låg redan i repot
+  oanvänd. Alla sidor plus `_layouts/artikel.html` pekar nu på PNG:en.
+- `og:image:width`, `height` och `type` tillagda. Utan dem hämtar skraparen bilden
+  och mäter den själv, vilket är varför en förhandsvisning ibland dyker upp först
+  vid andra delningen.
+- `twitter:card` var `summary` (liten kvadrat) på alla sidor utom artikellayouten,
+  och `twitter:image` saknades helt utanför artiklarna. Båda rättade.
+- **Regel:** WebP är rätt för bilder på sidan, aldrig för `og:image`. Skrapare är
+  inte webbläsare.
 
 **2026-08-26: hero-rubriken på startsidan kolliderade radvis.**
 
@@ -152,6 +165,11 @@ designen ligger live.
   är ett låst beslut.
 
 ## Resume here
+
+OG-fixen 2026-08-27 är committad men **inte pushad**. Efter push: kör Facebooks
+Sharing Debugger och LinkedIn Post Inspector så deras cache töms, annars ligger den
+trasiga förhandsvisningen kvar. Det gäller särskilt LinkedIn, som ska användas för
+artikeldelning enligt `nextAction`.
 
 Omindexering i Search Console enligt `nextAction`. Sedan backlinks.
 **Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan i
