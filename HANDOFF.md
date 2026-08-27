@@ -17,6 +17,18 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
+**2026-08-27, kväll: Cloudflare Web Analytics påslaget, policy version 1.1.**
+
+- Patrik valde "Enable, JS snippet automatically injected" för zonen
+  `orgutveckling.se` (Cloudflare-dashboarden, Observe → Web Analytics). Cloudflare
+  injicerar `beacon.min.js` i all HTML; cookiefri sidvisningsstatistik per sökväg.
+  Ingen kodändring, ingen CSP i zonen att öppna.
+- `integritetspolicy.html`: avsnittet Besöksmätning beskriver nu tjänsten och
+  rättslig grund i stället för att säga "ingen analystjänst alls". Google Fonts
+  är inte längre "den enda tredjeparten".
+- Två sessioner skrev policy samtidigt den här kvällen; den här behölls, dubbletten
+  `integritet.html` slängdes innan push.
+
 **2026-08-27: integritetspolicy, sajten saknade informationsplikt helt.**
 
 - Ny `integritetspolicy.html` i registerlayouten, med i `sitemap.xml` och länkad
