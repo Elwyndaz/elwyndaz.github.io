@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-08-27
+reviewedAt: 2026-09-10
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,50 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-09-10: granskning av innehåll, form och kod åtgärdad (tio punkter).**
+
+- **`index.html`: felaktigt myndighetspåstående borttaget.** FAQ:n påstod att
+  BAM-kursen "uppfyller Arbetsmiljöverkets krav". Arbetsmiljöverket godkänner
+  inte arbetsmiljöutbildningar, och sajtens egen artikel
+  `_posts/2026-07-06-ar-bam-obligatoriskt.md` säger korrekt motsatsen — sajten
+  motsade alltså sig själv. Omskrivet i både synlig FAQ och `FAQPage`-schemat.
+  Ingen AFS-paragraf citeras: AFS 2001:1 ersattes av det nya regelverket 2025.
+- **`om-oss.html`: regi-anvisningarna låg publicerade som brödtext.**
+  Platshållarrutan och noten "Ett enda porträtt, stort. Inget kollage, ingen bild
+  från en utbildningssal." var ett formgivarnotat på sidan. Borttagna; texten tar
+  nu hela bredden. `.about-grid`, `.portrait` och `.portrait-placeholder` står
+  kvar i `style.css` så att rutan kan återställas när porträttet finns, se
+  `BACKLOG.md`.
+- **`sitemap.xml`: två fel.** `/ai/` låg med trots att den enligt `CONTEXT.md`
+  medvetet ska förbli 404 (beslutat 2026-08-15) — vi skickade alltså en avsiktlig
+  404 till Google. Artikeln 2026-08-20 (AI och Copilot i Excel) saknades helt.
+- **Antalet program stämde inte.** `kontakt.html` sa "tre utbildningar", övriga
+  sidor "fyra program". `index.html` sa dessutom "öppna och interna", vilket
+  motsäger produktbeslutet i `CONTEXT.md` (aldrig anmälan, inget katalogdatum).
+- **Startsidans title bar fel sökordsform.** Den använde `Excel-utbildning` med
+  bindestreck, formen som Keyword Planner avfärdade 2026-08-20 (`excelkurs umeå`
+  10–100/mån mot `excelutbildning` 0–10). Startsidan är sajtens enda rankande
+  sida (position 5,1, tolv av femton klick), så det är den mest värdefulla titeln
+  på sajten. Även `case.html`. **Meta-beskrivningarna bär fortfarande
+  bindestrecksformen och är inte omlagda.**
+- **Tillgänglighet: dekorativa siffror lästes högt.** `01`–`04` låg inuti
+  länkarna i mobilmenyn (15 sidor + artikellayouten) och i registerraderna
+  (8 sidor), så skärmläsare sa "01 Utbildningar". `aria-hidden="true"`.
+- **Fem oanvända bilder borttagna**: `COU.webp`, `boka-utbildning-umea.webp`,
+  `excel-utbildning-umea.webp`, `utvarderingar-umea.webp` och `og-image.webp`
+  (den sista död sedan OG-fixen 2026-08-27 lade om allt till PNG).
+- **`style.css`: latent overflow-bugg.** `.register-row` och `.link-row` använde
+  bar `1fr` där `.book-row` redan använde `minmax(0,1fr)`. Det är exakt fällan
+  `CONTEXT.md` beskriver: en grid-cell kan inte krympa under sitt innehålls
+  minsta bredd så länge `min-width` är `auto`. Åtgärdat i både grundregeln och
+  mobilvarianterna.
+- Kontroller gröna: `check_faq.py` 0 avvikelser (index: 5 par matchar),
+  `check_layout.js` 0 overflow på 15 sidor × 4 bredder.
+- **Medvetet inte gjort:** e-postadressen ligger kvar i klartext i JSON-LD på
+  `index.html`, `kontakt.html` och `om-oss.html`, vilket gör `site.js`-
+  obfuskeringen verkningslös men kostar att adressen försvinner helt utan JS.
+  Att lösa det åt det ena eller andra hållet är ett beslut, inte en bugg.
 
 **2026-08-27, kväll: Cloudflare Web Analytics påslaget, policy version 1.1.**
 
@@ -196,10 +240,18 @@ designen ligger live.
 
 ## Resume here
 
-OG-fixen 2026-08-27 är committad men **inte pushad**. Efter push: kör Facebooks
-Sharing Debugger och LinkedIn Post Inspector så deras cache töms, annars ligger den
-trasiga förhandsvisningen kvar. Det gäller särskilt LinkedIn, som ska användas för
-artikeldelning enligt `nextAction`.
+OG-fixen 2026-08-27 **ligger i `main`** (`og-image.png` på samtliga sidor). Raden
+här sa tidigare att den var committad men inte pushad; det stämde inte,
+kontrollerat 2026-09-10. Kör Facebooks Sharing Debugger och LinkedIn Post
+Inspector så deras cache töms, annars ligger den trasiga förhandsvisningen kvar.
+Det gäller särskilt LinkedIn, som ska användas för artikeldelning enligt
+`nextAction`.
+
+**Överst på listan, oåtgärdat:** granskningen 2026-09-09 rapporterade att den
+publicerade `utbildningar.html` är en **äldre mall** än den i repot — gammal meny,
+ingen sidfot, trasig `/cdn-cgi/l/`-länk. Det kunde inte verifieras från
+utvecklingsmiljön. Kontrollera senaste Pages-bygget och Cloudflare-cachen **innan**
+något byggs om i repot: är orsaken cachning löser ingen kodändring den.
 
 Omindexering i Search Console enligt `nextAction`. Sedan backlinks.
 **Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan i

@@ -81,10 +81,10 @@ description: Artiklar, läslista och länktips om Excel, ledarskap, BAM och orga
     <button class="mobile-nav-close" onclick="toggleMenu()" aria-label="Stäng meny">&times;</button>
   </div>
   <div class="mobile-nav-list">
-    <a href="/utbildningar.html"><span>01</span>Utbildningar</a>
-    <a href="/artiklar/"><span>02</span>Kunskap</a>
-    <a href="/om-oss.html"><span>03</span>Om oss</a>
-    <a href="/kontakt.html"><span>04</span>Kontakt</a>
+    <a href="/utbildningar.html"><span aria-hidden="true">01</span>Utbildningar</a>
+    <a href="/artiklar/"><span aria-hidden="true">02</span>Kunskap</a>
+    <a href="/om-oss.html"><span aria-hidden="true">03</span>Om oss</a>
+    <a href="/kontakt.html"><span aria-hidden="true">04</span>Kontakt</a>
   </div>
   <a href="/kontakt.html" class="mobile-nav-cta">Begär förslag</a>
 </nav>
@@ -113,7 +113,7 @@ description: Artiklar, läslista och länktips om Excel, ledarskap, BAM och orga
 
     {% for post in site.posts %}
     <a href="{{ post.url }}" class="register-row artikel-rad" data-cat="{{ post.kategori }}">
-      <span class="register-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+      <span class="register-num" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
       <span class="register-title" style="font-size:clamp(24px,2.4vw,30px);line-height:1.05">{{ post.title }}</span>
       <span class="register-desc">{{ post.description }}</span>
       <span class="register-meta">{{ post.kategori }}<br>{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -131,7 +131,7 @@ description: Artiklar, läslista och länktips om Excel, ledarskap, BAM och orga
     </div>
 
     <a href="/lasning.html" class="register-row">
-      <span class="register-num">A</span>
+      <span class="register-num" aria-hidden="true">A</span>
       <span class="register-title">Läslistan</span>
       <span class="register-desc">Böckerna vi återkommer till i utbildningarna, inom organisationspsykologi, ledarskap och beteende.</span>
       <span class="register-meta">47 böcker<br>Fem ämnen</span>
@@ -139,7 +139,7 @@ description: Artiklar, läslista och länktips om Excel, ledarskap, BAM och orga
     </a>
 
     <a href="/lanktips.html" class="register-row">
-      <span class="register-num">B</span>
+      <span class="register-num" aria-hidden="true">B</span>
       <span class="register-title">Länktips</span>
       <span class="register-desc">Nyhetsbrev, poddar och YouTube-kanaler inom Excel, Office-paketet och psykologi. Plus våra egna videor.</span>
       <span class="register-meta">19 källor<br>Fyra typer</span>

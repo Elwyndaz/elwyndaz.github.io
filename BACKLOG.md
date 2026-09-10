@@ -62,8 +62,10 @@ skriva. Inget av det blockerar att sajten går live.
 **Innehåll som saknas**
 
 - [ ] **Porträttet på Om oss.** Enda bilden sajten behöver: svartvitt, rakt
-  framifrån, neutral bakgrund. Ligger som ett tydligt markerat platshållarfält
-  just nu. Filnamn i ren ASCII, WebP.
+  framifrån, neutral bakgrund. Platshållarrutan **togs bort 2026-09-10**: den
+  innehöll regi-anvisningar som lästes som brödtext på sidan. `.about-grid` och
+  `.portrait` står kvar i `style.css`, så rutan kan återställas när bilden finns.
+  Filnamn i ren ASCII, WebP.
 - [ ] **Kommentarer till böckerna på Läslistan.** Kurateringsregeln i specen är
   ingen post utan en egen mening om varför, högst tolv poster, varje post kopplad
   till en utbildning. I dag ligger 48 titlar utan kommentarer. Att gallra 48 till

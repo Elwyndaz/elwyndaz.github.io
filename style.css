@@ -110,7 +110,7 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 .fact-row.stor .fact-label{font:400 12px/1.4 var(--mono);letter-spacing:0;text-transform:none;margin:8px 0 0}
 
 /* registerrad */
-.register-row{display:grid;grid-template-columns:64px 1fr 300px 200px 40px;gap:24px;align-items:baseline;padding:34px 12px 34px 0;border-bottom:1px solid var(--linje);color:var(--black);text-decoration:none;transition:background var(--t),padding var(--t)}
+.register-row{display:grid;grid-template-columns:64px minmax(0,1fr) 300px 200px 40px;gap:24px;align-items:baseline;padding:34px 12px 34px 0;border-bottom:1px solid var(--linje);color:var(--black);text-decoration:none;transition:background var(--t),padding var(--t)}
 .register-row:hover{background:var(--papper-mork);padding-left:12px;padding-right:0}
 .register-num{font:500 12px/1 var(--mono);color:var(--accent)}
 .register-title{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1;letter-spacing:-.02em}
@@ -228,7 +228,7 @@ fieldset{min-inline-size:0}
 .book-row .b-title{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15;letter-spacing:-.02em}
 .book-row .b-meta{font-size:14.5px;line-height:1.5;color:var(--brod-ljus)}
 .book-row .b-note{font:400 11.5px/1.6 var(--mono);color:var(--dampad);text-align:right}
-.link-row{display:grid;grid-template-columns:48px 1fr 180px 34px;gap:24px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--linje);text-decoration:none;color:var(--black);transition:background var(--t),padding var(--t)}
+.link-row{display:grid;grid-template-columns:48px minmax(0,1fr) 180px 34px;gap:24px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--linje);text-decoration:none;color:var(--black);transition:background var(--t),padding var(--t)}
 .link-row:hover{background:var(--papper-mork);padding-left:12px}
 .link-row .l-title{font-size:15.5px;font-weight:500;line-height:1.4}
 .link-row .l-title span{display:block;font-weight:400;font-size:14px;color:var(--brod-ljus);margin-top:3px}
@@ -322,7 +322,7 @@ fieldset{min-inline-size:0}
   .portrait{max-width:420px}
 }
 @media(max-width:900px){
-  .register-row{grid-template-columns:1fr;gap:6px;padding:24px 0}
+  .register-row{grid-template-columns:minmax(0,1fr);gap:6px;padding:24px 0}
   .register-row:hover{padding-left:0}
   .register-num{order:1}.register-title{order:2}.register-desc{order:3;margin-top:4px}.register-meta{order:4;margin-top:8px}
   .register-title::after{content:' \2192';color:var(--accent)}
@@ -330,7 +330,7 @@ fieldset{min-inline-size:0}
   .book-row{grid-template-columns:40px 1fr;gap:6px 16px}
   .book-row .b-meta,.book-row .b-note{grid-column:2}
   .book-row .b-note{text-align:left}
-  .link-row{grid-template-columns:40px 1fr 28px}
+  .link-row{grid-template-columns:40px minmax(0,1fr) 28px}
   .link-row .l-meta{grid-column:2;font-size:11.5px}
 }
 @media(max-width:780px){
