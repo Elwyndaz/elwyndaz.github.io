@@ -138,6 +138,10 @@ frasen som ren text utan länk.
 **BAM-sidan lämnas medvetet med bindestreck som kontrollgrupp.** Om Excelsidan
 rör sig och BAM står stilla är det ett starkare belägg än om båda ändras samtidigt.
 
+- [ ] **Lägg in "diplomerad BAM-handledare via Prevent" på `bam-utbildning-umea.html`
+  direkt efter avläsningen.** Meriten ligger sedan 2026-09-10 på `om-oss.html` och i
+  startsidans FAQ, men BAM-sidan lämnades orörd för att inte störa kontrollgruppen.
+  Det är den sida där meriten gör mest nytta kommersiellt.
 - [ ] **Läs av om sex veckor, alltså efter 2026-09-26.** Mät visningar och
   position för `excel-utbildning-umea.html` på 90 dagar och jämför med 7
   visningar / position 16,4. Rör sig ingenting är hypotesen fel och orsaken är
