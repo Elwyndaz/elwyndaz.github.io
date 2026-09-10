@@ -17,6 +17,40 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
+**2026-09-10, senare: AFS-hänvisningarna uppdaterade och BAM-meriten publicerad.**
+
+- **Regelförnyelsen var inte inarbetad.** Arbetsmiljöverket slog 2025-01-01 ihop
+  ett sjuttiotal föreskrifter till femton. Artiklarna hänvisade fortfarande till
+  de upphävda numren. Verifierat mot av.se:
+  - `AFS 2001:1` → **`AFS 2023:1`**, "Systematiskt arbetsmiljöarbete –
+    grundläggande skyldigheter för dig med arbetsgivaransvar".
+  - `AFS 2015:4` (OSA) → **`AFS 2023:2`**, "Planering och organisering av
+    arbetsmiljöarbete". AFS 2015:4 ligger under *upphävda föreskrifter* på av.se.
+  - Kravet heter numera **"tillräckliga kunskaper"**, inte "tillräcklig
+    kompetens". Citatet i `ar-bam-obligatoriskt.md` var alltså fel ord.
+  - Ändrat i `_posts/2026-07-06-ar-bam-obligatoriskt.md`,
+    `_posts/2026-04-27-vad-ingar-i-bam-utbildning.md` och
+    `_posts/2026-02-23-bam-och-sam-skillnad.md` (som saknade nummer helt).
+    De gamla numren står kvar där de behövs som "ersatte den tidigare …".
+- **Startsidans FAQ citerar nu AFS 2023:1.** I den tidigare ändringen samma dag
+  utelämnades paragrafen medvetet eftersom numret inte var verifierat. Nu är det
+  det. Synlig text och `FAQPage`-schemat ändrade i par.
+- **`bam-utbildning-umea.html`: föråldrad källänk.** Länken till Arbetsmiljöverket
+  pekade på `…/systematiskt-arbetsmiljoarbete-sam/`; sökvägen saknar numera
+  `-sam`. **Inte HTTP-verifierad** — av.se är blockerad från utvecklingsmiljön,
+  URL:en är tagen från Arbetsmiljöverkets nuvarande indexerade sida. Kontrollera
+  den i webbläsaren.
+- **BAM-handledarskapet tillagt på `bam-utbildning-umea.html`** — se varningen om
+  kontrollgruppen nedan. Ny rad 06 i "I korthet", en mening i brödtexten och
+  `instructor` med `hasCredential` i `Course`-schemat.
+- **Terminologin kontrollerad.** Prevents egen process ger ett **diplom** som
+  gäller i tre år med recertifiering, och det är diplomet som ger tillgång till
+  kursmaterialet och rätten att utbilda i BAM. "Diplomerad BAM-handledare" är
+  alltså rätt term; "certifierad" används löst av tredje part. Formuleringen på
+  sajten är densamma som i `cv.html`.
+- Kontroller gröna: `check_faq.py` 0 avvikelser, `check_layout.js` 0 overflow på
+  15 sidor × 4 bredder, all JSON-LD validerad.
+
 **2026-09-10: granskning av innehåll, form och kod åtgärdad (tio punkter).**
 
 - **`index.html`: felaktigt myndighetspåstående borttaget.** FAQ:n påstod att
@@ -171,8 +205,13 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
   hopskrivna formen aldrig. Nu omlagd i title, h1, meta, brödtext, FAQ och all
   strukturerad data, plus `excelkurs` som andra sökform. Hela underlaget och
   mätplanen ligger i `BACKLOG.md` under "Excel-hypotesen".
-- **BAM-sidan lämnas medvetet oförändrad som kontrollgrupp.** Rör inte den utan
-  att först läsa av mätningen, annars går jämförelsen förlorad.
+- **BAM-sidan lämnades medvetet oförändrad som kontrollgrupp.** ⚠️ **Detta gäller
+  inte längre fullt ut:** sidan ändrades 2026-09-10 på beslut av Patrik, för att
+  få ut BAM-handledarskapet. **Sökordsformen är orörd** — `BAM-utbildning` med
+  bindestreck står kvar överallt, så själva hypotesen (hopskrivet mot bindestreck)
+  går fortfarande att läsa av. Men sidan har fått nytt innehåll, så en förändring
+  i dess siffror kan inte längre tolkas som ren nolleffekt. Väg in det vid
+  avläsningen efter 2026-09-26.
 - **Ny bugg hittad och rättad:** BAM-sidans `FAQPage`-schema saknade en mening
   som stod i den synliga texten. Google kräver att de matchar. `check_faq.py`
   lades till i repot och ska köras efter varje `jekyll build`.

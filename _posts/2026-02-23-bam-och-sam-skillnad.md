@@ -11,7 +11,7 @@ Om du har stött på båda förkortningarna och känt dig osäker på vad som eg
 
 ## SAM – det ni är skyldiga att göra
 
-SAM står för **Systematiskt ArbetsMiljöarbete** och är inget val. Det är ett lagstadgat krav (enligt Arbetsmiljöverkets föreskrifter) som gäller alla arbetsgivare, oavsett storlek eller bransch. SAM är inte en utbildning eller ett dokument – det är ett **arbetssätt**, ett återkommande hjul:
+SAM står för **Systematiskt ArbetsMiljöarbete** och är inget val. Det är ett lagstadgat krav (enligt Arbetsmiljöverkets föreskrifter AFS 2023:1 om systematiskt arbetsmiljöarbete) som gäller alla arbetsgivare, oavsett storlek eller bransch. SAM är inte en utbildning eller ett dokument – det är ett **arbetssätt**, ett återkommande hjul:
 
 - **Undersöka** arbetsmiljön regelbundet
 - **Riskbedöma** vad som hittas
