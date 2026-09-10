@@ -11,7 +11,7 @@ Vi har tidigare skrivit om [skillnaden mellan BAM och SAM](/2026/02/23/bam-och-s
 
 ## Vad lagen faktiskt säger
 
-Arbetsmiljölagen och Arbetsmiljöverkets föreskrifter nämner inte "BAM" som begrepp – det är inte konstigt, BAM är Prevents varumärke för en specifik kursutformning, inte en juridisk term. Det lagen däremot kräver, i AFS 2001:1 om systematiskt arbetsmiljöarbete, är att arbetsgivaren ser till att chefer, arbetsledare och skyddsombud har **"tillräcklig kompetens"** för att bedriva arbetsmiljöarbetet. Vad som räknas som tillräckligt är inte hårdkodat till en specifik kurs – i teorin kan kompetensen komma från erfarenhet, andra utbildningar eller egen inläsning.
+Arbetsmiljölagen och Arbetsmiljöverkets föreskrifter nämner inte "BAM" som begrepp – det är inte konstigt, BAM är Prevents varumärke för en specifik kursutformning, inte en juridisk term. Det lagen däremot kräver, i AFS 2023:1 om systematiskt arbetsmiljöarbete – föreskriften som den 1 januari 2025 ersatte den gamla AFS 2001:1 – är att arbetsgivaren ser till att de som får uppgifter i arbetsmiljöarbetet har **tillräckliga kunskaper**: om reglerna, om de risker som finns i verksamheten och om hur ohälsa och olycksfall förebyggs. Arbetsmiljöverket pekar själv ut utbildning som vägen dit, helst för chefer, arbetsledare och skyddsombud tillsammans, eftersom det är just samverkan mellan dem som ska fungera. Vad som räknas som tillräckligt är däremot inte hårdkodat till en specifik kurs – i teorin kan kunskapen komma från erfarenhet, andra utbildningar eller egen inläsning.
 
 I praktiken är det dock svårt att visa upp den kompetensen på ett sätt som håller för en inspektion utan någon form av dokumenterad utbildning, och BAM är den mest spridda och igenkända för det syftet.
 

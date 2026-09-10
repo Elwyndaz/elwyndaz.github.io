@@ -137,11 +137,14 @@ frasen som ren text utan länk.
 
 **BAM-sidan lämnas medvetet med bindestreck som kontrollgrupp.** Om Excelsidan
 rör sig och BAM står stilla är det ett starkare belägg än om båda ändras samtidigt.
+⚠️ **2026-09-10:** bindestrecksformen är fortfarande orörd, men sidan fick nytt
+innehåll (BAM-handledarskapet) den dagen. Hypotesen går att läsa av, men "BAM stod
+stilla" är inte längre ett rent utfall.
 
-- [ ] **Lägg in "diplomerad BAM-handledare via Prevent" på `bam-utbildning-umea.html`
-  direkt efter avläsningen.** Meriten ligger sedan 2026-09-10 på `om-oss.html` och i
-  startsidans FAQ, men BAM-sidan lämnades orörd för att inte störa kontrollgruppen.
-  Det är den sida där meriten gör mest nytta kommersiellt.
+- [x] **BAM-handledarskapet publicerat. Gjort 2026-09-10.** Ligger på `om-oss.html`,
+  i startsidans FAQ och på `bam-utbildning-umea.html`. Det sista togs på beslut av
+  Patrik trots kontrollgruppsfrysningen; sökordsformen är orörd, men sidan har fått
+  nytt innehåll. Se varningen i `HANDOFF.md` innan avläsningen tolkas.
 - [ ] **Läs av om sex veckor, alltså efter 2026-09-26.** Mät visningar och
   position för `excel-utbildning-umea.html` på 90 dagar och jämför med 7
   visningar / position 16,4. Rör sig ingenting är hypotesen fel och orsaken är

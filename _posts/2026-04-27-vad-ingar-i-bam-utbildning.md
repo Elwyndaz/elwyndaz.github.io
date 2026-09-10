@@ -32,7 +32,7 @@ Här ligger det som många först tänker på när de hör "arbetsmiljö": ergon
 
 ## 4. Organisatorisk och social arbetsmiljö (OSA)
 
-Det här området har vuxit kraftigt i betydelse, särskilt sedan Arbetsmiljöverkets föreskrift om organisatorisk och social arbetsmiljö (AFS 2015:4) kom. Här ingår frågor om arbetsbelastning, arbetstidens förläggning, och kränkande särbehandling. För många kontors- och tjänstemannaverksamheter är det här den del av BAM som faktiskt är mest relevant i vardagen – stress och hög arbetsbelastning är idag en av de vanligaste orsakerna till ohälsa på jobbet.
+Det här området har vuxit kraftigt i betydelse, särskilt sedan Arbetsmiljöverket införde egna regler om organisatorisk och social arbetsmiljö (OSA). De reglerna finns sedan den 1 januari 2025 i AFS 2023:2 om planering och organisering av arbetsmiljöarbete, som ersatte den tidigare AFS 2015:4. Här ingår frågor om arbetsbelastning, arbetstidens förläggning, och kränkande särbehandling. För många kontors- och tjänstemannaverksamheter är det här den del av BAM som faktiskt är mest relevant i vardagen – stress och hög arbetsbelastning är idag en av de vanligaste orsakerna till ohälsa på jobbet.
 
 ## 5. Riskbedömning och handlingsplaner i praktiken
 
