@@ -41,8 +41,23 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
   bindestreck, formen som Keyword Planner avfärdade 2026-08-20 (`excelkurs umeå`
   10–100/mån mot `excelutbildning` 0–10). Startsidan är sajtens enda rankande
   sida (position 5,1, tolv av femton klick), så det är den mest värdefulla titeln
-  på sajten. Även `case.html`. **Meta-beskrivningarna bär fortfarande
-  bindestrecksformen och är inte omlagda.**
+  på sajten. Även `case.html`. Meta-taggarna (`description`, `og:title`,
+  `og:description`, `twitter:*`) är omlagda på båda sidorna i samma pass.
+  **Kvar med bindestrecksformen:** `Course`-namnen och FAQ-frågan "Vad ingår i en
+  Excel-utbildning hos er?" i `index.html`, `Course`-namnet och ingressen på
+  `case.html`, samt `description` i `_config.yml`. Det är synligt innehåll och
+  strukturerad data, inte metadata, och FAQ-frågan kräver att `check_faq.py` körs
+  om eftersom schemat måste matcha den synliga texten ordagrant.
+- **BAM-handledarskapet syntes inte på den publika sajten.** Att Patrik är
+  diplomerad BAM-handledare via Prevent stod bara i `cv.html`, som är
+  `noindex, nofollow` och medvetet ligger utanför arkitekturen — alltså osynligt
+  för både kund och Google. Tillagt på `om-oss.html` (faktaraden plus
+  `hasCredential` i `Person`-schemat) och i startsidans BAM-fråga i FAQ:n, i både
+  synlig text och `FAQPage`-schemat. Formuleringen "diplomerad BAM-handledare via
+  Prevent" är hämtad ordagrant från `cv.html`. **`bam-utbildning-umea.html` är
+  medvetet inte ändrad**: den är kontrollgrupp för sökordshypotesen fram till
+  avläsningen 2026-09-26. Det är den sida där meriten gör mest nytta
+  kommersiellt, så lägg in den där direkt efter avläsningen.
 - **Tillgänglighet: dekorativa siffror lästes högt.** `01`–`04` låg inuti
   länkarna i mobilmenyn (15 sidor + artikellayouten) och i registerraderna
   (8 sidor), så skärmläsare sa "01 Utbildningar". `aria-hidden="true"`.
