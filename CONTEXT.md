@@ -18,6 +18,11 @@ anmälan. Därför finns ingen datumkolumn någonstans.
 
 - GitHub Pages med domänen `orgutveckling.se`, se `CNAME`. Domänen är registrerad
   hos Strato, DNS och proxy sköts av Cloudflare.
+- **Säkerhetsheaders bor i Cloudflare, inte i repot.** GitHub Pages kan inte
+  sätta headers, så HTTPS-tvång, HSTS, CSP, X-Frame-Options med flera ligger i
+  zonen (SSL/TLS-inställningar plus en Response Header Transform-regel) och
+  security.txt i Security Center. Ny extern resurs på sajten kräver att CSP:n i
+  regeln uppdateras. Detaljer och datum i `HANDOFF.md`.
 - **Delat designsystem i `style.css`.** Alla sidor länkar `/style.css` och
   `/site.js`. Det är rena statiska filer, inget byggsteg, men designändringar görs
   numera på ett ställe i stället för att synkas för hand över tio filer.

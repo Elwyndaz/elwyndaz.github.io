@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-09-10
+reviewedAt: 2026-09-11
 ---
 
 # Handoff: orgutveckling.se
@@ -17,6 +17,31 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
+**2026-09-11: säkerhetsheaders, HTTPS-tvång och security.txt, allt i Cloudflare.**
+
+- En extern skanner hade rätt på alla åtta punkter: HTTP svarade 200 utan
+  omdirigering, och HTTPS-svaret saknade HSTS, CSP, X-Frame-Options,
+  X-Content-Type-Options, Referrer-Policy, Permissions-Policy och security.txt.
+- GitHub Pages kan inte sätta headers (ingen `_headers`-fil), så allt lades i
+  Cloudflare-zonen via API, **ingen kodändring i repot**:
+  - Always Use HTTPS på: `http://` svarar nu 301 till `https://`.
+  - HSTS `max-age=15552000` (sex månader), utan includeSubDomains och preload.
+    Preload är nästan oåterkalleligt, därför avstått.
+  - En Response Header Transform-regel ("Security headers") sätter CSP,
+    `X-Frame-Options: DENY`, nosniff, `Referrer-Policy:
+    strict-origin-when-cross-origin` och Permissions-Policy.
+  - **CSP:n tillåter `'unsafe-inline'` för script och style**, eftersom sajten
+    har `onclick`/`onload` i markup, `style=`-attribut och ett inline-script i
+    `cv.html`. Den släpper igenom Google Fonts och Cloudflares
+    analytics-beacon, blockerar inramning, plugins och främmande scriptvärdar.
+    Läggs en ny extern resurs till (t.ex. YouTube-embed) måste regeln
+    uppdateras, annars blockeras den tyst. Kolla konsolen.
+  - security.txt via Cloudflares Security Center: kontakt
+    `kontakt@orgutveckling.se` och kontaktsidan, löper ut 2027-09-11.
+    **Förnya före dess**, annars räknas filen som ogiltig.
+- Verifierat med curl (alla headers i svaret) och Playwright: startsidan,
+  kontakt och cv.html laddar utan ett enda konsolfel under den nya CSP:n.
+- Raden "ingen CSP i zonen att öppna" i posten 2026-08-27 gäller inte längre.
 **2026-09-10, senare: AFS-hänvisningarna uppdaterade och BAM-meriten publicerad.**
 
 - **Regelförnyelsen var inte inarbetad.** Arbetsmiljöverket slog 2025-01-01 ihop
