@@ -215,12 +215,11 @@ Den skriver snapshots i `.playwright-cli/` i den mapp kommandot körs ifrån, so
 Kontakt: kontakt@orgutveckling.se, 072-221 13 37.
 
 ## Audits
-
 Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; conventions in elwyn-dash `docs/security.md`.
 
 - OWASP Top 10: 2026-07-25, clean, no forms or fetch
 - Headers: 2026-09-16, pass, 6 of 6 on orgutveckling.se via Cloudflare Transform Rule, HSTS from Edge Certificates
 - Search Console: 2026-09-16, warn, 15 of 21 sitemap URLs indexed, 3 unknown to Google (articles 06-14, 07-06, 08-20), 3 discovered not indexed (03-30, 04-27, integritetspolicy)
-- TLS: 2026-09-16, warn, SSL Labs B on orgutveckling.se, HSTS present, TLS 1.0 and 1.1 still enabled on the zone
+- TLS: 2026-09-16, warn, SSL Labs B before the change, TLS 1.2 minimum set today, rescan pending
 - Lighthouse: 2026-09-16, pass, a11y 100, best practices 100, SEO 100 (mobile, no perf)
 - Markup: 2026-09-16, pass, W3C 0 errors on the start page and the three landing pages, 0 broken links
