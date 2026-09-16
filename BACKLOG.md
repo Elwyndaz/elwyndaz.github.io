@@ -213,3 +213,9 @@ skyddsombud, psykologiskt ledarskap utbildning.
 
 1 till 3 månader för ordentlig indexering, 3 till 6 månader innan lokal ranking
 börjar, 6 till 12 månader innan lokala sökningar kan vinnas.
+
+## Granskning 2026-09-16
+
+Fynd från cockpitens granskningskolumner (Lighthouse mobil, W3C, UX-skript, headers, TLS, OWASP). Mätvärdena står under `## Audits` i CONTEXT.md.
+
+- [ ] `[P2]` Search Console: sex sitemap-URL:er är inte indexerade, tre är okända för Google trots sitemapen. Begär indexering för hand i URL-inspektionen (API:t kan inte): 2026-08-20 ai-och-copilot-i-excel, 2026-07-06 ar-bam-obligatoriskt, 2026-06-14 vanliga-excel-misstag, 2026-04-27 vad-ingar-i-bam-utbildning, 2026-03-30 konflikthantering-for-chefer, integritetspolicy. Övriga icke-indexerade i rapporten är avsiktliga: /ai/ 404, http-omdirigering, index.html med canonical, noindex på cv och tack, gamla artikeldatum.

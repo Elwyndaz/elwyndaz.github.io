@@ -336,3 +336,7 @@ Omindexering i Search Console enligt `nextAction`. Sedan backlinks.
 **Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan i
 `BACKLOG.md`**, den har haft fel förut: "Konflikthantering för chefer" stod som
 ogjord trots att den varit live sedan 2026-03-30.
+
+## Granskning 2026-09-16
+
+Cross-project audit run from elwyn-dash (session 5 in the daily note). Results written to `## Audits` in CONTEXT.md, findings appended to BACKLOG.md under `## Granskning 2026-09-16`. Headers on buildapp.se and the TLS grade are zone-level and are fixed once in Cloudflare, not here.
