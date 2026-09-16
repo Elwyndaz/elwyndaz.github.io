@@ -247,8 +247,7 @@ fieldset{min-inline-size:0}
 
 /* om oss */
 .about-grid{display:grid;grid-template-columns:520px 1fr;gap:clamp(32px,5vw,72px);align-items:start}
-.portrait{width:100%;aspect-ratio:4/5;background:repeating-linear-gradient(135deg,var(--papper-mork) 0 6px,#E8E4DA 6px 12px);filter:grayscale(1);display:flex;align-items:flex-end;justify-content:flex-start}
-.portrait-placeholder{font:400 11.5px/1.6 var(--mono);color:var(--dampad);padding:20px}
+.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1)}
 .about-text p{font-size:17px;line-height:1.7;color:var(--brod);margin-bottom:20px}
 /* Avslutningen pa om-oss: samma inline-fallla som hero hade, flyttad hit sa att
    mediefragan faktiskt kommer at 260px-spalten. */
