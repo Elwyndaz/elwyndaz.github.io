@@ -219,5 +219,5 @@ Kontakt: kontakt@orgutveckling.se, 072-221 13 37.
 Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; conventions in elwyn-dash `docs/security.md`.
 
 - OWASP Top 10: 2026-07-25, clean, no forms or fetch
-- Headers: 2026-08-04, fail, 0 of 6 on orgutveckling.se (GitHub Pages)
+- Headers: 2026-09-16, pass, 6 of 6 on orgutveckling.se via Cloudflare Transform Rule, HSTS from Edge Certificates
 - Search Console: 2026-09-15, pass, sitemap valid, 21 URLs indexed, 0 errors

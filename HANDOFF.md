@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-09-11
+reviewedAt: 2026-09-16
 ---
 
 # Handoff: orgutveckling.se
