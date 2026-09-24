@@ -219,3 +219,10 @@ börjar, 6 till 12 månader innan lokala sökningar kan vinnas.
 Fynd från cockpitens granskningskolumner (Lighthouse mobil, W3C, UX-skript, headers, TLS, OWASP). Mätvärdena står under `## Audits` i CONTEXT.md.
 
 - [ ] `[P2]` Search Console: sex sitemap-URL:er är inte indexerade, tre är okända för Google trots sitemapen. Begär indexering för hand i URL-inspektionen (API:t kan inte): 2026-08-20 ai-och-copilot-i-excel, 2026-07-06 ar-bam-obligatoriskt, 2026-06-14 vanliga-excel-misstag, 2026-04-27 vad-ingar-i-bam-utbildning, 2026-03-30 konflikthantering-for-chefer, integritetspolicy. Övriga icke-indexerade i rapporten är avsiktliga: /ai/ 404, http-omdirigering, index.html med canonical, noindex på cv och tack, gamla artikeldatum.
+
+## UX-audit 2026-09-24
+
+Från aifabriken `tools/audit-run.mjs ux` (skripthalvan av skillen ux-audit, mobil, hemsidan, utan --interact). Warn, inte fail: allt nedan klarar WCAG 2.5.8, men UX-ribban är 44 px.
+
+- [ ] `[P3]` orgutveckling.se: cirka 20 tryckytor under 44 px, bland annat logotypen "ORG/UTVECKLING" 24 px, "Öppna meny" 32 px, "Stäng meny" 28 px, "Läs alla utvärderingar →" 27 px. Designbeslut, därför inte rättat automatiskt.
+- [ ] `[P3]` orgutveckling.se: fyra knappar i primärstil synliga samtidigt (Von Restorff). Välj en primär handling per vy.
