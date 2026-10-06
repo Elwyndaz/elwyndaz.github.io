@@ -2,9 +2,9 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
+nextAction: Granska och merga grenen batch/2026-10-06 (CSP-städning, pivottabellartikel), ta sedan bort 'unsafe-inline' ur script-src i Cloudflare-regeln. Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-09-16
+reviewedAt: 2026-10-06
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,32 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-10-06: nattbatch på grenen `batch/2026-10-06`, inte mergad, inget deployat.**
+
+- **Inga inline-skript eller inline-hanterare kvar.** `onclick="toggleMenu()"` är
+  borta ur alla 16 sidmallar och binds i `site.js`; skriptet i `cv.html` ligger i
+  nya `cv.js`. Typsnitten laddas med vanlig `<link rel="stylesheet">` i stället för
+  `preload` + `onload`, vilket också tar bort `link[as]`-felet i markup-kolumnen.
+  Det som står under 2026-09-11 om varför CSP:n behöver `'unsafe-inline'` för
+  script gäller alltså inte längre när grenen är live. `style-src` behöver det
+  fortfarande (`style=`-attribut).
+- **Ny check: `python check_csp.py`** efter `jekyll build`. Verifierad åt båda håll:
+  föll på 24 av 25 sidor före ändringen, 0 efter.
+- Verifierat i Chromium med sajtens riktiga CSP minus `'unsafe-inline'` i
+  `script-src`: 16 sidor, 0 konsolfel, menyn öppnar och stänger, typsnitten laddar,
+  e-postlänken i `cv.html` byggs. `check_faq.py` 0 avvikelser, `check_layout.js`
+  0 overflow på 15 sidor x 4 bredder.
+- **Kvar för Patrik:** regeländringen i Cloudflare, först efter merge. Cloudflares
+  egna injicerade skript är inte testade mot den strängare CSP:n, se `BACKLOG.md`.
+- **Ny artikel skriven:** `_posts/2026-10-06-lar-dig-pivottabeller-snabbt.md`, med i
+  `sitemap.xml`. Opublicerad tills grenen mergas. Läs den före merge, och ändra
+  datumet före publicering om mergen sker en annan dag.
+- Keyword Planner-punkten i `BACKLOG.md` bockad: den var gjord 2026-08-20.
+- **Inte gjort:** avläsningen av Excel-hypotesen. `gsc`-MCP:n svarade inte
+  (timeout på `list_properties`). Punkten står kvar öppen.
+- `check_layout.js` kördes från en kopia på port 8794: port 8791 var upptagen av
+  en annan process på maskinen. Skriptet i repot är orört.
 
 **2026-09-11: säkerhetsheaders, HTTPS-tvång och security.txt, allt i Cloudflare.**
 
