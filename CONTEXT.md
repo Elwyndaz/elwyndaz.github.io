@@ -74,6 +74,18 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   följdfällor den fångar: en grid-cell kan inte krympa under sitt innehålls
   minsta bredd så länge `min-width` är `auto`, och webbläsarens egen regel ger
   `<fieldset>` dessutom `min-inline-size:min-content`.
+- **Inga inline-skript och inga inline-hanterare (`onclick`, `onload`).** All
+  JavaScript ligger i filer: `site.js`, och `cv.js` för `cv.html`. Händelser binds
+  med `addEventListener`. Skälet är CSP:n i Cloudflare: `script-src` ska kunna stå
+  utan `'unsafe-inline'`, och då blockeras inline-kod tyst, sidan ser hel ut men
+  menyn är död. `python check_csp.py` efter `jekyll build` vaktar det, samma roll
+  som `check_faq.py`. JSON-LD är data och berörs inte. `style=`-attribut finns
+  kvar, så `style-src` behöver fortfarande `'unsafe-inline'`.
+- **Typsnitten laddas med en vanlig `<link rel="stylesheet">`.** Det tidigare
+  mönstret `rel="preload" as="style" onload=...` krävde en inline-hanterare och
+  lämnade ett ogiltigt `as`-attribut i den renderade DOM:en. Priset är att Google
+  Fonts-CSS:en blockerar första renderingen; `preconnect` och `display=swap`
+  står kvar.
 - **`/ai/` ska förbli 404. Bygg ingen vidarebefordran dit.** Beslutat 2026-08-15.
   Sidan flyttade till `buildapp.se/ai/` och den gamla adressen ligger kvar
   indexerad med visningar, vilket ser ut som samma fel som den döda artikel-URL:en.

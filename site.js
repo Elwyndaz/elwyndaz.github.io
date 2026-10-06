@@ -2,8 +2,9 @@
 (function () {
   'use strict';
 
-  /* Mobilmeny */
-  window.toggleMenu = function () {
+  /* Mobilmeny. Binds här och inte med onclick i HTML: inline-hanterare kräver
+     'unsafe-inline' i CSP:n. check_csp.py vaktar att ingen smyger tillbaka. */
+  var toggleMenu = function () {
     var nav = document.getElementById('mobileNav');
     var btn = document.querySelector('.menu-btn');
     if (!nav) return;
@@ -12,6 +13,9 @@
     document.body.classList.toggle('menu-open');
     if (btn) btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
   };
+  document.querySelectorAll('.menu-btn, .mobile-nav-close').forEach(function (b) {
+    b.addEventListener('click', toggleMenu);
+  });
 
   /* E-postadressen sätts ihop i JS så den inte står i klartext i källkoden. */
   var u = 'kontakt', d = 'orgutveckling.se', addr = u + '@' + d;

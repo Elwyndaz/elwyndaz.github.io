@@ -10,8 +10,7 @@
 <title>CV | Patrik Löfgren</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --papper:#F2EFE8;--ark:#FDFCF9;--kant:#E8E4DA;--black:#15150F;
@@ -232,16 +231,6 @@ h2.avsnitt{font:500 11.5px/1 var(--mono);letter-spacing:.14em;text-transform:upp
 
 </main>
 
-<script>
-/* Egen adress, inte sajtens kontakt@. Byggs ihop i JS för att slippa spam-bottar. */
-(function(){
-  var u='patz.lofgren', d='gmail.com', el=document.getElementById('cv-epost');
-  if(!el) return;
-  var a=document.createElement('a');
-  a.href='mai'+'lto:'+u+'@'+d;
-  a.textContent=u+'@'+d;
-  el.appendChild(a);
-})();
-</script>
+<script src="/cv.js"></script>
 </body>
 </html>
