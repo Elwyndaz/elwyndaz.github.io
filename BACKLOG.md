@@ -26,7 +26,7 @@ haft fel förut.
 ### Excel
 
 - [x] AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv? Publicerad 2026-08-20. Går igenom reella användningsområden (formeltolkning, textstädning, enkla makron), tre allvarliga fallgropar (hallucinerad logik, granskningsbehov, sekretess), extern länk till Kenji Explains, länk till buildapp.se och internlänk till excelkursen.
-- [ ] Så lär du dig pivottabeller snabbt
+- [x] Så lär du dig pivottabeller snabbt. Skriven 2026-10-06 på grenen `batch/2026-10-06` (`_posts/2026-10-06-lar-dig-pivottabeller-snabbt.md`, med i `sitemap.xml`), **inte publicerad förrän grenen är mergad.** Läs den först: texten står under ditt namn, och menynamnet "Sammanfatta värden efter" är skrivet ur minnet, kontrollera det mot en svensk Excel. Mergas den en annan dag än 2026-10-06, ändra `date:`, filnamnet och sitemap-raden **före** publicering, aldrig efter.
 - [ ] Excel för ekonomer
 - [ ] Excel för HR
 - [ ] Excelkurs för nybörjare i Umeå
@@ -149,7 +149,11 @@ stilla" är inte längre ett rent utfall.
   position för `excel-utbildning-umea.html` på 90 dagar och jämför med 7
   visningar / position 16,4. Rör sig ingenting är hypotesen fel och orsaken är
   sökvolym, inte formulering.
-- [ ] **Mät den verkliga volymen i Google Keyword Planner** (gratis med ett Google
+- [x] **Gjort 2026-08-20, bockad 2026-10-06** (stod kvar som öppen trots att
+  resultatet låg i `HANDOFF.md`): `excelkurs umeå` 10–100 sökningar/månad, samma
+  som `ledarskapsutbildning umeå`; `excelutbildning` 0–10. Ordet är alltså `kurs`,
+  inte `utbildning`. Ursprunglig punkt:
+  **Mät den verkliga volymen i Google Keyword Planner** (gratis med ett Google
   Ads-konto, kräver ingen annonsering). Search Console visar bara sökningar där
   sajten redan syns, så frånvaro i GSC bevisar inte frånvaro av volym. Det här är
   enda sättet att få veta om "excelutbildning umeå" har 10 eller 500 sökningar i
