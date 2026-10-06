@@ -226,3 +226,10 @@ Från aifabriken `tools/audit-run.mjs ux` (skripthalvan av skillen ux-audit, mob
 
 - [ ] `[P3]` orgutveckling.se: cirka 20 tryckytor under 44 px, bland annat logotypen "ORG/UTVECKLING" 24 px, "Öppna meny" 32 px, "Stäng meny" 28 px, "Läs alla utvärderingar →" 27 px. Designbeslut, därför inte rättat automatiskt.
 - [ ] `[P3]` orgutveckling.se: fyra knappar i primärstil synliga samtidigt (Von Restorff). Välj en primär handling per vy.
+
+## Granskning 2026-10-06
+
+Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, npm audit, secrets, Actions, markup, axe). Mätvärdena står som `(automated)`-rader under `## Audits` i CONTEXT.md.
+
+- [ ] `[P3]` Markup: en `<link>` i `<head>` behåller `as`-attributet efter att `rel` bytts från `preload` till `stylesheet` (html-validate `attribute-misuse`, renderad DOM, `head > link:nth-child(11)`). Ofarligt, men ger fail i kolumnen.
+- [ ] `[P3]` Headers: CSP:n har `script-src 'self' 'unsafe-inline'`, vilket sviten underkänner. Kräver att inline-skripten flyttas till filer eller får hash/nonce innan `unsafe-inline` kan tas bort ur zonens Transform Rule.
