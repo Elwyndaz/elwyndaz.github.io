@@ -34,7 +34,7 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
   0 overflow på 15 sidor x 4 bredder.
 - **Kvar för Patrik:** regeländringen i Cloudflare, först efter merge. Cloudflares
   egna injicerade skript är inte testade mot den strängare CSP:n, se `BACKLOG.md`.
-- **Ny artikel skriven:** `_posts/2026-10-06-lar-dig-pivottabeller-snabbt.md`, med i
+- **Ny artikel skriven:** `_posts/2026-10-07-lar-dig-pivottabeller-snabbt.md`, med i
   `sitemap.xml`. Opublicerad tills grenen mergas. Läs den före merge, och ändra
   datumet före publicering om mergen sker en annan dag.
 - Keyword Planner-punkten i `BACKLOG.md` bockad: den var gjord 2026-08-20.
