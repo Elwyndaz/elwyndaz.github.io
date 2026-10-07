@@ -26,7 +26,7 @@ haft fel förut.
 ### Excel
 
 - [x] AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv? Publicerad 2026-08-20. Går igenom reella användningsområden (formeltolkning, textstädning, enkla makron), tre allvarliga fallgropar (hallucinerad logik, granskningsbehov, sekretess), extern länk till Kenji Explains, länk till buildapp.se och internlänk till excelkursen.
-- [x] Så lär du dig pivottabeller snabbt. Skriven 2026-10-06 på grenen `batch/2026-10-06` (`_posts/2026-10-06-lar-dig-pivottabeller-snabbt.md`, med i `sitemap.xml`), **inte publicerad förrän grenen är mergad.** Läs den först: texten står under ditt namn, och menynamnet "Sammanfatta värden efter" är skrivet ur minnet, kontrollera det mot en svensk Excel. Mergas den en annan dag än 2026-10-06, ändra `date:`, filnamnet och sitemap-raden **före** publicering, aldrig efter.
+- [x] Så lär du dig pivottabeller snabbt. Skriven 2026-10-06 på grenen `batch/2026-10-06` (`_posts/2026-10-07-lar-dig-pivottabeller-snabbt.md`, med i `sitemap.xml`), publicerad 2026-10-07 (omdaterad från 2026-10-06 före merge). Läs den först: texten står under ditt namn, och menynamnet "Sammanfatta värden efter" är skrivet ur minnet, kontrollera det mot en svensk Excel.
 - [ ] Excel för ekonomer
 - [ ] Excel för HR
 - [ ] Excelkurs för nybörjare i Umeå

@@ -1,7 +1,7 @@
 ---
 layout: artikel
 title: "Så lär du dig pivottabeller snabbt: från rådata till svar på fem minuter"
-date: 2026-10-06
+date: 2026-10-07
 description: "Pivottabeller är Excels snabbaste väg från en lång lista till ett svar. Här är de fyra rutorna, ett exempel steg för steg och de fel som stoppar de flesta nybörjare."
 kategori: Excel
 ingress: "Pivottabellen har rykte om sig att vara avancerad, men den är i själva verket det enklaste sättet att summera en lång lista utan att skriva en enda formel. Det som stoppar de flesta är inte verktyget utan underlaget. Här är vad du behöver förstå, i den ordning du behöver det."
