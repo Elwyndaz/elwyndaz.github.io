@@ -2,9 +2,9 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Granska och merga grenen batch/2026-10-06 (CSP-städning, pivottabellartikel), ta sedan bort 'unsafe-inline' ur script-src i Cloudflare-regeln. Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
+nextAction: Ta bort 'unsafe-inline' ur script-src i Cloudflare-regeln (säkert nu, grenen batch/2026-10-06 är mergad och live sedan 2026-10-07). Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-10-06
+reviewedAt: 2026-10-07
 ---
 
 # Handoff: orgutveckling.se
@@ -17,14 +17,14 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
-**2026-10-06: nattbatch på grenen `batch/2026-10-06`, inte mergad, inget deployat.**
+**2026-10-06: nattbatch på grenen `batch/2026-10-06`, mergad till `main` och deployad 2026-10-07 på Patriks order.**
 
 - **Inga inline-skript eller inline-hanterare kvar.** `onclick="toggleMenu()"` är
   borta ur alla 16 sidmallar och binds i `site.js`; skriptet i `cv.html` ligger i
   nya `cv.js`. Typsnitten laddas med vanlig `<link rel="stylesheet">` i stället för
   `preload` + `onload`, vilket också tar bort `link[as]`-felet i markup-kolumnen.
   Det som står under 2026-09-11 om varför CSP:n behöver `'unsafe-inline'` för
-  script gäller alltså inte längre när grenen är live. `style-src` behöver det
+  script gäller alltså inte längre: grenen är live sedan 2026-10-07. `style-src` behöver det
   fortfarande (`style=`-attribut).
 - **Ny check: `python check_csp.py`** efter `jekyll build`. Verifierad åt båda håll:
   föll på 24 av 25 sidor före ändringen, 0 efter.
@@ -32,11 +32,11 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
   `script-src`: 16 sidor, 0 konsolfel, menyn öppnar och stänger, typsnitten laddar,
   e-postlänken i `cv.html` byggs. `check_faq.py` 0 avvikelser, `check_layout.js`
   0 overflow på 15 sidor x 4 bredder.
-- **Kvar för Patrik:** regeländringen i Cloudflare, först efter merge. Cloudflares
+- **Kvar för Patrik:** regeländringen i Cloudflare, säker att göra nu när mergen är live (2026-10-07). Cloudflares
   egna injicerade skript är inte testade mot den strängare CSP:n, se `BACKLOG.md`.
 - **Ny artikel skriven:** `_posts/2026-10-07-lar-dig-pivottabeller-snabbt.md`, med i
-  `sitemap.xml`. Opublicerad tills grenen mergas. Läs den före merge, och ändra
-  datumet före publicering om mergen sker en annan dag.
+  `sitemap.xml`. Publicerad 2026-10-07 (omdaterad från 2026-10-06 före merge).
+  Läs den: texten ligger nu live under ditt namn.
 - Keyword Planner-punkten i `BACKLOG.md` bockad: den var gjord 2026-08-20.
 - **Inte gjort:** avläsningen av Excel-hypotesen. `gsc`-MCP:n svarade inte
   (timeout på `list_properties`). Punkten står kvar öppen.
