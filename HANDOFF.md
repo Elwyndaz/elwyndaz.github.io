@@ -17,7 +17,7 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
-**2026-10-11: mejlen flyttad från ImprovMX till Cloudflare Email Routing** (zonändring, ingen kod). `kontakt@orgutveckling.se` och catch-all vidarebefordras till Patriks verifierade privata adress. MX är `route1/2/3.mx.cloudflare.net`, SPF `v=spf1 include:_spf.mx.cloudflare.net ~all`, Cloudflares DKIM-post tillagd. Testmejl till `kontakt@` levererat 14:25 enligt Cloudflare-loggen. Gamla värden, för att backa: MX `mx1.improvmx.com` (prio 10) och `mx2.improvmx.com` (prio 20), SPF `v=spf1 include:spf.improvmx.com ~all`. ImprovMX-kontot kan stängas (Patriks steg). Cloudflare kan inte skicka mejl, bara ta emot.
+**2026-10-11: mejlen flyttad från ImprovMX till Cloudflare Email Routing** (zonändring, ingen kod). `kontakt@orgutveckling.se` och catch-all vidarebefordras till Patriks verifierade privata adress. MX är `route1/2/3.mx.cloudflare.net`, SPF `v=spf1 include:_spf.mx.cloudflare.net ~all`, Cloudflares DKIM-post tillagd. Testmejl till `kontakt@` levererat 14:25 enligt Cloudflare-loggen. Gamla värden, för att backa: MX `mx1.improvmx.com` (prio 10) och `mx2.improvmx.com` (prio 20), SPF `v=spf1 include:spf.improvmx.com ~all`. ImprovMX-kontot stängt av Patrik 2026-10-11. Cloudflare kan inte skicka mejl, bara ta emot.
 
 **2026-10-06: nattbatch på grenen `batch/2026-10-06`, mergad till `main` och deployad 2026-10-07 på Patriks order.**
 
