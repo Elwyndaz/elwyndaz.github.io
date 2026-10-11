@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Ta bort 'unsafe-inline' ur script-src i Cloudflare-regeln (säkert nu, grenen batch/2026-10-06 är mergad och live sedan 2026-10-07). Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
 blockers: []
-reviewedAt: 2026-10-07
+reviewedAt: 2026-10-11
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,8 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-10-11: mejlen flyttad från ImprovMX till Cloudflare Email Routing** (zonändring, ingen kod). `kontakt@orgutveckling.se` och catch-all vidarebefordras till Patriks verifierade privata adress. MX är `route1/2/3.mx.cloudflare.net`, SPF `v=spf1 include:_spf.mx.cloudflare.net ~all`, Cloudflares DKIM-post tillagd. Testmejl till `kontakt@` levererat 14:25 enligt Cloudflare-loggen. Gamla värden, för att backa: MX `mx1.improvmx.com` (prio 10) och `mx2.improvmx.com` (prio 20), SPF `v=spf1 include:spf.improvmx.com ~all`. ImprovMX-kontot kan stängas (Patriks steg). Cloudflare kan inte skicka mejl, bara ta emot.
 
 **2026-10-06: nattbatch på grenen `batch/2026-10-06`, mergad till `main` och deployad 2026-10-07 på Patriks order.**
 
