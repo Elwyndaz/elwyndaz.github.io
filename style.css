@@ -244,6 +244,9 @@ fieldset{min-inline-size:0}
 .field textarea{resize:vertical;min-height:96px}
 .field input::placeholder,.field textarea::placeholder{color:var(--dampad-mork)}
 .field-note{font-size:13px;color:var(--dampad);margin-top:6px}
+/* legend ritas pa fieldsetets overkant, sa luften maste ligga pa legend sjalv */
+fieldset.field{padding-top:0}
+.field-legend{padding-top:18px}
 
 /* om oss */
 .about-grid{display:grid;grid-template-columns:520px 1fr;gap:clamp(32px,5vw,72px);align-items:start}
