@@ -248,3 +248,4 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - WCAG 2.2 AA (automated): 2026-10-06, needs-review, 1 targets; 0 failed, 0 blocked; manual WCAG review outstanding; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a2/elwyndaz.github.io.json
 - OG image: 2026-10-25, pass, 1200x630 PNG, https://orgutveckling.se/og-image.png
 - Database: 2026-10-25, none, static site
+- ZAP baseline: 2026-10-27, n/a, static site on GitHub Pages with no server, cookies or forms; headers, TLS and markup are covered by their own columns, so a passive ZAP scan would repeat them
