@@ -27,14 +27,14 @@ haft fel förut.
 
 - [x] AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv? Publicerad 2026-08-20. Går igenom reella användningsområden (formeltolkning, textstädning, enkla makron), tre allvarliga fallgropar (hallucinerad logik, granskningsbehov, sekretess), extern länk till Kenji Explains, länk till buildapp.se och internlänk till excelkursen.
 - [x] Så lär du dig pivottabeller snabbt. Skriven 2026-10-06 på grenen `batch/2026-10-06` (`_posts/2026-10-07-lar-dig-pivottabeller-snabbt.md`, med i `sitemap.xml`), publicerad 2026-10-07 (omdaterad från 2026-10-06 före merge). Läs den: texten ligger nu live under ditt namn, och menynamnet "Sammanfatta värden efter" är skrivet ur minnet, kontrollera det mot en svensk Excel.
-- [ ] Excel för ekonomer
-- [ ] Excel för HR
-- [ ] Excelkurs för nybörjare i Umeå
+- [x] Excel för ekonomer. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
+- [x] Excel för HR. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
+- [x] Excelkurs för nybörjare i Umeå (som `excel-for-nyborjare`, för att inte konkurrera med landningssidan). Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
 
 ### BAM och arbetsmiljö
 
 - [x] Är BAM obligatoriskt? Publicerad 2026-07-06.
-- [ ] Psykologisk arbetsmiljö på moderna arbetsplatser
+- [x] Psykologisk arbetsmiljö på moderna arbetsplatser. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
 
 ### Ledarskap
 
@@ -42,7 +42,7 @@ haft fel förut.
   fem konkreta övningar i stället för att upprepa definitionen i "Vad kännetecknar
   bra ledarskap?", enligt noten som stod här. Länkar internt till majartikeln,
   konflikthanteringsartikeln, BAM-sidan, läslistan och ledarskapssidan.
-- [ ] Transformativt ledarskap
+- [x] Transformativt ledarskap. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
 
 ## Kvar från redesignen 2026-08-12
 
@@ -106,8 +106,9 @@ skriva. Inget av det blockerar att sajten går live.
   håller i sig. Sidan är fortfarande mest visad (30 visningar på 28 dagar) och
   fortfarande på akademiska bok-sökningar, inte på kurser. Position 36 betyder
   att den knappt syns. Se "SEO-läget" nedan.
-- [ ] Begär omindexering i Search Console när redesignen är pushad. Alla titlar,
-  meta-beskrivningar och H1 är omskrivna.
+- [x] Begär omindexering i Search Console när redesignen är pushad. Behövs inte
+  längre: URL-inspektionen 2026-10-28 visar att Google crawlat om
+  excel- och ledarskapssidan 2026-10-14/15, efter ändringarna. Status PASS.
 
 ## Excel-hypotesen 2026-08-15
 
@@ -237,13 +238,13 @@ Från aifabriken `tools/audit-run.mjs ux` (skripthalvan av skillen ux-audit, mob
 Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, npm audit, secrets, Actions, markup, axe). Mätvärdena står som `(automated)`-rader under `## Audits` i CONTEXT.md.
 
 - [x] `[P3]` Markup: en `<link>` i `<head>` behåller `as`-attributet efter att `rel` bytts från `preload` till `stylesheet` (html-validate `attribute-misuse`, renderad DOM, `head > link:nth-child(11)`). **Gjort 2026-10-06 på grenen `batch/2026-10-06`:** typsnitten laddas med en vanlig `<link rel="stylesheet">` på alla 16 sidmallar. Grenen ligger i `main` och är live sedan 2026-10-07; kolumnen är inte omkörd.
-- [ ] `[P3]` Headers: CSP:n har `script-src 'self' 'unsafe-inline'`, vilket sviten underkänner. **Repodelen gjord 2026-10-06 på grenen `batch/2026-10-06`:** inga inline-skript eller inline-hanterare finns kvar (`onclick` bundet i `site.js`, `cv.html`-skriptet flyttat till `cv.js`), vaktat av `check_csp.py`. **Kvar för Patrik, säkert nu när grenen är mergad och live (2026-10-07):** ta bort `'unsafe-inline'` ur `script-src` i zonens Transform Rule "Security headers". Kontrollera konsolen på en sida efteråt: Cloudflare kan själv injicera inline-skript (t.ex. e-postskyddet under `/cdn-cgi/l/`), och det är inte testat här. Regeländringen fick inte göras före mergen (mobilmenyn hade dött på den publicerade sajten); det hindret är borta sedan 2026-10-07.
+- [x] `[P3]` Headers: CSP:n har `script-src 'self' 'unsafe-inline'`, vilket sviten underkänner. **Repodelen gjord 2026-10-06 på grenen `batch/2026-10-06`:** inga inline-skript eller inline-hanterare finns kvar (`onclick` bundet i `site.js`, `cv.html`-skriptet flyttat till `cv.js`), vaktat av `check_csp.py`. **Kvar för Patrik, säkert nu när grenen är mergad och live (2026-10-07):** ta bort `'unsafe-inline'` ur `script-src` i zonens Transform Rule "Security headers". Kontrollera konsolen på en sida efteråt: Cloudflare kan själv injicera inline-skript (t.ex. e-postskyddet under `/cdn-cgi/l/`), och det är inte testat här. Regeländringen fick inte göras före mergen (mobilmenyn hade dött på den publicerade sajten); det hindret är borta sedan 2026-10-07. **Gjort 2026-10-28 via API:** `'unsafe-inline'` borta ur `script-src` (kvar i `style-src`). Verifierat i Chromium mot produktion: 7 sidor, 0 CSP-fel, beacon laddar, mobilmenyn öppnar, mejllänken i `cv.html` byggs. Inga Cloudflare-injicerade inline-skript i svaren.
 
 ## Från tillvaxt 2026-10-28
 
 Underlag: `C:\dev\tillvaxt\docs\research\seo-och-ai-synlighet.md` och veckorapporterna i `C:\dev\tillvaxt\rapporter\orgutveckling\`. Läget i Cloudflare samma dag: AI-botar välkomna (ingen blockering, robots.txt ordagrant repots).
 
-- [ ] `[P1]` Korta titlarna till högst cirka 60 tecken. 13 av 22 sitemap-sidor är längre: alla artiklar (82 till 126 tecken), samt `bam-utbildning-umea.html` 69, `om-oss.html` 67, `kontakt.html` 67. Google kapar resten.
+- [x] `[P1]` Korta titlarna till högst cirka 60 tecken. 13 av 22 sitemap-sidor är längre: alla artiklar (82 till 126 tecken), samt `bam-utbildning-umea.html` 69, `om-oss.html` 67, `kontakt.html` 67. Google kapar resten. **Gjort 2026-10-28 (`21480d6`):** layoutsuffixet borta, valfritt `seo_title` i artikelfrontmatter. Kvar över 60: `excel-utbildning-umea.html` 62 (godtaget) och `bam-utbildning-umea.html` 69, medvetet orörd som kontrollgrupp för sökordshypotesen.
 - [ ] `[P1]` Bing Webmaster Tools: importera från Search Console och skicka sitemap. Bing Places: importera från företagsprofilen. Bing matar Copilot, DuckDuckGo och en del av ChatGPT search.
 - [ ] `[P1]` Be tre lokala parter om en länk: studieförbund, Prevent (listar de BAM-handledare? overifierat), kunder i `case.html`.
 - [ ] `[P2]` IndexNow: nyckelfil i reporoten och ett POST-anrop efter deploy (Bing och Yandex, inte Google).

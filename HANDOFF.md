@@ -2,9 +2,9 @@
 schemaVersion: 1
 status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
-nextAction: Ta bort 'unsafe-inline' ur script-src i Cloudflare-regeln (säkert nu, grenen batch/2026-10-06 är mergad och live sedan 2026-10-07). Begär omindexering i Search Console för excel-utbildning-umea.html och ledarskapsutbildning-umea.html. Därefter backlink- och lokalauktoritetsarbete med LinkedIn-delning av artiklar och kontakt med lokala nätverk.
+nextAction: Fyll Google Business Profile i ägarkontot (foton, tjänst per kurs, kategori Företagsutbildning) och be tidigare deltagare om omdömen (P0 i BACKLOG.md). Bing Webmaster Tools och Bing Places (P1). Läs de fem artiklarna från 2026-10-28, de står under Patriks namn.
 blockers: []
-reviewedAt: 2026-10-11
+reviewedAt: 2026-10-28
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,15 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-10-28: CSP strängare, titlar kortade, fem nya artiklar.**
+
+- **`'unsafe-inline'` borta ur `script-src`** i Transform Rule "Security headers", via API. `style-src` har det kvar (`style=`-attribut). Verifierat i Chromium mot produktion: 7 sidor, 0 CSP-fel, beacon laddar, mobilmenyn öppnar, mejllänken i `cv.html` byggs. Allt i 2026-09-11-posten nedan om att script behöver `'unsafe-inline'` gäller inte längre.
+- **Titlar:** artikellayouten la till 39 teckens suffix. Suffixet borta, valfritt `seo_title` i frontmatter styr `<title>` (H1, og och schema använder fortfarande `title`). 13 av 22 sitemapsidor över 60 tecken, nu 2: Excel 62, BAM 69 (orörd, kontrollgrupp).
+- **Omindexering behövs inte:** URL-inspektionen visar excel- och ledarskapssidan crawlade 2026-10-14/15, PASS.
+- **`utbildningar.html`-misstanken från 2026-09-09 avskriven:** live-filen är byte-identisk med repot, ingen `/cdn-cgi/l/`-länk.
+- **Fem artiklar** (ekonomer, HR, nybörjare, psykologisk arbetsmiljö, transformativt ledarskap), skrivna av fem agenter och granskade av en sjätte med ren kontext. Kritikern testade formlerna i svensk Excel via COM och läste AFS 2023:2 i fulltext. Sex MÅSTE-fynd rättade, bland annat: `AVKORTA(ÅRDEL(...))` ger ett år för mycket före årsdagen (struken), felciterad Judge och Piccolo, "öresavrundning" fel term, och HR-artikeln bad kunder skicka riktiga personuppgifter. Nybörjarartikeln döptes om från `excelkurs-for-nyborjare-umea` till `excel-for-nyborjare` så den inte konkurrerar med landningssidan om "excelkurs umeå".
+- **Verifierat i Excel:** `DATEDIF` tar `"Y"` i svensk Excel; Microsofts svenska hjälpsida visar `"Å"`, vilket ger fel.
 
 **2026-10-11: mejlen flyttad från ImprovMX till Cloudflare Email Routing** (zonändring, ingen kod). `kontakt@orgutveckling.se` och catch-all vidarebefordras till Patriks verifierade privata adress. MX är `route1/2/3.mx.cloudflare.net`, SPF `v=spf1 include:_spf.mx.cloudflare.net ~all`, Cloudflares DKIM-post tillagd. Testmejl till `kontakt@` levererat 14:25 enligt Cloudflare-loggen. Gamla värden, för att backa: MX `mx1.improvmx.com` (prio 10) och `mx2.improvmx.com` (prio 20), SPF `v=spf1 include:spf.improvmx.com ~all`. ImprovMX-kontot stängt av Patrik 2026-10-11. Cloudflare kan inte skicka mejl, bara ta emot.
 
@@ -354,13 +363,7 @@ Inspector så deras cache töms, annars ligger den trasiga förhandsvisningen kv
 Det gäller särskilt LinkedIn, som ska användas för artikeldelning enligt
 `nextAction`.
 
-**Överst på listan, oåtgärdat:** granskningen 2026-09-09 rapporterade att den
-publicerade `utbildningar.html` är en **äldre mall** än den i repot — gammal meny,
-ingen sidfot, trasig `/cdn-cgi/l/`-länk. Det kunde inte verifieras från
-utvecklingsmiljön. Kontrollera senaste Pages-bygget och Cloudflare-cachen **innan**
-något byggs om i repot: är orsaken cachning löser ingen kodändring den.
-
-Omindexering i Search Console enligt `nextAction`. Sedan backlinks.
+Företagsprofilen och omdömena enligt `nextAction`. Sedan backlinks.
 **Dubbelkolla alltid mot `_posts/` innan du litar på artikellistan i
 `BACKLOG.md`**, den har haft fel förut: "Konflikthantering för chefer" stod som
 ogjord trots att den varit live sedan 2026-03-30.
