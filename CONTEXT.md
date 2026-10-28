@@ -260,3 +260,4 @@ Skrivs av tillvaxt (C:\dev\tillvaxt) varje vecka. Ändra inte för hand.
 - Google-klick 28d: 2026-10-25, 10 (+2, brus)
 - Visningar 28d: 2026-10-25, 649 (+133, bättre)
 - Snittposition: 2026-10-25, 26,9 (+7,1, sämre)
+- Sidvisningar 7d: 2026-10-28, 29
