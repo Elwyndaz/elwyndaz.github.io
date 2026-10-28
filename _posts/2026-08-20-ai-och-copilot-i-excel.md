@@ -1,6 +1,7 @@
 ---
 layout: artikel
 title: "AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv?"
+seo_title: "AI och Copilot i Excel: vad fungerar, vad är gimmick?"
 date: 2026-08-20
 description: "AI lovar att bygga dina kalkylark åt dig. Här är vad Microsoft Copilot och ChatGPT faktiskt klarar i Excel, var riskerna ligger och varför grundkunskapen behövs mer än någonsin."
 kategori: Excel

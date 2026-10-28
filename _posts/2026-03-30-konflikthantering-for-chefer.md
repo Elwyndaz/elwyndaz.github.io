@@ -1,6 +1,7 @@
 ---
 layout: artikel
 title: "Konflikthantering för chefer: så hanterar du konflikter innan de växer"
+seo_title: "Konflikthantering för chefer: lös konflikter i tid"
 date: 2026-03-30
 description: "Konflikter på jobbet är inte ett misslyckande – frågan är hur de hanteras. Praktiska principer för chefer som vill agera tidigt och rätt."
 kategori: Ledarskap

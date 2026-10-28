@@ -6,7 +6,7 @@
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" sizes="512x512" href="/logo.png"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-<title>{{ page.title }} | Centrum för Organisations-Utveckling</title>
+<title>{{ page.seo_title | default: page.title }}</title>
 <meta name="description" content="{{ page.description }}">
 <link rel="canonical" href="{{ page.url | prepend: site.url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">

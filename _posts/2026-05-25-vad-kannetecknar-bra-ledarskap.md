@@ -1,6 +1,7 @@
 ---
 layout: artikel
 title: "Vad kännetecknar bra ledarskap? Fem beteenden som gör skillnad"
+seo_title: "Vad kännetecknar bra ledarskap? Fem beteenden"
 date: 2026-05-25
 description: "Bra ledarskap handlar mindre om personlighet och mer om konkreta beteenden. Fem områden som forskning inom organisationspsykologi lyfter fram – och som går att träna."
 kategori: Ledarskap
