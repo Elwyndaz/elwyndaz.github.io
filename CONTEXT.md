@@ -249,3 +249,11 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - OG image: 2026-10-25, pass, 1200x630 PNG, https://orgutveckling.se/og-image.png
 - Database: 2026-10-25, none, static site
 - ZAP baseline: 2026-10-27, n/a, static site on GitHub Pages with no server, cookies or forms; headers, TLS and markup are covered by their own columns, so a passive ZAP scan would repeat them
+
+## Tillväxt
+
+Skrivs av tillvaxt (C:\dev\tillvaxt) varje vecka. Ändra inte för hand.
+
+- AI-synlighet: 2026-10-28, 4/9 svar nämner sajten
+- Teknik: 2026-10-28, 13 sidor med anmärkning av 22
+- Rapport: 2026-10-28, https://github.com/Elwyndaz/tillvaxt/blob/main/rapporter/orgutveckling/2026-10-28.md
