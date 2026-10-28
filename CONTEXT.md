@@ -257,3 +257,6 @@ Skrivs av tillvaxt (C:\dev\tillvaxt) varje vecka. Ändra inte för hand.
 - AI-synlighet: 2026-10-28, 4/9 svar nämner sajten
 - Teknik: 2026-10-28, 13 sidor med anmärkning av 22
 - Rapport: 2026-10-28, https://github.com/Elwyndaz/tillvaxt/blob/main/rapporter/orgutveckling/2026-10-28.md
+- Google-klick 28d: 2026-10-25, 10 (+2, brus)
+- Visningar 28d: 2026-10-25, 649 (+133, bättre)
+- Snittposition: 2026-10-25, 26,9 (+7,1, sämre)
