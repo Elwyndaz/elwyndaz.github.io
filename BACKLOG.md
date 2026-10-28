@@ -158,9 +158,15 @@ stilla" är inte längre ett rent utfall.
   sajten redan syns, så frånvaro i GSC bevisar inte frånvaro av volym. Det här är
   enda sättet att få veta om "excelutbildning umeå" har 10 eller 500 sökningar i
   månaden, och därmed om Excel är värt mer arbete alls.
-- [ ] **Kontrollera Google Business Profile.** För "i umeå"-sökningar ligger de
-  lokala kartträffarna ovanför de organiska. Står excelutbildning som tjänst där
-  gör den sannolikt mer nytta än landningssidan.
+- [ ] `[P0]` **Fyll Google Business Profile.** För "i umeå"-sökningar ligger de
+  lokala kartträffarna ovanför de organiska. Kontrollerat publikt 2026-10-28:
+  profilen "Centrum för organisationsutveckling" finns (Utbildningscenter,
+  serviceområde, inlägg 16 sep), men har **0 omdömen och inga foton**. Gör i
+  ägarkontot (inte ABF-kontot): foton, tjänst per kurs med länk till
+  landningssidan, kategori Företagsutbildning, serviceområde Umeå.
+- [ ] `[P0]` **Be tidigare deltagare om omdömen i profilen** (elva utvärderingar
+  finns). Antal och betyg är en uttalad rankingfaktor för kartträffarna
+  (support.google.com/business/answer/7091).
 
 **Realistisk förväntan:** även en förstaplats på "excelutbildning umeå" ger
 sannolikt tiotals sökningar i månaden i en stad på 90 000. Mät den sidan i
@@ -237,3 +243,16 @@ Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, n
 
 - [x] `[P3]` Markup: en `<link>` i `<head>` behåller `as`-attributet efter att `rel` bytts från `preload` till `stylesheet` (html-validate `attribute-misuse`, renderad DOM, `head > link:nth-child(11)`). **Gjort 2026-10-06 på grenen `batch/2026-10-06`:** typsnitten laddas med en vanlig `<link rel="stylesheet">` på alla 16 sidmallar. Grenen ligger i `main` och är live sedan 2026-10-07; kolumnen är inte omkörd.
 - [ ] `[P3]` Headers: CSP:n har `script-src 'self' 'unsafe-inline'`, vilket sviten underkänner. **Repodelen gjord 2026-10-06 på grenen `batch/2026-10-06`:** inga inline-skript eller inline-hanterare finns kvar (`onclick` bundet i `site.js`, `cv.html`-skriptet flyttat till `cv.js`), vaktat av `check_csp.py`. **Kvar för Patrik, säkert nu när grenen är mergad och live (2026-10-07):** ta bort `'unsafe-inline'` ur `script-src` i zonens Transform Rule "Security headers". Kontrollera konsolen på en sida efteråt: Cloudflare kan själv injicera inline-skript (t.ex. e-postskyddet under `/cdn-cgi/l/`), och det är inte testat här. Regeländringen fick inte göras före mergen (mobilmenyn hade dött på den publicerade sajten); det hindret är borta sedan 2026-10-07.
+
+## Från tillvaxt 2026-10-28
+
+Underlag: `C:\dev\tillvaxt\docs\research\seo-och-ai-synlighet.md` och veckorapporterna i `C:\dev\tillvaxt\rapporter\orgutveckling\`. Läget i Cloudflare samma dag: AI-botar välkomna (ingen blockering, robots.txt ordagrant repots).
+
+- [ ] `[P1]` Korta titlarna till högst cirka 60 tecken. 13 av 22 sitemap-sidor är längre: alla artiklar (82 till 126 tecken), samt `bam-utbildning-umea.html` 69, `om-oss.html` 67, `kontakt.html` 67. Google kapar resten.
+- [ ] `[P1]` Bing Webmaster Tools: importera från Search Console och skicka sitemap. Bing Places: importera från företagsprofilen. Bing matar Copilot, DuckDuckGo och en del av ChatGPT search.
+- [ ] `[P1]` Be tre lokala parter om en länk: studieförbund, Prevent (listar de BAM-handledare? overifierat), kunder i `case.html`.
+- [ ] `[P2]` IndexNow: nyckelfil i reporoten och ett POST-anrop efter deploy (Bing och Yandex, inte Google).
+- [ ] `[P2]` Nationell guidesida för `excelkurs online` / `grundkurs i excel` (1 000 till 10 000 sök/mån, Keyword Planner 2026-08-20).
+- [ ] `[P2]` "Svara först": första stycket på varje landningssida säger vem, vad, var, format och pris. Artiklar får siffror och källor (GEO-studien, arXiv 2311.09735).
+- [ ] `[P3]` Ta bort `AggregateRating` från `LocalBusiness` i `index.html`: Google visar aldrig egna omdömen om det egna företaget som stjärnor.
+- [ ] `[P3]` Korta meta description på `om-oss.html` (187) och tre artiklar (166 till 177 tecken).
