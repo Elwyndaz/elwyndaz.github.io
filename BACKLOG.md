@@ -31,6 +31,7 @@ haft fel förut.
 - [x] Excel för HR. Skriven 2026-10-28, publiceras automatiskt 2026-11-18.
 - [x] Excelkurs för nybörjare i Umeå (som `excel-for-nyborjare`, för att inte konkurrera med landningssidan). Skriven 2026-10-28, publiceras automatiskt 2026-11-04.
 
+- [ ] `[P3]` Beslut för Patrik: nybörjarartikeln (publiceras 2026-11-04) säger att en bra kurs börjar med listor och tabeller, men `excel-utbildning-umea.html` lovar "kontroll på formler och kortkommandon" och nämner inte tabeller. Nämn tabeller på landningssidan, eller tona ned artikeln.
 - [ ] `[P2]` Källänkar i de tio äldre artiklarna (2026-01-26 till 2026-10-07): bara AI-artikeln har externa länkar. tillvaxt-researchens punkt 10 (GEO, arXiv 2311.09735). De fem från 2026-10-28 har dem.
 
 ### BAM och arbetsmiljö

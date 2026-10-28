@@ -1,51 +1,61 @@
 ---
 layout: artikel
-title: "Excel för nybörjare: vad du ska lära dig först"
+title: "Excel för nybörjare: lär dig tabellen först"
 date: 2026-11-04
-description: "Vad en nybörjare i Excel ska lära sig först, vad som kan vänta och vad du ska fråga efter när du väljer kurs: på plats eller digitalt, internt eller öppet."
+description: "Viktigast för nybörjare i Excel är att göra data till en tabell. Då får du sortering, filtrering, summa och medel utan att skriva en enda formel."
 kategori: Excel
-ingress: "En grundkurs i Excel behöver inte täcka allt. Den behöver täcka rätt saker i rätt ordning, så att varje steg bygger på det förra. Här är en ordning som fungerar, vad du lugnt kan vänta med och hur du vet att du är redo att gå vidare."
+ingress: "Nybörjare i Excel lägger ofta tid på att lära sig formler för saker som Excel redan gör åt dem. Om det finns en sak du ska kunna, är det hur du gör din data till en tabell. Resten bygger på det."
 ---
 
-Som nybörjare i Excel behöver du sex saker, i den här ordningen: celler och referenser, absoluta referenser med `$`, funktionerna `SUMMA` och `MEDEL`, funktionen `OM`, tabeller med `Ctrl+T` (som ger dig sortering och filtrering på köpet) och enkla diagram. Med de sex kan du bygga, räkna i och läsa av de flesta listor du möter på jobbet. Allt annat kan vänta tills du har ett konkret behov av det.
+Gör din data till en tabell med `Ctrl+T`. Tabellen ger dig sortering och filtrering i rubrikraden, summa och medelvärde i en summarad längst ner, formler som fyller i sig själva och diagram som växer när listan växer. Det mesta av det utan en enda formel. Därefter behöver du bara två saker till: att förstå cellreferenser och funktionen `OM`.
 
-Ordningen spelar roll. Varje steg använder det förra, och den som hoppar direkt till pivottabeller eller makron fastnar ofta på något som hörde till steg ett.
+Ordningen nedan spelar roll. Allt från steg 3 bygger på tabellen från steg 2.
 
-## 1. Celler och referenser
+## 1. Bygg listan rätt
 
-Allt i Excel bygger på att en cell har en adress, till exempel `B2`. En formel börjar med likhetstecken och räknar med adresser i stället för med tal: `=B2+B3` i stället för `=120+80`. Ändrar du värdet i B2 räknas resultatet om av sig självt. Det är hela poängen med ett kalkylark, och den första vanan du ska bygga upp är att aldrig skriva in ett tal i en formel när talet redan står i en cell.
+En tabell är bara så bra som listan den bygger på. Tre regler räcker: en rubrik per kolumn, på en enda rad. En rad per post, till exempel en order eller en anställd. Och inga tomma rader eller delsummor mitt i listan. Står tal och datum vänsterställda trots att du inte har ändrat justeringen är de troligen sparade som text och går inte att räkna med. Hur du rättar datum står i artikeln om [vanliga misstag i Excel](/2026/06/14/vanliga-excel-misstag.html).
 
-## 2. Absoluta referenser med $
+## 2. Gör listan till en tabell
 
-När du kopierar en formel nedåt flyttar Excel med referenserna. Det är oftast rätt, men inte när formeln ska peka på en fast cell, till exempel en momssats i `E1`. Då skriver du `=B2*$E$1`, och dollartecknen låser referensen. I Excel för Windows kan du markera referensen i formeln och trycka `F4` för att växla mellan låst och olåst. Det är ett av de fel vi oftast ser hos självlärda, och vi har skrivit mer om det i artikeln om [vanliga misstag i Excel](/2026/06/14/vanliga-excel-misstag.html).
+Klicka var som helst i listan och tryck `Ctrl+T`. Excel markerar listan och öppnar rutan **Skapa tabell**. Kontrollera att **Tabellen har rubriker** är ikryssad och klicka OK. Listan får ett randigt utseende och en egen flik, **Tabelldesign** (i äldre versioner **Design**), när du står i den. Microsoft har en [lista över kortkommandon i Excel](https://support.microsoft.com/sv-se/office/kortkommandon-i-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) om du vill se fler genvägar.
 
-## 3. SUMMA och MEDEL
+## 3. Sortera och filtrera i rubrikraden
 
-Nästa steg är de två funktioner du kommer att använda mest. `=SUMMA(B2:B20)` lägger ihop ett område, `=MEDEL(B2:B20)` räknar ut medelvärdet. Lär dig samtidigt att läsa området: kolonet betyder "från och med, till och med". Lägg märke till att svensk Excel använder semikolon mellan argument, inte komma, eftersom kommat redan är decimaltecken.
+Varje rubrik i tabellen har nu en liten pilknapp. Klicka på den så kan du sortera kolumnen eller välja vilka värden som ska synas. Du behöver alltså inte leta upp sortering och filtrering på fliken **Data**, de sitter redan i tabellen.
 
-## 4. OM
+## 4. Summa och medel i summaraden
 
-`OM` är den första funktion som fattar ett beslut. `=OM(B2>1000;"Över budget";"Inom budget")` testar ett villkor och ger ett av två svar. När du förstår `OM` förstår du logiken bakom nästan alla mer avancerade funktioner, så den är värd att öva på tills du kan skriva den utan att titta.
+Gå till fliken **Tabelldesign** och kryssa i **Summarad**. Längst ner i tabellen dyker en rad upp. Klicka i den under en kolumn och sedan på pilen som dyker upp, så väljer du Summa, Medel, Antal, Max eller Min. Ingen formel att skriva.
 
-## 5. Tabeller med Ctrl+T
+Det bästa är att summaraden bara räknar de rader som syns. Filtrera fram en avdelning i rubrikraden, och summan längst ner visar direkt den avdelningens summa. Excel använder funktionen `DELSUMMA` för det, men du behöver inte kunna den.
 
-Bygg listan ordentligt först: en rubrik per kolumn, en rad per post och inga tomma rader mitt i. Den vanan betalar sig i allt du gör senare. Klicka sedan i listan och tryck `Ctrl+T`. Listan blir en tabell med filterknappar i rubrikraden, och i dem sorterar och filtrerar du direkt, utan att gå via fliken **Data**. Formler och diagram som bygger på tabellen följer dessutom med när du lägger till nya rader. Det är ett av de enklaste grepp som finns och ett av dem som gör mest skillnad. Microsoft har en [lista över kortkommandon i Excel](https://support.microsoft.com/sv-se/office/kortkommandon-i-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) om du vill se fler. Fler grepp av samma sort finns i artikeln om [funktioner som sparar tid](/2026/01/26/excel-funktioner-som-sparar-tid.html).
+Behöver du en summa utanför tabellen skriver du `=SUMMA(Tabell1[Belopp])`. Den följer med när tabellen växer, vilket `=SUMMA(B2:B20)` inte gör. Tabellens namn står längst till vänster på fliken **Tabelldesign**. Lägg märke till att svensk Excel använder semikolon mellan argument, inte komma, eftersom kommat redan är decimaltecken.
 
-## 6. Enkla diagram
+## 5. Formler som fyller i sig själva
 
-Markera tabellen och välj **Infoga → Rekommenderade diagram**. Excel föreslår några typer utifrån dina data. Som nybörjare räcker det att kunna stapeldiagram för att jämföra och linjediagram för att visa förändring över tid. Ett diagram är bara så rätt som underlaget, vilket är skälet till att det kommer sist.
+Skriv en rubrik i den tomma kolumnen direkt till höger om tabellen, till exempel Styckpris. Tabellen växer då med kolumnen. Skriv sedan formeln i första raden under rubriken, till exempel belopp delat med antal. Klickar du på cellerna i samma rad skriver Excel kolumnnamnen åt dig: `=[@Belopp]/[@Antal]`. När du trycker Enter fylls formeln i hela kolumnen av sig själv, och när du lägger till en ny rad följer formeln med. Du kopierar ingenting nedåt och kan därför inte glömma en rad.
+
+Kolumnnamn som `[@Belopp]` behöver aldrig låsas, de pekar alltid på rätt rad. Vanliga celladresser fungerar annorlunda: när formeln fylls nedåt flyttar sig adressen en rad i taget. Ligger momssatsen i en fast cell, till exempel `E1`, skriver du därför `=[@Belopp]*$E$1`. Dollartecknen låser referensen så att alla rader pekar på samma cell. I Excel för Windows kan du markera `E1` i formeln och trycka `F4` för att lägga till dem.
+
+## 6. OM
+
+`OM` är funktionen som väljer mellan två svar. `=OM(B2>1000;"Över budget";"Inom budget")` testar ett villkor och ger ett av två svar. I en tabell blir det `=OM([@Belopp]>1000;"Över budget";"Inom budget")` och fyller sig själv nedåt. Samma tänkande med villkor återkommer i `SUMMA.OMF`, `ANTAL.OMF` och villkorsstyrd formatering.
+
+## 7. Diagram som växer med tabellen
+
+Klicka i tabellen och välj **Infoga → Rekommenderade diagram**. Eftersom diagrammet bygger på tabellen tar det med nya rader av sig självt. Som nybörjare räcker det att kunna stapeldiagram för att jämföra och linjediagram för att visa förändring över tid.
 
 ## Det här kan vänta
 
-Pivottabeller, `XLETAUPP`, villkorsstyrd formatering med formler, makron och AI-verktyg som [Copilot](/2026/08/20/ai-och-copilot-i-excel.html) är alla värda att lära sig, men inte först. De förutsätter att du redan kan referenser och har välbyggda listor. Pivottabellen är det naturliga nästa steget, och när du kommer dit finns vår guide [lär dig pivottabeller snabbt](/2026/10/07/lar-dig-pivottabeller-snabbt.html).
+Pivottabeller, `XLETAUPP`, villkorsstyrd formatering med formler, makron och AI-verktyg som [Copilot](/2026/08/20/ai-och-copilot-i-excel.html) är alla värda att lära sig, men inte först. Alla fungerar bättre när din data redan ligger i en tabell. Pivottabellen är det naturliga nästa steget, och när du kommer dit finns vår guide [lär dig pivottabeller snabbt](/2026/10/07/lar-dig-pivottabeller-snabbt.html). Fler grepp av samma sort som tabellen finns i artikeln om [funktioner som sparar tid](/2026/01/26/excel-funktioner-som-sparar-tid.html).
 
 ## Hur du vet att du är redo för nästa steg
 
 Ta en lista du faktiskt arbetar med och prova tre saker utan att söka efter hjälp:
 
-- Kopiera en formel som pekar på en fast cell nedåt i hela listan, och få rätt svar på varje rad.
+- Gör listan till en tabell, filtrera fram en grupp och läs av summan i summaraden.
+- Lägg till en kolumn med en formel och en ny rad, och se att formeln följer med.
 - Skriv en `OM` som delar upp raderna i två grupper.
-- Gör listan till en tabell, sortera den och gör ett diagram av den.
 
 Klarar du alla tre har du grunden. Fastnar du på någon av dem är det där du ska öva, inte på nästa funktion.
 
@@ -55,6 +65,6 @@ Klarar du alla tre har du grunden. Fastnar du på någon av dem är det där du 
 
 **Intern kurs för arbetsgruppen eller öppen kurs.** En öppen kurs passar dig som går ensam och vill träffa andra på samma nivå. Innehållet är detsamma för alla, och exemplen kommer från kursmaterialet. En intern kurs för arbetsgruppen kan utgå från de filer ni redan använder, och alla lär sig samma arbetssätt samtidigt. Det gör det lättare att hålla fast vid det efteråt, när filerna delas mellan kollegor.
 
-**Fråga efter ordningen.** Be att få se vad kursen går igenom och i vilken ordning. Hoppar den över referenser för att hinna med fler funktioner är det en varningsflagga.
+**Fråga efter ordningen.** Be att få se vad kursen går igenom och i vilken ordning. Börjar den med en lång rad funktioner innan du fått lära dig bygga en lista och göra den till en tabell, är det ett varningstecken.
 
 Vi håller excelutbildning i Umeå för arbetsgrupper, hos er eller på distans, och utgår från era egna arbetsfiler. Läs mer om vår [excelkurs i Umeå](/excel-utbildning-umea.html), och [hör av dig](/kontakt.html) och berätta hur er vardag i Excel ser ut, så återkommer vi med ett förslag.
