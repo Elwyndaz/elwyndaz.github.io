@@ -1,0 +1,21 @@
+# Bygger om GitHub Pages varje onsdag, så att framtidsdaterade artiklar i _posts/
+# publiceras på sitt datum. Pages kör Jekyll med future: false och bygger annars
+# bara vid push. Artiklarna dateras därför på onsdagar.
+name: Veckobygge
+
+on:
+  schedule:
+    - cron: "0 5 * * 3" # onsdag 05:00 UTC = 06:00 vintertid, 07:00 sommartid (Stockholm)
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+jobs:
+  bygg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Begär nytt Pages-bygge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

@@ -1,17 +1,17 @@
 ---
 layout: artikel
 title: "Psykologisk arbetsmiljö: vad arbetsgivaren måste göra"
-date: 2026-10-28
+date: 2026-11-11
 description: "Arbetsbelastning, ständig uppkoppling, otydliga roller och kränkande särbehandling. Vad AFS 2023:2 kräver av arbetsgivaren och hur chefen gör i praktiken."
 kategori: Arbetsmiljö
 ingress: "Den psykologiska arbetsmiljön är inte en mjuk fråga vid sidan av det riktiga arbetsmiljöarbetet. Arbetsmiljöverket ställer konkreta krav på arbetsbelastning, tydlighet, arbetstid och kränkande särbehandling. Här är vad reglerna säger, och hur en chef omsätter dem i vardagen."
 ---
 
-Arbetsgivaren är skyldig att se till att arbetsbelastningen inte blir ohälsosam, att varje medarbetare vet vad som ska prioriteras när tiden inte räcker, att arbetstidens förläggning inte gör folk sjuka och att det finns rutiner mot kränkande särbehandling. Chefer ska dessutom ha kunskaper om hur man förebygger och hanterar både ohälsosam arbetsbelastning och kränkande särbehandling. Kraven står i andra kapitlet av Arbetsmiljöverkets föreskrifter AFS 2023:2 om planering och organisering av arbetsmiljöarbete (Arbetsmiljöverket säger organisatorisk och social arbetsmiljö). Kapitlet har också en särskild paragraf, 8 §, om arbete som är starkt psykiskt påfrestande.
+Arbetsgivaren är skyldig att se till att arbetsbelastningen inte blir ohälsosam, att varje medarbetare vet vad som ska prioriteras när tiden inte räcker, att arbetstidens förläggning inte gör folk sjuka och att det finns rutiner mot kränkande särbehandling. Chefer ska dessutom ha kunskaper om hur man förebygger och hanterar både ohälsosam arbetsbelastning och kränkande särbehandling. Kraven står i andra kapitlet av Arbetsmiljöverkets föreskrifter [AFS 2023:2](https://av.se/globalassets/filer/publikationer/foreskrifter/planering-och-organisering-av-arbetsmiljoarbete-grundlaggande-skyldigheter-for-dig-med-arbetsgivaransvar-afs2023-2.pdf) om planering och organisering av arbetsmiljöarbete (Arbetsmiljöverket säger organisatorisk och social arbetsmiljö). Kapitlet har också en särskild paragraf, 8 §, om arbete som är starkt psykiskt påfrestande.
 
 ## Samma krav, ny adress
 
-Den 1 januari 2025 slog Arbetsmiljöverket ihop sina föreskrifter. Den gamla föreskriften om organisatorisk och social arbetsmiljö, AFS 2015:4, upphävdes samma dag, och innehållet ligger nu som kapitel 2 i AFS 2023:2. Grundkraven på det systematiska arbetsmiljöarbetet finns i AFS 2023:1, som vi gått igenom i artikeln om [skillnaden mellan BAM och SAM](/2026/02/23/bam-och-sam-skillnad.html). Ser ni hänvisningar till "OSA-föreskriften" i gamla rutiner är det alltså dags att uppdatera källan, men själva skyldigheterna är i allt väsentligt desamma.
+Den 1 januari 2025 slog Arbetsmiljöverket ihop sina föreskrifter. Den gamla föreskriften om organisatorisk och social arbetsmiljö, AFS 2015:4, upphävdes samma dag, och innehållet ligger nu som kapitel 2 i AFS 2023:2. Grundkraven på det systematiska arbetsmiljöarbetet finns i [AFS 2023:1](https://www.av.se/globalassets/filer/publikationer/foreskrifter/systematiskt-arbetsmiljoarbete-grundlaggande-skyldigheter-for-dig-med-arbetsgivaransvar-afs2023-1.pdf), som vi gått igenom i artikeln om [skillnaden mellan BAM och SAM](/2026/02/23/bam-och-sam-skillnad.html). Ser ni hänvisningar till "OSA-föreskriften" i gamla rutiner är det alltså dags att uppdatera källan, men själva skyldigheterna är i allt väsentligt desamma.
 
 Kapitlet gäller all verksamhet där arbetstagare utför arbete för arbetsgivarens räkning. Det spelar ingen roll om arbetet görs på kontoret, i bilen eller vid köksbordet.
 

@@ -27,14 +27,16 @@ haft fel förut.
 
 - [x] AI och Copilot i Excel: vad fungerar, vad är en gimmick och vad behöver du kunna själv? Publicerad 2026-08-20. Går igenom reella användningsområden (formeltolkning, textstädning, enkla makron), tre allvarliga fallgropar (hallucinerad logik, granskningsbehov, sekretess), extern länk till Kenji Explains, länk till buildapp.se och internlänk till excelkursen.
 - [x] Så lär du dig pivottabeller snabbt. Skriven 2026-10-06 på grenen `batch/2026-10-06` (`_posts/2026-10-07-lar-dig-pivottabeller-snabbt.md`, med i `sitemap.xml`), publicerad 2026-10-07 (omdaterad från 2026-10-06 före merge). Läs den: texten ligger nu live under ditt namn, och menynamnet "Sammanfatta värden efter" är skrivet ur minnet, kontrollera det mot en svensk Excel.
-- [x] Excel för ekonomer. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
-- [x] Excel för HR. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
-- [x] Excelkurs för nybörjare i Umeå (som `excel-for-nyborjare`, för att inte konkurrera med landningssidan). Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
+- [x] Excel för ekonomer. Publicerad 2026-10-28.
+- [x] Excel för HR. Skriven 2026-10-28, publiceras automatiskt 2026-11-18.
+- [x] Excelkurs för nybörjare i Umeå (som `excel-for-nyborjare`, för att inte konkurrera med landningssidan). Skriven 2026-10-28, publiceras automatiskt 2026-11-04.
+
+- [ ] `[P2]` Källänkar i de tio äldre artiklarna (2026-01-26 till 2026-10-07): bara AI-artikeln har externa länkar. tillvaxt-researchens punkt 10 (GEO, arXiv 2311.09735). De fem från 2026-10-28 har dem.
 
 ### BAM och arbetsmiljö
 
 - [x] Är BAM obligatoriskt? Publicerad 2026-07-06.
-- [x] Psykologisk arbetsmiljö på moderna arbetsplatser. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
+- [x] Psykologisk arbetsmiljö på moderna arbetsplatser. Skriven 2026-10-28, publiceras automatiskt 2026-11-11.
 
 ### Ledarskap
 
@@ -42,7 +44,7 @@ haft fel förut.
   fem konkreta övningar i stället för att upprepa definitionen i "Vad kännetecknar
   bra ledarskap?", enligt noten som stod här. Länkar internt till majartikeln,
   konflikthanteringsartikeln, BAM-sidan, läslistan och ledarskapssidan.
-- [x] Transformativt ledarskap. Publicerad 2026-10-28 i en batch om fem, granskad av separat agent före publicering.
+- [x] Transformativt ledarskap. Skriven 2026-10-28, publiceras automatiskt 2026-11-25.
 
 ## Kvar från redesignen 2026-08-12
 

@@ -2,7 +2,7 @@
 layout: artikel
 title: "Transformativt ledarskap: vad forskningen säger och hur du gör"
 seo_title: "Transformativt ledarskap: forskningen och praktiken"
-date: 2026-10-28
+date: 2026-11-25
 description: "Transformativt ledarskap och de fyra I:na, vad forskningen faktiskt visar, var kritiken träffar och hur en chef praktiserar modellen en vanlig vecka."
 kategori: Ledarskap
 ingress: "Transformativt ledarskap är en av de mest studerade ledarskapsmodellerna som finns, och en av de mest omdiskuterade. Här är vad den säger, vad forskningen visar, var kritiken träffar och hur det ser ut i en vanlig arbetsvecka."
@@ -28,13 +28,13 @@ Försvarshögskolans modell Utvecklande ledarskap, som används i många svenska
 
 ## Vad forskningen faktiskt visar
 
-Den mest citerade sammanställningen är en metaanalys av Timothy Judge och Ronald Piccolo (2004) över 87 källor. Transformativt ledarskap hade ett sammantaget samband, korrigerat för mätfel, på 0,44 med utfall som medarbetarnas tillfredsställelse, motivation och chefens bedömda effektivitet. Det är högt för att vara beteendevetenskap.
+Den mest citerade sammanställningen är en [metaanalys av Timothy Judge och Ronald Piccolo](https://pubmed.ncbi.nlm.nih.gov/15506858/) (2004) över 87 källor. Transformativt ledarskap hade ett sammantaget samband, korrigerat för mätfel, på 0,44 med utfall som medarbetarnas tillfredsställelse, motivation och chefens bedömda effektivitet. Det är högt för att vara beteendevetenskap.
 
 Men samma studie visar något som ofta hamnar i skymundan. Belöning efter prestation, alltså att chefen är tydlig med förväntningar och följer upp att de uppfylls, låg nästan lika högt (0,39) och hade på vissa utfall till och med starkare samband än det transformativa ledarskapet. Dessutom korrelerade de två hela 0,80 med varandra. Chefer som gör det ena gör i hög grad också det andra.
 
 ## Kritiken: tre problem att känna till
 
-**Modellen överlappar andra.** Daan van Knippenberg och Sim Sitkin (2013) gick igenom forskningsfältet och kom fram till att begreppet saknar en tydlig definition och inte går att skilja empiriskt från andra ledarskapsbegrepp. Deras slutsats var att forskningen borde överge etiketten och i stället studera tydligare avgränsade beteenden.
+**Modellen överlappar andra.** [Daan van Knippenberg och Sim Sitkin](https://fds.duke.edu/db/Fuqua/Management/faculty/sim.sitkin/publications/327469) (2013) gick igenom forskningsfältet och kom fram till att begreppet saknar en tydlig definition och inte går att skilja empiriskt från andra ledarskapsbegrepp. Deras slutsats var att forskningen borde överge etiketten och i stället studera tydligare avgränsade beteenden.
 
 **Mätningen håller inte måttet.** Det vanligaste mätinstrumentet är MLQ, Multifactor Leadership Questionnaire, utvecklat av Bass och senare vidareutvecklat tillsammans med Bruce Avolio. Enligt van Knippenberg och Sitkin återskapar sådana enkäter inte de fyra dimensioner som teorin beskriver. Ett annat problem de lyfter är att ledarskapet delvis definieras genom sina effekter: en chef räknas som inspirerande för att medarbetarna blev inspirerade. Då blir sambandet med goda utfall delvis inbyggt i frågorna.
 

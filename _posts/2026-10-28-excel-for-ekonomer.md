@@ -17,7 +17,7 @@ Det vanligaste momentet i ekonomiarbete är att para ihop två listor: kontonamn
 =XLETAUPP(A2; Kontoplan[Konto]; Kontoplan[Benämning]; "Saknas")
 ```
 
-Det fjärde argumentet bestämmer vad som visas när värdet inte finns. Skriv alltid något där. "Saknas" i en cell är en upplysning, ett felvärde i en rapport är något ingen vågar skicka vidare. Till skillnad från LETARAD kan returkolumnen ligga på vilken sida som helst om sökkolumnen. Du pekar dessutom ut returkolumnen direkt i stället för att ange ett kolumnnummer, så formeln går inte sönder när någon infogar en kolumn i kontoplanen. XLETAUPP finns i Microsoft 365 och Excel 2021 och senare. Har ni en äldre version gäller fortfarande LETARAD eller INDEX och PASSA.
+Det fjärde argumentet ([Microsofts beskrivning av XLETAUPP](https://support.microsoft.com/sv-se/office/xletaupp-funktionen-b7fd680e-6d10-43e6-84f9-88eae8bf5929)) bestämmer vad som visas när värdet inte finns. Skriv alltid något där. "Saknas" i en cell är en upplysning, ett felvärde i en rapport är något ingen vågar skicka vidare. Till skillnad från LETARAD kan returkolumnen ligga på vilken sida som helst om sökkolumnen. Du pekar dessutom ut returkolumnen direkt i stället för att ange ett kolumnnummer, så formeln går inte sönder när någon infogar en kolumn i kontoplanen. XLETAUPP finns i Microsoft 365 och Excel 2021 och senare. Har ni en äldre version gäller fortfarande LETARAD eller INDEX och PASSA.
 
 ## SUMMA.OMF för konto och period
 
@@ -27,7 +27,7 @@ En resultatrapport är i grunden en lång rad villkorade summor: konto 3010 i ma
 =SUMMA.OMF(D:D; B:B; 3010; A:A; ">="&F1; A:A; "<="&SLUTMÅNAD(F1;0))
 ```
 
-Här ligger datum i kolumn A, konto i B och belopp i D, och F1 innehåller periodens första dag. Lägg märke till att summaområdet kommer först. I den äldre SUMMA.OM kommer det sist, och att blanda ihop ordningen är en klassisk felkälla när formler skrivs om.
+Här ligger datum i kolumn A, konto i B och belopp i D, och F1 innehåller periodens första dag. Lägg märke till att [summaområdet kommer först](https://support.microsoft.com/sv-se/office/summa-omf-funktionen-c9e748f5-7ea7-455d-9406-611cebce642b). I den äldre SUMMA.OM kommer det sist, och att blanda ihop ordningen är en klassisk felkälla när formler skrivs om.
 
 Behöver du räkna något som inte är en ren summa, till exempel ett viktat snittpris, är PRODUKTSUMMA rätt verktyg. Med antal i kolumn B och pris i C:
 

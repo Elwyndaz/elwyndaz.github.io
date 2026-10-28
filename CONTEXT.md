@@ -116,7 +116,9 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   undvika spam-bottar. Sätt `data-email=""` på ett tomt element där adressen ska
   synas.
 - Bildnamn måste vara ren ASCII. Å, ä och ö har orsakat renderingsproblem.
-- `sitemap.xml` underhålls manuellt och måste matcha verkliga URL:er. Jekylls
+- `sitemap.xml`: de statiska sidorna står för hand och måste matcha verkliga
+  URL:er; artiklarna genereras av en Liquid-loop över `site.posts` (sedan
+  2026-10-28), så en ny artikel behöver ingen sitemaprad. Jekylls
   standardpermalink är `/ÅÅÅÅ/MM/DD/slug.html` där datumet kommer från
   frontmatterns `date`, inte nödvändigtvis från filnamnet. `tack.html` och
   `404.html` är `noindex` och ska inte in i sitemap.
@@ -200,7 +202,13 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
 - **Utvärderingssiffrorna 4,8 / 4,7 / 100 % måste vara sanna och stå kvar.** Det
   är de som skiljer ett påstående från ett löfte. Även kritiken publiceras.
 - **Artikelserien** är en artikel i veckan, kategoriserad Excel, Arbetsmiljö eller
-  Ledarskap, för långsiktig auktoritet snarare än snabba resultat.
+  Ledarskap, för långsiktig auktoritet snarare än snabba resultat. Bekräftat
+  2026-10-28: artiklar kan skrivas i förväg men **publiceras en per vecka**.
+  Mekaniken: framtida `date:` (en onsdag), Pages kör Jekyll med `future: false`
+  så artikeln syns varken på sajten, i Kunskap eller i sitemap förrän
+  `.github/workflows/veckobygge.yml` bygger om Pages onsdag 05:00 UTC. Varje
+  ny artikel granskas av en separat agent, och formler testas i riktig svensk
+  Excel, före commit.
 - **Ledarskapssidans lista heter "Upplägg" och beskriver de sex tillfällena.**
   Beslutat 2026-08-14. Tillfälle 01, 02 och 06 är fasta, 03 till 05 väljs utifrån
   kartläggningen vid första tillfället. Excel- och BAM-sidorna har fortfarande

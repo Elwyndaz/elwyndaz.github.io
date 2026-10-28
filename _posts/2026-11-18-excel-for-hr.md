@@ -1,7 +1,7 @@
 ---
 layout: artikel
 title: "Excel för HR: personalförteckning, frånvaro och GDPR"
-date: 2026-10-28
+date: 2026-11-18
 description: "Så använder HR Excel för personalförteckning, sjukfrånvaro, lönerevision och anställningstid, och så hanterar du personnummer och hälsouppgifter rätt."
 kategori: Excel
 ingress: "HR arbetar mer i Excel än de flesta tror: listor över personal, frånvaro, löner och anställningstid. Verktyget räcker långt, men HR-filer innehåller också några av de känsligaste uppgifterna på en arbetsplats. Här är vad som är värt att kunna, och vad som inte ska ligga i ett kalkylark alls."
@@ -58,16 +58,16 @@ Regeln ändrar bara färgen, inte innehållet, så den är lätt att ta bort nä
 
 Här skiljer sig HR från de flesta andra som arbetar i Excel. Nästan varje rad i en HR-fil är en personuppgift, och en del av dem är känsliga.
 
-**Sjukfrånvaro är en uppgift om hälsa.** Integritetsskyddsmyndigheten, IMY, skriver att uppgifter om hälsa till exempel kan vara sjukfrånvaro, graviditet och läkarbesök, och sådana uppgifter räknas som känsliga personuppgifter enligt GDPR. IMY skriver också att en arbetsgivare normalt inte behöver behandla diagnoser. Ett frånvaroark behöver alltså antal timmar och typ av frånvaro, inte varför någon var sjuk.
+**Sjukfrånvaro är en uppgift om hälsa.** [Integritetsskyddsmyndigheten, IMY, skriver](https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/kansliga-personuppgifter/) att uppgifter om hälsa till exempel kan vara sjukfrånvaro, graviditet och läkarbesök, och sådana uppgifter räknas som känsliga personuppgifter enligt GDPR. IMY skriver också att en arbetsgivare normalt inte behöver behandla diagnoser. Ett frånvaroark behöver alltså antal timmar och typ av frånvaro, inte varför någon var sjuk.
 
-**Personnummer bara när det är klart motiverat.** Enligt IMY får en arbetsgivare använda personnummer för till exempel löne- och behörighetsadministration, men personnumret ska inte exponeras i onödan. I en uppföljningsfil räcker anställningsnumret.
+**Personnummer bara när det är klart motiverat.** [Enligt IMY](https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/arbetsliv/tillaten-behandling--vilka-krav-galler/personnummer/) får en arbetsgivare använda personnummer för till exempel löne- och behörighetsadministration, men personnumret ska inte exponeras i onödan. I en uppföljningsfil räcker anställningsnumret.
 
-**Mejla inte runt filen.** IMY:s vägledning är att känsliga personuppgifter som skickas med e-post ska vara krypterade så att bara den avsedda mottagaren kan läsa dem. En frånvarofil som bifogas i ett vanligt mejl uppfyller inte det. Dela i stället en länk till en plats där bara de som behöver uppgifterna har behörighet.
+**Mejla inte runt filen.** [IMY:s vägledning](https://www.imy.se/verksamhet/dataskydd/vi-guidar-dig/sakerhet-for/) är att känsliga personuppgifter som skickas med e-post ska vara krypterade så att bara den avsedda mottagaren kan läsa dem. En frånvarofil som bifogas i ett vanligt mejl uppfyller inte det. Dela i stället en länk till en plats där bara de som behöver uppgifterna har behörighet.
 
 Tre saker vi rekommenderar i praktiken:
 
 1. **Ta bort det som inte behövs.** Behöver rapporten inte namn eller personnummer, ta bort kolumnerna innan du sparar en kopia. IMY skriver att uppgifter inte får samlas in eller bevaras slentrianmässigt, och det gäller även gamla exporter som ligger kvar på skrivbordet.
-2. **Skydda filen.** Under **Arkiv → Info** väljer du **Skydda arbetsbok → Kryptera med lösenord**. Microsoft kan inte återställa ett glömt lösenord, så förvara det säkert.
+2. **Skydda filen.** Under **Arkiv → Info** väljer du **Skydda arbetsbok → Kryptera med lösenord**. [Microsoft kan inte återställa](https://support.microsoft.com/sv-se/office/skydda-en-excel-fil-7359d4ae-7213-4ac2-b058-f75e9311b599) ett glömt lösenord, så förvara det säkert.
 3. **Spara på ett ställe.** En fil med behörighetsstyrning, inte fem versioner i olika inkorgar.
 
 Det här är ingen juridisk genomgång. Är ni osäkra på vad ni får spara och hur länge, börja med IMY:s vägledning om arbetsliv på imy.se.

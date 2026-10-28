@@ -1,13 +1,13 @@
 ---
 layout: artikel
 title: "Excel för nybörjare: vad du ska lära dig först"
-date: 2026-10-28
+date: 2026-11-04
 description: "Vad en nybörjare i Excel ska lära sig först, vad som kan vänta och vad du ska fråga efter när du väljer kurs: på plats eller digitalt, internt eller öppet."
 kategori: Excel
 ingress: "En grundkurs i Excel behöver inte täcka allt. Den behöver täcka rätt saker i rätt ordning, så att varje steg bygger på det förra. Här är en ordning som fungerar, vad du lugnt kan vänta med och hur du vet att du är redo att gå vidare."
 ---
 
-Som nybörjare i Excel behöver du sju saker, i den här ordningen: celler och referenser, absoluta referenser med `$`, funktionerna `SUMMA` och `MEDEL`, funktionen `OM`, sortering och filtrering, tabeller med `Ctrl+T` och enkla diagram. Med de sju kan du bygga, räkna i och läsa av de flesta listor du möter på jobbet. Allt annat kan vänta tills du har ett konkret behov av det.
+Som nybörjare i Excel behöver du sex saker, i den här ordningen: celler och referenser, absoluta referenser med `$`, funktionerna `SUMMA` och `MEDEL`, funktionen `OM`, tabeller med `Ctrl+T` (som ger dig sortering och filtrering på köpet) och enkla diagram. Med de sex kan du bygga, räkna i och läsa av de flesta listor du möter på jobbet. Allt annat kan vänta tills du har ett konkret behov av det.
 
 Ordningen spelar roll. Varje steg använder det förra, och den som hoppar direkt till pivottabeller eller makron fastnar ofta på något som hörde till steg ett.
 
@@ -27,15 +27,11 @@ Nästa steg är de två funktioner du kommer att använda mest. `=SUMMA(B2:B20)`
 
 `OM` är den första funktion som fattar ett beslut. `=OM(B2>1000;"Över budget";"Inom budget")` testar ett villkor och ger ett av två svar. När du förstår `OM` förstår du logiken bakom nästan alla mer avancerade funktioner, så den är värd att öva på tills du kan skriva den utan att titta.
 
-## 5. Sortera och filtrera
+## 5. Tabeller med Ctrl+T
 
-Under fliken **Data**, i gruppen **Sortera och filtrera**, kan du ordna en lista och visa bara de rader du behöver. Det kräver att listan är ordentligt byggd: en rubrik per kolumn, en rad per post och inga tomma rader mitt i. Den vanan betalar sig i allt du gör senare.
+Bygg listan ordentligt först: en rubrik per kolumn, en rad per post och inga tomma rader mitt i. Den vanan betalar sig i allt du gör senare. Klicka sedan i listan och tryck `Ctrl+T`. Listan blir en tabell med filterknappar i rubrikraden, och i dem sorterar och filtrerar du direkt, utan att gå via fliken **Data**. Formler och diagram som bygger på tabellen följer dessutom med när du lägger till nya rader. Det är ett av de enklaste grepp som finns och ett av dem som gör mest skillnad. Microsoft har en [lista över kortkommandon i Excel](https://support.microsoft.com/sv-se/office/kortkommandon-i-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) om du vill se fler. Fler grepp av samma sort finns i artikeln om [funktioner som sparar tid](/2026/01/26/excel-funktioner-som-sparar-tid.html).
 
-## 6. Tabeller med Ctrl+T
-
-Klicka i listan och tryck `Ctrl+T`. Listan blir en tabell med filterknappar i rubrikraden, och formler och diagram som bygger på den följer med när du lägger till nya rader. Det är ett av de enklaste grepp som finns och ett av dem som gör mest skillnad. Fler grepp av samma sort finns i artikeln om [funktioner som sparar tid](/2026/01/26/excel-funktioner-som-sparar-tid.html).
-
-## 7. Enkla diagram
+## 6. Enkla diagram
 
 Markera tabellen och välj **Infoga → Rekommenderade diagram**. Excel föreslår några typer utifrån dina data. Som nybörjare räcker det att kunna stapeldiagram för att jämföra och linjediagram för att visa förändring över tid. Ett diagram är bara så rätt som underlaget, vilket är skälet till att det kommer sist.
 

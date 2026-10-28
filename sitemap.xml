@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -66,96 +69,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
+  {% comment %}Artiklarna genereras: framtidsdaterade inlägg utesluts av Jekyll (future: false) tills Pages byggs om på datumet, se .github/workflows/veckobygge.yml.{% endcomment %}
+  {%- for post in site.posts %}
   <url>
-    <loc>https://orgutveckling.se/2026/10/28/excel-for-ekonomer.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <loc>{{ post.url | prepend: site.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date: '%Y-%m-%d' }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/10/28/excel-for-hr.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/10/28/excel-for-nyborjare.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/10/28/psykologisk-arbetsmiljo.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/10/28/transformativt-ledarskap.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/10/07/lar-dig-pivottabeller-snabbt.html</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/08/20/ai-och-copilot-i-excel.html</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/08/13/psykologisk-trygghet-i-arbetsgrupper.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/07/06/ar-bam-obligatoriskt.html</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/06/14/vanliga-excel-misstag.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/05/25/vad-kannetecknar-bra-ledarskap.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/04/27/vad-ingar-i-bam-utbildning.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/03/30/konflikthantering-for-chefer.html</loc>
-    <lastmod>2026-03-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/02/23/bam-och-sam-skillnad.html</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://orgutveckling.se/2026/01/26/excel-funktioner-som-sparar-tid.html</loc>
-    <lastmod>2026-01-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
+  {%- endfor %}
   <url>
     <loc>https://orgutveckling.se/integritetspolicy.html</loc>
     <lastmod>2026-08-27</lastmod>

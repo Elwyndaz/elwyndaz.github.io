@@ -17,14 +17,16 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
-**2026-10-28: CSP strängare, titlar kortade, fem nya artiklar.**
+**2026-10-28: CSP strängare, titlar kortade, fem nya artiklar med veckovis publicering.**
 
 - **`'unsafe-inline'` borta ur `script-src`** i Transform Rule "Security headers", via API. `style-src` har det kvar (`style=`-attribut). Verifierat i Chromium mot produktion: 7 sidor, 0 CSP-fel, beacon laddar, mobilmenyn öppnar, mejllänken i `cv.html` byggs. Allt i 2026-09-11-posten nedan om att script behöver `'unsafe-inline'` gäller inte längre.
 - **Titlar:** artikellayouten la till 39 teckens suffix. Suffixet borta, valfritt `seo_title` i frontmatter styr `<title>` (H1, og och schema använder fortfarande `title`). 13 av 22 sitemapsidor över 60 tecken, nu 2: Excel 62, BAM 69 (orörd, kontrollgrupp).
 - **Omindexering behövs inte:** URL-inspektionen visar excel- och ledarskapssidan crawlade 2026-10-14/15, PASS.
 - **`utbildningar.html`-misstanken från 2026-09-09 avskriven:** live-filen är byte-identisk med repot, ingen `/cdn-cgi/l/`-länk.
 - **Fem artiklar** (ekonomer, HR, nybörjare, psykologisk arbetsmiljö, transformativt ledarskap), skrivna av fem agenter och granskade av en sjätte med ren kontext. Kritikern testade formlerna i svensk Excel via COM och läste AFS 2023:2 i fulltext. Sex MÅSTE-fynd rättade, bland annat: `AVKORTA(ÅRDEL(...))` ger ett år för mycket före årsdagen (struken), felciterad Judge och Piccolo, "öresavrundning" fel term, och HR-artikeln bad kunder skicka riktiga personuppgifter. Nybörjarartikeln döptes om från `excelkurs-for-nyborjare-umea` till `excel-for-nyborjare` så den inte konkurrerar med landningssidan om "excelkurs umeå".
-- **Verifierat i Excel:** `DATEDIF` tar `"Y"` i svensk Excel; Microsofts svenska hjälpsida visar `"Å"`, vilket ger fel.
+- **Verifierat i Excel:** `DATEDIF` tar `"Y"` i svensk Excel; Microsofts svenska hjälpsida visar `"Å"`, vilket ger fel. Samtliga formler i de fem artiklarna körda i lokal svensk Excel 16 via COM med `FormulaLocal`: 30 av 30 kontroller rätt (XLETAUPP mot tabell och efter infogad kolumn, SUMMA.OMF över periodgränser, PRODUKTSUMMA, datumformlerna, kontrollcellen, DATEDIF runt årsdagen, lönerevisionen, nybörjarformlerna). Skriptet låg i sessionens scratchpad, inte i repot.
+- **Källänkar** till primärkällor (av.se, imy.se, PubMed, Microsoft) i alla fem, alla HTTP 200. tillvaxt-researchens punkt 10 (GEO-studien): källhänvisningar ökar chansen att citeras i AI-svar. De tio äldre artiklarna har nästan inga, se BACKLOG.
+- **Publicering en per vecka:** ekonomer 2026-10-28 (live), nybörjare 11-04, psykologisk arbetsmiljö 11-11, HR 11-18, transformativt ledarskap 11-25. Ny `.github/workflows/veckobygge.yml` bygger om Pages varje onsdag; sitemapens artikeldel genereras nu av Liquid så framtida artiklar inte listas som 404. Mekaniken i `CONTEXT.md` under Artikelserien.
 
 **2026-10-11: mejlen flyttad från ImprovMX till Cloudflare Email Routing** (zonändring, ingen kod). `kontakt@orgutveckling.se` och catch-all vidarebefordras till Patriks verifierade privata adress. MX är `route1/2/3.mx.cloudflare.net`, SPF `v=spf1 include:_spf.mx.cloudflare.net ~all`, Cloudflares DKIM-post tillagd. Testmejl till `kontakt@` levererat 14:25 enligt Cloudflare-loggen. Gamla värden, för att backa: MX `mx1.improvmx.com` (prio 10) och `mx2.improvmx.com` (prio 20), SPF `v=spf1 include:spf.improvmx.com ~all`. ImprovMX-kontot stängt av Patrik 2026-10-11. Cloudflare kan inte skicka mejl, bara ta emot.
 
