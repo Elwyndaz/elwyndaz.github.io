@@ -209,6 +209,10 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   `.github/workflows/veckobygge.yml` bygger om Pages onsdag 05:00 UTC. Varje
   ny artikel granskas av en separat agent, och formler testas i riktig svensk
   Excel, före commit.
+- **Artiklar ska vara korta och täta.** Patrik 2026-10-29: "ingen orkar läsa så
+  där mycket text som också inte är så innehållsrik". Stryk utfyllnad, upprepning
+  och allmänna råd; varje stycke ska ge läsaren något konkret. Kritikern granskar
+  också längden. Serien 2026-10/11 låg på 850–1 050 ord, för långt.
 - **Ledarskapssidans lista heter "Upplägg" och beskriver de sex tillfällena.**
   Beslutat 2026-08-14. Tillfälle 01, 02 och 06 är fasta, 03 till 05 väljs utifrån
   kartläggningen vid första tillfället. Excel- och BAM-sidorna har fortfarande
