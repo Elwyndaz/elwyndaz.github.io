@@ -31,7 +31,7 @@ DATEDIF heter likadant i svensk Excel. Den syns inte i Excels funktionslista, me
 
 Frånvaro fungerar bäst som en egen lista, med en rad per frånvarotillfälle: anställningsnummer, avdelning, typ av frånvaro, startdatum, slutdatum och antal timmar. Inte en kolumn per månad som fylls i för hand, för den går inte att räkna på.
 
-Ur en sådan lista räknar du med `SUMMA.OMF` ihop timmarna per avdelning och med `ANTAL.OMF` antalet tillfällen. Sjukfrånvaro i procent får du genom att dela sjukfrånvarotimmarna med den ordinarie arbetstiden för samma grupp och period. Står det 12,5 % för en avdelning vet du var samtalet ska börja.
+Ur en sådan lista räknar du med `SUMMA.OMF` ihop timmarna per avdelning och med `ANTAL.OMF` antalet tillfällen. Sjukfrånvaro i procent får du genom att dela sjukfrånvarotimmarna med den ordinarie arbetstiden för samma grupp och period.
 
 ## Pivottabeller per avdelning
 
