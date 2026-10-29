@@ -74,6 +74,6 @@ Kontrollcellen är den viktigaste av dem. Den kostar en minut att bygga och larm
 
 ## Lär dig det i dina egna filer
 
-Funktionerna är inte svåra var för sig. Det svåra är att se var de passar in i just er månadsrapport, er budgetmall eller er avstämning. Därför bygger vi vår excelkurs för ekonomer på deltagarnas egna arbetsfiler, som vi samlar in innan. Pivottabeller, XLETAUPP, logiska funktioner, datarensning och automatiserade månadsrapporter är det vi oftast fördjupar oss i.
+Funktionerna är inte svåra var för sig. Det svåra är att se var de passar in i just era egna filer. Därför bygger vi våra excelkurser på deltagarnas egna arbetsfiler, som vi samlar in innan. Pivottabeller, XLETAUPP, logiska funktioner och datarensning är sådant vi ofta fördjupar oss i.
 
 Läs mer om upplägget på sidan om vår [excelutbildning i Umeå och på distans](/excel-utbildning-umea.html), eller [hör av dig](/kontakt.html) och berätta hur er vardag i Excel ser ut, så återkommer vi med ett förslag.
