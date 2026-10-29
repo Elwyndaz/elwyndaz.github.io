@@ -4,57 +4,41 @@ title: "Psykologisk arbetsmiljö: vad arbetsgivaren måste göra"
 date: 2026-11-11
 description: "Arbetsbelastning, ständig uppkoppling, otydliga roller och kränkande särbehandling. Vad AFS 2023:2 kräver av arbetsgivaren och hur chefen gör i praktiken."
 kategori: Arbetsmiljö
-ingress: "Den psykologiska arbetsmiljön är inte en mjuk fråga vid sidan av det riktiga arbetsmiljöarbetet. Arbetsmiljöverket ställer konkreta krav på arbetsbelastning, tydlighet, arbetstid och kränkande särbehandling. Här är vad reglerna säger, och hur en chef omsätter dem i vardagen."
+ingress: "Arbetsmiljöverket ställer konkreta krav på arbetsbelastning, tydlighet, arbetstid och kränkande särbehandling. Här är kraven, och vad en chef gör i praktiken."
 ---
 
-Arbetsgivaren är skyldig att se till att arbetsbelastningen inte blir ohälsosam, att varje medarbetare vet vad som ska prioriteras när tiden inte räcker, att arbetstidens förläggning inte gör folk sjuka och att det finns rutiner mot kränkande särbehandling. Chefer ska dessutom ha kunskaper om hur man förebygger och hanterar både ohälsosam arbetsbelastning och kränkande särbehandling. Kraven står i andra kapitlet av Arbetsmiljöverkets föreskrifter [AFS 2023:2](https://av.se/globalassets/filer/publikationer/foreskrifter/planering-och-organisering-av-arbetsmiljoarbete-grundlaggande-skyldigheter-for-dig-med-arbetsgivaransvar-afs2023-2.pdf) om planering och organisering av arbetsmiljöarbete (Arbetsmiljöverket säger organisatorisk och social arbetsmiljö). Kapitlet har också en särskild paragraf, 8 §, om arbete som är starkt psykiskt påfrestande.
+Kraven står i kapitel 2 i Arbetsmiljöverkets föreskrifter [AFS 2023:2](https://av.se/globalassets/filer/publikationer/foreskrifter/planering-och-organisering-av-arbetsmiljoarbete-grundlaggande-skyldigheter-for-dig-med-arbetsgivaransvar-afs2023-2.pdf). Fram till den 1 januari 2025 låg de i AFS 2015:4, så hänvisningar till "OSA-föreskriften" i gamla rutiner behöver uppdateras. Skyldigheterna är i allt väsentligt desamma, och de gäller oavsett om arbetet görs på kontoret eller vid köksbordet.
 
-## Samma krav, ny adress
+## Arbetsbelastning (2 kap. 6 §)
 
-Den 1 januari 2025 slog Arbetsmiljöverket ihop sina föreskrifter. Den gamla föreskriften om organisatorisk och social arbetsmiljö, AFS 2015:4, upphävdes samma dag, och innehållet ligger nu som kapitel 2 i AFS 2023:2. Grundkraven på det systematiska arbetsmiljöarbetet finns i [AFS 2023:1](https://www.av.se/globalassets/filer/publikationer/foreskrifter/systematiskt-arbetsmiljoarbete-grundlaggande-skyldigheter-for-dig-med-arbetsgivaransvar-afs2023-1.pdf), som vi gått igenom i artikeln om [skillnaden mellan BAM och SAM](/2026/02/23/bam-och-sam-skillnad.html). Ser ni hänvisningar till "OSA-föreskriften" i gamla rutiner är det alltså dags att uppdatera källan, men själva skyldigheterna är i allt väsentligt desamma.
+Arbetsbelastningen är ohälsosam när kraven mer än tillfälligt överskrider resurserna och återhämtningen inte räcker. Resurser är bemanning och kompetens, men också tydliga mål, återkoppling och stöd från chef och kollegor.
 
-Kapitlet gäller all verksamhet där arbetstagare utför arbete för arbetsgivarens räkning. Det spelar ingen roll om arbetet görs på kontoret, i bilen eller vid köksbordet.
+**Gör så här:** när en ny uppgift läggs på någon, säg vad som tas bort, skjuts upp eller får mer resurser.
 
-## Arbetsbelastning: krav ska vägas mot resurser
+## Tydliga roller (2 kap. 7 §)
 
-Föreskriften definierar ohälsosam arbetsbelastning som att kraven i arbetet mer än tillfälligt överskrider resurserna. Obalansen blir ohälsosam när den är långvarig och återhämtningen inte räcker till. En intensiv vecka före ett bokslut är alltså inte problemet. En intensiv vecka som aldrig tar slut är det.
+Varje medarbetare ska veta vilka uppgifter hen har, vilket resultat som ska nås, om arbetet ska göras på ett särskilt sätt, vad som ska prioriteras när tiden inte räcker och vem hen kan vända sig till för att få hjälp. Prioriteringen är det som oftast saknas.
 
-Enligt 2 kap. 6 § ska arbetsgivaren se till att de arbetsuppgifter och befogenheter som delas ut inte ger upphov till ohälsosam arbetsbelastning. Resurser är enligt definitionen i 2 kap. 3 § ett brett begrepp: bemanning och kompetens, men också rimliga och tydliga mål, återkoppling, kontroll över det egna arbetet och stöd från chef och kollegor.
+**Gör så här:** gå igenom punkterna fortlöpande, inte bara i medarbetarsamtalet, och fråga särskilt vad man får låta bli.
 
-**I praktiken:** när en ny uppgift läggs på någon ska chefen kunna svara på vad som tas bort, skjuts upp eller får mer resurser. Annars har kraven ökat utan att resurserna gjort det, och det är exakt den obalans föreskriften pekar på.
+## Arbetstid och uppkoppling (2 kap. 9 §)
 
-## Otydliga roller: fem saker varje medarbetare ska veta
+Arbetsgivaren ska motverka att arbetstidens förläggning leder till ohälsa. De allmänna råden nämner förväntningar på att alltid vara nåbar som en risk.
 
-2 kap. 7 § är den mest konkreta paragrafen i kapitlet. Arbetsgivaren ska se till att arbetstagarna känner till vilka arbetsuppgifter de ska utföra, vilket resultat som ska uppnås, om arbetet ska göras på ett särskilt sätt, vilka uppgifter som ska prioriteras när tiden inte räcker och vem de kan vända sig till för att få hjälp. Arbetsgivaren ska också säkerställa att de vet vilka befogenheter de har.
+**Gör så här:** bestäm med gruppen när man förväntas svara och hur det akuta når fram. Och tänk på vad dina egna mejl klockan 22 signalerar.
 
-Punkten om prioritering är den som oftast saknas. Många medarbetare vet vad de ska göra men inte vad de får låta bli när allt inte hinns med, och då blir varje val en personlig risk.
+## Kränkande särbehandling (2 kap. 10–11 §§)
 
-**I praktiken:** gå igenom de fem punkterna i medarbetarsamtalet och på arbetsplatsträffen, och fråga särskilt om prioriteringsordningen. De allmänna råden talar om att gå igenom punkterna fortlöpande. En gång om året i medarbetarsamtalet räcker alltså knappast.
+Arbetsgivaren ska klargöra att kränkande särbehandling inte accepteras och ha rutiner för vem som tar emot information, vad mottagaren gör och hur den som är utsatt snabbt får hjälp. Rutinerna ska vara kända av alla.
 
-## Hybridarbete och ständig uppkoppling
+**Gör så här:** fråga tre medarbetare vart de skulle vända sig om närmaste chef var problemet. Kan de inte svara finns rutinen bara på papperet.
 
-Arbetstiden regleras i 2 kap. 9 §: arbetsgivaren ska vidta de åtgärder som behövs för att motverka att arbetstidens förläggning leder till ohälsa. I de allmänna råden nämns uttryckligen långtgående möjligheter att arbeta på olika tider och platser med förväntningar på att vara ständigt nåbar, som ett exempel på förläggning som kan medföra risker. Arbetsgivaren bör också särskilt uppmärksamma möjligheterna till återhämtning.
+## Kunskaper och mål (2 kap. 4–5 §§)
 
-Det är en viktig formulering för den som leder hybridarbete. Friheten att jobba när och var som helst är ofta uppskattad, men den blir ett arbetsmiljöproblem när ingen har sagt när man får vara ledig.
+Chefer ska ha kunskaper om hur man förebygger och hanterar ohälsosam arbetsbelastning och kränkande särbehandling, och förutsättningar att använda dem. Arbetsgivaren ska ha mål för den organisatoriska och sociala arbetsmiljön, skriftliga om ni är tio eller fler.
 
-**I praktiken:** bestäm tillsammans med gruppen vilka tider man förväntas svara, vad som räknas som akut och hur det akuta når fram. Och tänk på vad chefens egna mejl klockan 22 signalerar, oavsett vad som står i policyn.
-
-## Kränkande särbehandling: policy och rutin
-
-Enligt 2 kap. 10 § ska arbetsgivaren klargöra att kränkande särbehandling inte accepteras och motverka förhållanden som kan ge upphov till den. Bland förhållandena att vara uppmärksam på nämner de allmänna råden konflikter, arbetsbelastning, arbetsfördelning och konsekvenser av förändringar. Kränkningar uppstår alltså ofta ur samma brister som hela den här artikeln handlar om.
-
-2 kap. 11 § kräver rutiner som visar vem som tar emot information om kränkande särbehandling, vad mottagaren ska göra och hur den som är utsatt snabbt kan få hjälp. Rutinerna ska vara kända av alla arbetstagare.
-
-**I praktiken:** testa rutinen genom att fråga tre medarbetare vart de skulle vända sig om närmaste chef var problemet. Kan de inte svara finns rutinen bara på papperet.
-
-## Kunskaper och mål
-
-2 kap. 4 § kräver att chefer och arbetsledare har kunskaper om hur man förebygger och hanterar ohälsosam arbetsbelastning och kränkande särbehandling, och att arbetsgivaren ger förutsättningar att använda kunskaperna. Med förutsättningar menar de allmänna råden bland annat befogenheter, en rimlig arbetsbelastning för chefen själv och stöd i chefsrollen. Som sätt att tillföra kunskaperna föreslås utbildning, gärna för chefer och skyddsombud tillsammans.
-
-Arbetsgivaren ska också ha mål för den organisatoriska och sociala arbetsmiljön enligt 2 kap. 5 §. Medarbetarna ska kunna vara med och ta fram dem, och målen ska vara skriftliga om verksamheten har tio eller fler arbetstagare.
-
-Allt detta hör hemma i det vanliga arbetsmiljöarbetet: undersöka, riskbedöma, åtgärda och följa upp. Den sociala sidan, att det går att säga ifrån utan att det kostar något, har vi skrivit om separat i artikeln om [psykologisk trygghet i arbetsgrupper](/2026/08/13/psykologisk-trygghet-i-arbetsgrupper.html). Utan den når signalerna om för hög belastning aldrig fram till chefen.
+Allt det här hör hemma i det vanliga [systematiska arbetsmiljöarbetet](/2026/02/23/bam-och-sam-skillnad.html). Och utan [psykologisk trygghet](/2026/08/13/psykologisk-trygghet-i-arbetsgrupper.html) når signalerna om för hög belastning aldrig fram till chefen.
 
 ---
 
-På [BAM-utbildningen](/bam-utbildning-umea.html) går chefer och skyddsombud igenom den organisatoriska och sociala arbetsmiljön tillsammans, med riskbedömning i den egna verksamheten. Vill ni hellre öva samtalen om prioritering och belastning finns [ledarskapsutbildningen i Umeå](/ledarskapsutbildning-umea.html). [Berätta hur det ser ut hos er](/kontakt.html), så återkommer vi med ett förslag.
+På [BAM-utbildningen](/bam-utbildning-umea.html) går chefer och skyddsombud igenom den organisatoriska och sociala arbetsmiljön tillsammans. Vill ni öva samtalen om prioritering och belastning finns [ledarskapsutbildningen i Umeå](/ledarskapsutbildning-umea.html). [Berätta hur det ser ut hos er](/kontakt.html), så återkommer vi med ett förslag.
