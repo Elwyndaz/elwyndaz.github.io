@@ -43,17 +43,6 @@ En sak att tänka på: en pivottabell över en liten avdelning visar i praktiken
 
 Inför lönerevisionen lägger du till kolumner för föreslagen höjning i procent och ny lön. Lägg en generell höjning i en egen cell högst upp, till exempel K1. Låt kolumnen för höjning börja med `=$K$1` och justera individuellt, och räkna ny lön med `=G2*(1+H2)`. Då står den generella höjningen på ett enda ställe i stället för i varje formel. Varför det spelar roll beskriver vi i [vanliga Excel-misstag](/2026/06/14/vanliga-excel-misstag.html). En summa över ny lön per avdelning visar direkt om utrymmet håller.
 
-## Villkorsstyrd formatering för uppföljning
-
-Under **Start → Villkorsstyrd formatering** kan du låta Excel färga det som kräver åtgärd. Några exempel som HR brukar ha nytta av:
-
-- provanställningar som löper ut inom 30 dagar
-- medarbetare med många korta frånvarotillfällen under året
-- lönesamtal som inte är genomförda
-- visstidsanställningar med slutdatum som har passerat
-
-Regeln ändrar bara färgen, inte innehållet, så den är lätt att ta bort när den inte behövs.
-
 ## Personuppgifter: det som inte ska ligga i ett lösryckt kalkylark
 
 Här skiljer sig HR från de flesta andra som arbetar i Excel. Nästan varje rad i en HR-fil är en personuppgift, och en del av dem är känsliga.
