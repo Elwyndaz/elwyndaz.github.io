@@ -241,7 +241,7 @@ Kontakt: kontakt@orgutveckling.se, 072-221 13 37.
 ## Audits
 Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; conventions in elwyn-dash `docs/security.md`.
 
-- OWASP Top 10: 2026-07-25, clean, no forms or fetch
+- OWASP Top 10: 2026-10-30, warn, code review (Mistral Large, highs and mediums read by Claude, lows not verified), no live probe; 0 high, 2 medium: headers only in the zone rule; cv.html public with personal data, noindex only
 - Headers: 2026-09-16, pass, 6 of 6 on orgutveckling.se via Cloudflare Transform Rule, HSTS from Edge Certificates
 - Search Console: 2026-09-16, warn, 15 of 21 sitemap URLs indexed, 3 unknown to Google (articles 06-14, 07-06, 08-20), 3 discovered not indexed (03-30, 04-27, integritetspolicy)
 - TLS: 2026-09-16, pass, SSL Labs A+ on orgutveckling.se after TLS 1.2 minimum was set today, HSTS present
