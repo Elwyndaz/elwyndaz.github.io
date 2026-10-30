@@ -253,5 +253,5 @@ Underlag: `C:\dev\tillvaxt\docs\research\seo-och-ai-synlighet.md` och veckorappo
 - [ ] `[P2]` IndexNow: nyckelfil i reporoten och ett POST-anrop efter deploy (Bing och Yandex, inte Google).
 - [ ] `[P2]` Nationell guidesida för `excelkurs online` / `grundkurs i excel` (1 000 till 10 000 sök/mån, Keyword Planner 2026-08-20).
 - [ ] `[P2]` "Svara först": första stycket på varje landningssida säger vem, vad, var, format och pris. Artiklar får siffror och källor (GEO-studien, arXiv 2311.09735).
-- [ ] `[P3]` Ta bort `AggregateRating` från `LocalBusiness` i `index.html`: Google visar aldrig egna omdömen om det egna företaget som stjärnor.
-- [ ] `[P3]` Korta meta description på `om-oss.html` (187) och tre artiklar (166 till 177 tecken).
+- [x] (rättad 2026-10-30) `[P3]` Ta bort `AggregateRating` från `LocalBusiness` i `index.html`: Google visar aldrig egna omdömen om det egna företaget som stjärnor.
+- [x] (rättad 2026-10-30) `[P3]` Korta meta description på `om-oss.html` (187) och tre artiklar (166 till 177 tecken).

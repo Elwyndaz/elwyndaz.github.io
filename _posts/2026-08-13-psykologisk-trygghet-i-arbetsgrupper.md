@@ -3,7 +3,7 @@ layout: artikel
 title: "Psykologisk trygghet i arbetsgrupper: fem övningar som fungerar"
 seo_title: "Psykologisk trygghet: fem övningar som fungerar"
 date: 2026-08-13
-description: "Psykologisk trygghet är inte trivsel, och den byggs inte av värdegrundsdokument. Fem konkreta övningar en chef kan börja med på nästa möte, och tre saker som river ner den igen."
+description: "Psykologisk trygghet är inte trivsel och byggs inte av värdegrund. Fem övningar en chef kan börja med på nästa möte, och tre saker som river ner den."
 kategori: Ledarskap
 ingress: "Psykologisk trygghet har blivit ett av de mest använda begreppen i svenskt arbetsliv, och ett av de mest missförstådda. Det handlar inte om att alla ska trivas, och det byggs inte av en workshop om värdegrund. Här är vad det faktiskt betyder i en arbetsgrupp, hur du märker att den saknas, och fem övningar du kan börja med på nästa möte."
 ---
