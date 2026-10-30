@@ -2,7 +2,7 @@
 layout: artikel
 title: "Transformativt ledarskap: så gör du i praktiken"
 seo_title: "Transformativt ledarskap i praktiken"
-date: 2026-11-25
+date: 2027-02-24
 description: "Transformativt ledarskap är fyra beteenden som går att öva. Så gör en chef dem en vanlig vecka, och därför väger uppföljningen nästan lika tungt som visionen."
 kategori: Ledarskap
 ingress: "Transformativt ledarskap är fyra beteenden som går att öva, inte en personlighet. Här är vad de betyder i praktiken, och varför uppföljningen väger nästan lika tungt som visionen."

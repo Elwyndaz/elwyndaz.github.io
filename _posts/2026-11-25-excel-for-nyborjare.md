@@ -1,7 +1,7 @@
 ---
 layout: artikel
 title: "Excel för nybörjare: lär dig tabellen först"
-date: 2026-11-04
+date: 2026-11-25
 description: "Viktigast för nybörjare i Excel är att göra data till en tabell. Då får du sortering, filtrering, summa och medel utan att skriva en enda formel."
 kategori: Excel
 ingress: "Om det finns en sak en nybörjare i Excel ska kunna, är det att göra sin data till en tabell. Resten bygger på det."

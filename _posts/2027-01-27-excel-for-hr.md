@@ -1,7 +1,7 @@
 ---
 layout: artikel
 title: "Excel för HR: personalförteckning, frånvaro och GDPR"
-date: 2026-11-18
+date: 2027-01-27
 description: "Så använder HR Excel för personalförteckning, sjukfrånvaro, lönerevision och anställningstid, och så hanterar du personnummer och hälsouppgifter rätt."
 kategori: Excel
 ingress: "HR-filer innehåller några av de känsligaste uppgifterna på en arbetsplats. Här är vad som är värt att kunna i Excel, och vad som inte ska ligga i ett kalkylark."

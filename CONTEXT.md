@@ -201,10 +201,10 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   tillsammans med `FAQPage`-schema. Det är billig och konkret SEO-yta.
 - **Utvärderingssiffrorna 4,8 / 4,7 / 100 % måste vara sanna och stå kvar.** Det
   är de som skiljer ett påstående från ett löfte. Även kritiken publiceras.
-- **Artikelserien** är en artikel i veckan, kategoriserad Excel, Arbetsmiljö eller
-  Ledarskap, för långsiktig auktoritet snarare än snabba resultat. Bekräftat
-  2026-10-28: artiklar kan skrivas i förväg men **publiceras en per vecka**.
-  Mekaniken: framtida `date:` (en onsdag), Pages kör Jekyll med `future: false`
+- **Artikelserien** är **en artikel i månaden**, kategoriserad Excel, Arbetsmiljö
+  eller Ledarskap, för långsiktig auktoritet snarare än snabba resultat. Ändrat
+  2026-10-31 av Patrik från en i veckan. Artiklar skrivs i förväg och dateras
+  **sista onsdagen i månaden**. Mekaniken: framtida `date:`, Pages kör Jekyll med `future: false`
   så artikeln syns varken på sajten, i Kunskap eller i sitemap förrän
   `.github/workflows/veckobygge.yml` bygger om Pages onsdag 05:00 UTC. Varje
   ny artikel granskas av en separat agent, och formler testas i riktig svensk

@@ -1,7 +1,7 @@
 ---
 layout: artikel
 title: "Psykologisk arbetsmiljö: vad arbetsgivaren måste göra"
-date: 2026-11-11
+date: 2026-12-30
 description: "Arbetsbelastning, ständig uppkoppling, otydliga roller och kränkande särbehandling. Vad AFS 2023:2 kräver av arbetsgivaren och hur chefen gör i praktiken."
 kategori: Arbetsmiljö
 ingress: "Arbetsmiljöverket ställer konkreta krav på arbetsbelastning, tydlighet, arbetstid och kränkande särbehandling. Här är kraven, och vad en chef gör i praktiken."
