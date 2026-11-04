@@ -188,7 +188,7 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 .chip{flex:0 0 auto;font:500 11.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:11px 15px;border:1px solid var(--black);background:transparent;color:var(--black);cursor:pointer;white-space:nowrap;transition:background var(--t),color var(--t)}
 .chip:hover{background:var(--papper-mork)}
 .chip.active,.chip[aria-pressed="true"]{background:var(--black);color:var(--papper)}
-.hidden{display:none}
+.hidden{display:none!important}
 
 /* sticky förfrågningsruta */
 .layout-side{display:grid;grid-template-columns:1fr 320px;gap:clamp(32px,5vw,72px);align-items:start}
