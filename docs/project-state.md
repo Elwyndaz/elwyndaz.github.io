@@ -36,7 +36,7 @@
 | `case.html` | `/case.html` | Utvärderingar. Inte i navigationen, men länkad från flera sidor |
 | `om-oss.html` | `/om-oss.html` | Ny sida, byggd runt en person |
 | `kontakt.html` | `/kontakt.html` | Förfrågningsformulär med chips, mailto-baserat |
-| `lasning.html` | `/lasning.html` | Läslistan, 48 titlar |
+| `lasning.html` | `/lasning.html` | Läslistan, 71 titlar |
 | `lanktips.html` | `/lanktips.html` | 19 källor |
 | `tack.html` | `/tack.html` | Tacksida, mörk, `noindex` |
 | `404.html` | `/404.html` | Tre vägar vidare i registerform, `noindex` |

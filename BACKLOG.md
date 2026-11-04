@@ -64,11 +64,11 @@ skriva. Inget av det blockerar att sajten går live.
 
 **Innehåll som saknas**
 
-- [ ] **Kommentarer till böckerna på Läslistan.** Kurateringsregeln i specen är
-  ingen post utan en egen mening om varför, högst tolv poster, varje post kopplad
-  till en utbildning. I dag ligger 48 titlar utan kommentarer. Att gallra 48 till
-  12 och skriva en mening om var och en är innehållsarbete bara du kan göra.
-  Layouten är förberedd: kommentaren ska ta den bredaste spalten.
+- [ ] **Favoriter på Läslistan.** Beslut 2026-11-04: alla 71 titlar ligger kvar,
+  och specens regel om högst tolv kommenterade poster gäller inte längre. I
+  stället markeras Patriks favoriter, sorteras överst och får en egen filterknapp.
+  Väntar på att Patrik väljer titlarna. Kommentarer per bok är frivilliga, och
+  layouten har plats för dem i den bredaste spalten.
 - [x] **Riktigt kursinnehåll, ledarskapssidan. Gjort 2026-08-14.** Listan heter nu
   "Upplägg" och beskriver de sex handledningstillfällena i stället för
   utbildningens egenskaper. Tillfälle 01, 02 och 06 är fasta, 03 till 05 väljs

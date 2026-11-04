@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Fyll Google Business Profile i ägarkontot (foton, tjänst per kurs, kategori Företagsutbildning) och be tidigare deltagare om omdömen (P0 i BACKLOG.md). Bing Webmaster Tools och Bing Places (P1). Läs de fem artiklarna från 2026-10-28, de står under Patriks namn.
 blockers: []
-reviewedAt: 2026-10-28
+reviewedAt: 2026-11-04
 ---
 
 # Handoff: orgutveckling.se
@@ -344,7 +344,7 @@ designen ligger live.
   hitta.se, eniro.se, handelskammare och utbildning.se är redan testade och
   avskrivna, se `BACKLOG.md`.
 - **Öppna beslut och saknat innehåll** ligger samlat i `BACKLOG.md` under "Kvar
-  från redesignen": porträttet till Om oss, kommentarer till de 48 böckerna, om
+  från redesignen": porträttet till Om oss, favoriterna bland de 71 böckerna, om
   `lasning.html` och `lanktips.html` ska slås ihop, om filtrering ska bli egna
   URL:er, och innehållslistorna 01–05 på **Excel- och BAM-sidorna**.
   Ledarskapssidan är klar sedan 2026-08-14 och kan användas som mall.
