@@ -197,6 +197,12 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   `<meta refresh>`, och en ny domän utan auktoritet har inget att vinna på att
   offra en fungerande URL. Båda sidorna är omgjorda i den nya designen och
   korslänkade. Riv inte upp detta utan att fråga.
+- **`style.css` länkas med versionsparameter, `/style.css?v=ÅÅÅÅ-MM-DD`.** Infört
+  2026-11-04. Cloudflare cachar filen i fyra timmar (`max-age=14400`), så en
+  ändrad stilmall nådde inte besökarna. Byt datumet på alla 15 sidor (inklusive
+  `_layouts/artikel.html`) varje gång `style.css` ändras. Repona forskning och
+  konflikt länkar `/style.css` utan parameter och får ändringen först när cachen
+  gått ut.
 - **FAQ-innehållet ligger kvar** på startsidan och på varje landningssida,
   tillsammans med `FAQPage`-schema. Det är billig och konkret SEO-yta.
 - **Utvärderingssiffrorna 4,8 / 4,7 / 100 % måste vara sanna och stå kvar.** Det
