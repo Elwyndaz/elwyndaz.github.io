@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Fyll Google Business Profile i ägarkontot (foton, tjänst per kurs, kategori Företagsutbildning) och be tidigare deltagare om omdömen (P0 i BACKLOG.md). Bing Webmaster Tools och Bing Places (P1). Läs de fem artiklarna från 2026-10-28, de står under Patriks namn.
 blockers: []
-reviewedAt: 2026-10-28
+reviewedAt: 2026-11-04
 ---
 
 # Handoff: orgutveckling.se
@@ -378,3 +378,11 @@ Cross-project audit run from elwyn-dash (session 5 in the daily note). Results w
 ## Automated audit batch, 2026-10-06
 
 Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (headers, npm audit, secrets, Actions, markup, axe at one mobile viewport; TLS and Lighthouse not run). Results are the `(automated)` lines under `## Audits` in CONTEXT.md, findings under `## Granskning 2026-10-06` in BACKLOG.md. Markup fail on one rendered `<link as>`; axe clean (manual review still outstanding); headers fail because the orgutveckling.se CSP allows `script-src 'unsafe-inline'`. No application code or deployment changed. `reviewedAt` was left alone: the goal and next action above were not reviewed.
+
+## Session 2026-11-04: kandidatgranskning på separat gren
+
+Status: färdiggranskat, lokalt verifierat och lämnas som separat PR på review/candidates-2026-11-04. Omfattning: tre utbildningsingresser, oförändrade kursfakta hämtade från respektive sidas faktaruta, FAQ och kontaktblock. CTA- och IndexNow-kandidater granskas separat och införs inte automatiskt. Huvudmappens checkout lämnas orörd.
+
+Infört: de tre ingresserna svarar på målgrupp, utbildning, ort, format och prisförslag med samma fakta som redan står på respektive sida. Kandidatens rena nyckelordsräkning tillför ingen korrekthetskontroll och utelämnas. CTA-kandidaten refuseras: räknar primärstil över hela dokumentet och tar bort den beslutade mobilmenyns Begär förslag. IndexNow-kandidaten refuseras: samma-SHA-jämförelsen kan godta ett tidigare veckobygge innan det nya är klart; dubbla sökmotorposter behövs inte enligt IndexNow. Ingen ny schemaläggning eller publiceringsnyckel aktiverad.
+
+Verifierat: lokalt Jekyll-bygge; 19 FAQ-par på fyra sidor matchar, 27 byggda sidor utan inline-skript, 15 sidor gånger fyra bredder utan overflow. Huvudmappens checkout och otrackade filer är orörda.
