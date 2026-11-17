@@ -378,3 +378,7 @@ Cross-project audit run from elwyn-dash (session 5 in the daily note). Results w
 ## Automated audit batch, 2026-10-06
 
 Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (headers, npm audit, secrets, Actions, markup, axe at one mobile viewport; TLS and Lighthouse not run). Results are the `(automated)` lines under `## Audits` in CONTEXT.md, findings under `## Granskning 2026-10-06` in BACKLOG.md. Markup fail on one rendered `<link as>`; axe clean (manual review still outstanding); headers fail because the orgutveckling.se CSP allows `script-src 'unsafe-inline'`. No application code or deployment changed. `reviewedAt` was left alone: the goal and next action above were not reviewed.
+
+## Session 2026-11-17: podcast.html
+
+- Ny sida `/podcast.html` (Kunskap, under Länktips): 51 direkta och 285 indirekta avsnitt av Dumma människor med arbetslivskoppling, filter Alla/Direkta/Indirekta (befintliga `site.js`, `data-filter-set`). Standardvyn visar bara de direkta. Källa: `docs/dumma-manniskor-arbetsliv.md` (genomgång 2026-11-02, bedömd på titel och beskrivning, inget lyssnat), generator `docs/bygg_podcast.py`. Länkad från footern på 14 sidor, från ingressen på `lanktips.html` och i `sitemap.xml`.

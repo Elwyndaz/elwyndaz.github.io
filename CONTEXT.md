@@ -27,10 +27,11 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   `/site.js`. Det är rena statiska filer, inget byggsteg, men designändringar görs
   numera på ett ställe i stället för att synkas för hand över tio filer.
 - **Statiska sidor** (`index.html`, `utbildningar.html`, `case.html`,
-  `kontakt.html`, `om-oss.html`, `lasning.html`, `lanktips.html`, `tack.html`,
+  `kontakt.html`, `om-oss.html`, `lasning.html`, `lanktips.html`, `podcast.html`, `tack.html`,
   `404.html` och de tre landningssidorna): vanlig HTML utan Jekyll-frontmatter.
   Header, mobilmeny och footer är kopierad markup i varje fil, eftersom det inte
   finns något include-system för dem.
+- **`podcast.html` är genererad.** Listan över avsnitt av Dumma människor med arbetslivskoppling byggs av `python docs/bygg_podcast.py` ur `docs/dumma-manniskor-arbetsliv.md` (mallen är `docs/podcast.mall.html`; `docs/` är utesluten ur bygget). Redigera aldrig `podcast.html` för hand: ändra md-filen eller mallen och kör om. Listan är en ögonblicksbild av poddens RSS-flöde 2026-11-02 och bedömd på titel och beskrivning, inget avsnitt är lyssnat på.
 - **Blogg** under `/artiklar/`: Jekyll, inlägg i `_posts/` som
   `ÅÅÅÅ-MM-DD-slug.md`, layout i `_layouts/artikel.html`. `artiklar.html` är
   Kunskap-sidan, loopar över `site.posts` och länkar vidare till Läslistan och
