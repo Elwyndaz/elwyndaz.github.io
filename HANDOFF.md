@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Fyll Google Business Profile i ägarkontot (foton, tjänst per kurs, kategori Företagsutbildning) och be tidigare deltagare om omdömen (P0 i BACKLOG.md). Bing Webmaster Tools och Bing Places (P1). Läs de fem artiklarna från 2026-10-28, de står under Patriks namn.
 blockers: []
-reviewedAt: 2026-11-04
+reviewedAt: 2026-11-18
 ---
 
 # Handoff: orgutveckling.se
@@ -16,6 +16,8 @@ Sajten är live på `https://orgutveckling.se/` och tekniskt i ordning: 20 index
 Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs umeå`** är **10–100** sökningar/månad (exakt samma som `ledarskapsutbildning umeå`), medan `excelutbildning` gav 0–10. Marknaden för Excel är stark både lokalt och nationellt (`excelkurs online` 1 000–10 000 sök/mån, `excelkurs för ekonomer` med bud upp till 108 kr/klick).
 
 ## Recent work
+
+**2026-11-18: backlogsvep (agent).** IndexNow infört: nyckelfil i reporoten och `.github/workflows/indexnow.yml` som pingar efter varje Pages-bygge. P0/P1-punkterna (företagsprofil, omdömen, Bing Webmaster, länkförfrågningar) kräver Patriks inloggning eller kontakt och är orörda.
 
 **2026-10-28: CSP strängare, titlar kortade, fem nya artiklar med veckovis publicering.**
 

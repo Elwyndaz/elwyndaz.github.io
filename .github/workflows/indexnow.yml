@@ -1,0 +1,28 @@
+# Pingar IndexNow (Bing, Yandex, inte Google) efter varje lyckat Pages-bygge,
+# också när veckobygget publicerar en framtidsdaterad artikel. Nyckeln är
+# offentlig per design och ligger i reporoten som <nyckel>.txt.
+name: IndexNow
+
+on:
+  page_build:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || github.event.build.status == 'built'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skicka sitemapens URL:er
+        env:
+          KEY: af9ecb8c2d1b048e34d603edab69413a
+        # ponytail: hela sitemapen varje gång (cirka 25 URL:er), räkna fram ändrade URL:er om den växer mot tusentals
+        run: |
+          sleep 60 # låt Pages-CDN:en hinna få det nya bygget
+          urls=$(curl -fsS "https://orgutveckling.se/sitemap.xml?v=$GITHUB_RUN_ID" | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -Rsc 'split("\n") | map(select(length > 0))')
+          echo "$urls" | jq length
+          body=$(jq -nc --arg key "$KEY" --argjson urls "$urls" '{host: "orgutveckling.se", key: $key, keyLocation: "https://orgutveckling.se/\($key).txt", urlList: $urls}')
+          code=$(curl -sS -o resp.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          echo "HTTP $code"; cat resp.txt
+          [ "$code" = 200 ] || [ "$code" = 202 ]

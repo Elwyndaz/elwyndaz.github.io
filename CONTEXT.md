@@ -16,6 +16,7 @@ anmälan. Därför finns ingen datumkolumn någonstans.
 
 ## Architecture
 
+- **IndexNow:** `.github/workflows/indexnow.yml` skickar alla sitemap-URL:er till IndexNow (Bing, Yandex) efter varje lyckat Pages-bygge, också veckobyggets. Nyckelfilen `af9ecb8c2d1b048e34d603edab69413a.txt` i reporoten måste ligga kvar, annars avvisas anropen.
 - GitHub Pages med domänen `orgutveckling.se`, se `CNAME`. Domänen är registrerad
   hos Strato, DNS och proxy sköts av Cloudflare.
 - **Säkerhetsheaders bor i Cloudflare, inte i repot.** GitHub Pages kan inte

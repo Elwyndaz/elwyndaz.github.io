@@ -250,7 +250,7 @@ Underlag: `C:\dev\tillvaxt\docs\research\seo-och-ai-synlighet.md` och veckorappo
 - [x] `[P1]` Korta titlarna till högst cirka 60 tecken. 13 av 22 sitemap-sidor är längre: alla artiklar (82 till 126 tecken), samt `bam-utbildning-umea.html` 69, `om-oss.html` 67, `kontakt.html` 67. Google kapar resten. **Gjort 2026-10-28 (`21480d6`):** layoutsuffixet borta, valfritt `seo_title` i artikelfrontmatter. Kvar över 60: `excel-utbildning-umea.html` 62 (godtaget) och `bam-utbildning-umea.html` 69, medvetet orörd som kontrollgrupp för sökordshypotesen.
 - [ ] `[P1]` Bing Webmaster Tools: importera från Search Console och skicka sitemap. Bing Places: importera från företagsprofilen. Bing matar Copilot, DuckDuckGo och en del av ChatGPT search.
 - [ ] `[P1]` Be tre lokala parter om en länk: studieförbund, Prevent (listar de BAM-handledare? overifierat), kunder i `case.html`.
-- [ ] `[P2]` IndexNow: nyckelfil i reporoten och ett POST-anrop efter deploy (Bing och Yandex, inte Google).
+- [x] `[P2]` IndexNow: nyckelfil i reporoten och ett POST-anrop efter deploy (Bing och Yandex, inte Google). **Gjort 2026-11-18:** `af9ecb8c2d1b048e34d603edab69413a.txt` i reporoten, `.github/workflows/indexnow.yml` skickar sitemapens URL:er efter varje lyckat Pages-bygge (`page_build`), svar se HANDOFF.
 - [ ] `[P2]` Nationell guidesida för `excelkurs online` / `grundkurs i excel` (1 000 till 10 000 sök/mån, Keyword Planner 2026-08-20).
 - [ ] `[P2]` "Svara först": första stycket på varje landningssida säger vem, vad, var, format och pris. Artiklar får siffror och källor (GEO-studien, arXiv 2311.09735).
 - [x] (rättad 2026-10-30) `[P3]` Ta bort `AggregateRating` från `LocalBusiness` i `index.html`: Google visar aldrig egna omdömen om det egna företaget som stjärnor.
