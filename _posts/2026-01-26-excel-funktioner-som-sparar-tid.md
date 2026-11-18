@@ -15,14 +15,14 @@ Markera din data och tryck **CTRL+T**. Excel omvandlar den till en strukturerad 
 
 De flesta som arbetar med listor i Excel bör göra det i tabellformat. Det sparar enormt mycket tid och minskar risken för fel.
 
-## 2. XLOOKUP – Ersätter det gamla LETARAD
+## 2. XLETAUPP – Ersätter det gamla LETARAD
 
-XLOOKUP är den moderna ersättaren till den klassiska LETARAD-funktionen. Den är enklare att skriva, mer flexibel och ger bättre felhantering.
+XLETAUPP (XLOOKUP i engelsk Excel) är den moderna ersättaren till den klassiska LETARAD-funktionen. Den är enklare att skriva, mer flexibel och ger bättre felhantering ([Microsofts beskrivning av XLETAUPP](https://support.microsoft.com/sv-se/excel/functions/xlookup-function)).
 
 Grundstrukturen är enkel:
 
 ```
-=XLOOKUP(sökvärde; sökkolumn; returkolumn)
+=XLETAUPP(sökvärde; sökkolumn; returkolumn)
 ```
 
 Lägg till ett fjärde argument för att styra vad som visas om inget hittas – exempelvis en tom cell eller ett eget meddelande.
@@ -35,11 +35,11 @@ Samma princip gäller åt höger med **CTRL+R**.
 
 ## 4. Snabbanalys – CTRL+Q
 
-Markera ett område med data och tryck **CTRL+Q**. Excel visar en snabbmeny med diagram, villkorsstyrd formatering och sparklines. Bra när du snabbt vill visualisera data utan att navigera i menyfliksområdet.
+Markera ett område med data och tryck **CTRL+Q**. Excel visar en snabbmeny med diagram, villkorsstyrd formatering och sparklines. Bra när du snabbt vill visualisera data utan att navigera i menyfliksområdet ([Microsofts lista över kortkommandon i Excel](https://support.microsoft.com/sv-se/accessibility/excel/keyboard-shortcuts-in-excel)).
 
-## 5. Frys fönsterrutor
+## 5. Lås fönsterrutor
 
-Arbetar du med långa listor och vill alltid se rubrikerna? Klicka på cellen under och till höger om det du vill frysa, gå sedan till **Visa → Frys fönsterrutor**.
+Arbetar du med långa listor och vill alltid se rubrikerna? [Klicka på cellen under och till höger om det du vill frysa](https://support.microsoft.com/sv-se/excel/get-started/freeze-panes-to-lock-rows-and-columns), gå sedan till **Visa → Lås fönsterrutor**.
 
 Nu stannar rubrikraden (och eventuella kolumner) på plats när du scrollar – oavsett hur långt ner i listan du är.
 

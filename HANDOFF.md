@@ -17,7 +17,7 @@ Google Keyword Planner bevisade den 20 augusti att sökvolymen för **`excelkurs
 
 ## Recent work
 
-**2026-11-18: backlogsvep (agent).** IndexNow infört: nyckelfil i reporoten och `.github/workflows/indexnow.yml` som pingar efter varje Pages-bygge. Första körningen 2026-11-18 08:45: 24 URL:er, HTTP 202 (mottaget, nyckeln valideras av Bing). P0/P1-punkterna (företagsprofil, omdömen, Bing Webmaster, länkförfrågningar) kräver Patriks inloggning eller kontakt och är orörda.
+**2026-11-18: backlogsvep (agent).** IndexNow infört: nyckelfil i reporoten och `.github/workflows/indexnow.yml` som pingar efter varje Pages-bygge. Första körningen 2026-11-18 08:45: 24 URL:er, HTTP 202 (mottaget, nyckeln valideras av Bing). Källänkar i de nio äldre artiklarna (P2) tillagda och tre faktafel rättade, se BACKLOG; övriga faktafynd står där som `[needs-info]`. P0/P1-punkterna (företagsprofil, omdömen, Bing Webmaster, länkförfrågningar) kräver Patriks inloggning eller kontakt och är orörda.
 
 **2026-10-28: CSP strängare, titlar kortade, fem nya artiklar med veckovis publicering.**
 

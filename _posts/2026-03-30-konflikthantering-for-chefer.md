@@ -36,7 +36,7 @@ Det kan handla om att sätta upp ett möte med tydliga spelregler (en pratar i t
 
 ## 5. När behöver chefen agera direkt, utan omvägar?
 
-Allt är inte en konflikt mellan likvärdiga parter som kan lösas genom dialog. Om det finns en tydlig maktobalans, om mönstret upprepar sig trots tidigare samtal, eller om beteendet närmar sig det som räknas som kränkande särbehandling, är facilitering inte rätt verktyg. Då behöver chefen sätta tydliga gränser för vad som är acceptabelt, följa upp att det efterlevs, och i vissa fall koppla in HR eller skyddsombud. Det är skillnaden mellan en konflikt och ett arbetsmiljöproblem – och att känna igen när det ena övergår i det andra är i sig en viktig ledarskapsförmåga.
+Allt är inte en konflikt mellan likvärdiga parter som kan lösas genom dialog. Om det finns en tydlig maktobalans, om mönstret upprepar sig trots tidigare samtal, eller om beteendet närmar sig det som räknas som [kränkande särbehandling](https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/afs-20232/), är facilitering inte rätt verktyg. Då behöver chefen sätta tydliga gränser för vad som är acceptabelt, följa upp att det efterlevs, och i vissa fall koppla in HR eller skyddsombud. Det är skillnaden mellan en konflikt och ett arbetsmiljöproblem – och att känna igen när det ena övergår i det andra är i sig en viktig ledarskapsförmåga.
 
 ---
 

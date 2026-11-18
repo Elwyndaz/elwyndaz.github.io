@@ -11,7 +11,7 @@ Om du har stött på båda förkortningarna och känt dig osäker på vad som eg
 
 ## SAM – det ni är skyldiga att göra
 
-SAM står för **Systematiskt ArbetsMiljöarbete** och är inget val. Det är ett lagstadgat krav (enligt Arbetsmiljöverkets föreskrifter AFS 2023:1 om systematiskt arbetsmiljöarbete) som gäller alla arbetsgivare, oavsett storlek eller bransch. SAM är inte en utbildning eller ett dokument – det är ett **arbetssätt**, ett återkommande hjul:
+SAM står för **Systematiskt ArbetsMiljöarbete** och är inget val. Det är ett lagstadgat krav (enligt Arbetsmiljöverkets föreskrifter [AFS 2023:1](https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/afs-20231/) om systematiskt arbetsmiljöarbete) som gäller alla arbetsgivare, oavsett storlek eller bransch. SAM är inte en utbildning eller ett dokument – det är ett **arbetssätt**, ett återkommande hjul:
 
 - **Undersöka** arbetsmiljön regelbundet
 - **Riskbedöma** vad som hittas
@@ -22,7 +22,7 @@ Det här hjulet ska snurra löpande, året runt, och vara förankrat i en arbets
 
 ## BAM – utbildningen som ger verktygen
 
-BAM står för **Bättre ArbetsMiljö** och är, till skillnad från SAM, en **utbildning** – framtagen av Prevent, som ägs gemensamt av Svenskt Näringsliv, LO och PTK. BAM är inte i sig ett lagkrav. Däremot är kunskapen den ger ofta en förutsättning för att SAM-arbetet ska fungera i praktiken.
+BAM står för **Bättre ArbetsMiljö** och är, till skillnad från SAM, en **utbildning** – framtagen av [Prevent](https://www.prevent.se/om-prevent), som ägs gemensamt av Svenskt Näringsliv, LO och PTK. BAM är inte i sig ett lagkrav. Däremot är kunskapen den ger ofta en förutsättning för att SAM-arbetet ska fungera i praktiken.
 
 Under en BAM-utbildning går chefer och skyddsombud igenom precis det som SAM kräver: hur man undersöker, riskbedömer, åtgärdar och följer upp – men också ansvarsfördelning, samverkan och både fysisk och organisatorisk/social arbetsmiljö. Man kan se det som att SAM är *vad* lagen kräver, och BAM är *hur*-kunskapen som gör det möjligt att leva upp till kravet.
 

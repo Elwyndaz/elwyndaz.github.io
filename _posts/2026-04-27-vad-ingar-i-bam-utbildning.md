@@ -7,7 +7,7 @@ kategori: Arbetsmiljö
 ingress: "BAM (Bättre Arbetsmiljö) är den mest spridda grundutbildningen i arbetsmiljöfrågor på svenska arbetsplatser – men namnet säger inte mycket om vad som faktiskt händer under utbildningsdagarna. Här går vi igenom innehållet område för område, och hur en BAM-utbildning i praktiken brukar vara upplagd."
 ---
 
-BAM står för Bättre Arbetsmiljö och är framtagen av Prevent, en organisation som ägs gemensamt av Svenskt Näringsliv, LO och PTK. Utbildningen är tänkt att ge chefer och skyddsombud en gemensam grund att stå på i arbetsmiljöfrågor – men innehållet är bredare än många tror. Här är de områden som vanligtvis ingår.
+BAM står för Bättre Arbetsmiljö och är framtagen av [Prevent](https://www.prevent.se/bam), en organisation som ägs gemensamt av Svenskt Näringsliv, LO och PTK. Utbildningen är tänkt att ge chefer och skyddsombud en gemensam grund att stå på i arbetsmiljöfrågor – men innehållet är bredare än många tror. Här är de områden som vanligtvis ingår.
 
 ## 1. Vem ansvarar för vad? Arbetsmiljölagen i korthet
 
@@ -17,7 +17,7 @@ Den centrala tanken i BAM är **samverkan**: chef och skyddsombud ska arbeta til
 
 ## 2. Det systematiska arbetsmiljöarbetet (SAM)
 
-SAM är det ramverk som arbetsmiljölagen kräver att alla arbetsgivare ska arbeta enligt, och är ett av de centrala momenten i BAM. Det handlar om ett återkommande arbetssätt i fyra steg:
+SAM är det ramverk som [arbetsmiljölagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetsmiljolag-19771160_sfs-1977-1160/) kräver att alla arbetsgivare ska arbeta enligt, och är ett av de centrala momenten i BAM. Det handlar om ett återkommande arbetssätt i fyra steg:
 
 - **Undersöka** – vilka risker finns på arbetsplatsen, fysiska och psykosociala?
 - **Riskbedöma** – hur allvarliga är riskerna, och vilka ska prioriteras?
@@ -32,7 +32,7 @@ Här ligger det som många först tänker på när de hör "arbetsmiljö": ergon
 
 ## 4. Organisatorisk och social arbetsmiljö (OSA)
 
-Det här området har vuxit kraftigt i betydelse, särskilt sedan Arbetsmiljöverket införde egna regler om organisatorisk och social arbetsmiljö (OSA). De reglerna finns sedan den 1 januari 2025 i AFS 2023:2 om planering och organisering av arbetsmiljöarbete, som ersatte den tidigare AFS 2015:4. Här ingår frågor om arbetsbelastning, arbetstidens förläggning, och kränkande särbehandling. För många kontors- och tjänstemannaverksamheter är det här den del av BAM som faktiskt är mest relevant i vardagen – stress och hög arbetsbelastning är idag en av de vanligaste orsakerna till ohälsa på jobbet.
+Det här området har vuxit kraftigt i betydelse, särskilt sedan Arbetsmiljöverket införde egna regler om organisatorisk och social arbetsmiljö (OSA). De reglerna finns sedan den 1 januari 2025 i [AFS 2023:2](https://www.av.se/arbetsmiljoarbete-och-inspektioner/publikationer/foreskrifter/afs-20232/) om planering och organisering av arbetsmiljöarbete, som ersatte den tidigare AFS 2015:4. Här ingår frågor om arbetsbelastning, arbetstidens förläggning, och kränkande särbehandling. För många kontors- och tjänstemannaverksamheter är det här den del av BAM som faktiskt är mest relevant i vardagen – stress och hög arbetsbelastning är idag en av de vanligaste orsakerna till ohälsa på jobbet.
 
 ## 5. Riskbedömning och handlingsplaner i praktiken
 

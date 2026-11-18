@@ -12,13 +12,13 @@ Vi har tidigare skrivit om [vad som kännetecknar bra ledarskap](/2026/05/25/vad
 
 ## Först: vad psykologisk trygghet inte är
 
-Begreppet kommer från Amy Edmondsons forskning på sjukhusavdelningar. Hon förväntade sig att de bäst fungerande teamen skulle rapportera **färre** misstag. De rapporterade fler. Skillnaden låg inte i hur många fel som begicks, utan i hur många som kom upp till ytan.
+Begreppet kommer från Amy Edmondsons forskning på sjukhusavdelningar. Hon förväntade sig att de bäst fungerande teamen skulle rapportera **färre** misstag. De rapporterade fler. Skillnaden låg inte i hur många fel som begicks, utan i hur många som kom upp till ytan ([Edmondsons studie från 1996](https://psnet.ahrq.gov/issue/learning-mistakes-easier-said-done-group-and-organizational-influences-detection-and)).
 
 Det säger det mesta om vad begreppet betyder, och vad det inte betyder.
 
 Psykologisk trygghet är **inte** trivsel. En grupp kan ha hög trivsel och låg trygghet: alla är trevliga mot varandra just för att ingen säger något obekvämt. Det är inte heller konsensus, inte frånvaro av konflikt, och absolut inte att kraven är låga. Edmondson är tydlig med att trygghet utan höga krav ger en bekväm grupp som inte presterar. Det är kombinationen som gör jobbet.
 
-Det trygghet faktiskt betyder är smalare och mer konkret: **bedömer medarbetaren att det är säkert att ta en mellanmänsklig risk?** Att fråga något som kan uppfattas som dumt. Att säga att man inte hänger med. Att erkänna ett fel innan någon annan hittar det. Att säga emot chefen inför andra.
+Det trygghet faktiskt betyder är smalare och mer konkret: **bedömer medarbetaren att det är säkert att ta en mellanmänsklig risk?** ([Edmondson, 1999](https://doi.org/10.2307/2666999)) Att fråga något som kan uppfattas som dumt. Att säga att man inte hänger med. Att erkänna ett fel innan någon annan hittar det. Att säga emot chefen inför andra.
 
 ## Hur du märker att den saknas
 

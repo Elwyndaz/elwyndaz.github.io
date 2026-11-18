@@ -19,7 +19,7 @@ Lägg istället värdet i en egen, tydligt namngiven cell (till exempel "Momssat
 
 Det här är förmodligen det vanligaste misstaget av alla. När du kopierar en formel neråt eller åt sidan flyttar Excel automatiskt med cellreferenserna. Det kallas en **relativ referens**, och är ofta exakt vad man vill ha.
 
-Men om formeln refererar till en cell som ska vara *fast*, till exempel en moms- eller valutakurs högst upp i arket, flyttar referensen med ändå – och resultatet blir fel längre ner i listan. Lösningen är att lägga dollartecken framför rad och kolumn för den cell du vill låsa, till exempel `$B$1`. Det kallas en **absolut referens**, och den ändras inte när du kopierar formeln.
+Men om formeln refererar till en cell som ska vara *fast*, till exempel en moms- eller valutakurs högst upp i arket, flyttar referensen med ändå – och resultatet blir fel längre ner i listan. Lösningen är att lägga dollartecken framför rad och kolumn för den cell du vill låsa, till exempel `$B$1`. Det kallas en **absolut referens**, och den ändras inte när du kopierar formeln ([Microsofts genomgång av relativa och absoluta referenser](https://support.microsoft.com/sv-se/excel/switch-between-relative-absolute-and-mixed-references)).
 
 ## 3. Sammanslagna celler (Merge & Center)
 
@@ -29,7 +29,7 @@ Ett enkelt alternativ är **Centrera över markering**. Markera cellerna, öppna
 
 ## 4. Datum som egentligen är text
 
-Ibland ser ett datum korrekt ut – men är i själva verket sparat som text, inte som ett riktigt datumvärde. Det händer ofta vid import från andra system eller vid kopiering från webbsidor och PDF-filer. Ett tydligt tecken är att datumet hamnar **vänsterställt** i cellen istället för högerställt, som siffror och datum normalt gör.
+Ibland ser ett datum korrekt ut – men är i själva verket sparat som text, inte som ett riktigt datumvärde. Det händer ofta vid import från andra system eller vid kopiering från webbsidor och PDF-filer. Ett tydligt tecken är att datumet hamnar **vänsterställt** i cellen istället för högerställt, som siffror och datum normalt gör ([Microsoft om datum som sparats som text](https://support.microsoft.com/sv-se/excel/convert-dates-stored-as-text-to-dates)).
 
 Konsekvensen är att datumformler, sortering i kronologisk ordning och beräkningar av antal dagar mellan datum slutar fungera korrekt – ofta utan något felmeddelande. Markera kolumnen, gå till Data → Text till kolumner, och klicka dig igenom guiden utan att ändra något (bara Nästa, Nästa, Slutför). Excel tolkar då om innehållet och omvandlar texten till riktiga datumvärden.
 

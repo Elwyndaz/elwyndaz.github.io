@@ -18,7 +18,7 @@ En tydlig ledare kommunicerar riktning regelbundet, inte bara vid ett enda kicko
 
 ## 2. Psykologisk trygghet – att våga säga vad man tänker
 
-Psykologisk trygghet handlar om huruvida medarbetare vågar ställa frågor, erkänna misstag, eller säga emot utan att riskera att bli bestraffade eller förlöjligade för det. Grupper med hög psykologisk trygghet löser problem snabbare – helt enkelt eftersom information om fel och risker kommer upp till ytan tidigt, istället för att gömmas tills det är för sent.
+Psykologisk trygghet handlar om huruvida medarbetare vågar ställa frågor, erkänna misstag, eller säga emot utan att riskera att bli bestraffade eller förlöjligade för det ([Amy Edmondsons studie av 51 arbetsgrupper](https://doi.org/10.2307/2666999)). Grupper med hög psykologisk trygghet löser problem snabbare – helt enkelt eftersom information om fel och risker kommer upp till ytan tidigt, istället för att gömmas tills det är för sent.
 
 Ledarens roll här är avgörande. Hur en ledare reagerar första gången någon erkänner ett misstag eller ifrågasätter ett beslut sätter normen för alla framtida tillfällen. Att möta sådana situationer med nyfikenhet istället för att leta syndabockar är en av de mest konkreta saker en ledare kan träna på.
 

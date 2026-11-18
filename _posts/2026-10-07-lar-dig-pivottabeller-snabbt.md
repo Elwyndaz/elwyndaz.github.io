@@ -8,7 +8,7 @@ kategori: Excel
 ingress: "Pivottabellen har rykte om sig att vara avancerad, men den är i själva verket det enklaste sättet att summera en lång lista utan att skriva en enda formel. Det som stoppar de flesta är inte verktyget utan underlaget. Här är vad du behöver förstå, i den ordning du behöver det."
 ---
 
-En pivottabell gör en enda sak: den tar en lång lista och räknar ihop den per grupp. Försäljning per månad, timmar per projekt, sjukfrånvaro per avdelning. Allt det går att bygga med formler som `SUMMA.OMF`, men pivottabellen gör det på några sekunder, och du kan vända på frågan utan att börja om.
+En pivottabell gör en enda sak: den tar en lång lista och räknar ihop den per grupp. Försäljning per månad, timmar per projekt, sjukfrånvaro per avdelning. Allt det går att bygga med formler som [`SUMMA.OMF`](https://support.microsoft.com/sv-se/excel/functions/sumifs-function), men pivottabellen gör det på några sekunder, och du kan vända på frågan utan att börja om.
 
 Det är också därför den lönar sig att lära sig tidigt. Du behöver inte kunna en enda funktion för att använda den.
 
@@ -21,7 +21,7 @@ De flesta problem med pivottabeller beror på hur listan ser ut, inte på pivott
 - **En typ av uppgift per kolumn.** Datum i en kolumn, belopp i en annan, avdelning i en tredje.
 - **Tal och datum som är riktiga tal och datum.** Står de vänsterställda i cellen är de sparade som text och går inte att räkna med. Hur du rättar det står i artikeln om [vanliga Excel-misstag](/2026/06/14/vanliga-excel-misstag.html).
 
-Gör sedan listan till en tabell: klicka i den och tryck `Ctrl+T`. Då växer underlaget av sig självt när du lägger till rader, och pivottabellen hittar de nya raderna nästa gång du uppdaterar.
+Gör sedan listan till en tabell: klicka i den och tryck `Ctrl+T`. Då växer underlaget av sig självt när du lägger till rader, och pivottabellen hittar de nya raderna nästa gång du uppdaterar ([Microsofts guide till pivottabeller](https://support.microsoft.com/sv-se/excel/get-started/create-a-pivottable-to-analyze-worksheet-data)).
 
 ## De fyra rutorna
 
