@@ -392,3 +392,9 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - Klar: layoutkontrollen hittade overflow på `lasning.html` vid 320 px. Rättat mobilkolumnens minsta bredd och radbrytning av boktitlar i `style.css`, samt uppdaterat alla CSS-versionslänkar till `2026-11-24`. Podcasten omgenererad från sin uppdaterade mall. Ny P2-punkt med evidens bockad i `BACKLOG.md`.
 - Verifierat: Jekyll-bygge, `uv run check_faq.py` (19 FAQ-par), `uv run check_csp.py` (28 sidor), `check_layout.js` (16 sidor × 4 bredder, 0 overflow) och `git diff --check`. Python kördes med separat uv-cache i temp eftersom standardcachens lås nekades av sandboxen. Chromium behövde köras utanför sandboxen; samma layoutskript kördes med `chromium.launch` satt till `headless:false` från en Node-wrapper, utan ändring av kontrollfilen.
 - Alla ändringar lämnas uncommittade för granskning. Artikeltexter, sakpåståenden, beroenden och publicering är orörda. Befintliga öppna P0–P2-punkter lämnas kvar av de skäl som anges i backloggens svepnot.
+
+## Session 2026-11-24: funktionspass (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1124f`, gren `feat/2026-11-24` från `9ae3abd`. Klar, pushad till `main` och live.
+- `769526c`: förfrågningsformuläret visar utkastet med kopieringsknapp efter skickat (mailto gör inget utan e-postklient), `kontakt.html?amne=` förväljer ämnet från kurssidorna, `site.js?v=2026-11-24` på 17 sidor. Detaljer och evidens i BACKLOG under "Funktionspass 2026-11-24". BAM-sidan fick bara nya länkmål på två knappar; sökordsformen är orörd.
+- Öppna P0–P2 i övrigt kräver Patrik: företagsprofil och omdömen, Bing, länkförfrågningar, manuell indexering, pris för "Svara först", innehållet till guidesidan och `needs-info`-faktafynden.

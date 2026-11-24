@@ -6,6 +6,10 @@
 
 Urvalet av befintliga öppna P0–P2-punkter gav inga lokala kodåtgärder: Google Business Profile, omdömen, Bing-import, länkförfrågningar och manuell Search Console-indexering ligger utanför detta kodsvep. Nationell guidesida, "Svara först" och faktafynden med `needs-info` kräver ägarens innehåll. P3 och oprioriterade punkter ingår inte.
 
+## Funktionspass 2026-11-24
+
+- [x] `[P2]` Förfrågningsformuläret tappade besökarens text när ingen e-postklient fanns (webbmejl): mailto gjorde ingenting och statusrutan bad bara om ett nytt mejl. **Gjort 2026-11-24 (`769526c`):** statusrutan visar utkastet (till, ämne, text) med knappen "Kopiera utkastet". Samtidigt förväljer `kontakt.html?amne=…` ämnet, och kurssidornas förfrågningsknappar samt registerraden Organisationsutveckling länkar så. `site.js` fick versionsparameter (`?v=2026-11-24`) av samma cacheskäl som `style.css`. **Evidens:** Playwright-test mot produktion efter Pages-bygget: förval för excel, bam, ledarskap, organisationsutveckling och ett okänt värde (inget förval), utkastets text exakt, urklipp lika med utkastet, mailto-anropet sker, ingen overflow vid 320 px, inga sidfel. `check_faq.py` 0 avvikelser, `check_csp.py` 0 av 28, `check_layout.js` 16 sidor x 4 bredder 0 overflow, 0 brutna interna länkar i bygget med framtida artiklar.
+
 ## Backlinks och lokal auktoritet
 
 Prio 1. Sajten är indexerad men osynlig, och det är en auktoritetsfråga snarare

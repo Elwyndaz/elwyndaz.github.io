@@ -38,7 +38,9 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   Kunskap-sidan, loopar över `site.posts` och länkar vidare till Läslistan och
   Länktips.
 - `site.js` sköter mobilmeny, e-postskydd, filterchips, förfrågningsformuläret och
-  inzoomningen vid scroll. Elementen hittas via `data-email`, `data-mailto` och
+  inzoomningen vid scroll. `kontakt.html?amne=excel` (också `bam`, `ledarskap`,
+  `organisationsutveckling`, chippens `data-value`) förväljer ämnet; kurssidornas
+  förfrågningsknappar länkar så. Elementen hittas via `data-email`, `data-mailto` och
   `data-filter-set`, så en ny sida behöver ingen egen JavaScript.
 - `cv.html` står medvetet utanför arkitekturen: ingen nav-länk, `noindex,
   nofollow`, inte i `sitemap.xml`, ingår inte i copyright-årsbumpen. Den har ett
@@ -191,7 +193,9 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   i processteg, kunskapskort och sifferrad.
 - **Formuläret på `kontakt.html` har ingen backend.** Det sätter ihop en mailto
   med ifyllda fält, så besökaren skickar själv och sajten sparar ingenting. Priset
-  är att `tack.html` inte kan nås automatiskt efter skickat formulär.
+  är att `tack.html` inte kan nås automatiskt efter skickat formulär. Utan
+  e-postklient (webbmejl) händer inget på mailto, så utkastet visas också i
+  statusrutan med en kopieringsknapp (sedan 2026-11-24).
 - **`lasning.html` och `lanktips.html` förblir två sidor.** Beslutat 2026-08-13.
   Redesignspecen ville slå ihop dem till en Läslista med redirect från
   länktipsen. Vi avviker medvetet: `lasning.html` är sajtens mest visade sida i
@@ -204,7 +208,9 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   ändrad stilmall nådde inte besökarna. Byt datumet på alla 15 sidor (inklusive
   `_layouts/artikel.html`) varje gång `style.css` ändras. Repona forskning och
   konflikt länkar `/style.css` utan parameter och får ändringen först när cachen
-  gått ut.
+  gått ut. Samma sak för `/site.js?v=ÅÅÅÅ-MM-DD` sedan 2026-11-24 (17 sidor
+  inklusive `docs/podcast.mall.html`, kör om `docs/bygg_podcast.py`); `cv.html`
+  använder `cv.js` och berörs inte.
 - **FAQ-innehållet ligger kvar** på startsidan och på varje landningssida,
   tillsammans med `FAQPage`-schema. Det är billig och konkret SEO-yta.
 - **Utvärderingssiffrorna 4,8 / 4,7 / 100 % måste vara sanna och stå kvar.** Det
