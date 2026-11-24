@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Fyll Google Business Profile i ägarkontot (foton, tjänst per kurs, kategori Företagsutbildning) och be tidigare deltagare om omdömen (P0 i BACKLOG.md). Bing Webmaster Tools och Bing Places (P1). Läs de fem artiklarna från 2026-10-28, de står under Patriks namn.
 blockers: []
-reviewedAt: 2026-11-18
+reviewedAt: 2026-11-24
 ---
 
 # Handoff: orgutveckling.se
@@ -384,3 +384,11 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 ## Session 2026-11-17: podcast.html
 
 - Ny sida `/podcast.html` (Kunskap, under Länktips): 51 direkta och 285 indirekta avsnitt av Dumma människor med arbetslivskoppling, filter Alla/Direkta/Indirekta (befintliga `site.js`, `data-filter-set`). Standardvyn visar bara de direkta. Källa: `docs/dumma-manniskor-arbetsliv.md` (genomgång 2026-11-02, bedömd på titel och beskrivning, inget lyssnat), generator `docs/bygg_podcast.py`. Länkad från footern på 14 sidor, från ingressen på `lanktips.html` och i `sitemap.xml`.
+
+## Session 2026-11-24: tekniskt backlogsvep (Codex)
+
+- Worktree: `C:/dev/elwyndaz.github.io-codex-1124`, gren `codex/sweep-2026-11-24`, från `6e2ace1`. Ren vid start. Granskad, committad och pushad av Claude samma dag.
+- Omfattning: tekniska P0–P2-punkter, utan nya beroenden eller ändringar av artikeltext och sakpåståenden. Genomläsningen hittade inga öppna lokala kodpunkter inom urvalet. Ägarkonton, kontaktarbete, innehåll, `needs-info` och P3 lämnas till ägaren.
+- Klar: layoutkontrollen hittade overflow på `lasning.html` vid 320 px. Rättat mobilkolumnens minsta bredd och radbrytning av boktitlar i `style.css`, samt uppdaterat alla CSS-versionslänkar till `2026-11-24`. Podcasten omgenererad från sin uppdaterade mall. Ny P2-punkt med evidens bockad i `BACKLOG.md`.
+- Verifierat: Jekyll-bygge, `uv run check_faq.py` (19 FAQ-par), `uv run check_csp.py` (28 sidor), `check_layout.js` (16 sidor × 4 bredder, 0 overflow) och `git diff --check`. Python kördes med separat uv-cache i temp eftersom standardcachens lås nekades av sandboxen. Chromium behövde köras utanför sandboxen; samma layoutskript kördes med `chromium.launch` satt till `headless:false` från en Node-wrapper, utan ändring av kontrollfilen.
+- Alla ändringar lämnas uncommittade för granskning. Artikeltexter, sakpåståenden, beroenden och publicering är orörda. Befintliga öppna P0–P2-punkter lämnas kvar av de skäl som anges i backloggens svepnot.

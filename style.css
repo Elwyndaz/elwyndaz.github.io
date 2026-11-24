@@ -225,7 +225,7 @@ fieldset{min-inline-size:0}
 .book-row{display:grid;grid-template-columns:48px minmax(0,1fr) 230px 200px;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--linje);text-decoration:none;color:var(--black);transition:background var(--t),padding var(--t)}
 .book-row:hover{background:var(--papper-mork);padding-left:12px}
 .book-row .b-num{font:500 11.5px/1.6 var(--mono);color:var(--accent)}
-.book-row .b-title{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15;letter-spacing:-.02em}
+.book-row .b-title{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15;letter-spacing:-.02em;overflow-wrap:anywhere}
 .book-row .b-meta{font-size:14.5px;line-height:1.5;color:var(--brod-ljus)}
 .book-row .b-note{font:400 11.5px/1.6 var(--mono);color:var(--dampad);text-align:right}
 .link-row{display:grid;grid-template-columns:48px minmax(0,1fr) 180px 34px;gap:24px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--linje);text-decoration:none;color:var(--black);transition:background var(--t),padding var(--t)}
@@ -329,7 +329,7 @@ fieldset.field{padding-top:0}
   .register-num{order:1}.register-title{order:2}.register-desc{order:3;margin-top:4px}.register-meta{order:4;margin-top:8px}
   .register-title::after{content:' \2192';color:var(--accent)}
   .register-arrow{display:none}
-  .book-row{grid-template-columns:40px 1fr;gap:6px 16px}
+  .book-row{grid-template-columns:40px minmax(0,1fr);gap:6px 16px}
   .book-row .b-meta,.book-row .b-note{grid-column:2}
   .book-row .b-note{text-align:left}
   .link-row{grid-template-columns:40px minmax(0,1fr) 28px}

@@ -1,5 +1,11 @@
 # Backlog
 
+## Tekniskt backlogsvep 2026-11-24
+
+- [x] `[P2]` Mobilbredd på Läslistan: `check_layout.js` hittade 314 px sidbredd på 305 px tillgänglig bredd i ett 320 px-fönster. **Gjort 2026-11-24:** mobilkolumnen använder nu `minmax(0,1fr)` och boktitlar får `overflow-wrap:anywhere` i `style.css`. CSS-versionen uppdaterad till `2026-11-24` i alla 17 HTML-källor, inklusive podcastens mall och omgenererade sida. **Evidens:** Jekyll-bygge grönt; `uv run check_faq.py` 19 matchande FAQ-par, 0 avvikelser; `uv run check_csp.py` 28 sidor, 0 fel; `check_layout.js` med synligt Chromium 16 sidor × 4 bredder (320, 375, 430, 768 px), 0 overflow. Inga artikeltexter ändrade.
+
+Urvalet av befintliga öppna P0–P2-punkter gav inga lokala kodåtgärder: Google Business Profile, omdömen, Bing-import, länkförfrågningar och manuell Search Console-indexering ligger utanför detta kodsvep. Nationell guidesida, "Svara först" och faktafynden med `needs-info` kräver ägarens innehåll. P3 och oprioriterade punkter ingår inte.
+
 ## Backlinks och lokal auktoritet
 
 Prio 1. Sajten är indexerad men osynlig, och det är en auktoritetsfråga snarare
