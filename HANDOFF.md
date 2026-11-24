@@ -398,3 +398,10 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - Worktree `C:/dev/_wt/elwyndaz.github.io-1124f`, gren `feat/2026-11-24` från `9ae3abd`. Klar, pushad till `main` och live.
 - `769526c`: förfrågningsformuläret visar utkastet med kopieringsknapp efter skickat (mailto gör inget utan e-postklient), `kontakt.html?amne=` förväljer ämnet från kurssidorna, `site.js?v=2026-11-24` på 17 sidor. Detaljer och evidens i BACKLOG under "Funktionspass 2026-11-24". BAM-sidan fick bara nya länkmål på två knappar; sökordsformen är orörd.
 - Öppna P0–P2 i övrigt kräver Patrik: företagsprofil och omdömen, Bing, länkförfrågningar, manuell indexering, pris för "Svara först", innehållet till guidesidan och `needs-info`-faktafynden.
+
+## Session 2026-11-24: buggjakt (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1124h`, gren `hunt/2026-11-24` från `c909118`.
+- `9cfed8b`: stängd mobilmeny tar inte längre fokus (sju osynliga tabbstopp på varje sida), Escape stänger, fokus följer menyn; filterchippen har `aria-pressed`; kopieraknappen nollställs vid nytt skick. `style.css` och `site.js` på `?v=2026-11-24b` (17 sidor).
+- `f0abd43`: `check_layout.js` hade mätt en annan servers filer (localhost:8791 gick till `::1`, annan process). Rättad och utökad, se BACKLOG "Buggjakt 2026-11-24".
+- Inte testat: skärmläsare på riktigt (bara attributen kontrollerade), Safari/iOS.

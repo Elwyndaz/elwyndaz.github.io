@@ -73,7 +73,10 @@ anmälan. Därför finns ingen datumkolumn någonstans.
 - **`check_layout.js` måste gå igenom före push.** `node check_layout.js`, kräver
   `npm i -g playwright`. Den startar en egen server på loopback och mäter att
   ingen sida i reporoten blir bredare än skärmen på 320, 375, 430 och 768 px.
-  Samma roll som `check_faq.py`: en statisk sajt har ingen kompilator, så felet
+  Den kontrollerar också att den stängda mobilmenyn har `visibility:hidden`, så att
+  den inte tar tangentbordsfokus. Servern får en ledig port av OS:et och nås på
+  `127.0.0.1`: med fast port 8791 och `localhost` mätte den 2026-11-24 en annan
+  servers filer och sa OK. Samma roll som `check_faq.py`: en statisk sajt har ingen kompilator, så felet
   ligger annars kvar tills en människa råkar öppna sidan i mobilen. Två
   följdfällor den fångar: en grid-cell kan inte krympa under sitt innehålls
   minsta bredd så länge `min-width` är `auto`, och webbläsarens egen regel ger
@@ -208,7 +211,7 @@ aldrig. Allt respekterar `prefers-reduced-motion`.
   ändrad stilmall nådde inte besökarna. Byt datumet på alla 15 sidor (inklusive
   `_layouts/artikel.html`) varje gång `style.css` ändras. Repona forskning och
   konflikt länkar `/style.css` utan parameter och får ändringen först när cachen
-  gått ut. Samma sak för `/site.js?v=ÅÅÅÅ-MM-DD` sedan 2026-11-24 (17 sidor
+  gått ut. Andra ändringen samma dag får ett suffix (`2026-11-24b`), annars ligger förra versionen kvar i cachen. Samma sak för `/site.js?v=ÅÅÅÅ-MM-DD` sedan 2026-11-24 (17 sidor
   inklusive `docs/podcast.mall.html`, kör om `docs/bygg_podcast.py`); `cv.html`
   använder `cv.js` och berörs inte.
 - **FAQ-innehållet ligger kvar** på startsidan och på varje landningssida,
