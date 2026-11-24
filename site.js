@@ -12,9 +12,17 @@
     nav.classList.toggle('open');
     document.body.classList.toggle('menu-open');
     if (btn) btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+    /* Fokus följer menyn: in till stängknappen, tillbaka till menyknappen. */
+    var close = nav.querySelector('.mobile-nav-close');
+    if (opening && close) close.focus();
+    else if (!opening && btn) btn.focus();
   };
   document.querySelectorAll('.menu-btn, .mobile-nav-close').forEach(function (b) {
     b.addEventListener('click', toggleMenu);
+  });
+  document.addEventListener('keydown', function (e) {
+    var nav = document.getElementById('mobileNav');
+    if (e.key === 'Escape' && nav && nav.classList.contains('open')) toggleMenu();
   });
 
   /* E-postadressen sätts ihop i JS så den inte står i klartext i källkoden. */
@@ -58,6 +66,8 @@
          då här, färdigt att kopiera, så det besökaren skrev inte går förlorat. */
       var draft = document.getElementById('form-draft');
       if (draft) draft.value = 'Till: ' + addr + '\nÄmne: ' + subject + '\n\n' + body;
+      var copyBtn = document.getElementById('form-copy');
+      if (copyBtn) copyBtn.textContent = 'Kopiera utkastet'; /* nytt utkast är inte kopierat än */
       var done = document.getElementById('form-status');
       if (done) done.hidden = false;
     });
@@ -85,10 +95,17 @@
 
   document.querySelectorAll('[data-filter-set]').forEach(function (set) {
     var targets = document.querySelectorAll(set.getAttribute('data-filter-set'));
-    set.querySelectorAll('.chip').forEach(function (chip) {
+    var chips = set.querySelectorAll('.chip');
+    /* aria-pressed så att skärmläsare hör vilket filter som är valt. */
+    var mark = function () {
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c.classList.contains('active') ? 'true' : 'false'); });
+    };
+    mark();
+    chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
-        set.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('active'); });
+        chips.forEach(function (c) { c.classList.remove('active'); });
         chip.classList.add('active');
+        mark();
         var want = chip.getAttribute('data-value');
         targets.forEach(function (t) {
           t.classList.toggle('hidden', want !== 'all' && t.getAttribute('data-cat') !== want);
