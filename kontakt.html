@@ -116,10 +116,10 @@
           <fieldset class="field full" style="border:none">
             <legend class="field-legend" style="font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dampad);margin-bottom:14px">Ämne</legend>
             <div class="chips">
-              <button type="button" class="chip" data-group="amne" aria-pressed="false">Excel</button>
-              <button type="button" class="chip" data-group="amne" aria-pressed="false">Arbetsmiljö &amp; BAM</button>
-              <button type="button" class="chip" data-group="amne" aria-pressed="false">Ledarskap</button>
-              <button type="button" class="chip" data-group="amne" aria-pressed="false">Organisationsutveckling</button>
+              <button type="button" class="chip" data-group="amne" data-value="excel" aria-pressed="false">Excel</button>
+              <button type="button" class="chip" data-group="amne" data-value="bam" aria-pressed="false">Arbetsmiljö &amp; BAM</button>
+              <button type="button" class="chip" data-group="amne" data-value="ledarskap" aria-pressed="false">Ledarskap</button>
+              <button type="button" class="chip" data-group="amne" data-value="organisationsutveckling" aria-pressed="false">Organisationsutveckling</button>
               <button type="button" class="chip" data-group="amne" aria-pressed="false">Vet inte än</button>
             </div>
           </fieldset>
@@ -146,7 +146,12 @@
           </div>
 
           <div id="form-status" hidden style="margin-top:22px;border-top:1px solid var(--black);padding-top:22px">
-            <p style="font-size:16px;line-height:1.65">Utkastet ska ha öppnats i din e-postklient. Hände inget? Skriv direkt till <span data-email="inline-link"></span>.</p>
+            <p style="font-size:16px;line-height:1.65">Utkastet ska ha öppnats i din e-postklient. Hände inget? Kopiera texten nedan och klistra in den i ett mejl till <span data-email="inline-link"></span>.</p>
+            <div class="field full" style="margin-top:14px">
+              <label for="form-draft">Ditt utkast</label>
+              <textarea id="form-draft" readonly></textarea>
+            </div>
+            <p style="margin-top:12px"><button type="button" id="form-copy" class="chip">Kopiera utkastet</button></p>
             <p style="margin-top:12px"><a href="/tack.html" class="mono-link">Vad händer nu? &rarr;</a></p>
           </div>
         </form>
@@ -223,6 +228,6 @@
   </div>
 </footer>
 
-<script src="/site.js"></script>
+<script src="/site.js?v=2026-11-24"></script>
 </body>
 </html>

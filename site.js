@@ -54,13 +54,30 @@
       var body = rows.map(function (r) { return r[0] + ': ' + r[1]; }).join('\n');
       var subject = 'Förfrågan' + (val('organisation') ? ' från ' + val('organisation') : '');
       window.location.href = mailto('?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
+      /* Utan e-postklient (webbmejl) händer inget på mailto. Utkastet visas
+         då här, färdigt att kopiera, så det besökaren skrev inte går förlorat. */
+      var draft = document.getElementById('form-draft');
+      if (draft) draft.value = 'Till: ' + addr + '\nÄmne: ' + subject + '\n\n' + body;
       var done = document.getElementById('form-status');
       if (done) done.hidden = false;
     });
+    var copy = document.getElementById('form-copy');
+    if (copy) copy.addEventListener('click', function () {
+      var draft = document.getElementById('form-draft');
+      var ok = function () { copy.textContent = 'Kopierat'; };
+      var manual = function () { draft.focus(); draft.select(); copy.textContent = 'Markerat, tryck Ctrl+C'; };
+      if (navigator.clipboard) navigator.clipboard.writeText(draft.value).then(ok, manual);
+      else manual();
+    });
   }
 
-  /* Chips: filter på listsidor, flervalsknappar i formuläret. */
+  /* Chips: filter på listsidor, flervalsknappar i formuläret.
+     kontakt.html?amne=excel förväljer ämnet, så länken från en kurssida sparar ett klick. */
+  var amne = new URLSearchParams(window.location.search).get('amne');
   document.querySelectorAll('.chip[data-group]').forEach(function (chip) {
+    if (amne && chip.getAttribute('data-group') === 'amne' && chip.getAttribute('data-value') === amne) {
+      chip.setAttribute('aria-pressed', 'true');
+    }
     chip.addEventListener('click', function () {
       chip.setAttribute('aria-pressed', chip.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
     });
