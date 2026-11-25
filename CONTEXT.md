@@ -44,7 +44,7 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   `data-filter-set`, så en ny sida behöver ingen egen JavaScript.
 - `cv.html` står medvetet utanför arkitekturen: ingen nav-länk, `noindex,
   nofollow`, inte i `sitemap.xml`, ingår inte i copyright-årsbumpen. Den har ett
-  eget inbyggt `<style>`-block och länkar varken `style.css` eller `site.js`,
+  eget inbyggt `<style>`-block och länkar varken `style.css` eller `site.js` (bara `fonts/fonts.css`),
   eftersom den riktar sig till en annan läsare (en PTP-handledare) och använder en
   annan e-postadress (`patz.lofgren@gmail.com`, inte `kontakt@`). Den är byggd som
   ett utskrivbart dokument i en spalt med egen print-CSS: sidan **är** dokumentet.
@@ -88,11 +88,14 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   menyn är död. `python check_csp.py` efter `jekyll build` vaktar det, samma roll
   som `check_faq.py`. JSON-LD är data och berörs inte. `style=`-attribut finns
   kvar, så `style-src` behöver fortfarande `'unsafe-inline'`.
-- **Typsnitten laddas med en vanlig `<link rel="stylesheet">`.** Det tidigare
-  mönstret `rel="preload" as="style" onload=...` krävde en inline-hanterare och
-  lämnade ett ogiltigt `as`-attribut i den renderade DOM:en. Priset är att Google
-  Fonts-CSS:en blockerar första renderingen; `preconnect` och `display=swap`
-  står kvar.
+- **Typsnitten ligger på egen domän, i `fonts/`** (sedan 2026-11-25). `fonts/fonts.css` har
+  `@font-face` för latin och latin-ext, hämtade från Google Fonts samma dag (samma
+  filer, samma `opsz`-axel, skärmbilder av sex sidor i 390 och 1440 px pixelidentiska före och efter); övriga
+  delmängder behövs inte för sajtens tecken. Alla sidor och `cv.html` länkar
+  `/fonts/fonts.css` med en vanlig `<link rel="stylesheet">`, ingen preload med
+  inline-hanterare (CSP). Ingen begäran går längre till Google, vilket
+  integritetspolicyn (version 1.2) säger. Ny vikt eller familj: hämta filerna, lägg
+  till `@font-face` i `fonts.css`, aldrig en länk till Google Fonts.
 - **`/ai/` ska förbli 404. Bygg ingen vidarebefordran dit.** Beslutat 2026-08-15.
   Sidan flyttade till `buildapp.se/ai/` och den gamla adressen ligger kvar
   indexerad med visningar, vilket ser ut som samma fel som den döda artikel-URL:en.
