@@ -9,7 +9,9 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.6;color:var(--black);background:var(--papper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.6;color:var(--black);background:var(--papper);-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-wrap:anywhere}
+/* anywhere, inte break-word: ett långt ord eller en e-postadress ska få brytas även när
+   den sätter minsta bredd i ett rutnät. Annars trycker 200 % textzoom ut sidan åt höger. */
 body.menu-open{overflow:hidden}
 a{color:inherit}
 img{max-width:100%;display:block}
@@ -22,7 +24,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 
 /* ---------- header ---------- */
 .site-header{display:flex;align-items:center;justify-content:space-between;padding:22px var(--edge);border-bottom:1px solid var(--linje);position:sticky;top:0;background:var(--papper);z-index:60}
-.wordmark{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--black);font-family:var(--sans)}
+.wordmark{display:flex;align-items:baseline;gap:9px;overflow-wrap:normal;text-decoration:none;color:var(--black);font-family:var(--sans)}
 .wordmark .a{font-weight:600;font-size:15px;letter-spacing:.02em}
 .wordmark .slash{color:var(--accent);font-weight:400;font-size:15px}
 .wordmark .b{font-weight:400;font-size:15px;letter-spacing:.02em}
@@ -33,7 +35,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .main-nav a.btn-nav{font:500 13px/1 var(--sans);color:var(--papper);background:var(--black);padding:13px 18px;letter-spacing:.01em;border:none;transition:background var(--t)}
 .main-nav a.btn-nav:hover{background:var(--accent);color:var(--papper)}
 .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--black);flex-direction:column;gap:5px}
-.menu-btn span{display:block;width:22px;height:2px;background:currentColor}
+/* Ram, inte bakgrund: i Windows kontrastläge (forced colors) blir bakgrunden vit och strecken försvann. */
+.menu-btn span{display:block;width:22px;height:0;border-top:2px solid}
 
 .mobile-nav{position:fixed;inset:0;background:var(--black);color:var(--papper);display:flex;flex-direction:column;padding:22px var(--edge);transform:translateY(-100%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s;z-index:100}
 /* visibility: en stängd meny ska inte ta tangentbordsfokus eller läsas upp. */
@@ -74,8 +77,8 @@ section.band{padding:clamp(56px,7vw,110px) 0 0}
 /* sidhuvud på undersidor */
 .page-head{padding:clamp(44px,7vw,88px) 0 0}
 /* Svenska sammansattningar ("Ledarskapsutbildning") ar langre an en smal skarm.
-   break-word slar bara till nar ordet inte far plats alls, aldrig annars. */
-.page-head h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,56px);line-height:.95;letter-spacing:-.03em;margin-top:20px;max-width:16ch;overflow-wrap:break-word}
+   Rubriken arver overflow-wrap:anywhere fran body: ordet bryts bara nar det inte far plats. */
+.page-head h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,56px);line-height:.95;letter-spacing:-.03em;margin-top:20px;max-width:16ch}
 .page-head .ingress{font-size:16px;line-height:1.65;color:var(--brod);margin-top:22px;max-width:52ch}
 .page-head .eyebrow{color:var(--accent)}
 .page-head .eyebrow a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(168,67,31,.4)}
@@ -353,6 +356,10 @@ fieldset.field{padding-top:0}
   .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
   .facts div{grid-template-columns:1fr;gap:6px}
   .numbered li{grid-template-columns:40px 1fr;gap:16px}
+}
+/* Windows kontrastläge tar bort bakgrunden, så valt filter såg ut som de andra. */
+@media(forced-colors:active){
+  .chip.active,.chip[aria-pressed="true"]{forced-color-adjust:none;background:Highlight;color:HighlightText;border-color:Highlight}
 }
 @media(prefers-reduced-motion:reduce){
   .reveal.pre{opacity:1;transform:none}
