@@ -268,7 +268,7 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - Secrets: 2026-09-24, pass, gitleaks 0 findings in 102 commits
 - Actions: 2026-09-24, n/a, no GitHub Actions workflows
 - WCAG 2.2 AA: 2026-11-25, warn, axe 4.14.0 0 violations on orgutveckling.se, 16 pages x 390 and 1440 px (tack.html contrast fixed today); manual keyboard pass not done
-- Performance: 2026-11-25, pass, live, 390 px with 4x CPU and Slow 4G: LCP 1,5-1,8 s, CLS max 0,039, 230-408 KB per page (fonts 210-355 KB)
+- Performance: 2026-11-25, pass, live, 390 px with 4x CPU and Slow 4G: LCP 1,5-1,9 s, CLS max 0,045, 230-408 KB per page (fonts 210-355 KB)
 - UX: 2026-09-24, warn, 4 of 6 script checks pass on orgutveckling.se (no --interact): warn Fitts targets; warn Von Restorff primary; screenshot review not done
 - Headers (automated): 2026-10-27, pass, 6 of 6 on orgutveckling.se, Observatory B+ on orgutveckling.se
 - npm audit (automated): 2026-10-06, n/a, No package.json in repository; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/elwyndaz.github.io.json
