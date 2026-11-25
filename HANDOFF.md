@@ -4,7 +4,7 @@ status: active
 currentGoal: Göra orgutveckling.se synlig i lokal sökning i Umeå
 nextAction: Fyll Google Business Profile i ägarkontot (foton, tjänst per kurs, kategori Företagsutbildning) och be tidigare deltagare om omdömen (P0 i BACKLOG.md). Bing Webmaster Tools och Bing Places (P1). Läs de fem artiklarna från 2026-10-28, de står under Patriks namn.
 blockers: []
-reviewedAt: 2026-11-24
+reviewedAt: 2026-11-25
 ---
 
 # Handoff: orgutveckling.se
@@ -405,3 +405,9 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - `9cfed8b`: stängd mobilmeny tar inte längre fokus (sju osynliga tabbstopp på varje sida), Escape stänger, fokus följer menyn; filterchippen har `aria-pressed`; kopieraknappen nollställs vid nytt skick. `style.css` och `site.js` på `?v=2026-11-24b` (17 sidor).
 - `f0abd43`: `check_layout.js` hade mätt en annan servers filer (localhost:8791 gick till `::1`, annan process). Rättad och utökad, se BACKLOG "Buggjakt 2026-11-24".
 - Inte testat: skärmläsare på riktigt (bara attributen kontrollerade), Safari/iOS.
+
+## Session 2026-11-25: buggjakt 2 (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1124k`, gren `hunt2/2026-11-24` från `f6d4a28`. Klar, pushad till `main`.
+- Omfattning: sidor och flöden som buggjakten 2026-11-24 inte gick igenom (404, tack, integritetspolicy, artiklar, cv, andra besök), länkkontroll internt och externt, innehållsfel (decimalpunkt, engelska rester, titlar, bilder).
+- `36aaf8c`: Kunskap sa 47 böcker (71), 404 sa sju artiklar (tolv), `tack.html` lovade att inget mer behövdes fast mejlet kanske inte gått. Resten genomgånget utan fynd, se BACKLOG "Buggjakt 2, 2026-11-25".
