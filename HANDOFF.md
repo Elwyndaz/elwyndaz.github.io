@@ -411,3 +411,9 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - Worktree `C:/dev/_wt/elwyndaz.github.io-1124k`, gren `hunt2/2026-11-24` från `f6d4a28`. Klar, pushad till `main`.
 - Omfattning: sidor och flöden som buggjakten 2026-11-24 inte gick igenom (404, tack, integritetspolicy, artiklar, cv, andra besök), länkkontroll internt och externt, innehållsfel (decimalpunkt, engelska rester, titlar, bilder).
 - `36aaf8c`: Kunskap sa 47 böcker (71), 404 sa sju artiklar (tolv), `tack.html` lovade att inget mer behövdes fast mejlet kanske inte gått. Resten genomgånget utan fynd, se BACKLOG "Buggjakt 2, 2026-11-25".
+
+## Session 2026-11-25: fart, tillgänglighet och metadata (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1125s`, gren `speed/2026-11-25` från `64ce90e`.
+- `df31a76`: kontrastfelet på `tack.html` (axe 3 noder, 3,04 mot 4,5) rättat, `fetchpriority="high"` på porträttet som är LCP på Om oss. Mätvärden före och efter, och två parkerade beslut (Newsreader utan `opsz`, cache-TTL i Cloudflare), i BACKLOG "Fart, tillgänglighet och metadata 2026-11-25".
+- Mätskripten ligger utanför repot, i `C:\Users\patri\AppData\Local\Temp\aifabriken-lanes\speed-elwyndaz.github.io\`.

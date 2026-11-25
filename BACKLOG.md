@@ -24,6 +24,18 @@ Urvalet av befintliga öppna P0–P2-punkter gav inga lokala kodåtgärder: Goog
 - Genomgånget utan fynd: 29 byggda sidor i Chromium (0 konsolfel, 0 sidfel, 0 trasiga bilder, ett `h1` per sida, `lang="sv"`), 0 brutna interna länkar och ankare, 47 JSON-LD-block giltiga, canonical och `og:url` lika med sidans adress överallt, filterchippens antal på Läslistan (71), Länktips (19) och Podd (51/285/336) stämmer med sidornas text, formuläret med `?amne=` och bakåtknapp, podden utan `site.js` visar 51 direkta, live: 404-status på saknad sida, `http://` och `www.` 301 till `https://orgutveckling.se/`, interna filer (HANDOFF, CONTEXT, docs, checkarna) 404. Externa länkar utom bokus och Google Fonts: 376 av 378 svarar 200, de två andra (doi.org 403, LinkedIn 999) är botspärrar. Bokus sökadresser (59) gav 429 (hastighetsspärr) och är inte kontrollerade.
 - Inte testat: återställning från bfcache (stängs menyn när man backar till en sida där den var öppen?). Playwright gick inte att få att återställa sidan ur bfcache, ens med `--disable-back-forward-cache` borttagen.
 
+## Fart, tillgänglighet och metadata 2026-11-25
+
+Mätt live med Playwright på 16 sidor (de 13 sitemapsidorna utom artiklarna, plus en artikel, `tack.html` och 404) i två lägen: 390 px med 4x CPU-strypning och Slow 4G (562 ms RTT, 1,44 Mbit/s), och 1440 px utan strypning. Tom cache.
+
+- Läget före: LCP 1,5–1,8 s mobil, 0,17–0,34 s dator; CLS högst 0,039 (Länktips, dator); 230–408 KB per sida, varav typsnitten 210–355 KB. LCP är textelementet (`h1`, ingress) på alla sidor utom `om-oss.html`, där porträttet är LCP. Render-blockerande: Google Fonts-CSS:en och `style.css`. Enda bilden på sajten (`patrik.webp`, 33 KB, 800x707) har `width`/`height` och rätt format. Typsnittsfilerna har `max-age=31536000`, `style.css`, `site.js` och `patrik.webp` `max-age=14400`.
+- [x] `[P2]` `tack.html`: siffrorna 01–03 i accentfärg på svart botten hade kontrast 3,04 (krav 4,5). **Gjort 2026-11-25 (`df31a76`):** `--dampad-mork`, samma roll på mörk botten enligt paletten, kontrast 7,12. **Evidens:** axe 4.14 `color-contrast` 3 noder före, 0 efter (lokalt bygge och live, båda bredderna).
+- [x] `[P3]` Porträttet på `om-oss.html` är LCP-elementet men laddades utan prioritet. **Gjort 2026-11-25 (`df31a76`):** `fetchpriority="high"`.
+- Genomgånget utan fynd: axe 4.14 (WCAG 2.0–2.2 A/AA plus best practice) 0 överträdelser på övriga 15 sidor i båda bredderna. Metadata i bygget (alla indexerbara sidor): unika `title` och `description`, `lang="sv"`, canonical, `og:image` och favicon överallt; `tack` och 404 är `noindex` och saknar dem medvetet. Ingen manifest, sajten är ingen PWA.
+- [ ] `[P2]` `[needs-info]` Typsnitten är 60–85 % av varje sidas vikt. Newsreader laddas med `opsz`-axeln (6..72): två filer på 132 och 147 KB. Samma vikter utan `opsz` är 25 och 58 KB (hämtat från Google Fonts 2026-11-25), alltså cirka 195 KB mindre på startsidan och 107 KB på sidor utan kursiv. Priset är att displaygraden (hero 104 px, `h1` 56 px) ritas med textens optiska storlek, en synlig ändring av typografin. Patriks beslut.
+- [ ] `[P3]` `[needs-info]` `style.css?v=` och `site.js?v=` har versionsparameter men cachas bara fyra timmar (`max-age=14400`). En Cloudflare-cacheregel med längre webbläsar-TTL för just dessa skulle spara en förfrågan per återbesök. Zonändring, inte gjord.
+- Inte gjort: egna typsnitt i stället för Google Fonts (tar bort en extern anslutning före första rendering, men kräver ändrad CSP-regel och integritetspolicy).
+
 ## Backlinks och lokal auktoritet
 
 Prio 1. Sajten är indexerad men osynlig, och det är en auktoritetsfråga snarare
