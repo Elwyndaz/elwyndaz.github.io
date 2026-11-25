@@ -12,7 +12,7 @@ Många chefer upplever konflikter på sin arbetsplats som ett tecken på att nå
 
 ## 1. Vänta inte – tidiga signaler är lättare att hantera
 
-Det är förståeligt att vilja undvika obekväma samtal i hopp om att saker löser sig själva. Ibland gör de det. Men oftare växer en olöst friktion: parterna bildar uppfattningar om varandra, andra i gruppen drar in i konflikten, och det som från början var en liten missförståelse blir en infekterad relation.
+Det är förståeligt att vilja undvika obekväma samtal i hopp om att saker löser sig själva. Ibland gör de det. Men oftare växer en olöst friktion: parterna bildar uppfattningar om varandra, andra i gruppen dras in i konflikten, och det som från början var en liten missförståelse blir en infekterad relation.
 
 Ju tidigare en chef adresserar en spänning – innan den eskalerat – desto lägre är insatserna, och desto enklare brukar samtalet vara. Att säga "jag har märkt att det varit lite spänt mellan er, vad handlar det om?" tidigt är ett helt annat samtal än att försöka reda ut månader av ackumulerad frustration.
 
