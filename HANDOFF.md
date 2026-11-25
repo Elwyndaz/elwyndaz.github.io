@@ -420,5 +420,7 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 
 ## Session 2026-11-25: scenariojakt (Claude)
 
-- Worktree `C:/dev/_wt/elwyndaz.github.io-1125c`, gren `scen/2026-11-25` från `f18ddc7`. Pågår.
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1125c`, gren `scen/2026-11-25` från `f18ddc7`. Klar, pushad till `main` och live.
 - Omfattning: flerstegsscenarier (förfrågan redigerad och ångrad, två flikar, 336 poddrader med 4x CPU, breddbyte mitt i flödet, versionsparametrar), sedan egna typsnitt i stället för Google Fonts med mätning före och efter.
+- `13b1124`: mobilmenyn stängs när vyn blir bredare än 780 px (platta vriden med öppen meny låste scrollen). `299c28d`: typsnitten från `fonts/` i stället för Google Fonts, integritetspolicy 1.2, live FCP/LCP 40–150 ms bättre och 0 förfrågningar till Google. Detaljer i BACKLOG "Scenariojakt 2026-11-25".
+- Kvar för Patrik (zon): cacheregel för `/fonts/`, och Google-domänerna kan strykas ur CSP:n.
