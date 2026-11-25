@@ -430,3 +430,10 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - Worktree `C:/dev/_wt/elwyndaz.github.io-1125x`, gren `xb/2026-11-25` från `c453209`. Klar, bara dokumentation pushad.
 - Omfattning: huvudflödena i WebKit (Playwright, iPhone 13-profil) och Firefox 1440 px jämfört med Chromium. Skript utanför repot i `C:\Users\patri\AppData\Local\Temp\aifabriken-lanes\xb-elwyndaz.github.io\`.
 - Resultat: ingen skillnad som drabbar en besökare, ingen kodändring. 16 sidor plus meny, filter, FAQ, förfrågan med decimalkomma och kopiering lika i WebKit 27.2 (Playwright), Firefox 157 och Chromium 156. WebKit-portens mailto-navigering är en Windows-egenhet, inte sajtens. Detaljer och den otestade bfcache-risken för mobilmenyn i BACKLOG "Webbläsarpass WebKit och Firefox 2026-11-25". Inte testat på riktig iPhone.
+
+## Session 2026-11-25: preferenser och språk (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1125t`, gren `prefs/2026-11-25` från `dee77b1`. Klar, pushad till `main`.
+- Omfattning: svensk text i alla användarsynliga strängar (stavning, särskrivning, decimalkomma, tankstreck), sedan mörkt läge, reducerad rörelse, 200 % textzoom vid 1280 och 390 px och forced colors med Playwright.
+- `6d878ca`, `3b5212f`: i kontrastläge (forced colors) syntes inte menyknappen och valt filter såg ut som de andra; vid 200 % textzoom blev 14 av 17 sidor bredare än skärmen. Rättat i `style.css` (`overflow-wrap:anywhere` på `body`, streck som ram, `Highlight` på valt chip) och `cv.html`, `style.css?v=2026-11-25`. Text: "dras in", "Föreläsaren", tre poddbeskrivningar som låg en rad fel. Mörkt läge och reducerad rörelse utan fynd. Detaljer och evidens i BACKLOG "Preferenser och språk 2026-11-25".
+- Kvar för Patrik: namnformen "Organisations-Utveckling" i strukturerad data mot "Organisationsutveckling" i titlar, och "Ett litet bolag" på `kontakt.html` (båda `needs-info` i BACKLOG).

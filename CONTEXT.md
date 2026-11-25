@@ -70,6 +70,11 @@ anmälan. Därför finns ingen datumkolumn någonstans.
   skärm. `body{overflow-x:hidden}` döljer rullisten men tar inte bort överflödet,
   och regeln ignoreras dessutom ofta på iOS, så felet syns som att sidan går att
   zooma och panorera när ingen annan sida gör det.
+- **`body` har `overflow-wrap:anywhere`** (sedan 2026-11-25), också i `cv.html`. Ett långt ord,
+  en e-postadress eller en formel får då brytas även när den sätter minsta bredd i
+  ett rutnät med `1fr`; med `break-word` gör den inte det, och vid 200 % textzoom
+  blev sidan upp till 367 px för bred. Ordmärket har `overflow-wrap:normal`. Sätt
+  inte `break-word` på enskilda element, det tar tillbaka felet där.
 - **`check_layout.js` måste gå igenom före push.** `node check_layout.js`, kräver
   `npm i -g playwright`. Den startar en egen server på loopback och mäter att
   ingen sida i reporoten blir bredare än skärmen på 320, 375, 430 och 768 px.
@@ -180,7 +185,8 @@ Petrol, Lera, Papper) och den gamla `.cou-mark`-loggan utgår helt, utom i
 `cv.html`.
 
 Ordmärket är `ORG / UTVECKLING`. Det fullständiga namnet, Centrum för
-Organisationsutveckling, står i footern, i `<title>` och i strukturerad data.
+Organisationsutveckling, står i footern och i `<title>`. Strukturerad data,
+`og:site_name` och `_config.yml` skriver "Organisations-Utveckling" (se BACKLOG, needs-info).
 
 Fyra rörelser, inga fler: registerrad tonar och dras in 12 px vid hover (180 ms),
 sektion tonar in 8 px underifrån en gång vid scroll (av på mobil), mobilmenyn är
