@@ -417,3 +417,8 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - Worktree `C:/dev/_wt/elwyndaz.github.io-1125s`, gren `speed/2026-11-25` från `64ce90e`.
 - `df31a76`: kontrastfelet på `tack.html` (axe 3 noder, 3,04 mot 4,5) rättat, `fetchpriority="high"` på porträttet som är LCP på Om oss. Mätvärden före och efter, och två parkerade beslut (Newsreader utan `opsz`, cache-TTL i Cloudflare), i BACKLOG "Fart, tillgänglighet och metadata 2026-11-25".
 - Mätskripten ligger utanför repot, i `C:\Users\patri\AppData\Local\Temp\aifabriken-lanes\speed-elwyndaz.github.io\`.
+
+## Session 2026-11-25: scenariojakt (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1125c`, gren `scen/2026-11-25` från `f18ddc7`. Pågår.
+- Omfattning: flerstegsscenarier (förfrågan redigerad och ångrad, två flikar, 336 poddrader med 4x CPU, breddbyte mitt i flödet, versionsparametrar), sedan egna typsnitt i stället för Google Fonts med mätning före och efter.
