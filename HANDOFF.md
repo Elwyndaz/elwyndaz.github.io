@@ -424,3 +424,9 @@ Cross-project run from elwyn-dash with aifabriken `tools/audit-suite.ts` (header
 - Omfattning: flerstegsscenarier (förfrågan redigerad och ångrad, två flikar, 336 poddrader med 4x CPU, breddbyte mitt i flödet, versionsparametrar), sedan egna typsnitt i stället för Google Fonts med mätning före och efter.
 - `13b1124`: mobilmenyn stängs när vyn blir bredare än 780 px (platta vriden med öppen meny låste scrollen). `299c28d`: typsnitten från `fonts/` i stället för Google Fonts, integritetspolicy 1.2, live FCP/LCP 40–150 ms bättre och 0 förfrågningar till Google. Detaljer i BACKLOG "Scenariojakt 2026-11-25".
 - Kvar för Patrik (zon): cacheregel för `/fonts/`, och Google-domänerna kan strykas ur CSP:n.
+
+## Session 2026-11-25: webbläsarpass WebKit och Firefox (Claude)
+
+- Worktree `C:/dev/_wt/elwyndaz.github.io-1125x`, gren `xb/2026-11-25` från `c453209`. Klar, bara dokumentation pushad.
+- Omfattning: huvudflödena i WebKit (Playwright, iPhone 13-profil) och Firefox 1440 px jämfört med Chromium. Skript utanför repot i `C:\Users\patri\AppData\Local\Temp\aifabriken-lanes\xb-elwyndaz.github.io\`.
+- Resultat: ingen skillnad som drabbar en besökare, ingen kodändring. 16 sidor plus meny, filter, FAQ, förfrågan med decimalkomma och kopiering lika i WebKit 27.2 (Playwright), Firefox 157 och Chromium 156. WebKit-portens mailto-navigering är en Windows-egenhet, inte sajtens. Detaljer och den otestade bfcache-risken för mobilmenyn i BACKLOG "Webbläsarpass WebKit och Firefox 2026-11-25". Inte testat på riktig iPhone.
