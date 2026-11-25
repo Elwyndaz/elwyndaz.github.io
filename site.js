@@ -24,6 +24,15 @@
     var nav = document.getElementById('mobileNav');
     if (e.key === 'Escape' && nav && nav.classList.contains('open')) toggleMenu();
   });
+  /* Vrids plattan till liggande med menyn öppen täcker den hela datorvyn och
+     låser scrollen, fast menyknappen är dold. Stäng när mobilvyn (style.css, 780 px) tar slut. */
+  var mobile = window.matchMedia('(max-width:780px)');
+  var onWidth = function () {
+    var nav = document.getElementById('mobileNav');
+    if (!mobile.matches && nav && nav.classList.contains('open')) toggleMenu();
+  };
+  if (mobile.addEventListener) mobile.addEventListener('change', onWidth);
+  else if (mobile.addListener) mobile.addListener(onWidth);
 
   /* E-postadressen sätts ihop i JS så den inte står i klartext i källkoden. */
   var u = 'kontakt', d = 'orgutveckling.se', addr = u + '@' + d;
